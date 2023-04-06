@@ -4,7 +4,7 @@ function u = tr_prod(X, V)
     % The input of tr_prod are a p-by-p-by-N tensor X and a p-by-k matrix
     % V, and the output of tr_prod is a N-dimensional vector, with the ith
     % element being the inner product of VV' and the ith slice of X (which
-    % is X[, , i]).
+    % is X(:, :, i)).
     %
     % Example:
     % p = 20;
