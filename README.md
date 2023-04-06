@@ -1,2 +1,4 @@
 # JisstPCA
-All functions and corresponding simulation of Joint-integrated semi-symmetric tensor decomposition PCA
+This repo is about algorithms and simulation of Joint-Integrated Semi-Symmetric Tensor PCA (JisstPCA), from the paper:
+
+To run the code, you need to install tensor_toolbox by Kolda first, the link is https://www.tensortoolbox.org
