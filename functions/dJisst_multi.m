@@ -1,0 +1,48 @@
+% function of multi-factor JISST-PCA while the true model uses diagonal
+% matrix D as signal, based on subtract deflation
+
+function [u_est, V_est, W_est, Dx_est, Dy_est] = dJisst_multi(X, Y, u0, rx, ry, lambda, tol, max_iter)
+
+    sz = size(rx, 2);
+    X_est = cell(sz + 1, 1);
+    Y_est = cell(sz + 1, 1);
+    u_est = cell(sz + 1, 1);
+    V_est = cell(sz + 1, 1);
+    W_est = cell(sz + 1, 1);
+    Dx_est = cell(sz + 1, 1);
+    Dy_est = cell(sz + 1, 1);
+
+    % set initialization and let X^{1} = X, Y^{1} = Y as in our algorithm
+    u_est{1} = u0;
+    X_est{1} = X;
+    Y_est{1} = Y;
+
+    k = 1;
+    while k < (sz + 1)
+        [hat_u, hat_V, hat_W, Dx, Dy, ~, ~] = dJisst_single(X_est{k}, Y_est{k}, u_est{k}, rx(k), ry(k), lambda(k), tol, max_iter);
+        
+        % update of tensor factors
+        u_est{k+1} = hat_u;
+        V_est{k+1} = hat_V;
+        W_est{k+1} = hat_W;
+        Dx_est{k+1} = Dx;
+        Dy_est{k+1} = Dy;
+
+        % subtract deflation
+        X_est{k+1} = X_est{k} - squeeze(ttt(tensor(hat_V*Dx*hat_V'), tensor(hat_u)));
+        Y_est{k+1} = Y_est{k} - squeeze(ttt(tensor(hat_W*Dy*hat_W'), tensor(hat_u)));
+
+        % next iteration
+        k = k+1;
+    end
+
+    % Note: Again, to avoid confusion, the estimation of kth factor is
+    % (k+1)th element of the output estimators, e.g. \hat{u}_{k} = u_est{k+1}
+end
+
+
+
+
+
+
+
