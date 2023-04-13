@@ -1,4 +1,17 @@
 % This function is for single-factor JisstPCA Algorithm
+
+% Input of Jisst_single is:
+% X, Y: two single-factor semi-symmetric tensors of dimension p-p-N and q-q-N
+% u0: initialization
+% rx, ry: rank of X and Y
+% lambda: scaler that represents the relative importance oif each tensor
+% tol, max_iter: tolerance value and maximum iteration number
+
+% Output of Jisst_single is:
+% hat_u, hat_V, hat_W: estimation of factors u, V, W
+% dx, dy: estimation of dx and dy
+% hat_X, hat_Y: reconstruction of true parameter tensors X^{*} and Y^{*}, by hat_X = dx*hat_V hat_V' \circ hat_u and so is for hat_Y
+
 function [hat_u, hat_V, hat_W, dx, dy, hat_X, hat_Y] = Jisst_single(X, Y, u0, rx, ry, lambda, tol, max_iter)
 
     % Note: tensor_toolbox by Kolda is needed for tensor algebra in this
