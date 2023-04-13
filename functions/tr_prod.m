@@ -1,5 +1,12 @@
 % This function is trace product used in Jisst_single
 
+% input of tr_prod:
+% X: semi-symmetric tensor of dimension p-p-N
+% V: matrix of dimension p-r
+
+% output of tr_prod:
+% u: vector of length N
+
 function u = tr_prod(X, V)
     % The input of tr_prod are a p-by-p-by-N tensor X and a p-by-k matrix
     % V, and the output of tr_prod is a N-dimensional vector, with the ith
