@@ -1,5 +1,7 @@
 # Description of functions:
 
+## Main functions: 
+
 "Jisst_single": Single-factor JisstPCA. The signal in $\mathcal{X}, \mathcal{Y}$ are scaler $d_{x}$ and $d_{y}$.
 
 "Jisst_multi": Multi-factor JisstPCA. The signals in each layer of tensor are scalers.
@@ -18,7 +20,7 @@
 
 "init": Return the spectral initialization based on $\mathcal{X}, \mathcal{Y}$.
 
-And other functions used in the main functions are:
+## Other functions used in the main functions are:
 
 "tr_prod": Trace product between a semi-symmetric tensor and a low-rank matrix.
 
