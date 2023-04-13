@@ -1,14 +1,14 @@
 % function of multi-factor JISST-PCA while the true model uses diagonal
 % matrix D as signal, based on subtract deflation
 
-% Input of Jisst_multi is:
+% Input of dJisst_multi is:
 % X, Y: two multi-factor semi-symmetric tensors of dimension p-p-N and q-q-N, with K layers
 % u0: initialization
 % rx, ry: rank of X and Y, both are vectors of dimension K
 % lambda: scaler for each layer, which is a vector of dimension K
 % tol, max_iter: tolerance value and maximum iteration number
 
-% Output of Jisst_multi is:
+% Output of dJisst_multi is:
 % u_est, V_est, W_est: cells with (K+1) elements. The estimation of kth factor of u, V, W are the (k+1)th factor in u_est, V_est, W_est
 % Dx_est, Dy_est: cells with (K+1) elements. The estimation of kth diagonal signal of Dx, Dy are the (k+1)th factor in Dx_est, Dy_est
 
