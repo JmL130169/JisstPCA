@@ -1,5 +1,17 @@
 % function of JISST-PCA with diagonal matrix D as signal
 
+% Input of dJisst_single is:
+% X, Y: two single-factor semi-symmetric tensors of dimension p-p-N and q-q-N
+% u0: initialization
+% rx, ry: rank of X and Y
+% lambda: scaler that represents the relative importance oif each tensor
+% tol, max_iter: tolerance value and maximum iteration number
+
+% Output of dJisst_single is:
+% hat_u, hat_V, hat_W: estimation of factors u, V, W
+% Dx, Dy: estimation of Dx and Dy
+% hat_X, hat_Y: reconstruction of true parameter tensors X^{*} and Y^{*}
+
 function [hat_u, hat_V, hat_W, Dx, Dy, hat_X, hat_Y] = dJisst_single(X, Y, u0, rx, ry, lambda, tol, max_iter)
 
     hat_u = u0; % initialization of u
