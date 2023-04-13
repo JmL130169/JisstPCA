@@ -23,7 +23,7 @@ function u = tr_prod(X, V)
     % u = u/(norm(u));
     % X = ttt(tensor(V*V'), tensor(u));
     % X = squeeze(X);
-    % c = tr_prod(X, V); %<-- the output is a vector in R^{N} space.
+    % c = tr_prod(X, V); %<-- the output is a vector in R^{N} space
     
     sz = size(X, 3);
     u = zeros(sz, 1);
