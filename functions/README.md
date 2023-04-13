@@ -1,1 +1,3 @@
-# All the functions and their usages are as follows:
+# Description of functions:
+
+"Jisst_single": Single-factor JisstPCA. The input data $\mathcal{X}, \mathcal{Y}$ are of the form:
