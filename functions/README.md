@@ -1,3 +1,9 @@
 # Description of functions:
 
-"Jisst_single": Single-factor JisstPCA. The input data $\mathcal{X}, \mathcal{Y}$ are of the form: $\mathcal{X} = d_{x} \cdot \boldsymbol{V}\boldsymbol{V}^{\top} \circ \boldsymbol{u} + \mathcal{E}_{x}$, $\mathcal{Y} = d_{y} \cdot \boldsymbol{W}\boldsymbol{W}^{\top} \circ \boldsymbol{u} + \mathcal{E}_{y}$ 
+"Jisst_single": Single-factor JisstPCA. The signal in $\mathcal{X}, \mathcal{Y}$ are scaler $d_{x}$ and $d_{y}$.
+
+"Jisst_multi": Multi-factor JisstPCA. The signals in each layer of tensor are scalers.
+
+"dJisst_single": Single-factor JisstPCA with diagonal matrix $D_{x}, D_{y}$ as signals.
+
+"dJisst_multi": Multi-factor JisstPCA. The signals in each layer of tensor are diagonal matrices $D_{x}, D_{y}$. 
