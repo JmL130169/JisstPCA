@@ -4,6 +4,9 @@
 % gtr_prod function is used in dJisst_single when signal is diagonal matrix
 % D instead of scaler d
 
+% input: X is p-p-N semi-symmetric tensor; V is p-r matrix and D is p-p diagonal matrix
+% output: u is a vector of dimension N
+
 function u = gtr_prod(X, V, D)
 
     % The input of gtr_prod is p-p-N tensor X, p-r orthogonal matrix V and
