@@ -26,3 +26,5 @@
 
 "gtr_prod": Generalized trace product between a semi-symmetric tensor, diagonal matrix and a low-rank matrix.
 
+"sin_do": $\sin\Theta$ distance between two subspaces spanned by two matrices.
+
