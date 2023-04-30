@@ -11,7 +11,7 @@
 % u_est, V_est, W_est: cells with (K+1) elements. The estimation of kth factor of u, V, W are the (k+1)th factor in u_est, V_est, W_est
 % d_est: matrix of dimension 2-(K+1), while the first row is estimation of dx, and second row is estimation of dy. The estimation of kth factor is in the (k+1)th column of d_est
 
-function [u_est, V_est, W_est, d_est] = Jisst_multi(X, Y, u0, rx, ry, lambda, tol, max_iter)
+function [u_est, V_est, W_est, d_est] = Jisst_multi(X, Y, u0, rx, ry, lambda, tol, max_iter, def)
 
     sz = size(rx);
     X_est = cell(sz(2) + 1, 1);
@@ -37,8 +37,30 @@ function [u_est, V_est, W_est, d_est] = Jisst_multi(X, Y, u0, rx, ry, lambda, to
         d_est(2, k+1) = d_y; % estimation of d_{y_{k}}
 
         % deflate
-        X_est{k+1} = X_est{k} - d_x*squeeze(ttt(tensor(hat_V*hat_V'), tensor(hat_u)));
-        Y_est{k+1} = Y_est{k} - d_y*squeeze(ttt(tensor(hat_W*hat_W'), tensor(hat_u)));
+        if def == o % subtract deflation
+            X_est{k+1} = X_est{k} - d_x*squeeze(ttt(tensor(hat_V*hat_V'), tensor(hat_u)));
+            Y_est{k+1} = Y_est{k} - d_y*squeeze(ttt(tensor(hat_W*hat_W'), tensor(hat_u)));
+        else if def == 1 % project deflation
+            sz_X = size(X);
+            sz_Y = size(Y);
+            uk = double(eye(sz_X(3)) - u_est{k+1}*u_est{k+1}');
+            Vk = double(eye(sz_X(1)) - V_est{k+1}*V_est{k+1}');
+            Wk = double(eye(sz_Y(1)) - W_est{k+1}*W_est{k+1}');
+            X_est{k+1} = ttm(X_est{k}, {Vk, Vk, uk}, [1, 2, 3]);
+            Y_est{k+1} = ttm(Y_est{k}, {Wk, Wk, uk}, [1, 2, 3]);
+        else if def == 2 % subtract deflation for X and project deflation for Y
+            X_est{k+1} = X_est{k} - d_x*squeeze(ttt(tensor(hat_V*hat_V'), tensor(hat_u)));
+            sz_Y = size(Y);
+            uk = double(eye(sz_X(3)) - u_est{k+1}*u_est{k+1}');
+            Wk = double(eye(sz_Y(1)) - W_est{k+1}*W_est{k+1}');
+            Y_est{k+1} = ttm(Y_est{k}, {Wk, Wk, uk}, [1, 2, 3]);
+        else if def == 3 % project deflation for X and subtract deflation for Y
+            Y_est{k+1} = Y_est{k} - d_y*squeeze(ttt(tensor(hat_W*hat_W'), tensor(hat_u)));
+            sz_X = size(X);            
+            uk = double(eye(sz_X(3)) - u_est{k+1}*u_est{k+1}');
+            Vk = double(eye(sz_X(1)) - V_est{k+1}*V_est{k+1}');
+            X_est{k+1} = ttm(X_est{k}, {Vk, Vk, uk}, [1, 2, 3]);
+        end
         
         % finish the while loop
         k = k+1;
