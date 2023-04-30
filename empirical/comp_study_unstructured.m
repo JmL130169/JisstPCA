@@ -90,7 +90,8 @@ for i = 1:rep
         err_oracle{3, 2}(i, j) = abs(sin_d(W1_est{3}, W2)); % est err of W2
 
         % Method 2: data-driven JisstPCA
-        bic_r = bic_est(X{j}, Y{j}, p, q, 2, u0, lam, tol, max_iter, def); % estimated rank
+        method = 2;
+        bic_r = bic_est(X{j}, Y{j}, p, q, 2, u0, lam, tol, max_iter, method, def); % estimated rank
         bic_r = bic_r';
         [u2_est, V2_est, W2_est, ~] = iMsst_sub(X{j}, Y{j}, u0, bic_r, bic_r, lambda, tol, max_iter, def);
 
@@ -245,7 +246,8 @@ for i = 1:rep
         err_oracle{3, 2}(i, j) = abs(sin_d(W1_est{3}, W2)); % est err of W2
 
         % Method 2: data-driven JisstPCA
-        bic_r = bic_est(X{j}, Y{j}, p, q, 2, u0, lam, tol, max_iter, def); % estimated rank
+        method = 2;
+        bic_r = bic_est(X{j}, Y{j}, p, q, 2, u0, lam, tol, max_iter, method, def); % estimated rank
         bic_r = bic_r';
         [u2_est, V2_est, W2_est, ~] = iMsst_sub(X{j}, Y{j}, u0, bic_r, bic_r, lambda, tol, max_iter, def);
 
@@ -399,7 +401,8 @@ for i = 1:rep
         err_oracle{3, 2}(i, j) = abs(sin_d(W1_est{3}, W2)); % est err of W2
 
         % Method 2: data-driven JisstPCA
-        bic_r = bic_est(X{j}, Y{j}, p, q, 2, u0, lam, tol, max_iter, def); % estimated rank
+        method = 2;
+        bic_r = bic_est(X{j}, Y{j}, p, q, 2, u0, lam, tol, max_iter, method, def); % estimated rank
         bic_r = bic_r';
         [u2_est, V2_est, W2_est, ~] = iMsst_sub(X{j}, Y{j}, u0, bic_r, bic_r, lambda, tol, max_iter, def);
 
@@ -553,7 +556,8 @@ for i = 1:rep
         err_oracle{3, 2}(i, j) = abs(sin_d(W1_est{3}, W2)); % est err of W2
 
         % Method 2: data-driven JisstPCA
-        bic_r = bic_est(X{j}, Y{j}, p, q, 2, u0, lam, tol, max_iter, def); % estimated rank
+        method = 2;
+        bic_r = bic_est(X{j}, Y{j}, p, q, 2, u0, lam, tol, max_iter, method, def); % estimated rank
         bic_r = bic_r';
         [u2_est, V2_est, W2_est, ~] = iMsst_sub(X{j}, Y{j}, u0, bic_r, bic_r, lambda, tol, max_iter, def);
 
