@@ -56,11 +56,11 @@ function [u_est, V_est, W_est, d_est] = Jisst_multi(X, Y, u0, rx, ry, lambda, to
             Wk = double(eye(sz_Y(1)) - W_est{k+1}*W_est{k+1}');
             Y_est{k+1} = ttm(Y_est{k}, {Wk, Wk, uk}, [1, 2, 3]);
         else if def == 3 % project deflation for X and subtract deflation for Y
-            Y_est{k+1} = Y_est{k} - d_y*squeeze(ttt(tensor(hat_W*hat_W'), tensor(hat_u)));
             sz_X = size(X);            
             uk = double(eye(sz_X(3)) - u_est{k+1}*u_est{k+1}');
             Vk = double(eye(sz_X(1)) - V_est{k+1}*V_est{k+1}');
             X_est{k+1} = ttm(X_est{k}, {Vk, Vk, uk}, [1, 2, 3]);
+            Y_est{k+1} = Y_est{k} - d_y*squeeze(ttt(tensor(hat_W*hat_W'), tensor(hat_u)));
         end
         
         % finish the while loop
