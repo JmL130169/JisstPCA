@@ -12,7 +12,7 @@
 % output of imt_multi:
 % estimation of each factor
 
-function [u_est, V_est, w_est, d_est] = imt_multi(X, Y, u0, rx, lambda, tol, max_iter)
+function [u_est, V_est, w_est, d_est] = imt_multi(X, Y, u0, rx, lambda, tol, max_iter, def)
     
     sz = size(rx, 2); % number of layers for multi-factor iSST-PCA model
     X_est = cell(sz + 1, 1);
@@ -37,10 +37,32 @@ function [u_est, V_est, w_est, d_est] = imt_multi(X, Y, u0, rx, lambda, tol, max
         d_est(1, k+1) = d_x;
         d_est(2, k+1) = d_y;
 
-        % subtract deflation
-        X_est{k+1} = X_est{k} - d_x*squeeze(ttt(tensor(hat_V*hat_V'), tensor(hat_u)));
-        Y_est{k+1} = Y_est{k} - d_y*hat_w*hat_u';
-
+        % deflation
+        if def == 0 % subtract deflation
+            X_est{k+1} = X_est{k} - d_x*squeeze(ttt(tensor(hat_V*hat_V'), tensor(hat_u)));
+            Y_est{k+1} = Y_est{k} - d_y*hat_w*hat_u';
+        else if def == 1 % project deflation
+            sz_X = size(X);
+            sz_Y = size(Y);
+            uk = double(eye(sz_X(3)) - u_est{k+1}*u_est{k+1}');
+            Vk = double(eye(sz_X(1)) - V_est{k+1}*V_est{k+1}');
+            wk = double(eye(sz_Y(1)) - w_est{k+1}*w_est{k+1}');
+            X_est{k+1} = ttm(X_est{k}, {Vk, Vk, uk}, [1, 2, 3]);
+            Y_est{k+1} = wk*Y_est{k}*uk;
+        else if def == 2 % subtract deflation for X and project deflation for Y
+            X_est{k+1} = X_est{k} - d_x*squeeze(ttt(tensor(hat_V*hat_V'), tensor(hat_u)));
+            sz_Y = size(Y);
+            uk = double(eye(sz_X(3)) - u_est{k+1}*u_est{k+1}');            
+            wk = double(eye(sz_Y(1)) - w_est{k+1}*w_est{k+1}');            
+            Y_est{k+1} = wk*Y_est{k}*uk;
+        else if def == 3 % project deflation for X and subtract deflation for Y
+            sz_X = size(X);
+            uk = double(eye(sz_X(3)) - u_est{k+1}*u_est{k+1}');
+            Vk = double(eye(sz_X(1)) - V_est{k+1}*V_est{k+1}');
+            X_est{k+1} = ttm(X_est{k}, {Vk, Vk, uk}, [1, 2, 3]);
+            Y_est{k+1} = Y_est{k} - d_y*hat_w*hat_u';
+        end
+        
         % finish the while loop
         k = k+1;
     end
