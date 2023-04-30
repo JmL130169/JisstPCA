@@ -1,10 +1,4 @@
-%% comparative study, unstructured data
-mkdir('/Users/jl259/Desktop/tensor_toolbox')   
-addpath('/Users/jl259/Desktop/tensor_toolbox')
-mkdir('/Users/jl259/Desktop/isst')   
-addpath('/Users/jl259/Desktop/isst')
-
-%% scenario 1: p = q = 50, N = 200
+%% case 1: p = q = 50, N = 200
 p = 50;
 q = 50;
 N = 200;
@@ -79,13 +73,14 @@ for i = 1:rep
         % scaler lambda
         lam = norm(X{j})/(norm(X{j}) + norm(Y{j}));
         lambda = [lam lam];
+        def = 0;
 
         % sum/cumsum of r
         r_sum = sum(r);
         cr = cumsum(r);
 
         % Method 1: oracle JISST-PCA
-        [u1_est, V1_est, W1_est, ~] = iMsst_sub(X{j}, Y{j}, u0, r, r, lambda, tol, max_iter);
+        [u1_est, V1_est, W1_est, ~] = iMsst_sub(X{j}, Y{j}, u0, r, r, lambda, tol, max_iter, def);
 
         err_oracle{1, 1}(i, j) = abs(sin_d(u1_est{2}, u1)); % est err of u1
         err_oracle{1, 2}(i, j) = abs(sin_d(u1_est{3}, u2)); % est err of u2
@@ -95,9 +90,9 @@ for i = 1:rep
         err_oracle{3, 2}(i, j) = abs(sin_d(W1_est{3}, W2)); % est err of W2
 
         % Method 2: data-driven JisstPCA
-        bic_r = bic_est(X{j}, Y{j}, p, q, 2, u0, lam, tol, max_iter); % estimated rank
+        bic_r = bic_est(X{j}, Y{j}, p, q, 2, u0, lam, tol, max_iter, def); % estimated rank
         bic_r = bic_r';
-        [u2_est, V2_est, W2_est, ~] = iMsst_sub(X{j}, Y{j}, u0, bic_r, bic_r, lambda, tol, max_iter);
+        [u2_est, V2_est, W2_est, ~] = iMsst_sub(X{j}, Y{j}, u0, bic_r, bic_r, lambda, tol, max_iter, def);
 
         err_bic{1, 1}(i, j) = abs(sin_d(u2_est{2}, u1)); % est err of u1
         err_bic{1, 2}(i, j) = abs(sin_d(u2_est{3}, u2)); % est err of u2
@@ -129,33 +124,33 @@ for i = 1:rep
 end
 
 % export the data to local file
-writematrix(err_oracle{1, 1}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_oracle_u1.csv")
-writematrix(err_oracle{1, 2}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_oracle_u2.csv")
-writematrix(err_oracle{2, 1}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_oracle_V1.csv")
-writematrix(err_oracle{2, 2}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_oracle_V2.csv")
-writematrix(err_oracle{3, 1}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_oracle_W1.csv")
-writematrix(err_oracle{3, 2}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_oracle_W2.csv")
+writematrix(err_oracle{1, 1}, "/JisstPCA/unstructured/case1/err_oracle_u1.csv")
+writematrix(err_oracle{1, 2}, "/JisstPCA/unstructured/case1/err_oracle_u2.csv")
+writematrix(err_oracle{2, 1}, "/JisstPCA/unstructured/case1/err_oracle_V1.csv")
+writematrix(err_oracle{2, 2}, "/JisstPCA/unstructured/case1/err_oracle_V2.csv")
+writematrix(err_oracle{3, 1}, "/JisstPCA/unstructured/case1/err_oracle_W1.csv")
+writematrix(err_oracle{3, 2}, "/JisstPCA/unstructured/case1/err_oracle_W2.csv")
 
-writematrix(err_bic{1, 1}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_bic_u1.csv")
-writematrix(err_bic{1, 2}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_bic_u2.csv")
-writematrix(err_bic{2, 1}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_bic_V1.csv")
-writematrix(err_bic{2, 2}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_bic_V2.csv")
-writematrix(err_bic{3, 1}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_bic_W1.csv")
-writematrix(err_bic{3, 2}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_bic_W2.csv")
+writematrix(err_bic{1, 1}, "/JisstPCA/unstructured/case1/err_bic_u1.csv")
+writematrix(err_bic{1, 2}, "/JisstPCA/unstructured/case1/err_bic_u2.csv")
+writematrix(err_bic{2, 1}, "/JisstPCA/unstructured/case1/err_bic_V1.csv")
+writematrix(err_bic{2, 2}, "/JisstPCA/unstructured/case1/err_bic_V2.csv")
+writematrix(err_bic{3, 1}, "/JisstPCA/unstructured/case1/err_bic_W1.csv")
+writematrix(err_bic{3, 2}, "/JisstPCA/unstructured/case1/err_bic_W2.csv")
 
-writematrix(err_ihosvd{1, 1}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_ihosvd_u1.csv")
-writematrix(err_ihosvd{1, 2}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_ihosvd_u2.csv")
-writematrix(err_ihosvd{2, 1}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_ihosvd_V1.csv")
-writematrix(err_ihosvd{2, 2}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_ihosvd_V2.csv")
-writematrix(err_ihosvd{3, 1}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_ihosvd_W1.csv")
-writematrix(err_ihosvd{3, 2}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_ihosvd_W2.csv")
+writematrix(err_ihosvd{1, 1}, "/JisstPCA/unstructured/case1/err_ihosvd_u1.csv")
+writematrix(err_ihosvd{1, 2}, "/JisstPCA/unstructured/case1/err_ihosvd_u2.csv")
+writematrix(err_ihosvd{2, 1}, "/JisstPCA/unstructured/case1/err_ihosvd_V1.csv")
+writematrix(err_ihosvd{2, 2}, "/JisstPCA/unstructured/case1/err_ihosvd_V2.csv")
+writematrix(err_ihosvd{3, 1}, "/JisstPCA/unstructured/case1/err_ihosvd_W1.csv")
+writematrix(err_ihosvd{3, 2}, "/JisstPCA/unstructured/case1/err_ihosvd_W2.csv")
 
-writematrix(err_ihooi{1, 1}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_ihooi_u1.csv")
-writematrix(err_ihooi{1, 2}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_ihooi_u2.csv")
-writematrix(err_ihooi{2, 1}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_ihooi_V1.csv")
-writematrix(err_ihooi{2, 2}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_ihooi_V2.csv")
-writematrix(err_ihooi{3, 1}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_ihooi_W1.csv")
-writematrix(err_ihooi{3, 2}, "/Users/jl259/Desktop/section_4/unstructure/case1/err_ihooi_W2.csv")
+writematrix(err_ihooi{1, 1}, "/JisstPCA/unstructured/case1/err_ihooi_u1.csv")
+writematrix(err_ihooi{1, 2}, "/JisstPCA/unstructured/case1/err_ihooi_u2.csv")
+writematrix(err_ihooi{2, 1}, "/JisstPCA/unstructured/case1/err_ihooi_V1.csv")
+writematrix(err_ihooi{2, 2}, "/JisstPCA/unstructured/case1/err_ihooi_V2.csv")
+writematrix(err_ihooi{3, 1}, "/JisstPCA/unstructured/case1/err_ihooi_W1.csv")
+writematrix(err_ihooi{3, 2}, "/JisstPCA/unstructured/case1/err_ihooi_W2.csv")
 
 
 %% scenario 2: p = q = 150, N = 50
@@ -233,13 +228,14 @@ for i = 1:rep
         % scaler lambda
         lam = norm(X{j})/(norm(X{j}) + norm(Y{j}));
         lambda = [lam lam];
+        def = 0;
 
         % sum/cumsum of r
         r_sum = sum(r);
         cr = cumsum(r);
 
         % Method 1: oracle JISST-PCA
-        [u1_est, V1_est, W1_est, ~] = iMsst_sub(X{j}, Y{j}, u0, r, r, lambda, tol, max_iter);
+        [u1_est, V1_est, W1_est, ~] = iMsst_sub(X{j}, Y{j}, u0, r, r, lambda, tol, max_iter, def);
 
         err_oracle{1, 1}(i, j) = abs(sin_d(u1_est{2}, u1)); % est err of u1
         err_oracle{1, 2}(i, j) = abs(sin_d(u1_est{3}, u2)); % est err of u2
@@ -249,9 +245,9 @@ for i = 1:rep
         err_oracle{3, 2}(i, j) = abs(sin_d(W1_est{3}, W2)); % est err of W2
 
         % Method 2: data-driven JisstPCA
-        bic_r = bic_est(X{j}, Y{j}, p, q, 2, u0, lam, tol, max_iter); % estimated rank
+        bic_r = bic_est(X{j}, Y{j}, p, q, 2, u0, lam, tol, max_iter, def); % estimated rank
         bic_r = bic_r';
-        [u2_est, V2_est, W2_est, ~] = iMsst_sub(X{j}, Y{j}, u0, bic_r, bic_r, lambda, tol, max_iter);
+        [u2_est, V2_est, W2_est, ~] = iMsst_sub(X{j}, Y{j}, u0, bic_r, bic_r, lambda, tol, max_iter, def);
 
         err_bic{1, 1}(i, j) = abs(sin_d(u2_est{2}, u1)); % est err of u1
         err_bic{1, 2}(i, j) = abs(sin_d(u2_est{3}, u2)); % est err of u2
@@ -283,33 +279,33 @@ for i = 1:rep
 end
 
 % export the data to local file
-writematrix(err_oracle{1, 1}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_oracle_u1.csv")
-writematrix(err_oracle{1, 2}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_oracle_u2.csv")
-writematrix(err_oracle{2, 1}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_oracle_V1.csv")
-writematrix(err_oracle{2, 2}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_oracle_V2.csv")
-writematrix(err_oracle{3, 1}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_oracle_W1.csv")
-writematrix(err_oracle{3, 2}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_oracle_W2.csv")
+writematrix(err_oracle{1, 1}, "/JisstPCA/unstructured/case2/err_oracle_u1.csv")
+writematrix(err_oracle{1, 2}, "/JisstPCA/unstructured/case2/err_oracle_u2.csv")
+writematrix(err_oracle{2, 1}, "/JisstPCA/unstructured/case2/err_oracle_V1.csv")
+writematrix(err_oracle{2, 2}, "/JisstPCA/unstructured/case2/err_oracle_V2.csv")
+writematrix(err_oracle{3, 1}, "/JisstPCA/unstructured/case2/err_oracle_W1.csv")
+writematrix(err_oracle{3, 2}, "/JisstPCA/unstructured/case2/err_oracle_W2.csv")
 
-writematrix(err_bic{1, 1}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_bic_u1.csv")
-writematrix(err_bic{1, 2}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_bic_u2.csv")
-writematrix(err_bic{2, 1}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_bic_V1.csv")
-writematrix(err_bic{2, 2}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_bic_V2.csv")
-writematrix(err_bic{3, 1}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_bic_W1.csv")
-writematrix(err_bic{3, 2}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_bic_W2.csv")
+writematrix(err_bic{1, 1}, "/JisstPCA/unstructured/case2/err_bic_u1.csv")
+writematrix(err_bic{1, 2}, "/JisstPCA/unstructured/case2/err_bic_u2.csv")
+writematrix(err_bic{2, 1}, "/JisstPCA/unstructured/case2/err_bic_V1.csv")
+writematrix(err_bic{2, 2}, "/JisstPCA/unstructured/case2/err_bic_V2.csv")
+writematrix(err_bic{3, 1}, "/JisstPCA/unstructured/case2/err_bic_W1.csv")
+writematrix(err_bic{3, 2}, "/JisstPCA/unstructured/case2/err_bic_W2.csv")
 
-writematrix(err_ihosvd{1, 1}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_ihosvd_u1.csv")
-writematrix(err_ihosvd{1, 2}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_ihosvd_u2.csv")
-writematrix(err_ihosvd{2, 1}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_ihosvd_V1.csv")
-writematrix(err_ihosvd{2, 2}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_ihosvd_V2.csv")
-writematrix(err_ihosvd{3, 1}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_ihosvd_W1.csv")
-writematrix(err_ihosvd{3, 2}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_ihosvd_W2.csv")
+writematrix(err_ihosvd{1, 1}, "/JisstPCA/unstructured/case2/err_ihosvd_u1.csv")
+writematrix(err_ihosvd{1, 2}, "/JisstPCA/unstructured/case2/err_ihosvd_u2.csv")
+writematrix(err_ihosvd{2, 1}, "/JisstPCA/unstructured/case2/err_ihosvd_V1.csv")
+writematrix(err_ihosvd{2, 2}, "/JisstPCA/unstructured/case2/err_ihosvd_V2.csv")
+writematrix(err_ihosvd{3, 1}, "/JisstPCA/unstructured/case2/err_ihosvd_W1.csv")
+writematrix(err_ihosvd{3, 2}, "/JisstPCA/unstructured/case2/err_ihosvd_W2.csv")
 
-writematrix(err_ihooi{1, 1}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_ihooi_u1.csv")
-writematrix(err_ihooi{1, 2}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_ihooi_u2.csv")
-writematrix(err_ihooi{2, 1}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_ihooi_V1.csv")
-writematrix(err_ihooi{2, 2}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_ihooi_V2.csv")
-writematrix(err_ihooi{3, 1}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_ihooi_W1.csv")
-writematrix(err_ihooi{3, 2}, "/Users/jl259/Desktop/section_4/unstructure/case2/err_ihooi_W2.csv")
+writematrix(err_ihooi{1, 1}, "/JisstPCA/unstructured/case2/err_ihooi_u1.csv")
+writematrix(err_ihooi{1, 2}, "/JisstPCA/unstructured/case2/err_ihooi_u2.csv")
+writematrix(err_ihooi{2, 1}, "/JisstPCA/unstructured/case2/err_ihooi_V1.csv")
+writematrix(err_ihooi{2, 2}, "/JisstPCA/unstructured/case2/err_ihooi_V2.csv")
+writematrix(err_ihooi{3, 1}, "/JisstPCA/unstructured/case2/err_ihooi_W1.csv")
+writematrix(err_ihooi{3, 2}, "/JisstPCA/unstructured/case2/err_ihooi_W2.csv")
 
 %% scenario 3: p = 150, q = 50, N = 200
 p = 150;
@@ -386,13 +382,14 @@ for i = 1:rep
         % scaler lambda
         lam = norm(X{j})/(norm(X{j}) + norm(Y{j}));
         lambda = [lam lam];
+        def = 0;
 
         % sum/cumsum of r
         r_sum = sum(r);
         cr = cumsum(r);
 
         % Method 1: oracle JISST-PCA
-        [u1_est, V1_est, W1_est, ~] = iMsst_sub(X{j}, Y{j}, u0, r, r, lambda, tol, max_iter);
+        [u1_est, V1_est, W1_est, ~] = iMsst_sub(X{j}, Y{j}, u0, r, r, lambda, tol, max_iter, def);
 
         err_oracle{1, 1}(i, j) = abs(sin_d(u1_est{2}, u1)); % est err of u1
         err_oracle{1, 2}(i, j) = abs(sin_d(u1_est{3}, u2)); % est err of u2
@@ -402,9 +399,9 @@ for i = 1:rep
         err_oracle{3, 2}(i, j) = abs(sin_d(W1_est{3}, W2)); % est err of W2
 
         % Method 2: data-driven JisstPCA
-        bic_r = bic_est(X{j}, Y{j}, p, q, 2, u0, lam, tol, max_iter); % estimated rank
+        bic_r = bic_est(X{j}, Y{j}, p, q, 2, u0, lam, tol, max_iter, def); % estimated rank
         bic_r = bic_r';
-        [u2_est, V2_est, W2_est, ~] = iMsst_sub(X{j}, Y{j}, u0, bic_r, bic_r, lambda, tol, max_iter);
+        [u2_est, V2_est, W2_est, ~] = iMsst_sub(X{j}, Y{j}, u0, bic_r, bic_r, lambda, tol, max_iter, def);
 
         err_bic{1, 1}(i, j) = abs(sin_d(u2_est{2}, u1)); % est err of u1
         err_bic{1, 2}(i, j) = abs(sin_d(u2_est{3}, u2)); % est err of u2
@@ -436,33 +433,33 @@ for i = 1:rep
 end
 
 % export the data to local file
-writematrix(err_oracle{1, 1}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_oracle_u1.csv")
-writematrix(err_oracle{1, 2}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_oracle_u2.csv")
-writematrix(err_oracle{2, 1}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_oracle_V1.csv")
-writematrix(err_oracle{2, 2}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_oracle_V2.csv")
-writematrix(err_oracle{3, 1}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_oracle_W1.csv")
-writematrix(err_oracle{3, 2}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_oracle_W2.csv")
+writematrix(err_oracle{1, 1}, "/JisstPCA/unstructured/case3/err_oracle_u1.csv")
+writematrix(err_oracle{1, 2}, "/JisstPCA/unstructured/case3/err_oracle_u2.csv")
+writematrix(err_oracle{2, 1}, "/JisstPCA/unstructured/case3/err_oracle_V1.csv")
+writematrix(err_oracle{2, 2}, "/JisstPCA/unstructured/case3/err_oracle_V2.csv")
+writematrix(err_oracle{3, 1}, "/JisstPCA/unstructured/case3/err_oracle_W1.csv")
+writematrix(err_oracle{3, 2}, "/JisstPCA/unstructured/case3/err_oracle_W2.csv")
 
-writematrix(err_bic{1, 1}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_bic_u1.csv")
-writematrix(err_bic{1, 2}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_bic_u2.csv")
-writematrix(err_bic{2, 1}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_bic_V1.csv")
-writematrix(err_bic{2, 2}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_bic_V2.csv")
-writematrix(err_bic{3, 1}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_bic_W1.csv")
-writematrix(err_bic{3, 2}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_bic_W2.csv")
+writematrix(err_bic{1, 1}, "/JisstPCA/unstructured/case3/err_bic_u1.csv")
+writematrix(err_bic{1, 2}, "/JisstPCA/unstructured/case3/err_bic_u2.csv")
+writematrix(err_bic{2, 1}, "/JisstPCA/unstructured/case3/err_bic_V1.csv")
+writematrix(err_bic{2, 2}, "/JisstPCA/unstructured/case3/err_bic_V2.csv")
+writematrix(err_bic{3, 1}, "/JisstPCA/unstructured/case3/err_bic_W1.csv")
+writematrix(err_bic{3, 2}, "/JisstPCA/unstructured/case3/err_bic_W2.csv")
 
-writematrix(err_ihosvd{1, 1}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_ihosvd_u1.csv")
-writematrix(err_ihosvd{1, 2}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_ihosvd_u2.csv")
-writematrix(err_ihosvd{2, 1}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_ihosvd_V1.csv")
-writematrix(err_ihosvd{2, 2}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_ihosvd_V2.csv")
-writematrix(err_ihosvd{3, 1}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_ihosvd_W1.csv")
-writematrix(err_ihosvd{3, 2}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_ihosvd_W2.csv")
+writematrix(err_ihosvd{1, 1}, "/JisstPCA/unstructured/case3/err_ihosvd_u1.csv")
+writematrix(err_ihosvd{1, 2}, "/JisstPCA/unstructured/case3/err_ihosvd_u2.csv")
+writematrix(err_ihosvd{2, 1}, "/JisstPCA/unstructured/case3/err_ihosvd_V1.csv")
+writematrix(err_ihosvd{2, 2}, "/JisstPCA/unstructured/case3/err_ihosvd_V2.csv")
+writematrix(err_ihosvd{3, 1}, "/JisstPCA/unstructured/case3/err_ihosvd_W1.csv")
+writematrix(err_ihosvd{3, 2}, "/JisstPCA/unstructured/case3/err_ihosvd_W2.csv")
 
-writematrix(err_ihooi{1, 1}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_ihooi_u1.csv")
-writematrix(err_ihooi{1, 2}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_ihooi_u2.csv")
-writematrix(err_ihooi{2, 1}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_ihooi_V1.csv")
-writematrix(err_ihooi{2, 2}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_ihooi_V2.csv")
-writematrix(err_ihooi{3, 1}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_ihooi_W1.csv")
-writematrix(err_ihooi{3, 2}, "/Users/jl259/Desktop/section_4/unstructure/case3/err_ihooi_W2.csv")
+writematrix(err_ihooi{1, 1}, "/JisstPCA/unstructured/case3/err_ihooi_u1.csv")
+writematrix(err_ihooi{1, 2}, "/JisstPCA/unstructured/case3/err_ihooi_u2.csv")
+writematrix(err_ihooi{2, 1}, "/JisstPCA/unstructured/case3/err_ihooi_V1.csv")
+writematrix(err_ihooi{2, 2}, "/JisstPCA/unstructured/case3/err_ihooi_V2.csv")
+writematrix(err_ihooi{3, 1}, "/JisstPCA/unstructured/case3/err_ihooi_W1.csv")
+writematrix(err_ihooi{3, 2}, "/JisstPCA/unstructured/case3/err_ihooi_W2.csv")
 
 %% scenario 4: p = 150, q = 50, N = 50
 p = 150;
@@ -539,13 +536,14 @@ for i = 1:rep
         % scaler lambda
         lam = norm(X{j})/(norm(X{j}) + norm(Y{j}));
         lambda = [lam lam];
+        def = 0;
 
         % sum/cumsum of r
         r_sum = sum(r);
         cr = cumsum(r);
 
         % Method 1: oracle JISST-PCA
-        [u1_est, V1_est, W1_est, ~] = iMsst_sub(X{j}, Y{j}, u0, r, r, lambda, tol, max_iter);
+        [u1_est, V1_est, W1_est, ~] = iMsst_sub(X{j}, Y{j}, u0, r, r, lambda, tol, max_iter, def);
 
         err_oracle{1, 1}(i, j) = abs(sin_d(u1_est{2}, u1)); % est err of u1
         err_oracle{1, 2}(i, j) = abs(sin_d(u1_est{3}, u2)); % est err of u2
@@ -555,9 +553,9 @@ for i = 1:rep
         err_oracle{3, 2}(i, j) = abs(sin_d(W1_est{3}, W2)); % est err of W2
 
         % Method 2: data-driven JisstPCA
-        bic_r = bic_est(X{j}, Y{j}, p, q, 2, u0, lam, tol, max_iter); % estimated rank
+        bic_r = bic_est(X{j}, Y{j}, p, q, 2, u0, lam, tol, max_iter, def); % estimated rank
         bic_r = bic_r';
-        [u2_est, V2_est, W2_est, ~] = iMsst_sub(X{j}, Y{j}, u0, bic_r, bic_r, lambda, tol, max_iter);
+        [u2_est, V2_est, W2_est, ~] = iMsst_sub(X{j}, Y{j}, u0, bic_r, bic_r, lambda, tol, max_iter, def);
 
         err_bic{1, 1}(i, j) = abs(sin_d(u2_est{2}, u1)); % est err of u1
         err_bic{1, 2}(i, j) = abs(sin_d(u2_est{3}, u2)); % est err of u2
@@ -589,32 +587,32 @@ for i = 1:rep
 end
 
 % export the data to local file
-writematrix(err_oracle{1, 1}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_oracle_u1.csv")
-writematrix(err_oracle{1, 2}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_oracle_u2.csv")
-writematrix(err_oracle{2, 1}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_oracle_V1.csv")
-writematrix(err_oracle{2, 2}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_oracle_V2.csv")
-writematrix(err_oracle{3, 1}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_oracle_W1.csv")
-writematrix(err_oracle{3, 2}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_oracle_W2.csv")
+writematrix(err_oracle{1, 1}, "/JisstPCA/unstructured/case4/err_oracle_u1.csv")
+writematrix(err_oracle{1, 2}, "/JisstPCA/unstructured/case4/err_oracle_u2.csv")
+writematrix(err_oracle{2, 1}, "/JisstPCA/unstructured/case4/err_oracle_V1.csv")
+writematrix(err_oracle{2, 2}, "/JisstPCA/unstructured/case4/err_oracle_V2.csv")
+writematrix(err_oracle{3, 1}, "/JisstPCA/unstructured/case4/err_oracle_W1.csv")
+writematrix(err_oracle{3, 2}, "/JisstPCA/unstructured/case4/err_oracle_W2.csv")
 
-writematrix(err_bic{1, 1}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_bic_u1.csv")
-writematrix(err_bic{1, 2}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_bic_u2.csv")
-writematrix(err_bic{2, 1}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_bic_V1.csv")
-writematrix(err_bic{2, 2}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_bic_V2.csv")
-writematrix(err_bic{3, 1}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_bic_W1.csv")
-writematrix(err_bic{3, 2}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_bic_W2.csv")
+writematrix(err_bic{1, 1}, "/JisstPCA/unstructured/case4/err_bic_u1.csv")
+writematrix(err_bic{1, 2}, "/JisstPCA/unstructured/case4/err_bic_u2.csv")
+writematrix(err_bic{2, 1}, "/JisstPCA/unstructured/case4/err_bic_V1.csv")
+writematrix(err_bic{2, 2}, "/JisstPCA/unstructured/case4/err_bic_V2.csv")
+writematrix(err_bic{3, 1}, "/JisstPCA/unstructured/case4/err_bic_W1.csv")
+writematrix(err_bic{3, 2}, "/JisstPCA/unstructured/case4/err_bic_W2.csv")
 
-writematrix(err_ihosvd{1, 1}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_ihosvd_u1.csv")
-writematrix(err_ihosvd{1, 2}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_ihosvd_u2.csv")
-writematrix(err_ihosvd{2, 1}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_ihosvd_V1.csv")
-writematrix(err_ihosvd{2, 2}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_ihosvd_V2.csv")
-writematrix(err_ihosvd{3, 1}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_ihosvd_W1.csv")
-writematrix(err_ihosvd{3, 2}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_ihosvd_W2.csv")
+writematrix(err_ihosvd{1, 1}, "/JisstPCA/unstructured/case4/err_ihosvd_u1.csv")
+writematrix(err_ihosvd{1, 2}, "/JisstPCA/unstructured/case4/err_ihosvd_u2.csv")
+writematrix(err_ihosvd{2, 1}, "/JisstPCA/unstructured/case4/err_ihosvd_V1.csv")
+writematrix(err_ihosvd{2, 2}, "/JisstPCA/unstructured/case4/err_ihosvd_V2.csv")
+writematrix(err_ihosvd{3, 1}, "/JisstPCA/unstructured/case4/err_ihosvd_W1.csv")
+writematrix(err_ihosvd{3, 2}, "/JisstPCA/unstructured/case4/err_ihosvd_W2.csv")
 
-writematrix(err_ihooi{1, 1}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_ihooi_u1.csv")
-writematrix(err_ihooi{1, 2}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_ihooi_u2.csv")
-writematrix(err_ihooi{2, 1}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_ihooi_V1.csv")
-writematrix(err_ihooi{2, 2}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_ihooi_V2.csv")
-writematrix(err_ihooi{3, 1}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_ihooi_W1.csv")
-writematrix(err_ihooi{3, 2}, "/Users/jl259/Desktop/section_4/unstructure/case4/err_ihooi_W2.csv")
+writematrix(err_ihooi{1, 1}, "/JisstPCA/unstructured/case4/err_ihooi_u1.csv")
+writematrix(err_ihooi{1, 2}, "/JisstPCA/unstructured/case4/err_ihooi_u2.csv")
+writematrix(err_ihooi{2, 1}, "/JisstPCA/unstructured/case4/err_ihooi_V1.csv")
+writematrix(err_ihooi{2, 2}, "/JisstPCA/unstructured/case4/err_ihooi_V2.csv")
+writematrix(err_ihooi{3, 1}, "/JisstPCA/unstructured/case4/err_ihooi_W1.csv")
+writematrix(err_ihooi{3, 2}, "/JisstPCA/unstructured/case4/err_ihooi_W2.csv")
 
 
