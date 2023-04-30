@@ -6,6 +6,7 @@
 % rx, ry: rank of X and Y, both are vectors of dimension K
 % lambda: scaler for each layer, which is a vector of dimension K
 % tol, max_iter: tolerance value and maximum iteration number
+% def: deflation strategy. def = 0 is subtract deflation; def = 1 is project deflation; def = 2 is subtract deflation for X and project deflation for Y; def = 3 is subtract deflation for Y and project deflation for X
 
 % Output of Jisst_multi is:
 % u_est, V_est, W_est: cells with (K+1) elements. The estimation of kth factor of u, V, W are the (k+1)th factor in u_est, V_est, W_est
@@ -37,7 +38,7 @@ function [u_est, V_est, W_est, d_est] = Jisst_multi(X, Y, u0, rx, ry, lambda, to
         d_est(2, k+1) = d_y; % estimation of d_{y_{k}}
 
         % deflate
-        if def == o % subtract deflation
+        if def == 0 % subtract deflation
             X_est{k+1} = X_est{k} - d_x*squeeze(ttt(tensor(hat_V*hat_V'), tensor(hat_u)));
             Y_est{k+1} = Y_est{k} - d_y*squeeze(ttt(tensor(hat_W*hat_W'), tensor(hat_u)));
         else if def == 1 % project deflation
