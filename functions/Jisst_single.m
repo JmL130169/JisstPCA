@@ -12,7 +12,7 @@
 % dx, dy: estimation of dx and dy
 % hat_X, hat_Y: reconstruction of true parameter tensors X^{*} and Y^{*}, by hat_X = dx*hat_V hat_V' \circ hat_u and so is for hat_Y
 
-function [hat_u, hat_V, hat_W, dx, dy, hat_X, hat_Y] = Jisst_single(X, Y, u0, rx, ry, lambda, tol, max_iter)
+function [hat_u, hat_V, hat_W, dx, dy, hat_X, hat_Y] = Jisst_single(X, Y, u0, lambda, tol, max_iter, rank_max, varargin)
 
     % Note: tensor_toolbox by Kolda is needed for tensor algebra in this
     % function
@@ -33,6 +33,16 @@ function [hat_u, hat_V, hat_W, dx, dy, hat_X, hat_Y] = Jisst_single(X, Y, u0, rx
     % describe the relative importance of the observations.
     %
     % Note: The data type of input X, Y should be 'tensor'.
+
+    if isempty(varargin)
+        K = size(lambda, 2);
+        method = 1;
+        [rx, ry] = bic_def(X, Y, rank_max, K, u0, lambda, tol, max_iter, method);
+    else
+        r = varargin{1};
+        rx = r{1};
+        ry = r{2};
+    end
 
     k = 1;
     hat_u = u0; % at the 0th iteration, estimation of joint tensor factor u

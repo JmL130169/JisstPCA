@@ -23,7 +23,9 @@ function [bic_val] = bic_sst(rx, ry, X, Y, u0, lambda, tol, max_iter)
 
     pe = sum(sz_x(1)*rx + sz_y(1)*ry + sz_x(3)); % number of efficient parameters
     
-    [~, ~, ~, ~, ~, hat_X, hat_Y] = Jisst_single(X, Y, u0, rx, ry, lambda, tol, max_iter);
+    rank_max = 0; % this arguement makes no use in this function
+    rank{1} = rx; rank{2} = ry;
+    [~, ~, ~, ~, ~, hat_X, hat_Y] = Jisst_single(X, Y, u0, lambda, tol, max_iter, rank_max, rank);
 
     Tx = tensor(zeros(sz_x));
     Ty = tensor(zeros(sz_y));
