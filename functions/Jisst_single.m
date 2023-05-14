@@ -6,6 +6,12 @@
 % rx, ry: rank of X and Y
 % lambda: scaler that represents the relative importance oif each tensor
 % tol, max_iter: tolerance value and maximum iteration number
+% rank_max: if the true rank rx, ry are unknown, rank_max is the largest
+% possible that will be tried using BIC method; If rx, ry are known, this
+% arguemtn will not affect this function and user can set rank_max = 0
+% varargin: If rx, ry are unknown, this should be a cell for the true
+% ranks, if true ranks are unknown, this arguement can be left empty and
+% JisstPCA will use BIC estimated ranks
 
 % Output of Jisst_single is:
 % hat_u, hat_V, hat_W: estimation of factors u, V, W
