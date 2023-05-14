@@ -6,18 +6,34 @@
 % rx, ry: rank of X and Y
 % lambda: scaler that represents the relative importance oif each tensor
 % tol, max_iter: tolerance value and maximum iteration number
+% rank_max: if the true rank rx, ry are unknown, rank_max is the largest
+% possible that will be tried using BIC method; If rx, ry are known, this
+% arguemtn will not affect this function and user can set rank_max = 0
+% varargin: If rx, ry are unknown, this should be a cell for the true
+% ranks, if true ranks are unknown, this arguement can be left empty and
+% JisstPCA will use BIC estimated ranks
 
 % Output of dJisst_single is:
 % hat_u, hat_V, hat_W: estimation of factors u, V, W
 % Dx, Dy: estimation of Dx and Dy
 % hat_X, hat_Y: reconstruction of true parameter tensors X^{*} and Y^{*}
 
-function [hat_u, hat_V, hat_W, Dx, Dy, hat_X, hat_Y] = dJisst_single(X, Y, u0, rx, ry, lambda, tol, max_iter)
+function [hat_u, hat_V, hat_W, Dx, Dy, hat_X, hat_Y] = dJisst_single(X, Y, u0, lambda, tol, max_iter, rank_max, varargin)
 
+    if isempty(varargin)
+        K = size(lambda, 2);
+        method = 1;
+        [rx, ry] = bic_def(X, Y, rank_max, K, u0, lambda, tol, max_iter, method);
+    else
+        r = varargin{1};
+        rx = r{1};
+        ry = r{2};
+    end
+    
     hat_u = u0; % initialization of u
-    k = 0;
+    k = 1;
 
-    while k < max_iter
+    while k < (max_iter+1)
 
         % update of V, the leading r_x singular vectors of third-mode
         % tensor multiplication with hat_u at each iteration
