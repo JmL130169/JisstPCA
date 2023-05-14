@@ -3,7 +3,9 @@
 
 % Input of dJisst_multi is:
 % X, Y: two multi-factor semi-symmetric tensors of dimension p-p-N and q-q-N, with K layers
-% u0: initialization
+% u0: initialization. If user wants to use spectral initialization, the input
+% of u0 is 'spectral'; Otherwise user can input specific u0 as
+% initialization
 % rx, ry: rank of X and Y, both are vectors of dimension K
 % lambda: scaler for each layer, which is a vector of dimension K
 % tol, max_iter: tolerance value and maximum iteration number
@@ -34,6 +36,11 @@ function [u_est, V_est, W_est, Dx_est, Dy_est] = dJisst_multi(X, Y, u0, lambda, 
         r = varargin{1};
         rx = r{1};
         ry = r{2};
+    end
+
+    % spectral initialization
+    if ischar(u0) && strcmp(u0, 'spectral')
+        u0 = init(X, Y);
     end
 
     sz = size(rx, 2);

@@ -2,7 +2,9 @@
 
 % Input of Jisst_single is:
 % X, Y: two single-factor semi-symmetric tensors of dimension p-p-N and q-q-N
-% u0: initialization
+% u0: initialization. If user wants to use spectral initialization, the input
+% of u0 is 'spectral'; Otherwise user can input specific u0 as
+% initialization
 % rx, ry: rank of X and Y
 % lambda: scaler that represents the relative importance oif each tensor
 % tol, max_iter: tolerance value and maximum iteration number
@@ -48,6 +50,11 @@ function [hat_u, hat_V, hat_W, dx, dy, hat_X, hat_Y] = Jisst_single(X, Y, u0, la
         r = varargin{1};
         rx = r{1};
         ry = r{2};
+    end
+
+    % spectral initialization
+    if ischar(u0) && strcmp(u0, 'spectral')
+        u0 = init(X, Y);
     end
 
     k = 1;
