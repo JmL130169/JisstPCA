@@ -1,0 +1,176 @@
+% This function is about multi-factor JisstPCA with subtract deflation
+
+% Input of Jisst_multi is:
+% X, Y: two multi-factor semi-symmetric tensors of dimension p-p-N and q-q-N, with K layers
+% u0: initialization. If user wants to use spectral initialization, the input
+% of u0 is 'spectral'; Otherwise user can input specific u0 as
+% initialization
+% rx, ry: rank of X and Y, both are vectors of dimension K
+% lambda: scaler for each layer, which is a vector of dimension K
+% tol, max_iter: tolerance value and maximum iteration number
+% rank_max: if the true rank rx, ry are unknown, rank_max is the largest
+% possible that will be tried using BIC method; If rx, ry are known, this
+% arguemtn will not affect this function and user can set rank_max = 0
+% def: def = 0 is subtract deflation, def = 1 is project deflation, def = 2
+% is project deflation for only u after subtract deflation, def = 3 is
+% project deflation for only V and W after subtract deflation
+% varargin: If rx, ry are unknown, this should be a cell for the true
+% ranks, if true ranks are unknown, this arguement can be left empty and
+% JisstPCA will use BIC estimated ranks
+
+% Output of Jisst_multi is:
+% u_est, V_est, W_est: cells with K elements. The estimation of kth factor of u, V, W are the kth factor in u_est, V_est, W_est
+% d_est: matrix of dimension 2*K, while the first row is estimation of dx, and second row is estimation of dy. The estimation of kth factor is in the kth column of d_est
+
+function [u_est, V_est, W_est, d_est] = JisstPCA(X, Y, K, varargin)
+
+    % create an input parser object
+    p = inputParser;
+
+    % add required and optional parameters
+    addRequired(p, 'X');
+    addRequired(p, 'Y');
+    addRequired(p, 'K');
+    addParameter(p, 'u0', NaN);
+    addParameter(p, 'rx', NaN);
+    addParameter(p, 'ry', NaN);
+    addParameter(p, 'lambda', NaN);
+    addParameter(p, 'tol', NaN);
+    addParameter(p, 'max_iter', NaN);
+    addParameter(p, 'deflation', NaN);
+    addParameter(p, 'rank_max', NaN);
+    addParameter(p, 'method', NaN);
+
+    % parse the inputs
+    parse(p, X, Y, K, varargin{:});
+
+    % get the values
+    X = p.Results.X;
+    Y = p.Results.Y;
+    K = p.Results.K;
+    u0 = p.Results.u0;
+    rx = p.Results.rx;
+    ry = p.Results.ry;
+    lambda = p.Results.lambda;
+    tol = p.Results.tol;
+    max_iter = p.Results.max_iter;
+    deflation = p.Results.deflation;
+    rank_max = p.Results.rank_max;
+    method = p.Results.method;
+
+    % check if the user proveides lambda, tol, max_iter and
+    % deflation
+    if isnan(lambda)
+        lam = norm(X)/(norm(X)+norm(Y));
+        lambda = lam*ones(K, 1);
+    end
+    if isnan(tol)
+        tol = 0.0001;
+    end
+    if isnan(max_iter)
+        max_iter = 100;  
+    end
+    if isnan(deflation)
+        deflation = 0; 
+    end
+    if isnan(rank_max)
+        rank_max = 3;  
+    end
+    if isnan(method)
+        method = 1; 
+    end
+
+    % default value for u0, rx and ry
+    if isnan(u0)
+        u0 = init(X, Y); 
+    end
+    if isnan(rx)
+        rx = bic_def_1(X, Y, rank_max, K, u0, lambda, tol, max_iter, method, deflation);
+    end
+    if isnan(ry)
+        ry = bic_def_2(X, Y, rank_max, K, u0, lambda, tol, max_iter, method, deflation);
+    end
+
+    %% main function when all the hyperparameters are known
+    sz = size(rx);
+    X_est = cell(sz(2) + 1, 1);
+    Y_est = cell(sz(2) + 1, 1);
+    u_est = cell(sz(2) + 1, 1);
+    V_est = cell(sz(2) + 1, 1);
+    W_est = cell(sz(2) + 1, 1);
+    d_est = zeros(2, sz(2)+1);
+
+    u_est{1} = u0;
+    X_est{1} = X;
+    Y_est{1} = Y;
+
+    k = 1;
+    while k < K + 1
+        [hat_u, hat_V, hat_W, d_x, d_y, ~, ~] = Jisst_single(X_est{k}, Y_est{k}, u_est{k}, rx(k), ry(k), lambda(k), tol, max_iter);
+        
+        % update of tensor factors
+        u_est{k+1} = hat_u;
+        V_est{k+1} = hat_V;
+        W_est{k+1} = hat_W;
+        d_est(1, k+1) = d_x; % estimation of d_{x_{k}}
+        d_est(2, k+1) = d_y; % estimation of d_{y_{k}}
+
+        % deflate
+        if deflation == 0 % subtract deflation
+            X_est{k+1} = X_est{k} - d_x*squeeze(ttt(tensor(hat_V*hat_V'), tensor(hat_u)));
+            Y_est{k+1} = Y_est{k} - d_y*squeeze(ttt(tensor(hat_W*hat_W'), tensor(hat_u)));
+        elseif deflation == 1 % project deflation
+            sz_X = size(X);
+            sz_Y = size(Y);
+            uk = double(eye(sz_X(3)) - u_est{k+1}*u_est{k+1}');
+            Vk = double(eye(sz_X(1)) - V_est{k+1}*V_est{k+1}');
+            Wk = double(eye(sz_Y(1)) - W_est{k+1}*W_est{k+1}');
+            X_est{k+1} = ttm(X_est{k}, {Vk, Vk, uk}, [1, 2, 3]);
+            Y_est{k+1} = ttm(Y_est{k}, {Wk, Wk, uk}, [1, 2, 3]);
+        elseif deflation == 2 % orthogonal joint factor after subtract deflation
+            X_est{k+1} = X_est{k} - d_x*squeeze(ttt(tensor(hat_V*hat_V'), tensor(hat_u)));
+            Y_est{k+1} = Y_est{k} - d_y*squeeze(ttt(tensor(hat_W*hat_W'), tensor(hat_u)));
+            
+            sz_X = size(X);
+            sz_Y = size(Y);
+            uk = double(eye(sz_X(3)) - u_est{k+1}*u_est{k+1}');
+            Vk = double(eye(sz_X(1)) - V_est{k+1}*V_est{k+1}');
+            Wk = double(eye(sz_Y(1)) - W_est{k+1}*W_est{k+1}');
+
+            X_est{k+1} = ttm(X_est{k+1}, {uk}, 3);
+            Y_est{k+1} = ttm(Y_est{k+1}, {uk}, 3);
+        elseif deflation == 3 % orthogonal individual factors after subtract deflation
+            X_est{k+1} = X_est{k} - d_x*squeeze(ttt(tensor(hat_V*hat_V'), tensor(hat_u)));
+            Y_est{k+1} = Y_est{k} - d_y*squeeze(ttt(tensor(hat_W*hat_W'), tensor(hat_u)));
+            
+            sz_X = size(X);
+            sz_Y = size(Y);
+            uk = double(eye(sz_X(3)) - u_est{k+1}*u_est{k+1}');
+            Vk = double(eye(sz_X(1)) - V_est{k+1}*V_est{k+1}');
+            Wk = double(eye(sz_Y(1)) - W_est{k+1}*W_est{k+1}');
+            
+            X_est{k+1} = ttm(X_est{k+1}, {Vk, Vk}, [1, 2]);
+            Y_est{k+1} = ttm(Y_est{k+1}, {Wk, Wk}, [1, 2]);
+        end
+        
+        % finish the while loop
+        k = k+1;
+    end
+
+    % make index consistent
+    u_est(1) = [];
+    V_est(1) = [];
+    W_est(1) = [];
+    d_est(:, 1) = [];
+end
+
+%% Example
+% Given X, Y, K, if all the other hyperparameters are unknown, then we can
+% just implement Jisst_multi(X, Y, K)
+% Given X, Y, K, if partial (or all) hyperparameters are known, for example
+% u0, rx and ry, then we should use this function as Jisst_multi(X, Y, K,
+% 'u0', u0, 'rx', rx, 'ry', ry) to specify which arguements are available
+
+
+
+
