@@ -1,4 +1,4 @@
-% Main function of the model joint-integrated semi-symmetric tensor PCA
+% Main function of the model joint-integrated semi-symmetric tensor PCA 
 
 % Input of JisstPCA:
 
