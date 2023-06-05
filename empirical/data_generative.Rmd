@@ -1,0 +1,975 @@
+\textbf{Generate block Gaussian model and check the factor rank}
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
+
+```{r}
+library(ggplot2)
+library(cowplot)
+library(patchwork)
+library(pracma)
+library(reshape)
+```
+
+```{r}
+# scenario 1
+# generate u
+n = 200
+p = c(0.3, 0.4, 0.3)
+mu1 = c(0, 5, 15)
+mu2 = c(0, 15, 5)
+sigma = rep(1, 3)
+
+set.seed(123)
+ind_1 = runif(n, 0, 1)
+u_1 = rep(0, n)
+u_2 = rep(0, n)
+cluster = c()
+for (i in 1:n){
+  u_1[i] = rnorm(1, mu1[1], sigma[1])*(ind_1[i] < p[1]) + rnorm(1, mu1[2], sigma[2])*(ind_1[i] > p[1] && ind_1[i] < (p[1] + p[2])) + rnorm(1, mu1[3], sigma[3])*(ind_1[i] > (p[1] + p[2]))
+  u_2[i] = rnorm(1, mu2[1], sigma[1])*(ind_1[i] < p[1]) + rnorm(1, mu2[2], sigma[2])*(ind_1[i] > p[1] && ind_1[i] < (p[1] + p[2])) + rnorm(1, mu2[3], sigma[3])*(ind_1[i] > (p[1] + p[2]))
+  if (ind_1[i] < p[1]){
+    cluster[i] = "group 1"
+  } else if (ind_1[i] > p[1] && ind_1[i] < (p[1] + p[2])){
+    cluster[i] = "group 2"
+  } else{
+    cluster[i] = "group 3"
+  }
+}
+
+u_1 = u_1/norm(as.matrix(u_1))
+u_2 = u_2/norm(as.matrix(u_2))
+
+gs_u = gramSchmidt(cbind(u_1, u_2), tol = 0.001)
+u = gs_u$Q
+u_1 = u[, 1]
+u_2 = u[, 2]
+u = data.frame(u)
+
+u = data.frame(cbind(u_1, u_2))
+plot_u_t = ggplot(u, aes(x=u_1, y=u_2, color=cluster)) + geom_point(shape=1) + ggtitle("Scatter plot of true u") + theme(plot.title = element_text(hjust = 0.5)) + theme(aspect.ratio=1) + theme(legend.position = "none")
+plot_u_t
+
+# factors of X
+px = 50
+r = c(3, 2)
+px_1 = c(20, 20, 10)
+px_2 = c(25, 25)
+spx_1 = cumsum(px_1)
+spx_2 = cumsum(px_2)
+V1 = matrix(0, px, r[1])
+V2 = matrix(0, px, r[2])
+
+set.seed(2023)
+V1[1:px_1[1], 1] = rnorm(px_1[1], 0, 10)
+for (i in 1:(r[1]-1)){
+  V1[(spx_1[i]+1):(spx_1[i+1]), i+1] = rnorm(px_1[i+1], 0, 10)
+}
+V1 = orth(V1)
+
+# one version of V2: block gaussian
+# V2[1:px_2[1], 1] = rnorm(px_2[1], 5, 25)
+# for (i in 1:(r[2]-1)){
+#   V2[(spx_2[i]+1):(spx_2[i+1]), i+1] = rnorm(px_2[i+1], 5, 25)
+# }
+# V2 = orth(V2)
+
+# another version of V2: star graph
+V_V2 = matrix(0, px, px)
+L_V = matrix(0, 25, 25)
+L_V[1, 1] = 25
+for (i in 2:25){
+  L_V[1, i] = -1
+  L_V[i, 1] = -1
+  L_V[i, i] = 1
+}
+V_V2[1:25, 1:25] = L_V
+V_V2[26:50, 26:50] = L_V
+
+v2_svd = svd(V_V2)
+V2 = v2_svd$u[, 1:r[2]]
+
+# factors of Y
+py = 50
+r = c(3, 2)
+py_1 = c(20, 15, 15)
+py_2 = c(30, 20)
+spy_1 = cumsum(py_1)
+spy_2 = cumsum(py_2)
+W1 = matrix(0, py, r[1])
+W2 = matrix(0, py, r[2])
+
+set.seed(2023)
+W1[1:py_1[1], 1] = rnorm(py_1[1], 0, 10)
+for (i in 1:(r[1]-1)){
+  W1[(spy_1[i]+1):(spy_1[i+1]), i+1] = rnorm(py_1[i+1], 0, 10)
+}
+W1 = orth(W1)
+
+# one version of V2: block gaussian
+# V2[1:px_2[1], 1] = rnorm(px_2[1], 5, 25)
+# for (i in 1:(r[2]-1)){
+#   V2[(spx_2[i]+1):(spx_2[i+1]), i+1] = rnorm(px_2[i+1], 5, 25)
+# }
+# V2 = orth(V2)
+
+# another version of V2: star graph
+W_W2 = matrix(0, py, py)
+L_W1 = matrix(0, 30, 30)
+L_W2 = matrix(0, 20, 20)
+L_W1[1, 1] = 30
+L_W2[1, 1] = 20
+for (i in 2:30){
+  L_W1[1, i] = -1
+  L_W1[i, 1] = -1
+  L_W1[i, i] = 1
+}
+for (i in 2:20){
+  L_W2[1, i] = -1
+  L_W2[i, 1] = -1
+  L_W2[i, i] = 1
+}
+W_W2[1:30, 1:30] = L_W1
+W_W2[31:50, 31:50] = L_W2
+
+w2_svd = svd(W_W2)
+W2 = w2_svd$u[, 1:r[2]]
+
+# plot and export of V1V1' and V2V2'
+# V1V1'
+V_V_1 = abs(V1%*%t(V1))
+colnames(V_V_1) <- paste(1:50)
+rownames(V_V_1) <- paste(1:50)
+
+# Transform the matrix in long format
+df_1 <- melt(V_V_1)
+colnames(df_1) <- c("x", "y", "value")
+plot_v1 = ggplot(df_1, aes(x = x, y = y, fill = value)) + geom_tile() + scale_fill_gradient(low = "white", high = "red") + coord_fixed() +
+  theme(axis.title.x = element_text(size = 8), 
+          axis.text.x = element_text(size = 5), 
+          axis.title.y = element_text(size = 8), 
+          axis.text.y = element_text(size = 5), 
+          title = element_text(size = 8)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  theme(aspect.ratio=1) + 
+  theme(legend.key.height= unit(0.5, 'cm'),
+        legend.key.width= unit(0.5, 'cm')) + 
+  theme(legend.title = element_text(size=8)) + 
+  theme(legend.text  = element_text(size=5)) +
+  theme(plot.margin = margin(0, 0, 0, 0)) +   
+  ggtitle(TeX("$V_{1}V_{1}^{\\prime}$")) + theme(plot.title = element_text(hjust = 0.5))
+
+# V2V2'
+V_V_2 = abs(V2%*%t(V2))
+colnames(V_V_2) <- paste(1:50)
+rownames(V_V_2) <- paste(1:50)
+
+# Transform the matrix in long format
+df_2 <- melt(V_V_2)
+colnames(df_2) <- c("x", "y", "value")
+plot_v2 = ggplot(df_2, aes(x = x, y = y, fill = value)) + geom_tile() + scale_fill_gradient(low = "white", high = "red") + coord_fixed() +
+  theme(axis.title.x = element_text(size = 8), 
+          axis.text.x = element_text(size = 5), 
+          axis.title.y = element_text(size = 8), 
+          axis.text.y = element_text(size = 5), 
+          title = element_text(size = 8)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  theme(aspect.ratio=1) + 
+  theme(legend.key.height= unit(0.5, 'cm'),
+        legend.key.width= unit(0.5, 'cm')) + 
+  theme(legend.title = element_text(size=8)) + 
+  theme(legend.text  = element_text(size=5)) +
+  theme(plot.margin = margin(0, 0, 0, 0)) +   
+  ggtitle(TeX("$V_{2}V_{2}^{\\prime}$")) + theme(plot.title = element_text(hjust = 0.5))
+
+# W1W1'
+W_W_1 = abs(W1%*%t(W1))
+colnames(W_W_1) <- paste(1:50)
+rownames(W_W_1) <- paste(1:50)
+
+# Transform the matrix in long format
+df_3 <- melt(W_W_1)
+colnames(df_3) <- c("x", "y", "value")
+plot_w1 = ggplot(df_3, aes(x = x, y = y, fill = value)) + geom_tile() + scale_fill_gradient(low = "white", high = "red") + coord_fixed() +
+  theme(axis.title.x = element_text(size = 8), 
+          axis.text.x = element_text(size = 5), 
+          axis.title.y = element_text(size = 8), 
+          axis.text.y = element_text(size = 5), 
+          title = element_text(size = 8)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  theme(aspect.ratio=1) + 
+  theme(legend.key.height= unit(0.5, 'cm'),
+        legend.key.width= unit(0.5, 'cm')) + 
+  theme(legend.title = element_text(size=8)) + 
+  theme(legend.text  = element_text(size=5)) +
+  theme(plot.margin = margin(0, 0, 0, 0)) +   
+  ggtitle(TeX("$W_{1}W_{1}^{\\prime}$")) + theme(plot.title = element_text(hjust = 0.5))
+
+# W2W2'
+W_W_2 = abs(W2%*%t(W2))
+colnames(W_W_2) <- paste(1:50)
+rownames(W_W_2) <- paste(1:50)
+
+# Transform the matrix in long format
+df_4 <- melt(W_W_2)
+colnames(df_4) <- c("x", "y", "value")
+  plot_w2 = ggplot(df_4, aes(x = x, y = y, fill = value)) + geom_tile() + scale_fill_gradient(low = "white", high = "red") + coord_fixed() +
+  theme(axis.title.x = element_text(size = 8), 
+          axis.text.x = element_text(size = 5), 
+          axis.title.y = element_text(size = 8), 
+          axis.text.y = element_text(size = 5), 
+          title = element_text(size = 8)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  theme(aspect.ratio=1) + 
+  theme(legend.key.height= unit(0.5, 'cm'),
+        legend.key.width= unit(0.5, 'cm')) + 
+  theme(legend.title = element_text(size=8)) + 
+  theme(legend.text  = element_text(size=5)) +
+  theme(plot.margin = margin(0, 0, 0, 0)) +   
+  ggtitle(TeX("$W_{2}W_{2}^{\\prime}$")) + theme(plot.title = element_text(hjust = 0.5))
+
+plot_case1 = plot_v1 + plot_v2 + plot_w1 + plot_w2
+plot_case1
+
+# export the data
+write.csv(u_1, file = "/Users/jiamingliu/Desktop/section 4/structured_data/case1/factor/u1.csv")
+write.csv(u_2, file = "/Users/jiamingliu/Desktop/section 4/structured_data/case1/factor/u2.csv")
+write.csv(V1, file = "/Users/jiamingliu/Desktop/section 4/structured_data/case1/factor/V1.csv")
+write.csv(V2, file = "/Users/jiamingliu/Desktop/section 4/structured_data/case1/factor/V2.csv")
+write.csv(W1, file = "/Users/jiamingliu/Desktop/section 4/structured_data/case1/factor/W1.csv")
+write.csv(W2, file = "/Users/jiamingliu/Desktop/section 4/structured_data/case1/factor/W2.csv")
+```
+
+```{r}
+# scenario 2
+# generate u
+n = 50
+p = c(0.3, 0.4, 0.3)
+mu1 = c(0, 5, 15)
+mu2 = c(0, 15, 5)
+sigma = rep(1, 3)
+
+set.seed(123)
+ind_1 = runif(n, 0, 1)
+u_1 = rep(0, n)
+u_2 = rep(0, n)
+cluster = c()
+for (i in 1:n){
+  u_1[i] = rnorm(1, mu1[1], sigma[1])*(ind_1[i] < p[1]) + rnorm(1, mu1[2], sigma[2])*(ind_1[i] > p[1] && ind_1[i] < (p[1] + p[2])) + rnorm(1, mu1[3], sigma[3])*(ind_1[i] > (p[1] + p[2]))
+  u_2[i] = rnorm(1, mu2[1], sigma[1])*(ind_1[i] < p[1]) + rnorm(1, mu2[2], sigma[2])*(ind_1[i] > p[1] && ind_1[i] < (p[1] + p[2])) + rnorm(1, mu2[3], sigma[3])*(ind_1[i] > (p[1] + p[2]))
+  if (ind_1[i] < p[1]){
+    cluster[i] = "group 1"
+  } else if (ind_1[i] > p[1] && ind_1[i] < (p[1] + p[2])){
+    cluster[i] = "group 2"
+  } else{
+    cluster[i] = "group 3"
+  }
+}
+
+u_1 = u_1/norm(as.matrix(u_1))
+u_2 = u_2/norm(as.matrix(u_2))
+
+gs_u = gramSchmidt(cbind(u_1, u_2), tol = 0.001)
+u = gs_u$Q
+u_1 = u[, 1]
+u_2 = u[, 2]
+u = data.frame(u)
+
+u = data.frame(cbind(u_1, u_2))
+plot_u_t = ggplot(u, aes(x=u_1, y=u_2, color=cluster)) + geom_point(shape=1) + ggtitle("Scatter plot of true u") + theme(plot.title = element_text(hjust = 0.5))
+plot_u_t
+
+# factors of X
+px = 150
+r = c(3, 2)
+px_1 = c(60, 60, 30)
+px_2 = c(75, 75)
+spx_1 = cumsum(px_1)
+spx_2 = cumsum(px_2)
+V1 = matrix(0, px, r[1])
+V2 = matrix(0, px, r[2])
+
+set.seed(2023)
+V1[1:px_1[1], 1] = rnorm(px_1[1], 0, 1)
+for (i in 1:(r[1]-1)){
+  V1[(spx_1[i]+1):(spx_1[i+1]), i+1] = rnorm(px_1[i+1], 0, 1)
+}
+V1 = orth(V1)
+
+# one version of V2: block gaussian
+# V2[1:px_2[1], 1] = rnorm(px_2[1], 5, 25)
+# for (i in 1:(r[2]-1)){
+#   V2[(spx_2[i]+1):(spx_2[i+1]), i+1] = rnorm(px_2[i+1], 5, 25)
+# }
+# V2 = orth(V2)
+
+# another version of V2: star graph
+V_V2 = matrix(0, px, px)
+L_V = matrix(0, 75, 75)
+L_V[1, 1] = 75
+for (i in 2:75){
+  L_V[1, i] = -1
+  L_V[i, 1] = -1
+  L_V[i, i] = 1
+}
+V_V2[1:75, 1:75] = L_V
+V_V2[76:150, 76:150] = L_V
+
+v2_svd = svd(V_V2)
+V2 = v2_svd$u[, 1:r[2]]
+
+# factors of Y
+py = 150
+r = c(3, 2)
+py_1 = c(60, 45, 45)
+py_2 = c(90, 60)
+spy_1 = cumsum(py_1)
+spy_2 = cumsum(py_2)
+W1 = matrix(0, py, r[1])
+W2 = matrix(0, py, r[2])
+
+set.seed(2023)
+W1[1:py_1[1], 1] = rnorm(py_1[1], 0, 1)
+for (i in 1:(r[1]-1)){
+  W1[(spy_1[i]+1):(spy_1[i+1]), i+1] = rnorm(py_1[i+1], 0, 1)
+}
+W1 = orth(W1)
+
+# one version of V2: block gaussian
+# V2[1:px_2[1], 1] = rnorm(px_2[1], 5, 25)
+# for (i in 1:(r[2]-1)){
+#   V2[(spx_2[i]+1):(spx_2[i+1]), i+1] = rnorm(px_2[i+1], 5, 25)
+# }
+# V2 = orth(V2)
+
+# another version of V2: star graph
+W_W2 = matrix(0, py, py)
+L_W1 = matrix(0, 90, 90)
+L_W2 = matrix(0, 60, 60)
+L_W1[1, 1] = 90
+L_W2[1, 1] = 60
+for (i in 2:90){
+  L_W1[1, i] = -1
+  L_W1[i, 1] = -1
+  L_W1[i, i] = 1
+}
+for (i in 2:60){
+  L_W2[1, i] = -1
+  L_W2[i, 1] = -1
+  L_W2[i, i] = 1
+}
+W_W2[1:90, 1:90] = L_W1
+W_W2[91:150, 91:150] = L_W2
+
+w2_svd = svd(W_W2)
+W2 = w2_svd$u[, 1:r[2]]
+
+# plot and export of V1V1' and V2V2'
+# V1V1'
+V_V_1 = abs(V1%*%t(V1))
+colnames(V_V_1) <- paste(1:150)
+rownames(V_V_1) <- paste(1:150)
+
+# Transform the matrix in long format
+df_1 <- melt(V_V_1)
+colnames(df_1) <- c("x", "y", "value")
+plot_v1 = ggplot(df_1, aes(x = x, y = y, fill = value)) + geom_tile() + scale_fill_gradient(low = "white", high = "red") + coord_fixed() + ggtitle("Heatmap of first layer of X") + theme(plot.title = element_text(hjust = 0.5))
+
+# V2V2'
+V_V_2 = abs(V2%*%t(V2))
+colnames(V_V_2) <- paste(1:150)
+rownames(V_V_2) <- paste(1:150)
+
+# Transform the matrix in long format
+df_2 <- melt(V_V_2)
+colnames(df_2) <- c("x", "y", "value")
+plot_v2 = ggplot(df_2, aes(x = x, y = y, fill = value)) + geom_tile() + scale_fill_gradient(low = "white", high = "red") + coord_fixed() + ggtitle("Heatmap of second layer of X") + theme(plot.title = element_text(hjust = 0.5))
+
+# W1W1'
+W_W_1 = abs(W1%*%t(W1))
+colnames(W_W_1) <- paste(1:150)
+rownames(W_W_1) <- paste(1:150)
+
+# Transform the matrix in long format
+df_3 <- melt(W_W_1)
+colnames(df_3) <- c("x", "y", "value")
+plot_w1 = ggplot(df_3, aes(x = x, y = y, fill = value)) + geom_tile() + scale_fill_gradient(low = "white", high = "red") + coord_fixed() + ggtitle("Heatmap of first layer of Y") + theme(plot.title = element_text(hjust = 0.5))
+
+# W2W2'
+W_W_2 = abs(W2%*%t(W2))
+colnames(W_W_2) <- paste(1:150)
+rownames(W_W_2) <- paste(1:150)
+
+# Transform the matrix in long format
+df_4 <- melt(W_W_2)
+colnames(df_4) <- c("x", "y", "value")
+plot_w2 = ggplot(df_4, aes(x = x, y = y, fill = value)) + geom_tile() + scale_fill_gradient(low = "white", high = "red") + coord_fixed() + ggtitle("Heatmap of second layer of Y") + theme(plot.title = element_text(hjust = 0.5))
+
+plot_v1 + plot_v2 + plot_w1 + plot_w2
+
+# export the data
+write.csv(u_1, file = "/Users/jl259/Desktop/section_4/structure/case2/factor/u1.csv")
+write.csv(u_2, file = "/Users/jl259/Desktop/section_4/structure/case2/factor/u2.csv")
+write.csv(V1, file = "/Users/jl259/Desktop/section_4/structure/case2/factor/V1.csv")
+write.csv(V2, file = "/Users/jl259/Desktop/section_4/structure/case2/factor/V2.csv")
+write.csv(W1, file = "/Users/jl259/Desktop/section_4/structure/case2/factor/W1.csv")
+write.csv(W2, file = "/Users/jl259/Desktop/section_4/structure/case2/factor/W2.csv")
+```
+
+```{r}
+# scenario 3
+# generate u
+n = 200
+p = c(0.3, 0.4, 0.3)
+mu1 = c(0, 5, 15)
+mu2 = c(0, 15, 5)
+sigma = rep(1, 3)
+
+set.seed(123)
+ind_1 = runif(n, 0, 1)
+u_1 = rep(0, n)
+u_2 = rep(0, n)
+cluster = c()
+for (i in 1:n){
+  u_1[i] = rnorm(1, mu1[1], sigma[1])*(ind_1[i] < p[1]) + rnorm(1, mu1[2], sigma[2])*(ind_1[i] > p[1] && ind_1[i] < (p[1] + p[2])) + rnorm(1, mu1[3], sigma[3])*(ind_1[i] > (p[1] + p[2]))
+  u_2[i] = rnorm(1, mu2[1], sigma[1])*(ind_1[i] < p[1]) + rnorm(1, mu2[2], sigma[2])*(ind_1[i] > p[1] && ind_1[i] < (p[1] + p[2])) + rnorm(1, mu2[3], sigma[3])*(ind_1[i] > (p[1] + p[2]))
+  if (ind_1[i] < p[1]){
+    cluster[i] = "group 1"
+  } else if (ind_1[i] > p[1] && ind_1[i] < (p[1] + p[2])){
+    cluster[i] = "group 2"
+  } else{
+    cluster[i] = "group 3"
+  }
+}
+
+u_1 = u_1/norm(as.matrix(u_1))
+u_2 = u_2/norm(as.matrix(u_2))
+
+gs_u = gramSchmidt(cbind(u_1, u_2), tol = 0.001)
+u = gs_u$Q
+u_1 = u[, 1]
+u_2 = u[, 2]
+u = data.frame(u)
+
+u = data.frame(cbind(u_1, u_2))
+plot_u_t = ggplot(u, aes(x=u_1, y=u_2, color=cluster)) + geom_point(shape=1) + ggtitle("Scatter plot of true u") + theme(plot.title = element_text(hjust = 0.5)) + theme(aspect.ratio=1)
+plot_u_t
+
+# factors of X
+px = 150
+r = c(3, 2)
+px_1 = c(60, 60, 30)
+px_2 = c(75, 75)
+spx_1 = cumsum(px_1)
+spx_2 = cumsum(px_2)
+V1 = matrix(0, px, r[1])
+V2 = matrix(0, px, r[2])
+
+set.seed(2023)
+V1[1:px_1[1], 1] = rnorm(px_1[1], 0, 10)
+for (i in 1:(r[1]-1)){
+  V1[(spx_1[i]+1):(spx_1[i+1]), i+1] = rnorm(px_1[i+1], 0, 10)
+}
+V1 = orth(V1)
+
+# one version of V2: block gaussian
+# V2[1:px_2[1], 1] = rnorm(px_2[1], 5, 25)
+# for (i in 1:(r[2]-1)){
+#   V2[(spx_2[i]+1):(spx_2[i+1]), i+1] = rnorm(px_2[i+1], 5, 25)
+# }
+# V2 = orth(V2)
+
+# another version of V2: star graph
+V_V2 = matrix(0, px, px)
+L_V = matrix(0, 75, 75)
+L_V[1, 1] = 75
+for (i in 2:75){
+  L_V[1, i] = -1
+  L_V[i, 1] = -1
+  L_V[i, i] = 1
+}
+V_V2[1:75, 1:75] = L_V
+V_V2[76:150, 76:150] = L_V
+
+v2_svd = svd(V_V2)
+V2 = v2_svd$u[, 1:r[2]]
+
+# factors of Y
+py = 50
+r = c(3, 2)
+py_1 = c(20, 15, 15)
+py_2 = c(30, 20)
+spy_1 = cumsum(py_1)
+spy_2 = cumsum(py_2)
+W1 = matrix(0, py, r[1])
+W2 = matrix(0, py, r[2])
+
+set.seed(2023)
+W1[1:py_1[1], 1] = rnorm(py_1[1], 0, 10)
+for (i in 1:(r[1]-1)){
+  W1[(spy_1[i]+1):(spy_1[i+1]), i+1] = rnorm(py_1[i+1], 0, 10)
+}
+W1 = orth(W1)
+
+# one version of V2: block gaussian
+# V2[1:px_2[1], 1] = rnorm(px_2[1], 5, 25)
+# for (i in 1:(r[2]-1)){
+#   V2[(spx_2[i]+1):(spx_2[i+1]), i+1] = rnorm(px_2[i+1], 5, 25)
+# }
+# V2 = orth(V2)
+
+# another version of V2: star graph
+W_W2 = matrix(0, py, py)
+L_W1 = matrix(0, 30, 30)
+L_W2 = matrix(0, 20, 20)
+L_W1[1, 1] = 30
+L_W2[1, 1] = 20
+for (i in 2:30){
+  L_W1[1, i] = -1
+  L_W1[i, 1] = -1
+  L_W1[i, i] = 1
+}
+for (i in 2:20){
+  L_W2[1, i] = -1
+  L_W2[i, 1] = -1
+  L_W2[i, i] = 1
+}
+W_W2[1:30, 1:30] = L_W1
+W_W2[31:50, 31:50] = L_W2
+
+w2_svd = svd(W_W2)
+W2 = w2_svd$u[, 1:r[2]]
+
+# plot and export of V1V1' and V2V2'
+# V1V1'
+V_V_1 = abs(V1%*%t(V1))
+colnames(V_V_1) <- paste(1:150)
+rownames(V_V_1) <- paste(1:150)
+
+# Transform the matrix in long format
+df_1 <- melt(V_V_1)
+colnames(df_1) <- c("x", "y", "value")
+plot_v1 = ggplot(df_1, aes(x = x, y = y, fill = value)) + geom_tile() + scale_fill_gradient(low = "white", high = "red") + coord_fixed() +
+  theme(axis.title.x = element_text(size = 8), 
+          axis.text.x = element_text(size = 5), 
+          axis.title.y = element_text(size = 8), 
+          axis.text.y = element_text(size = 5), 
+          title = element_text(size = 8)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  theme(aspect.ratio=1) + 
+  theme(legend.key.height= unit(0.5, 'cm'),
+        legend.key.width= unit(0.5, 'cm')) + 
+  theme(legend.title = element_text(size=8)) + 
+  theme(legend.text  = element_text(size=5)) +
+  theme(plot.margin = margin(0, 0, 0, 0)) +   
+  ggtitle(TeX("$V_{1}V_{1}^{\\prime}$")) + theme(plot.title = element_text(hjust = 0.5))
+
+# V2V2'
+V_V_2 = abs(V2%*%t(V2))
+colnames(V_V_2) <- paste(1:150)
+rownames(V_V_2) <- paste(1:150)
+
+# Transform the matrix in long format
+df_2 <- melt(V_V_2)
+colnames(df_2) <- c("x", "y", "value")
+plot_v2 = ggplot(df_2, aes(x = x, y = y, fill = value)) + geom_tile() +
+scale_fill_gradient(low = "white", high = "red") + coord_fixed() +
+  theme(axis.title.x = element_text(size = 8), 
+          axis.text.x = element_text(size = 5), 
+          axis.title.y = element_text(size = 8), 
+          axis.text.y = element_text(size = 5), 
+          title = element_text(size = 8)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  theme(aspect.ratio=1) + 
+  theme(legend.key.height= unit(0.5, 'cm'),
+        legend.key.width= unit(0.5, 'cm')) + 
+  theme(legend.title = element_text(size=8)) + 
+  theme(legend.text  = element_text(size=5)) +
+  theme(plot.margin = margin(0, 0, 0, 0)) +   
+  ggtitle(TeX("$V_{2}V_{2}^{\\prime}$")) + theme(plot.title = element_text(hjust = 0.5))
+
+# W1W1'
+W_W_1 = abs(W1%*%t(W1))
+colnames(W_W_1) <- paste(1:50)
+rownames(W_W_1) <- paste(1:50)
+
+# Transform the matrix in long format
+df_3 <- melt(W_W_1)
+colnames(df_3) <- c("x", "y", "value")
+plot_w1 = ggplot(df_3, aes(x = x, y = y, fill = value)) + geom_tile() + scale_fill_gradient(low = "white", high = "red") + coord_fixed() +
+  theme(axis.title.x = element_text(size = 8), 
+          axis.text.x = element_text(size = 5), 
+          axis.title.y = element_text(size = 8), 
+          axis.text.y = element_text(size = 5), 
+          title = element_text(size = 8)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  theme(aspect.ratio=1) + 
+  theme(legend.key.height= unit(0.5, 'cm'),
+        legend.key.width= unit(0.5, 'cm')) + 
+  theme(legend.title = element_text(size=8)) + 
+  theme(legend.text  = element_text(size=5)) +
+  theme(plot.margin = margin(0, 0, 0, 0)) +   
+  ggtitle(TeX("$W_{1}W_{1}^{\\prime}$")) + theme(plot.title = element_text(hjust = 0.5))
+
+# W2W2'
+W_W_2 = abs(W2%*%t(W2))
+colnames(W_W_2) <- paste(1:50)
+rownames(W_W_2) <- paste(1:50)
+
+# Transform the matrix in long format
+df_4 <- melt(W_W_2)
+colnames(df_4) <- c("x", "y", "value")
+plot_w2 = ggplot(df_4, aes(x = x, y = y, fill = value)) + geom_tile() +
+  theme(axis.title.x = element_text(size = 8), 
+          axis.text.x = element_text(size = 5), 
+          axis.title.y = element_text(size = 8), 
+          axis.text.y = element_text(size = 5), 
+          title = element_text(size = 8)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  theme(aspect.ratio=1) + 
+  theme(legend.key.height= unit(0.5, 'cm'),
+        legend.key.width= unit(0.5, 'cm')) + 
+  theme(legend.title = element_text(size=8)) + 
+  theme(legend.text  = element_text(size=5)) +
+  theme(plot.margin = margin(0, 0, 0, 0)) +   
+  scale_fill_gradient(low = "white", high = "red") + coord_fixed() + ggtitle(TeX("$W_{2}W_{2}^{\\prime}$")) + theme(plot.title = element_text(hjust = 0.5))
+
+plot_v1 + plot_v2 + plot_w1 + plot_w2
+
+# export the data
+# write.csv(u_1, file = "/Users/jl259/Desktop/section_4/structure/case3/factor/u1.csv")
+# write.csv(u_2, file = "/Users/jl259/Desktop/section_4/structure/case3/factor/u2.csv")
+# write.csv(V1, file = "/Users/jl259/Desktop/section_4/structure/case3/factor/V1.csv")
+# write.csv(V2, file = "/Users/jl259/Desktop/section_4/structure/case3/factor/V2.csv")
+# write.csv(W1, file = "/Users/jl259/Desktop/section_4/structure/case3/factor/W1.csv")
+# write.csv(W2, file = "/Users/jl259/Desktop/section_4/structure/case3/factor/W2.csv")
+```
+
+\section{Simulation Results}
+\textbf{Below is the simulation results:}
+```{r}
+# case1
+# by JisstPCA
+u1_jisst = as.matrix(read.csv("/Users/jiamingliu/Desktop/5_1/case1/u1_jisst.csv", header = F))
+u2_jisst = as.matrix(read.csv("/Users/jiamingliu/Desktop/5_1/case1/u2_jisst.csv", header = F))
+V1_jisst = as.matrix(read.csv("/Users/jiamingliu/Desktop/5_1/case1/V1_jisst.csv", header = F))
+V2_jisst = as.matrix(read.csv("/Users/jiamingliu/Desktop/5_1/case1/V2_jisst.csv", header = F))
+W1_jisst = as.matrix(read.csv("/Users/jiamingliu/Desktop/5_1/case1/W1_jisst.csv", header = F))
+W2_jisst = as.matrix(read.csv("/Users/jiamingliu/Desktop/5_1/case1/W2_jisst.csv", header = F))
+
+u_jisst = data.frame(cbind(u1_jisst, u2_jisst))
+plot_u_jisst = ggplot(u_jisst, aes(x=u1_jisst, y=u2_jisst, color=cluster)) + geom_point(shape=1) + ggtitle("u from JisstPCA") + theme(plot.title = element_text(hjust = 0.5)) + theme(aspect.ratio=1) + theme(legend.position = "none")
+plot_u_jisst
+
+VV1_jisst = abs(V1_jisst%*%t(V1_jisst))
+colnames(VV1_jisst) <- paste(1:50)
+rownames(VV1_jisst) <- paste(1:50)
+
+# Transform the matrix in long format
+df_1 <- melt(VV1_jisst)
+colnames(df_1) <- c("x", "y", "value")
+plot_v1_jisst = ggplot(df_1, aes(x = x, y = y, fill = value)) + geom_tile() + scale_fill_gradient(low = "white", high = "red") + coord_fixed() +
+  theme(axis.title.x = element_text(size = 8), 
+          axis.text.x = element_text(size = 5), 
+          axis.title.y = element_text(size = 8), 
+          axis.text.y = element_text(size = 5), 
+          title = element_text(size = 8)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  theme(aspect.ratio=1) + 
+  theme(legend.key.height= unit(0.5, 'cm'),
+        legend.key.width= unit(0.5, 'cm')) + 
+  theme(legend.title = element_text(size=8)) + 
+  theme(legend.text  = element_text(size=5)) +
+  theme(plot.margin = margin(0, 0, 0, 0)) +   
+  ggtitle(TeX("JisstPCA $V_{1}V_{1}^{\\prime}$")) + theme(plot.title = element_text(hjust = 0.5))
+
+# V2V2'
+VV2_jisst = abs(V2_jisst%*%t(V2_jisst))
+colnames(VV2_jisst) <- paste(1:50)
+rownames(VV2_jisst) <- paste(1:50)
+
+# Transform the matrix in long format
+df_2 <- melt(VV2_jisst)
+colnames(df_2) <- c("x", "y", "value")
+plot_v2_jisst = ggplot(df_2, aes(x = x, y = y, fill = value)) + geom_tile() +
+scale_fill_gradient(low = "white", high = "red") + coord_fixed() +
+  theme(axis.title.x = element_text(size = 8), 
+          axis.text.x = element_text(size = 5), 
+          axis.title.y = element_text(size = 8), 
+          axis.text.y = element_text(size = 5), 
+          title = element_text(size = 8)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  theme(aspect.ratio=1) + 
+  theme(legend.key.height= unit(0.5, 'cm'),
+        legend.key.width= unit(0.5, 'cm')) + 
+  theme(legend.title = element_text(size=8)) + 
+  theme(legend.text  = element_text(size=5)) +
+  theme(plot.margin = margin(0, 0, 0, 0)) +   
+  ggtitle(TeX("JisstPCA $V_{2}V_{2}^{\\prime}$")) + theme(plot.title = element_text(hjust = 0.5))
+
+# W1W1'
+WW1_jisst = abs(W1_jisst%*%t(W1_jisst))
+colnames(WW1_jisst) <- paste(1:50)
+rownames(WW1_jisst) <- paste(1:50)
+
+# Transform the matrix in long format
+df_3 <- melt(WW1_jisst)
+colnames(df_3) <- c("x", "y", "value")
+plot_w1_jisst = ggplot(df_3, aes(x = x, y = y, fill = value)) + geom_tile() + scale_fill_gradient(low = "white", high = "red") + coord_fixed() +
+  theme(axis.title.x = element_text(size = 8), 
+          axis.text.x = element_text(size = 5), 
+          axis.title.y = element_text(size = 8), 
+          axis.text.y = element_text(size = 5), 
+          title = element_text(size = 8)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  theme(aspect.ratio=1) + 
+  theme(legend.key.height= unit(0.5, 'cm'),
+        legend.key.width= unit(0.5, 'cm')) + 
+  theme(legend.title = element_text(size=8)) + 
+  theme(legend.text  = element_text(size=5)) +
+  theme(plot.margin = margin(0, 0, 0, 0)) +   
+  ggtitle(TeX("JisstPCA $W_{1}W_{1}^{\\prime}$")) + theme(plot.title = element_text(hjust = 0.5))
+
+# W2W2'
+WW2_jisst = abs(W2_jisst%*%t(W2_jisst))
+colnames(WW2_jisst) <- paste(1:50)
+rownames(WW2_jisst) <- paste(1:50)
+
+# Transform the matrix in long format
+df_4 <- melt(WW2_jisst)
+colnames(df_4) <- c("x", "y", "value")
+plot_w2_jisst = ggplot(df_4, aes(x = x, y = y, fill = value)) + geom_tile() +
+  theme(axis.title.x = element_text(size = 8), 
+          axis.text.x = element_text(size = 5), 
+          axis.title.y = element_text(size = 8), 
+          axis.text.y = element_text(size = 5), 
+          title = element_text(size = 8)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  theme(aspect.ratio=1) + 
+  theme(legend.key.height= unit(0.5, 'cm'),
+        legend.key.width= unit(0.5, 'cm')) + 
+  theme(legend.title = element_text(size=8)) + 
+  theme(legend.text  = element_text(size=5)) +
+  theme(plot.margin = margin(0, 0, 0, 0)) +   
+  scale_fill_gradient(low = "white", high = "red") + coord_fixed() + ggtitle(TeX("JisstPCA $W_{2}W_{2}^{\\prime}$")) + theme(plot.title = element_text(hjust = 0.5))
+
+plot_v1_jisst + plot_v2_jisst + plot_w1_jisst + plot_w2_jisst
+
+# by iHOSVD
+u1_ihosvd = as.matrix(read.csv("/Users/jiamingliu/Desktop/5_1/case1/u1_ihosvd.csv", header = F))
+u2_ihosvd = as.matrix(read.csv("/Users/jiamingliu/Desktop/5_1/case1/u2_ihosvd.csv", header = F))
+V1_ihosvd = as.matrix(read.csv("/Users/jiamingliu/Desktop/5_1/case1/V1_ihosvd.csv", header = F))
+V2_ihosvd = as.matrix(read.csv("/Users/jiamingliu/Desktop/5_1/case1/V2_ihosvd.csv", header = F))
+W1_ihosvd = as.matrix(read.csv("/Users/jiamingliu/Desktop/5_1/case1/W1_ihosvd.csv", header = F))
+W2_ihosvd = as.matrix(read.csv("/Users/jiamingliu/Desktop/5_1/case1/W2_ihosvd.csv", header = F))
+
+u_ihosvd = data.frame(cbind(u1_ihosvd, u2_ihosvd))
+plot_u_ihosvd = ggplot(u_ihosvd, aes(x=u1_ihosvd, y=u2_ihosvd, color=cluster)) + geom_point(shape=1) + ggtitle("u from iHOSVD") + theme(plot.title = element_text(hjust = 0.5)) + theme(aspect.ratio=1) + theme(legend.position = "none")
+plot_u_ihosvd
+
+VV1_ihosvd = abs(V1_ihosvd%*%t(V1_ihosvd))
+colnames(VV1_ihosvd) <- paste(1:50)
+rownames(VV1_ihosvd) <- paste(1:50)
+
+# Transform the matrix in long format
+df_1 <- melt(VV1_ihosvd)
+colnames(df_1) <- c("x", "y", "value")
+plot_v1_ihosvd = ggplot(df_1, aes(x = x, y = y, fill = value)) + geom_tile() + scale_fill_gradient(low = "white", high = "red") + coord_fixed() +
+  theme(axis.title.x = element_text(size = 8), 
+          axis.text.x = element_text(size = 5), 
+          axis.title.y = element_text(size = 8), 
+          axis.text.y = element_text(size = 5), 
+          title = element_text(size = 8)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  theme(aspect.ratio=1) + 
+  theme(legend.key.height= unit(0.5, 'cm'),
+        legend.key.width= unit(0.5, 'cm')) + 
+  theme(legend.title = element_text(size=8)) + 
+  theme(legend.text  = element_text(size=5)) +
+  theme(plot.margin = margin(0, 0, 0, 0)) +   
+  ggtitle(TeX("iHOSVD $V_{1}V_{1}^{\\prime}$")) + theme(plot.title = element_text(hjust = 0.5))
+
+# V2V2'
+VV2_ihosvd = abs(V2_ihosvd%*%t(V2_ihosvd))
+colnames(VV2_ihosvd) <- paste(1:50)
+rownames(VV2_ihosvd) <- paste(1:50)
+
+# Transform the matrix in long format
+df_2 <- melt(VV2_ihosvd)
+colnames(df_2) <- c("x", "y", "value")
+plot_v2_ihosvd = ggplot(df_2, aes(x = x, y = y, fill = value)) + geom_tile() +
+scale_fill_gradient(low = "white", high = "red") + coord_fixed() +
+  theme(axis.title.x = element_text(size = 8), 
+          axis.text.x = element_text(size = 5), 
+          axis.title.y = element_text(size = 8), 
+          axis.text.y = element_text(size = 5), 
+          title = element_text(size = 8)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  theme(aspect.ratio=1) + 
+  theme(legend.key.height= unit(0.5, 'cm'),
+        legend.key.width= unit(0.5, 'cm')) + 
+  theme(legend.title = element_text(size=8)) + 
+  theme(legend.text  = element_text(size=5)) +
+  theme(plot.margin = margin(0, 0, 0, 0)) +   
+  ggtitle(TeX("iHOSVD $V_{2}V_{2}^{\\prime}$")) + theme(plot.title = element_text(hjust = 0.5))
+
+# W1W1'
+WW1_ihosvd = abs(W1_ihosvd%*%t(W1_ihosvd))
+colnames(WW1_ihosvd) <- paste(1:50)
+rownames(WW1_ihosvd) <- paste(1:50)
+
+# Transform the matrix in long format
+df_3 <- melt(WW1_ihosvd)
+colnames(df_3) <- c("x", "y", "value")
+plot_w1_ihosvd = ggplot(df_3, aes(x = x, y = y, fill = value)) + geom_tile() + scale_fill_gradient(low = "white", high = "red") + coord_fixed() +
+  theme(axis.title.x = element_text(size = 8), 
+          axis.text.x = element_text(size = 5), 
+          axis.title.y = element_text(size = 8), 
+          axis.text.y = element_text(size = 5), 
+          title = element_text(size = 8)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  theme(aspect.ratio=1) + 
+  theme(legend.key.height= unit(0.5, 'cm'),
+        legend.key.width= unit(0.5, 'cm')) + 
+  theme(legend.title = element_text(size=8)) + 
+  theme(legend.text  = element_text(size=5)) +
+  theme(plot.margin = margin(0, 0, 0, 0)) +   
+  ggtitle(TeX("iHOSVD $W_{1}W_{1}^{\\prime}$")) + theme(plot.title = element_text(hjust = 0.5))
+
+# W2W2'
+WW2_ihosvd = abs(W2_ihosvd%*%t(W2_ihosvd))
+colnames(WW2_ihosvd) <- paste(1:50)
+rownames(WW2_ihosvd) <- paste(1:50)
+
+# Transform the matrix in long format
+df_4 <- melt(WW2_ihosvd)
+colnames(df_4) <- c("x", "y", "value")
+plot_w2_ihosvd = ggplot(df_4, aes(x = x, y = y, fill = value)) + geom_tile() +
+  theme(axis.title.x = element_text(size = 8), 
+          axis.text.x = element_text(size = 5), 
+          axis.title.y = element_text(size = 8), 
+          axis.text.y = element_text(size = 5), 
+          title = element_text(size = 8)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  theme(aspect.ratio=1) + 
+  theme(legend.key.height= unit(0.5, 'cm'),
+        legend.key.width= unit(0.5, 'cm')) + 
+  theme(legend.title = element_text(size=8)) + 
+  theme(legend.text  = element_text(size=5)) +
+  theme(plot.margin = margin(0, 0, 0, 0)) +   
+  scale_fill_gradient(low = "white", high = "red") + coord_fixed() + ggtitle(TeX("iHOSVD $W_{2}W_{2}^{\\prime}$")) + theme(plot.title = element_text(hjust = 0.5))
+
+plot_v1_ihosvd + plot_v2_ihosvd + plot_w1_ihosvd + plot_w2_ihosvd
+
+# by iHOOI
+u1_ihooi = as.matrix(read.csv("/Users/jiamingliu/Desktop/5_1/case1/u1_ihooi.csv", header = F))
+u2_ihooi = as.matrix(read.csv("/Users/jiamingliu/Desktop/5_1/case1/u2_ihooi.csv", header = F))
+V1_ihooi = as.matrix(read.csv("/Users/jiamingliu/Desktop/5_1/case1/V1_ihooi.csv", header = F))
+V2_ihooi = as.matrix(read.csv("/Users/jiamingliu/Desktop/5_1/case1/V2_ihooi.csv", header = F))
+W1_ihooi = as.matrix(read.csv("/Users/jiamingliu/Desktop/5_1/case1/W1_ihooi.csv", header = F))
+W2_ihooi = as.matrix(read.csv("/Users/jiamingliu/Desktop/5_1/case1/W2_ihooi.csv", header = F))
+
+u_ihooi = data.frame(cbind(u1_ihooi, u2_ihooi))
+plot_u_ihooi = ggplot(u_ihosvd, aes(x=u1_ihooi, y=u2_ihooi, color=cluster)) + geom_point(shape=1) + ggtitle("u from iHOOI") + theme(plot.title = element_text(hjust = 0.5)) + theme(aspect.ratio=1) + theme(legend.position = "none")
+plot_u_ihooi
+
+VV1_ihooi = abs(V1_ihooi%*%t(V1_ihooi))
+colnames(VV1_ihooi) <- paste(1:50)
+rownames(VV1_ihooi) <- paste(1:50)
+
+# Transform the matrix in long format
+df_1 <- melt(VV1_ihooi)
+colnames(df_1) <- c("x", "y", "value")
+plot_v1_ihooi = ggplot(df_1, aes(x = x, y = y, fill = value)) + geom_tile() + scale_fill_gradient(low = "white", high = "red") + coord_fixed() +
+  theme(axis.title.x = element_text(size = 8), 
+          axis.text.x = element_text(size = 5), 
+          axis.title.y = element_text(size = 8), 
+          axis.text.y = element_text(size = 5), 
+          title = element_text(size = 8)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  theme(aspect.ratio=1) + 
+  theme(legend.key.height= unit(0.5, 'cm'),
+        legend.key.width= unit(0.5, 'cm')) + 
+  theme(legend.title = element_text(size=8)) + 
+  theme(legend.text  = element_text(size=5)) +
+  theme(plot.margin = margin(0, 0, 0, 0)) +   
+  ggtitle(TeX("iHOOI $V_{1}V_{1}^{\\prime}$")) + theme(plot.title = element_text(hjust = 0.5))
+
+# V2V2'
+VV2_ihooi = abs(V2_ihooi%*%t(V2_ihooi))
+colnames(VV2_ihooi) <- paste(1:50)
+rownames(VV2_ihooi) <- paste(1:50)
+
+# Transform the matrix in long format
+df_2 <- melt(VV2_ihooi)
+colnames(df_2) <- c("x", "y", "value")
+plot_v2_ihooi = ggplot(df_2, aes(x = x, y = y, fill = value)) + geom_tile() +
+scale_fill_gradient(low = "white", high = "red") + coord_fixed() +
+  theme(axis.title.x = element_text(size = 8), 
+          axis.text.x = element_text(size = 5), 
+          axis.title.y = element_text(size = 8), 
+          axis.text.y = element_text(size = 5), 
+          title = element_text(size = 8)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  theme(aspect.ratio=1) + 
+  theme(legend.key.height= unit(0.5, 'cm'),
+        legend.key.width= unit(0.5, 'cm')) + 
+  theme(legend.title = element_text(size=8)) + 
+  theme(legend.text  = element_text(size=5)) +
+  theme(plot.margin = margin(0, 0, 0, 0)) +   
+  ggtitle(TeX("iHOOI $V_{2}V_{2}^{\\prime}$")) + theme(plot.title = element_text(hjust = 0.5))
+
+# W1W1'
+WW1_ihooi = abs(W1_ihooi%*%t(W1_ihooi))
+colnames(WW1_ihooi) <- paste(1:50)
+rownames(WW1_ihooi) <- paste(1:50)
+
+# Transform the matrix in long format
+df_3 <- melt(WW1_ihooi)
+colnames(df_3) <- c("x", "y", "value")
+plot_w1_ihooi = ggplot(df_3, aes(x = x, y = y, fill = value)) + geom_tile() + scale_fill_gradient(low = "white", high = "red") + coord_fixed() +
+  theme(axis.title.x = element_text(size = 8), 
+          axis.text.x = element_text(size = 5), 
+          axis.title.y = element_text(size = 8), 
+          axis.text.y = element_text(size = 5), 
+          title = element_text(size = 8)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  theme(aspect.ratio=1) + 
+  theme(legend.key.height= unit(0.5, 'cm'),
+        legend.key.width= unit(0.5, 'cm')) + 
+  theme(legend.title = element_text(size=8)) + 
+  theme(legend.text  = element_text(size=5)) +
+  theme(plot.margin = margin(0, 0, 0, 0)) +   
+  ggtitle(TeX("iHOOI $W_{1}W_{1}^{\\prime}$")) + theme(plot.title = element_text(hjust = 0.5))
+
+# W2W2'
+WW2_ihooi = abs(W2_ihooi%*%t(W2_ihooi))
+colnames(WW2_ihooi) <- paste(1:50)
+rownames(WW2_ihooi) <- paste(1:50)
+
+# Transform the matrix in long format
+df_4 <- melt(WW2_ihooi)
+colnames(df_4) <- c("x", "y", "value")
+plot_w2_ihooi = ggplot(df_4, aes(x = x, y = y, fill = value)) + geom_tile() +
+  theme(axis.title.x = element_text(size = 8), 
+          axis.text.x = element_text(size = 5), 
+          axis.title.y = element_text(size = 8), 
+          axis.text.y = element_text(size = 5), 
+          title = element_text(size = 8)) +
+  theme(plot.title = element_text(hjust = 0.5)) + 
+  theme(aspect.ratio=1) + 
+  theme(legend.key.height= unit(0.5, 'cm'),
+        legend.key.width= unit(0.5, 'cm')) + 
+  theme(legend.title = element_text(size=8)) + 
+  theme(legend.text  = element_text(size=5)) +
+  theme(plot.margin = margin(0, 0, 0, 0)) +   
+  scale_fill_gradient(low = "white", high = "red") + coord_fixed() + ggtitle(TeX("iHOOI $W_{2}W_{2}^{\\prime}$")) + theme(plot.title = element_text(hjust = 0.5))
+
+plot_v1_ihooi + plot_v2_ihooi + plot_w1_ihooi + plot_w2_ihooi
+```
+
+
+
+
+
+
