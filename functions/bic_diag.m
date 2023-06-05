@@ -1,8 +1,8 @@
-% BIC method for multi-factor rank selection
+% BIC method for multi-factor rank selection, diagonal signal D
 
-% input of bic_def:
+% input of bic_diag:
 
-% X, Y: semi-symmetric tensors
+% X, Y: multi-factor semi-symmetric tensors
 % rank_max: the largest value of rank you want to try. For example, when p,
 % q are large, it takes long time to try all different possible ranks. As
 % we only care about the low rank structure of tensor factors Vk and Wk, we
@@ -16,12 +16,12 @@
 % When method = 2, we assume they have the same rank
 
 
-% output of bic_def:
+% output of bic_diag:
 
 % bic_rx, bic_ry: best rank selected by minimizing BIC. bic_rx, bic_ry are vectors of ranks
 % for each Vk, Wk, so bic_rx, bic_ry are of dimension K
 
-function [bic_rx, bic_ry] = bic_def(X, Y, rank_max, K, u0, lambda, tol, max_iter, method, deflation)
+function [bic_rx, bic_ry] = bic_diag(X, Y, rank_max, K, u0, lambda, tol, max_iter, method, deflation)
 
     bic_rx = ones(K, 1); % K is the number of layers, which is prespecified
     bic_ry = ones(K, 1);
@@ -38,13 +38,13 @@ function [bic_rx, bic_ry] = bic_def(X, Y, rank_max, K, u0, lambda, tol, max_iter
 
             for i = 1:rank_max
                 for j = 1:rank_max
-                    bic(i, j) = bic_sst(i, j, X_iter{k}, Y_iter{k}, u0, lambda(k), tol, max_iter);
+                    bic(i, j) = bic_dsst(i, j, X_iter{k}, Y_iter{k}, u0, lambda(k), tol, max_iter);
                 end
             end
             [~, bic_min] = min(bic(:));
             [bic_rx(k), bic_ry(k)] = ind2sub(size(bic), bic_min); % bic estimation at kth layer
 
-            [hat_u, hat_V, hat_W, ~, ~, hat_X, hat_Y] = Jisst_single(X_iter{k}, Y_iter{k}, u0, bic_rx(k), bic_ry(k), lambda(k), tol, max_iter);
+            [hat_u, hat_V, hat_W, ~, ~, hat_X, hat_Y] = dJisst_single(X_iter{k}, Y_iter{k}, u0, bic_rx(k), bic_ry(k), lambda(k), tol, max_iter);
             
             if deflation == 0 % subtract deflation
                 X_iter{k+1} = X_iter{k} - hat_X;
@@ -89,13 +89,13 @@ function [bic_rx, bic_ry] = bic_def(X, Y, rank_max, K, u0, lambda, tol, max_iter
             bic = ones(rank_max, 1);
 
             for i = 1:rank_max
-                bic(i) = bic_sst(i, i, X_iter{k}, Y_iter{k}, u0, lambda(k), tol, max_iter);
+                bic(i) = bic_dsst(i, i, X_iter{k}, Y_iter{k}, u0, lambda(k), tol, max_iter);
             end
             [~, bic_min] = min(bic);
             bic_rx(k) = bic_min; % BIC estimation for the kth layer, X
             bic_ry(k) = bic_min; % BIC estimation for the kth layer, Y
 
-            [hat_u, hat_V, hat_W, ~, ~, hat_X, hat_Y] = Jisst_single(X_iter{k}, Y_iter{k}, u0, bic_rx(k), bic_ry(k), lambda(k), tol, max_iter);
+            [hat_u, hat_V, hat_W, ~, ~, hat_X, hat_Y] = dJisst_single(X_iter{k}, Y_iter{k}, u0, bic_rx(k), bic_ry(k), lambda(k), tol, max_iter);
             
             if deflation == 0 % subtract deflation
                 X_iter{k+1} = X_iter{k} - hat_X;

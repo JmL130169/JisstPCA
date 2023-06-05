@@ -1,6 +1,7 @@
-% Main function of the model joint-integrated semi-symmetric tensor PCA
+% Function of the model joint-integrated semi-symmetric tensor PCA,
+% diagonal signal D
 
-% Input of JisstPCA:
+% Input of dJisstPCA:
 
 % (a). Required input parameters:
 
@@ -33,16 +34,15 @@
 % method = 1
 
 
-% Output of JisstPCA:
+% Output of dJisstPCA:
 
 % u_est, V_est, W_est: cells with K elements. The estimation of kth factor 
 % of u, V, W are the kth factor in u_est, V_est, W_est. For example, the
 % estimation of uk is u_est{k}
-% d_est: matrix of dimension 2*K, while the first row is estimation of dx, 
-% and second row is estimation of dy. For example, the estimation of dx_k
-% is d_est(1, k)
+% Dx_est, Dy_est; cells with K elements. The estimation of kth signal of X
+% (Dx_k) or Y (Dy_k) are the kth elements in Dx_est or Dy_est
 
-function [u_est, V_est, W_est, d_est] = JisstPCA(X, Y, K, varargin)
+function [u_est, V_est, W_est, Dx_est, Dy_est] = dJisstPCA(X, Y, K, varargin)
 
     % create an input parser object
     p = inputParser;
@@ -105,41 +105,43 @@ function [u_est, V_est, W_est, d_est] = JisstPCA(X, Y, K, varargin)
         u0 = init(X, Y); 
     end
     if isnan(rx)
-        rx = bic_def_1(X, Y, rank_max, K, u0, lambda, tol, max_iter, method, deflation);
+        rx = bic_diag_1(X, Y, rank_max, K, u0, lambda, tol, max_iter, method, deflation);
     end
     if isnan(ry)
-        ry = bic_def_2(X, Y, rank_max, K, u0, lambda, tol, max_iter, method, deflation);
+        ry = bic_diag_2(X, Y, rank_max, K, u0, lambda, tol, max_iter, method, deflation);
     end
-
+   
     %% main function when all the hyperparameters are known
-    sz = size(rx);
-    X_est = cell(sz(2) + 1, 1);
-    Y_est = cell(sz(2) + 1, 1);
-    u_est = cell(sz(2) + 1, 1);
-    V_est = cell(sz(2) + 1, 1);
-    W_est = cell(sz(2) + 1, 1);
-    d_est = zeros(2, sz(2)+1);
+    sz = size(rx, 2);
+    X_est = cell(sz + 1, 1);
+    Y_est = cell(sz + 1, 1);
+    u_est = cell(sz + 1, 1);
+    V_est = cell(sz + 1, 1);
+    W_est = cell(sz + 1, 1);
+    Dx_est = cell(sz + 1, 1);
+    Dy_est = cell(sz + 1, 1);
 
+    % set initialization and let X^{1} = X, Y^{1} = Y as in our algorithm
     u_est{1} = u0;
     X_est{1} = X;
     Y_est{1} = Y;
 
     k = 1;
-    while k < K + 1
-        [hat_u, hat_V, hat_W, d_x, d_y, ~, ~] = Jisst_single(X_est{k}, Y_est{k}, u_est{k}, rx(k), ry(k), lambda(k), tol, max_iter);
+    while k < (K + 1)
+        [hat_u, hat_V, hat_W, Dx, Dy, ~, ~] = dJisst_single(X_est{k}, Y_est{k}, u_est{k}, rx(k), ry(k), lambda(k), tol, max_iter);
         
         % update of tensor factors
         u_est{k+1} = hat_u;
         V_est{k+1} = hat_V;
         W_est{k+1} = hat_W;
-        d_est(1, k+1) = d_x; % estimation of d_{x_{k}}
-        d_est(2, k+1) = d_y; % estimation of d_{y_{k}}
+        Dx_est{k+1} = Dx;
+        Dy_est{k+1} = Dy;
 
-        % deflate
-        if deflation == 0 % subtract deflation
-            X_est{k+1} = X_est{k} - d_x*squeeze(ttt(tensor(hat_V*hat_V'), tensor(hat_u)));
-            Y_est{k+1} = Y_est{k} - d_y*squeeze(ttt(tensor(hat_W*hat_W'), tensor(hat_u)));
-        elseif deflation == 1 % project deflation
+        % deflation
+        if def == 0 % subtract deflation
+            X_est{k+1} = X_est{k} - squeeze(ttt(tensor(hat_V*Dx*hat_V'), tensor(hat_u)));
+            Y_est{k+1} = Y_est{k} - squeeze(ttt(tensor(hat_W*Dy*hat_W'), tensor(hat_u)));
+        elseif def == 1 % project deflation
             sz_X = size(X);
             sz_Y = size(Y);
             uk = double(eye(sz_X(3)) - u_est{k+1}*u_est{k+1}');
@@ -147,9 +149,9 @@ function [u_est, V_est, W_est, d_est] = JisstPCA(X, Y, K, varargin)
             Wk = double(eye(sz_Y(1)) - W_est{k+1}*W_est{k+1}');
             X_est{k+1} = ttm(X_est{k}, {Vk, Vk, uk}, [1, 2, 3]);
             Y_est{k+1} = ttm(Y_est{k}, {Wk, Wk, uk}, [1, 2, 3]);
-        elseif deflation == 2 % orthogonal joint factor after subtract deflation
-            X_est{k+1} = X_est{k} - d_x*squeeze(ttt(tensor(hat_V*hat_V'), tensor(hat_u)));
-            Y_est{k+1} = Y_est{k} - d_y*squeeze(ttt(tensor(hat_W*hat_W'), tensor(hat_u)));
+        elseif def == 2 % orthogonal joint factor after subtract deflation
+            X_est{k+1} = X_est{k} - squeeze(ttt(tensor(hat_V*Dx*hat_V'), tensor(hat_u)));
+            Y_est{k+1} = Y_est{k} - squeeze(ttt(tensor(hat_W*Dy*hat_W'), tensor(hat_u)));
             
             sz_X = size(X);
             sz_Y = size(Y);
@@ -159,9 +161,9 @@ function [u_est, V_est, W_est, d_est] = JisstPCA(X, Y, K, varargin)
 
             X_est{k+1} = ttm(X_est{k+1}, {uk}, 3);
             Y_est{k+1} = ttm(Y_est{k+1}, {uk}, 3);
-        elseif deflation == 3 % orthogonal individual factors after subtract deflation
-            X_est{k+1} = X_est{k} - d_x*squeeze(ttt(tensor(hat_V*hat_V'), tensor(hat_u)));
-            Y_est{k+1} = Y_est{k} - d_y*squeeze(ttt(tensor(hat_W*hat_W'), tensor(hat_u)));
+        elseif def == 3 % orthogonal individual factors after subtract deflation
+            X_est{k+1} = X_est{k} - squeeze(ttt(tensor(hat_V*Dx*hat_V'), tensor(hat_u)));
+            Y_est{k+1} = Y_est{k} - squeeze(ttt(tensor(hat_W*Dy*hat_W'), tensor(hat_u)));
             
             sz_X = size(X);
             sz_Y = size(Y);
@@ -173,7 +175,7 @@ function [u_est, V_est, W_est, d_est] = JisstPCA(X, Y, K, varargin)
             Y_est{k+1} = ttm(Y_est{k+1}, {Wk, Wk}, [1, 2]);
         end
         
-        % finish the while loop
+        % next iteration
         k = k+1;
     end
 
@@ -181,15 +183,13 @@ function [u_est, V_est, W_est, d_est] = JisstPCA(X, Y, K, varargin)
     u_est(1) = [];
     V_est(1) = [];
     W_est(1) = [];
-    d_est(:, 1) = [];
+    Dx_est(1) = [];
+    Dy_est(1) = [];
+
 end
 
-%% Example
-% Given X, Y, K, if all the other hyperparameters are unknown, then we can
-% just implement Jisst_multi(X, Y, K)
-% Given X, Y, K, if partial (or all) hyperparameters are known, for example
-% u0, rx and ry, then we should use this function as Jisst_multi(X, Y, K,
-% 'u0', u0, 'rx', rx, 'ry', ry) to specify which arguements are available
+
+
 
 
 

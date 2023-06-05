@@ -12,7 +12,7 @@
 % output of bic_sst:
 % bic_val: the corresponding BIC value for rank rx and ry, given data X and Y
 
-function [bic_val] = bic_sst(rx, ry, X, Y, u0, lambda, tol, max_iter)
+function [bic_val] = bic_dsst(rx, ry, X, Y, u0, lambda, tol, max_iter)
     
     sz_x = size(X);
     sz_y = size(Y);
@@ -23,7 +23,7 @@ function [bic_val] = bic_sst(rx, ry, X, Y, u0, lambda, tol, max_iter)
 
     pe = sum(sz_x(1)*rx + sz_y(1)*ry + sz_x(3)); % number of efficient parameters
     
-    [~, ~, ~, ~, ~, hat_X, hat_Y] = Jisst_single(X, Y, u0, rx, ry, lambda, tol, max_iter);
+    [~, ~, ~, ~, ~, hat_X, hat_Y] = dJisst_single(X, Y, u0, rx, ry, lambda, tol, max_iter);
 
     Tx = tensor(zeros(sz_x));
     Ty = tensor(zeros(sz_y));

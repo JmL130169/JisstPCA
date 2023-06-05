@@ -1,26 +1,22 @@
 % This function is for single-factor JisstPCA Algorithm
 
-% Input of Jisst_single is:
-% X, Y: two single-factor semi-symmetric tensors of dimension p-p-N and q-q-N
-% u0: initialization. If user wants to use spectral initialization, the input
-% of u0 is 'spectral'; Otherwise user can input specific u0 as
-% initialization
-% rx, ry: rank of X and Y
-% lambda: scaler that represents the relative importance oif each tensor
-% tol, max_iter: tolerance value and maximum iteration number
-% rank_max: if the true rank rx, ry are unknown, rank_max is the largest
-% possible that will be tried using BIC method; If rx, ry are known, this
-% arguemtn will not affect this function and user can set rank_max = 0
-% varargin: If rx, ry are unknown, this should be a cell for the true
-% ranks, if true ranks are unknown, this arguement can be left empty and
-% JisstPCA will use BIC estimated ranks
+% Input of Jisst_single:
 
-% Output of Jisst_single is:
+% X, Y: two single-factor semi-symmetric tensors of dimension p-p-N and q-q-N
+% u0: initialization. 
+% rx, ry: rank of X and Y
+% lambda: scaler that represents the relative importance of each tensor
+% tol, max_iter: tolerance value and maximum iteration number
+
+
+% Output of Jisst_single:
+
 % hat_u, hat_V, hat_W: estimation of factors u, V, W
 % dx, dy: estimation of dx and dy
-% hat_X, hat_Y: reconstruction of true parameter tensors X^{*} and Y^{*}, by hat_X = dx*hat_V hat_V' \circ hat_u and so is for hat_Y
+% hat_X, hat_Y: reconstruction of true parameter tensors X^{*} and Y^{*}, 
+% by hat_X = dx*hat_V hat_V' \circ hat_u and so is for hat_Y
 
-function [hat_u, hat_V, hat_W, dx, dy, hat_X, hat_Y] = Jisst_single(X, Y, u0, lambda, tol, max_iter, rank_max, varargin)
+function [hat_u, hat_V, hat_W, dx, dy, hat_X, hat_Y] = Jisst_single(X, Y, u0, rx, ry, lambda, tol, max_iter)
 
     % Note: tensor_toolbox by Kolda is needed for tensor algebra in this
     % function
@@ -42,20 +38,6 @@ function [hat_u, hat_V, hat_W, dx, dy, hat_X, hat_Y] = Jisst_single(X, Y, u0, la
     %
     % Note: The data type of input X, Y should be 'tensor'.
 
-    if isempty(varargin)
-        K = size(lambda, 2);
-        method = 1;
-        [rx, ry] = bic_def(X, Y, rank_max, K, u0, lambda, tol, max_iter, method);
-    else
-        r = varargin{1};
-        rx = r{1};
-        ry = r{2};
-    end
-
-    % spectral initialization
-    if ischar(u0) && strcmp(u0, 'spectral')
-        u0 = init(X, Y);
-    end
 
     k = 1;
     hat_u = u0; % at the 0th iteration, estimation of joint tensor factor u
