@@ -1,0 +1,112 @@
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
+
+```{r}
+library(ggplot2)
+library(cowplot)
+library(patchwork)
+library(pracma)
+library(reshape)
+```
+
+```{r}
+# connection probability, easy case
+# B_x2 = matrix(c(0.6, 0.01, 0.01, 0.01, 0.6, 0.01, 0.01, 0.01, 0.6), nrow = 3, ncol = 3, byrow = T)
+# B_x1 = matrix(c(0.9, 0.01, 0.01, 0.01, 0.01, 0.9, 0.01, 0.01, 0.01, 0.01, 0.9, 0.01, 0.01, 0.01, 0.01, 0.9), nrow = 4, ncol = 4, byrow = T)
+# B_x2 = matrix(c(0.5, 0.05, 0.05, 0.05, 0.5, 0.05, 0.05, 0.05, 0.5), nrow = 3, ncol = 3, byrow = T)
+B_x2 = matrix(c(0.7, 0.1, 0.1, 0.7), nrow = 2, ncol = 2, byrow = T)
+B_x1 = matrix(c(0.9, 0.1, 0.1, 0.1, 0.8, 0.1, 0.1, 0.1, 0.9), nrow = 3, ncol = 3, byrow = T)
+B_y2 = matrix(c(0.6, 0.1, 0.1, 0.6), nrow = 2, ncol = 2, byrow = T)
+B_y1 = matrix(c(0.8, 0.1, 0.1, 0.1, 0.8, 0.1, 0.1, 0.1, 0.8), nrow = 3, ncol = 3, byrow = T)
+
+# medium, rank = (3, 2)
+p = 50
+q = 50
+N = 200
+r1 = c(3, 2)
+r = c(3, 2)
+theta_x1 = matrix(0, nrow = p, ncol = r1[1])
+theta_x2 = matrix(0, nrow = p, ncol = r1[2])
+theta_y1 = matrix(0, nrow = q, ncol = r[1])
+theta_y2 = matrix(0, nrow = q, ncol = r[2])
+
+set.seed(10)
+clu_x1 = c(rep(1, 0.4*p), rep(2, 0.3*p), rep(3, 0.3*p))
+clu_x2 = c(rep(1, 0.5*p), rep(2, 0.5*p))
+clu_y1 = c(rep(1, 0.4*q), rep(2, 0.4*q), rep(3, 0.2*q))
+clu_y2 = c(rep(1, 0.6*q), rep(2, 0.4*q))
+
+for (i in 1:p){
+  theta_x1[i, clu_x1[i]] = 1
+  theta_x2[i, clu_x2[i]] = 1
+}
+for (i in 1:q){
+  theta_y1[i, clu_y1[i]] = 1
+  theta_y2[i, clu_y2[i]] = 1
+}
+
+# first layer of X
+px1 = theta_x1%*%B_x1%*%t(theta_x1)
+svd_x1 = svd(px1)
+D_x1 = diag(svd_x1$d[1:3])
+p_x1 = svd_x1$u[, 1:3]%*%D_x1%*%t(svd_x1$u[, 1:3])
+
+colnames(p_x1) <- paste(1:p)
+rownames(p_x1) <- paste(1:p)
+df_x1 <- melt(p_x1)
+colnames(df_x1) <- c("x", "y", "value")
+plot_p_x1 = ggplot(df_x1, aes(x = x, y = y, fill = value)) + geom_tile() + scale_fill_gradient(low = "white", high = "red") + coord_fixed() + ggtitle("First SBM of X") + theme(plot.title = element_text(hjust = 0.5))
+
+# second layer of X
+px2 = theta_x2%*%B_x2%*%t(theta_x2)
+svd_x2 = svd(px2)
+D_x2 = diag(svd_x2$d[1:2])
+p_x2 = svd_x2$u[, 1:2]%*%D_x2%*%t(svd_x2$u[, 1:2])
+
+colnames(p_x2) <- paste(1:p)
+rownames(p_x2) <- paste(1:p)
+df_x2 <- melt(p_x2)
+colnames(df_x2) <- c("x", "y", "value")
+plot_p_x2 = ggplot(df_x2, aes(x = x, y = y, fill = value)) + geom_tile() + scale_fill_gradient(low = "white", high = "red") + coord_fixed() + ggtitle("Second SBM of X") + theme(plot.title = element_text(hjust = 0.5))
+
+# first layer of Y
+py1 = theta_y1%*%B_y1%*%t(theta_y1) #- diag(diag(theta_y1%*%B_y1%*%t(theta_y1)))
+svd_y1 = svd(py1)
+D_y1 = diag(svd_y1$d[1:3])
+p_y1 = svd_y1$u[, 1:3]%*%D_y1%*%t(svd_y1$u[, 1:3])
+
+colnames(p_y1) <- paste(1:q)
+rownames(p_y1) <- paste(1:q)
+df_y1 <- melt(p_y1)
+colnames(df_y1) <- c("x", "y", "value")
+plot_p_y1 = ggplot(df_y1, aes(x = x, y = y, fill = value)) + geom_tile() + scale_fill_gradient(low = "white", high = "red") + coord_fixed() + ggtitle("First SBM of Y") + theme(plot.title = element_text(hjust = 0.5))
+
+# second layer of Y
+py2 = theta_y2%*%B_y2%*%t(theta_y2) #- diag(diag(theta_y2%*%B_y2%*%t(theta_y2)))
+svd_y2 = svd(py2)
+D_y2 = diag(svd_y2$d[1:2])
+p_y2 = svd_y2$u[, 1:2]%*%D_y2%*%t(svd_y2$u[, 1:2])
+
+colnames(p_y2) <- paste(1:q)
+rownames(p_y2) <- paste(1:q)
+df_y2 <- melt(p_y2)
+colnames(df_y2) <- c("x", "y", "value")
+plot_p_y2 = ggplot(df_y2, aes(x = x, y = y, fill = value)) + geom_tile() + scale_fill_gradient(low = "white", high = "red") + coord_fixed() + ggtitle("Second SBM of Y") + theme(plot.title = element_text(hjust = 0.5))
+
+plot_p_x1 + plot_p_x2 + plot_p_y1 + plot_p_y2
+
+# export the parameter matrix
+write.csv(px1, "/Users/jiamingliu/Desktop/section 4/network_data/case1/px1.csv")
+write.csv(px2, "/Users/jiamingliu/Desktop/section 4/network_data/case1/px2.csv")
+write.csv(py1, "/Users/jiamingliu/Desktop/section 4/network_data/case1/py1.csv")
+write.csv(py2, "/Users/jiamingliu/Desktop/section 4/network_data/case1/py2.csv")
+
+
+# r_1 = qr(svd_x1$u[, 1:3])$rank # rank of V1
+# r_2 = qr(svd_x2$u[, 1:2])$rank # rank of V2
+# r_12 = qr(cbind(svd_x1$u[, 1:3], svd_x2$u[, 1:2]))$rank # rank of [V1, V2]
+# 
+# print(c(r_1, r_2, r_12))
+```
+
