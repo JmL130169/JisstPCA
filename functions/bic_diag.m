@@ -1,4 +1,4 @@
-% BIC method for multi-factor rank selection, diagonal signal D
+% BIC method for multi-factor rank selection, diagonal signal D 
 
 % input of bic_diag:
 
