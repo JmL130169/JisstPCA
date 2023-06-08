@@ -1,4 +1,4 @@
-% Function of the joint-integrated matrix_tensor PCA
+% Function of the joint-integrated matrix_tensor PCA 
 
 % Input of JimtPCA:
 
