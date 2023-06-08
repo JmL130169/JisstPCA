@@ -1,4 +1,4 @@
-% BIC method for rank selection in matrix_tensor case
+% BIC method for rank selection in matrix_tensor case 
 
 % input of bic_mt:
 
