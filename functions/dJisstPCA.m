@@ -1,4 +1,4 @@
-% Function of the model joint-integrated semi-symmetric tensor PCA,
+% Function of the model joint-integrated semi-symmetric tensor PCA, 
 % diagonal signal D
 
 % Input of dJisstPCA:
