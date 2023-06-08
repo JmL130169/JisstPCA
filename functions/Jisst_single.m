@@ -1,4 +1,4 @@
-% This function is for single-factor JisstPCA Algorithm
+% This function is for single-factor JisstPCA Algorithm 
 
 % Input of Jisst_single:
 
