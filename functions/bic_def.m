@@ -1,4 +1,4 @@
-% BIC method for multi-factor rank selection
+% BIC method for multi-factor rank selection 
 
 % input of bic_def:
 
