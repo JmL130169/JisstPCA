@@ -24,19 +24,13 @@ function [hat_u, hat_V, hat_W, Dx, Dy, hat_X, hat_Y] = dJisst_single(X, Y, u0, r
 
         % update of V, the leading r_x singular vectors of third-mode
         % tensor multiplication with hat_u at each iteration
-        [ax, bx, ~] = svd(double(ttv(X, hat_u, 3)));
-        [~, ind_x] = sort(diag(bx));
-        ax = ax(:, ind_x);
-        ax = fliplr(ax);
-        hat_V = ax(:, 1:rx);
+        [ax, ~, ~] = svds(double(ttv(X, hat_u, 3)), rx);
+        hat_V = ax;
 
         % update of W, the leading r_y singular vectors of third-mode
         % multiplication with hat_u at each iteration
-        [ay, by, ~] = svd(double(ttv(Y, hat_u, 3)));
-        [~, ind_y] = sort(diag(by));
-        ay = ay(:, ind_y);
-        ay = fliplr(ay);
-        hat_W = ay(:, 1:ry);
+        [ay, ~, ~] = svds(double(ttv(Y, hat_u, 3)), ry);
+        hat_W = ay;
 
         % update of Dx, unlike original algorithm, we need to update Dx
         % (and Dy) at each iteration in the modified model and algorithm

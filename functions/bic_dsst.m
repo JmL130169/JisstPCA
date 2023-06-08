@@ -25,26 +25,11 @@ function [bic_val] = bic_dsst(rx, ry, X, Y, u0, lambda, tol, max_iter)
     
     [~, ~, ~, ~, ~, hat_X, hat_Y] = dJisst_single(X, Y, u0, rx, ry, lambda, tol, max_iter);
 
-    Tx = tensor(zeros(sz_x));
-    Ty = tensor(zeros(sz_y));
-    
     % log likelihood function of X based on estimation using rank rx
-    for i = 1:sz_x(1)
-        for j = 1:sz_x(2)
-            for k = 1:sz_x(3)
-                Tx(i, j, k) = (-0.5)*(log(2*pi) + ((X(i, j, k)-hat_X(i, j, k))^2));
-            end
-        end
-    end
+    Tx = (-0.5)*(log(2*pi) + (X - hat_X).^2);
 
     % log likelihood function of y based on estimation using rank ry
-    for i = 1:sz_y(1)
-        for j = 1:sz_y(2)
-            for k = 1:sz_y(3)
-                Ty(i, j, k) = (-0.5)*(log(2*pi) + ((Y(i, j, k)-hat_Y(i, j, k))^2));
-            end
-        end
-    end
+    Ty = (-0.5)*(log(2*pi) + (Y - hat_Y).^2);
 
     bic_val = pe*log(n) - 2*(sum(double(Tx), 'all') + sum(double(Ty), 'all'));
 end
