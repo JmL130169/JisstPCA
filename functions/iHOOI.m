@@ -5,14 +5,16 @@
 % between JisstPCA model and Tucker model
 
 % The input of iHOOI:
+
 % X, Y are semi-symmetric tensors with dimension p-p-N and q-q-N, and
 % suppose X, Y are multi-factor tensors with number of layers K
 % rx is the sum of rank of all factors V_k for X, ry is the sum of rank of
 % all factors W_k for Y
 % max_iter is the maximum iteration number
-% nl = K is the number of layers
+% K is the number of layers
 
 % The output of iHOOI:
+
 % hat_u is N-K matrix, ith column is the estimation of u_i
 % hat_V is p-rx matrix, which can be viewed estimation of concatenated
 % factors V_k, as hat_V = (hat_V1, hat_V2, ..., hat_VK)
@@ -20,27 +22,21 @@
 % factors W_k, as hat_W = (hat_W1, hat_W2, ..., hat_WK)
 % hat_X, hat_Y are the corresponding estimators of X and Y
 
-function [hat_u, hat_V, hat_W, hat_X, hat_Y] = iHOOI(X, Y, rx, ry, max_iter, nl)
+function [hat_u, hat_V, hat_W, hat_X, hat_Y] = iHOOI(X, Y, rx, ry, max_iter, K)
 
     % initialization
 
     % initialization of V is first rx singular vectors of first-mode
     % matricization of X
     M1_X = double(tenmat(X, 1, [2, 3]));
-    [ax, bx, ~] = svd(M1_X);
-    [~, ind_x] = sort(diag(bx));
-    ax = ax(:, ind_x);
-    ax = fliplr(ax);
-    hat_V = ax(:, 1:rx);
+    [ax, ~, ~] = svds(M1_X, rx);
+    hat_V = ax;
     
     % initialization of W is first ry singular vectors of first-mode
     % matricization of Y
     M1_Y = double(tenmat(Y, 1, [2, 3]));
-    [ay, by, ~] = svd(M1_Y);
-    [~, ind_y] = sort(diag(by));
-    ay = ay(:, ind_y);
-    ay = fliplr(ay);
-    hat_W = ay(:, 1:ry);
+    [ay, ~, ~] = svds(M1_Y, ry);
+    hat_W = ay;
     
     % initialization of u is first K singular vectors of concatenated
     % matrix of third-mode matricization of X and third-mode matricization
@@ -48,11 +44,8 @@ function [hat_u, hat_V, hat_W, hat_X, hat_Y] = iHOOI(X, Y, rx, ry, max_iter, nl)
     M3_X = double(tenmat(X, 3, [1, 2]));
     M3_Y = double(tenmat(Y, 3, [1, 2]));
     M3 = [M3_X, M3_Y];
-    [a, b, ~] = svd(M3);
-    [~, ind] = sort(diag(b));
-    a = a(:, ind);
-    a = fliplr(a);
-    hat_u = a(:, 1:nl);
+    [a, ~, ~] = svds(M3, K);
+    hat_u = a;
 
     k = 0;
 
@@ -62,34 +55,25 @@ function [hat_u, hat_V, hat_W, hat_X, hat_Y] = iHOOI(X, Y, rx, ry, max_iter, nl)
         T_x = ttm(X, {hat_V', hat_u'}, [2, 3]);
 
         M1_X = double(tenmat(T_x, 1, [2, 3]));
-        [ax, bx, ~] = svd(M1_X);
-        [~, ind_x] = sort(diag(bx));
-        ax = ax(:, ind_x);
-        ax = fliplr(ax);
-        hat_V = ax(:, 1:rx);
+        [ax, ~, ~] = svds(M1_X, rx);
+        hat_V = ax;
 
 
         T_y = ttm(Y, {hat_W', hat_u'}, [2, 3]);
 
         M1_Y = double(tenmat(T_y, 1, [2, 3]));
-        [ay, by, ~] = svd(M1_Y);
-        [~, ind_y] = sort(diag(by));
-        ay = ay(:, ind_y);
-        ay = fliplr(ay);
-        hat_W = ay(:, 1:ry);
+        [ay, ~, ~] = svds(M1_Y, ry);
+        hat_W = ay;
 
 
         T_xu = ttm(X, {hat_V', hat_V'}, [1, 2]);
         M3_X = double(tenmat(T_xu, 3, [1, 2]));
-        T_yu = ttm(Y, {hat_W_Tu', hat_W_Tu'}, [1, 2]);
+        T_yu = ttm(Y, {hat_W', hat_W'}, [1, 2]);
         M3_Y = double(tenmat(T_yu, 3, [1, 2]));
 
         M3 = [M3_X, M3_Y];
-        [a, b, ~] = svd(M3);
-        [~, ind] = sort(diag(b));
-        a = a(:, ind);
-        a = fliplr(a);
-        hat_u = a(:, 1:nl);
+        [a, ~, ~] = svds(M3, K);
+        hat_u = a;
 
         k = k+1;
     end

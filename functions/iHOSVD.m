@@ -5,13 +5,15 @@
 % between JisstPCA model and Tucker model
 
 % The input of iHOSVD:
+
 % X, Y are semi-symmetric tensors with dimension p-p-N and q-q-N, and
 % suppose X, Y are multi-factor tensors with number of layers K
 % rx is the sum of rank of all factors V_k for X, ry is the sum of rank of
 % all factors W_k for Y
-% nl = K is the number of layers
+% K is the number of layers
 
 % The output of iHOSVD:
+
 % hat_u is N-K matrix, ith column is the estimation of u_i
 % hat_V is p-rx matrix, which can be viewed estimation of concatenated
 % factors V_k, as hat_V = (hat_V1, hat_V2, ..., hat_VK)
@@ -19,7 +21,7 @@
 % factors W_k, as hat_W = (hat_W1, hat_W2, ..., hat_WK)
 % hat_X, hat_Y are the corresponding estimators of X and Y
 
-function [hat_u, hat_V, hat_W, hat_X, hat_Y] = iHOSVD(X, Y, rx, ry, nl)
+function [hat_u, hat_V, hat_W, hat_X, hat_Y] = iHOSVD(X, Y, rx, ry, K)
     
     M1_X = double(tenmat(X, 1, [2, 3]));
     M1_Y = double(tenmat(Y, 1, [2, 3]));
@@ -27,28 +29,19 @@ function [hat_u, hat_V, hat_W, hat_X, hat_Y] = iHOSVD(X, Y, rx, ry, nl)
 
     % estimation of V is first rx singular vectors of first-mode
     % matricization of X
-    [ax, bx, ~] = svd(M1_X);
-    [~, ind_x] = sort(diag(bx));
-    ax = ax(:, ind_x);
-    ax = fliplr(ax);
-    hat_V = ax(:, 1:rx);
+    [ax, ~, ~] = svds(M1_X, rx);
+    hat_V = ax;
 
     % estimation of W is first ry singular vectors of first-mode
     % matricization of Y
-    [ay, by, ~] = svd(M1_Y);
-    [~, ind_y] = sort(diag(by));
-    ay = ay(:, ind_y);
-    ay = fliplr(ay);
-    hat_W = ay(:, 1:ry);
+    [ay, ~, ~] = svds(M1_Y, ry);
+    hat_W = ay;
     
     % estimation of u is first K singular vectors of concatenated
     % matrix of third-mode matricization of X and third-mode matricization
     % of Y
-    [a, b, ~] = svd(M3);
-    [~, ind] = sort(diag(b));
-    a = a(:, ind);
-    a = fliplr(a);
-    hat_u = a(:, 1:nl);
+    [a, ~, ~] = svds(M3, K);
+    hat_u = a;
 
     % reconstruct the true tensor X and Y
     S_x = ttm(X, {hat_V', hat_V', hat_u'}, [1, 2, 3]);
