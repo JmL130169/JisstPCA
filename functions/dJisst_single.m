@@ -1,4 +1,4 @@
-% Function of single-factor JisstPCA with diagonal matrix D as signal
+% Function of single-factor JisstPCA with diagonal matrix D as signal 
 
 % Input of dJisst_single:
 
