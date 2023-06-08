@@ -1,4 +1,4 @@
-% Main function of the model joint-integrated semi-symmetric tensor PCA 
+% Main function of the model joint-integrated semi-symmetric tensor PCA
 
 % Input of JisstPCA:
 
@@ -16,7 +16,7 @@
 % lambda: scaler for each layer, which is a vector of dimension K. The
 % default value is norm(X)/(norm(X)+norm(Y)) for each element
 % tol, max_iter: tolerance value and maximum iteration number. The default
-% values are tol = 0.0001 and max_iter = 100 
+% values are tol = 0.0001 and max_iter = 20 
 % deflation: deflation = 0 is subtract deflation, deflation = 1 is project 
 % deflation, deflation = 2 is project deflation for only u after subtract 
 % deflation, def = 3 is project deflation for only V and W after subtract
@@ -88,7 +88,7 @@ function [u_est, V_est, W_est, d_est] = JisstPCA(X, Y, K, varargin)
         tol = 0.0001;
     end
     if isnan(max_iter)
-        max_iter = 100;  
+        max_iter = 20;  
     end
     if isnan(deflation)
         deflation = 0; 

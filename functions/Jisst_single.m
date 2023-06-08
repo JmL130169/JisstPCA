@@ -55,11 +55,8 @@ function [hat_u, hat_V, hat_W, dx, dy, hat_X, hat_Y] = Jisst_single(X, Y, u0, rx
         % matrix. Also, svd function in MATLAB have already arrange the
         % singular value/vector in an decreasing order, we arrange them again
         % to make sure we get the leading singular vectors
-        [a1, b1, ~] = svd(double(ttv(X, hat_u, 3)));
-        [~, ind1] = sort(diag(b1));
-        a1 = a1(:, ind1);
-        a1 = fliplr(a1);
-        hat_V = a1(:, 1:rx);
+        [a1, ~, ~] = svds(double(ttv(X, hat_u, 3)), rx);
+        hat_V = a1;
     
         % update of W
         % at each iteration, the update of W is the ry leading eigenvectors
@@ -68,11 +65,8 @@ function [hat_u, hat_V, hat_W, dx, dy, hat_X, hat_Y] = Jisst_single(X, Y, u0, rx
         %
         % Note: at each iterstion, the estimate of W should be an orthogonal
         % matrix.
-        [a2, b2, ~] = svd(double(ttv(Y, hat_u, 3)));
-        [~, ind2] = sort(diag(b2));
-        a2 = a2(:, ind2);
-        a2 = fliplr(a2);
-        hat_W = a2(:, 1:ry);
+        [a2, ~, ~] = svds(double(ttv(Y, hat_u, 3)), ry);
+        hat_W = a2;
     
         % update of u
         % the update of u is a weighted summation of two trace products:
