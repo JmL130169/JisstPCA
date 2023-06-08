@@ -6,7 +6,7 @@
 % Y is rank K matrix of dimension q-N
 % rx is the sum of rank of all factors V_k for X
 % max_iter is the maximum iteration number
-% nl = K is the number of layers
+% K is the number of layers
 
 % The output of imt_HOOI:
 % hat_u is N-K matrix, ith column is the estimation of u_i
@@ -15,33 +15,22 @@
 % hat_W is q-K matrix, ith column is the estimation of w_i
 % hat_X, hat_Y are the corresponding estimators of X and Y
 
-function [hat_u, hat_V, hat_w, hat_X, hat_Y] = imt_HOOI(X, Y, rx, max_iter, nl)
+function [hat_u, hat_V, hat_w, hat_X, hat_Y] = imt_HOOI(X, Y, rx, max_iter, K)
 
-    % nl is the number of layers, which is K in the model
     % rx is sum of rank for each layer, which is not vector
 
     % initialization
     M1_X = double(tenmat(X, 1, [2, 3]));
-    [ax, bx, ~] = svd(M1_X);
-    [~, ind_x] = sort(diag(bx));
-    ax = ax(:, ind_x);
-    ax = fliplr(ax);
-    hat_V = ax(:, 1:rx);
+    [ax, ~, ~] = svds(M1_X, rx);
+    hat_V = ax;
 
-    [ay, by, ~] = svd(Y);
-    [~, ind_y] = sort(diag(by));
-    ay = ay(:, ind_y);
-    ay = fliplr(ay);
-    hat_w = ay(:, 1:nl);
+    [ay, ~, ~] = svds(Y, K);
+    hat_w = ay;
 
     M3_X = double(tenmat(X, 3, [1, 2]));
     M3 = [M3_X, Y'];
-    [a, b, ~] = svd(M3);
-    [~, ind] = sort(diag(b));
-    a = a(:, ind);
-    a = fliplr(a);
-    hat_u = a(:, 1:nl);
-
+    [a, ~, ~] = svds(M3, K);
+    hat_u = a;
     k = 0;
 
     % update of V, W, u
@@ -50,24 +39,13 @@ function [hat_u, hat_V, hat_w, hat_X, hat_Y] = imt_HOOI(X, Y, rx, max_iter, nl)
         T_x = ttm(X, {hat_V', hat_u'}, [2, 3]);
 
         M1_X = double(tenmat(T_x, 1, [2, 3]));
-        [ax, bx, ~] = svd(M1_X);
-        [~, ind_x] = sort(diag(bx));
-        ax = ax(:, ind_x);
-        ax = fliplr(ax);
-        hat_V = ax(:, 1:rx);
-
+        [ax, ~, ~] = svds(M1_X, rx);
+        hat_V = ax;
 
         T_y = Y*hat_u;
 
-        [ay, by, ~] = svd(T_y);
-        if nl < size(Y, 1)
-            hat_w = ay(:, 1:nl);
-        else
-            [~, ind_y] = sort(diag(by));
-            ay = ay(:, ind_y);
-            ay = fliplr(ay);
-            hat_w = ay(:, 1:nl);
-        end
+        [ay, ~, ~] = svds(T_y, K);
+        hat_w = ay;
 
 
         T_xu = ttm(X, {hat_V', hat_V'}, [1, 2]);
@@ -75,11 +53,8 @@ function [hat_u, hat_V, hat_w, hat_X, hat_Y] = imt_HOOI(X, Y, rx, max_iter, nl)
         T_yu = hat_w'*Y;
 
         M3 = [M3_X, T_yu'];
-        [a, b, ~] = svd(M3);
-        [~, ind] = sort(diag(b));
-        a = a(:, ind);
-        a = fliplr(a);
-        hat_u = a(:, 1:nl);
+        [a, ~, ~] = svds(M3, K);
+        hat_u = a;
 
         k = k+1;
     end
