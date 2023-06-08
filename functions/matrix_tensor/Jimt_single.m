@@ -1,4 +1,4 @@
-% Function of single-factor matrix_tensor factorization for rank one
+% Function of single-factor matrix_tensor factorization for rank one 
 % matrix and smei-symmetric tensor
 
 % input of imt_single:
