@@ -102,7 +102,7 @@ function [u_est, V_est, W_est, d_est] = JisstPCA(X, Y, K, varargin)
 
     % default value for u0, rx and ry
     if isnan(u0)
-        u0 = init(X, Y); 
+        u0 = init(X, Y,lam); 
     end
     if isnan(rx)
         rx = bic_def_1(X, Y, rank_max, K, u0, lambda, tol, max_iter, method, deflation);
