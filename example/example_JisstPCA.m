@@ -1,7 +1,7 @@
 % An illustrative example of JisstPCA
 
 %% data setup
-p = 100; q = 50; N = 200; % dimension of tensors
+p = 30; q = 20; N = 80; % dimension of tensors
 rx = [3 2]; ry = rx;
 dx = [2*p p]; % signal of X for each layer
 dy = [2*q q]; % signal of Y for each layer
@@ -29,11 +29,11 @@ X_obs = tensor(X + noise_X); % observation tensor of X, with noise
 Y_obs = tensor(Y + noise_Y); % observation tensor of X, with noise
 
 % optional inputs
-u0 = init(X_obs, Y_obs); % initialization
 tol = 0.0001; % tolerance level
 max_iter = 100; % maximum iteration number
 ratio = norm(X_obs)/(norm(X_obs) + norm(Y_obs)); % relative weight of X and Y in estimation
 lambda = ratio*ones(1, 2); % relative weight of X and Y
+u0 = init(X_obs, Y_obs, lambda(1)); % initialization
 deflation = 0;
 
 %% case 1: only X and Y are available
@@ -49,7 +49,12 @@ K = 2;
 [u_est3, V_est3, W_est3, d_est3] = JisstPCA(X_obs, Y_obs, K, 'rx', rx, 'ry', ry, ...
     'lambda', lambda, 'u0', u0, 'tol', tol, 'max_iter', max_iter, ...
     'deflation', deflation);
-
+norm(u_est3{1} * u_est3{1}' - u1 * u1')
+norm(u_est3{2} * u_est3{2}' - u2 * u2')
+norm(V_est3{1} * V_est3{1}' - V1 * V1')
+norm(V_est3{2} * V_est3{2}' - V2 * V2')
+norm(W_est3{1} * W_est3{1}' - W1 * W1')
+norm(W_est3{2} * W_est3{2}' - W2 * W2')
 
 
 
