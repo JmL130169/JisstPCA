@@ -2,21 +2,21 @@
 
 %% data setup
 p = 30; q = 20; N = 80; % dimension of tensors
+K = 2;
 rx = [3 2]; ry = rx;
 dx = [2*p p]; % signal of X for each layer
 dy = [2*q q]; % signal of Y for each layer
 
 rng(2023)
-V1 = orth(normrnd(0, 1, [p, rx(1)])); % first layer true factor V1
-W1 = orth(normrnd(0, 1, [q, ry(1)])); % first layer true factor W1
-V2 = orth(normrnd(0, 1, [p, rx(2)])); % first layer true factor V2
-W2 = orth(normrnd(0, 1, [q, ry(2)])); % first layer true factor W2
-u = normrnd(0, 1, [N, 2]);
-u1 = u(:, 1)/norm(u(:, 1)); % first joint factor u1
-u2 = u(:, 2)/norm(u(:, 2)); % second joint factor u2
-
-X = dx(1)*squeeze(ttt(tensor(V1*V1'), tensor(u1))) + dx(2)*squeeze(ttt(tensor(V2*V2'), tensor(u2))); % noiseless X
-Y = dy(1)*squeeze(ttt(tensor(W1*W1'), tensor(u1))) + dy(2)*squeeze(ttt(tensor(W2*W2'), tensor(u2))); % noiseless Y
+V = cell(K, 1); W = cell(K, 1); u = cell(K, 1);
+X = zeros(p, p, N); Y = zeros(q, q, N);
+for k = 1 : K
+    V{k} = orth(normrnd(0, 1, [p, rx(k)])); % kth layer true factor V1
+    W{k} = orth(normrnd(0, 1, [q, ry(k)])); % kth layer true factor W1
+    u{k} = orth(normrnd(0, 1, [N, 1]));
+    X = X + dx(k) * squeeze(ttt(tensor(V{k}*V{k}'), tensor(u{k}))); % noiseless X
+    Y = Y + dy(k) * squeeze(ttt(tensor(W{k}*W{k}'), tensor(u{k}))); % noiseless Y
+end
 
 noise_X = zeros(size(X));
 noise_Y = zeros(size(Y));
@@ -32,7 +32,7 @@ Y_obs = tensor(Y + noise_Y); % observation tensor of X, with noise
 tol = 0.0001; % tolerance level
 max_iter = 100; % maximum iteration number
 ratio = norm(X_obs)/(norm(X_obs) + norm(Y_obs)); % relative weight of X and Y in estimation
-lambda = ratio*ones(1, 2); % relative weight of X and Y
+lambda = ratio*ones(1, K); % relative weight of X and Y
 u0 = init(X_obs, Y_obs, lambda(1)); % initialization
 deflation = 0;
 
@@ -49,12 +49,7 @@ K = 2;
 [u_est3, V_est3, W_est3, d_est3] = JisstPCA(X_obs, Y_obs, K, 'rx', rx, 'ry', ry, ...
     'lambda', lambda, 'u0', u0, 'tol', tol, 'max_iter', max_iter, ...
     'deflation', deflation);
-norm(u_est3{1} * u_est3{1}' - u1 * u1')
-norm(u_est3{2} * u_est3{2}' - u2 * u2')
-norm(V_est3{1} * V_est3{1}' - V1 * V1')
-norm(V_est3{2} * V_est3{2}' - V2 * V2')
-norm(W_est3{1} * W_est3{1}' - W1 * W1')
-norm(W_est3{2} * W_est3{2}' - W2 * W2')
+find_dist(u_est3, V_est3, W_est3, u, V, W)
 
 
 

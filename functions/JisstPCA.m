@@ -78,7 +78,7 @@ function [u_est, V_est, W_est, d_est] = JisstPCA(X, Y, K, varargin)
     rank_max = p.Results.rank_max;
     method = p.Results.method;
 
-    % check if the user proveides lambda, tol, max_iter and
+    % check if the user provides lambda, tol, max_iter and
     % deflation
     if isnan(lambda)
         lam = norm(X)/(norm(X)+norm(Y));
@@ -102,7 +102,7 @@ function [u_est, V_est, W_est, d_est] = JisstPCA(X, Y, K, varargin)
 
     % default value for u0, rx and ry
     if isnan(u0)
-        u0 = init(X, Y,lam); 
+        u0 = init(X, Y,lambda(1)); 
     end
     if isnan(rx)
         rx = bic_def_1(X, Y, rank_max, K, u0, lambda, tol, max_iter, method, deflation);
@@ -126,7 +126,10 @@ function [u_est, V_est, W_est, d_est] = JisstPCA(X, Y, K, varargin)
 
     k = 1;
     while k < K + 1
-        [hat_u, hat_V, hat_W, d_x, d_y, ~, ~] = Jisst_single(X_est{k}, Y_est{k}, u_est{k}, rx(k), ry(k), lambda(k), tol, max_iter);
+        if k > 1
+            u0 = init(X_est{k}, Y_est{k}, lambda(k)); 
+        end
+        [hat_u, hat_V, hat_W, d_x, d_y, ~, ~] = Jisst_single(X_est{k}, Y_est{k}, u0, rx(k), ry(k), lambda(k), tol, max_iter);
         
         % update of tensor factors
         u_est{k+1} = hat_u;
