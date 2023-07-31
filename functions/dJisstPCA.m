@@ -102,7 +102,7 @@ function [u_est, V_est, W_est, Dx_est, Dy_est] = dJisstPCA(X, Y, K, varargin)
 
     % default value for u0, rx and ry
     if isnan(u0)
-        u0 = init(X, Y); 
+        u0 = init(X, Y, lambda(1)); 
     end
     if isnan(rx)
         rx = bic_diag_1(X, Y, rank_max, K, u0, lambda, tol, max_iter, method, deflation);
@@ -128,7 +128,10 @@ function [u_est, V_est, W_est, Dx_est, Dy_est] = dJisstPCA(X, Y, K, varargin)
 
     k = 1;
     while k < (K + 1)
-        [hat_u, hat_V, hat_W, Dx, Dy, ~, ~] = dJisst_single(X_est{k}, Y_est{k}, u_est{k}, rx(k), ry(k), lambda(k), tol, max_iter);
+        if k > 1
+            u0 = init(X_est{k}, Y_est{k}, lambda(k)); 
+        end
+        [hat_u, hat_V, hat_W, Dx, Dy, ~, ~] = dJisst_single(X_est{k}, Y_est{k}, u0, rx(k), ry(k), lambda(k), tol, max_iter);
         
         % update of tensor factors
         u_est{k+1} = hat_u;
@@ -138,10 +141,10 @@ function [u_est, V_est, W_est, Dx_est, Dy_est] = dJisstPCA(X, Y, K, varargin)
         Dy_est{k+1} = Dy;
 
         % deflation
-        if def == 0 % subtract deflation
+        if deflation == 0 % subtract deflation
             X_est{k+1} = X_est{k} - squeeze(ttt(tensor(hat_V*Dx*hat_V'), tensor(hat_u)));
             Y_est{k+1} = Y_est{k} - squeeze(ttt(tensor(hat_W*Dy*hat_W'), tensor(hat_u)));
-        elseif def == 1 % project deflation
+        elseif deflation == 1 % project deflation
             sz_X = size(X);
             sz_Y = size(Y);
             uk = double(eye(sz_X(3)) - u_est{k+1}*u_est{k+1}');
@@ -149,7 +152,7 @@ function [u_est, V_est, W_est, Dx_est, Dy_est] = dJisstPCA(X, Y, K, varargin)
             Wk = double(eye(sz_Y(1)) - W_est{k+1}*W_est{k+1}');
             X_est{k+1} = ttm(X_est{k}, {Vk, Vk, uk}, [1, 2, 3]);
             Y_est{k+1} = ttm(Y_est{k}, {Wk, Wk, uk}, [1, 2, 3]);
-        elseif def == 2 % orthogonal joint factor after subtract deflation
+        elseif deflation == 2 % orthogonal joint factor after subtract deflation
             X_est{k+1} = X_est{k} - squeeze(ttt(tensor(hat_V*Dx*hat_V'), tensor(hat_u)));
             Y_est{k+1} = Y_est{k} - squeeze(ttt(tensor(hat_W*Dy*hat_W'), tensor(hat_u)));
             
@@ -161,7 +164,7 @@ function [u_est, V_est, W_est, Dx_est, Dy_est] = dJisstPCA(X, Y, K, varargin)
 
             X_est{k+1} = ttm(X_est{k+1}, {uk}, 3);
             Y_est{k+1} = ttm(Y_est{k+1}, {uk}, 3);
-        elseif def == 3 % orthogonal individual factors after subtract deflation
+        elseif deflation == 3 % orthogonal individual factors after subtract deflation
             X_est{k+1} = X_est{k} - squeeze(ttt(tensor(hat_V*Dx*hat_V'), tensor(hat_u)));
             Y_est{k+1} = Y_est{k} - squeeze(ttt(tensor(hat_W*Dy*hat_W'), tensor(hat_u)));
             
