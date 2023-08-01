@@ -102,13 +102,19 @@ function [u_est, V_est, W_est, Dx_est, Dy_est] = dJisstPCA(X, Y, K, varargin)
 
     % default value for u0, rx and ry
     if isnan(u0)
+        spectral_init = true;
         u0 = init(X, Y, lambda(1)); 
+    else
+        spectral_init = false;
     end
-    if isnan(rx)
-        rx = bic_diag_1(X, Y, rank_max, K, u0, lambda, tol, max_iter, method, deflation);
-    end
-    if isnan(ry)
-        ry = bic_diag_2(X, Y, rank_max, K, u0, lambda, tol, max_iter, method, deflation);
+    if isnan(rx)||isnan(ry)
+        [rx_tmp, ry_tmp] = bic_diag(X, Y, rank_max, K, u0, spectral_init, lambda, tol, max_iter, method, deflation);
+        if isnan(rx)
+            rx = rx_tmp;
+        end
+        if isnan(ry)
+            ry = ry_tmp;
+        end
     end
    
     %% main function when all the hyperparameters are known
@@ -128,7 +134,7 @@ function [u_est, V_est, W_est, Dx_est, Dy_est] = dJisstPCA(X, Y, K, varargin)
 
     k = 1;
     while k < (K + 1)
-        if k > 1
+        if (k > 1) && spectral_init
             u0 = init(X_est{k}, Y_est{k}, lambda(k)); 
         end
         [hat_u, hat_V, hat_W, Dx, Dy, ~, ~] = dJisst_single(X_est{k}, Y_est{k}, u0, rx(k), ry(k), lambda(k), tol, max_iter);
