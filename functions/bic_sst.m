@@ -26,10 +26,10 @@ function [bic_val] = bic_sst(rx, ry, X, Y, u0, lambda, tol, max_iter)
     [~, ~, ~, ~, ~, hat_X, hat_Y] = Jisst_single(X, Y, u0, rx, ry, lambda, tol, max_iter);
 
     % log likelihood function of X based on estimation using rank rx
-    Tx = (-0.5)*(log(2*pi) + (X - hat_X).^2);
+    Tx = n1 * log(mean(double((X - hat_X).^2), 'all'));
 
     % log likelihood function of y based on estimation using rank ry
-    Ty = (-0.5)*(log(2*pi) + (Y - hat_Y).^2);
+    Ty = n2 * log(mean(double((Y - hat_Y).^2), 'all'));
 
-    bic_val = pe*log(n) - 2*(sum(double(Tx), 'all') + sum(double(Ty), 'all'));
+    bic_val = pe*log(n) + Tx + Ty;
 end

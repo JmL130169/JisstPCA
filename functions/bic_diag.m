@@ -21,7 +21,7 @@
 % bic_rx, bic_ry: best rank selected by minimizing BIC. bic_rx, bic_ry are vectors of ranks
 % for each Vk, Wk, so bic_rx, bic_ry are of dimension K
 
-function [bic_rx, bic_ry] = bic_diag(X, Y, rank_max, K, u0, lambda, tol, max_iter, method, deflation)
+function [bic_rx, bic_ry] = bic_diag(X, Y, rank_max, K, u0, spectral_init, lambda, tol, max_iter, method, deflation)
 
     bic_rx = ones(K, 1); % K is the number of layers, which is prespecified
     bic_ry = ones(K, 1);
@@ -35,7 +35,9 @@ function [bic_rx, bic_ry] = bic_diag(X, Y, rank_max, K, u0, lambda, tol, max_ite
     if method == 1
         while k < K+1
             bic = ones(rank_max, rank_max);
-
+            if (k > 1) && spectral_init
+                u0 = init(X_iter{k}, Y_iter{k}, lambda(k));
+            end
             for i = 1:rank_max
                 for j = 1:rank_max
                     bic(i, j) = bic_dsst(i, j, X_iter{k}, Y_iter{k}, u0, lambda(k), tol, max_iter);
@@ -61,10 +63,7 @@ function [bic_rx, bic_ry] = bic_diag(X, Y, rank_max, K, u0, lambda, tol, max_ite
                 X_iter{k+1} = X_iter{k} - hat_X;
                 Y_iter{k+1} = Y_iter{k} - hat_Y;
                 sz_X = size(X);
-                sz_Y = size(Y);
                 uk = double(eye(sz_X(3)) - hat_u*hat_u');
-                Vk = double(eye(sz_X(1)) - hat_V*hat_V');
-                Wk = double(eye(sz_Y(1)) - hat_W*hat_W');
                 X_iter{k+1} = ttm(X_iter{k+1}, {uk}, 3);
                 Y_iter{k+1} = ttm(Y_iter{k+1}, {uk}, 3);
             elseif deflation == 3 % project deflation on individual factor
@@ -72,14 +71,11 @@ function [bic_rx, bic_ry] = bic_diag(X, Y, rank_max, K, u0, lambda, tol, max_ite
                 Y_iter{k+1} = Y_iter{k} - hat_Y;
                 sz_X = size(X);
                 sz_Y = size(Y);
-                uk = double(eye(sz_X(3)) - hat_u*hat_u');
                 Vk = double(eye(sz_X(1)) - hat_V*hat_V');
                 Wk = double(eye(sz_Y(1)) - hat_W*hat_W');
                 X_iter{k+1} = ttm(X_iter{k+1}, {Vk, Vk}, [1, 2]);
                 Y_iter{k+1} = ttm(Y_iter{k+1}, {Wk, Wk}, [1, 2]);
             end
-
-            u0 = hat_u;
 
             k = k + 1;
         end
@@ -87,7 +83,9 @@ function [bic_rx, bic_ry] = bic_diag(X, Y, rank_max, K, u0, lambda, tol, max_ite
     elseif method == 2
         while k < K+1
             bic = ones(rank_max, 1);
-
+            if (k > 1) && spectral_init
+                u0 = init(X_iter{k}, Y_iter{k}, lambda(k));
+            end
             for i = 1:rank_max
                 bic(i) = bic_dsst(i, i, X_iter{k}, Y_iter{k}, u0, lambda(k), tol, max_iter);
             end
@@ -112,10 +110,7 @@ function [bic_rx, bic_ry] = bic_diag(X, Y, rank_max, K, u0, lambda, tol, max_ite
                 X_iter{k+1} = X_iter{k} - hat_X;
                 Y_iter{k+1} = Y_iter{k} - hat_Y;
                 sz_X = size(X);
-                sz_Y = size(Y);
                 uk = double(eye(sz_X(3)) - hat_u*hat_u');
-                Vk = double(eye(sz_X(1)) - hat_V*hat_V');
-                Wk = double(eye(sz_Y(1)) - hat_W*hat_W');
                 X_iter{k+1} = ttm(X_iter{k+1}, {uk}, 3);
                 Y_iter{k+1} = ttm(Y_iter{k+1}, {uk}, 3);
             elseif deflation == 3 % project deflation on individual factor
@@ -123,14 +118,11 @@ function [bic_rx, bic_ry] = bic_diag(X, Y, rank_max, K, u0, lambda, tol, max_ite
                 Y_iter{k+1} = Y_iter{k} - hat_Y;
                 sz_X = size(X);
                 sz_Y = size(Y);
-                uk = double(eye(sz_X(3)) - hat_u*hat_u');
                 Vk = double(eye(sz_X(1)) - hat_V*hat_V');
                 Wk = double(eye(sz_Y(1)) - hat_W*hat_W');
                 X_iter{k+1} = ttm(X_iter{k+1}, {Vk, Vk}, [1, 2]);
                 Y_iter{k+1} = ttm(Y_iter{k+1}, {Wk, Wk}, [1, 2]);
             end
-            
-            u0 = hat_u;
 
             k = k+1;
         end

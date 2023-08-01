@@ -24,20 +24,22 @@ function [hat_u, hat_V, hat_W, Dx, Dy, hat_X, hat_Y] = dJisst_single(X, Y, u0, r
 
         % update of V, the leading r_x singular vectors of third-mode
         % tensor multiplication with hat_u at each iteration
-        [ax, ~, ~] = svds(double(ttv(X, hat_u, 3)), rx);
+        X_mat = double(ttv(X, hat_u, 3));
+        [ax, ~, ~] = svds(X_mat, rx);
         hat_V = ax;
 
         % update of W, the leading r_y singular vectors of third-mode
         % multiplication with hat_u at each iteration
-        [ay, ~, ~] = svds(double(ttv(Y, hat_u, 3)), ry);
+        Y_mat = double(ttv(Y, hat_u, 3));
+        [ay, ~, ~] = svds(Y_mat, ry);
         hat_W = ay;
 
         % update of Dx, unlike original algorithm, we need to update Dx
         % (and Dy) at each iteration in the modified model and algorithm
-        Dx = diag(diag(hat_V'*(double(ttv(X, hat_u, 3)))*hat_V));
+        Dx = diag(diag(hat_V'*X_mat*hat_V));
 
         % update of Dy, similar as the update of Dx
-        Dy = diag(diag(hat_W'*(double(ttv(Y, hat_u, 3)))*hat_W));
+        Dy = diag(diag(hat_W'*Y_mat*hat_W));
 
         % update of u, gtr_prod is another function which is trace product
         % of X(Y), hat_V(hat_W) and Dx(Dy). The function of gtr_prod is in
@@ -46,6 +48,9 @@ function [hat_u, hat_V, hat_W, Dx, Dy, hat_X, hat_Y] = dJisst_single(X, Y, u0, r
         hat_u = u_unnorm/norm(u_unnorm);
 
         % estimate X and Y
+        if k > 1
+            hat_X_old = hat_X; hat_Y_old = hat_Y;
+        end
         hat_X = squeeze(ttt(tensor(hat_V*Dx*hat_V'), tensor(hat_u)));
         hat_Y = squeeze(ttt(tensor(hat_W*Dy*hat_W'), tensor(hat_u)));
 
@@ -53,7 +58,7 @@ function [hat_u, hat_V, hat_W, Dx, Dy, hat_X, hat_Y] = dJisst_single(X, Y, u0, r
         k = k+1;
 
         % stopping criteria
-        if norm(hat_X-X)/norm(X)+norm(hat_Y-Y)/norm(Y)<tol
+        if k > 2 && norm(hat_X-hat_X_old)/norm(hat_X_old)+norm(hat_Y-hat_Y_old)/norm(hat_Y_old)<tol
             break
         end
     end
