@@ -108,12 +108,12 @@ function [u_est, V_est, W_est, Dx_est, Dy_est] = dJisstPCA(X, Y, K, varargin)
     else
         spectral_init = false;
     end
-    if isnan(rx)||isnan(ry)
+    if max(isnan(rx))||max(isnan(ry))
         [rx_tmp, ry_tmp] = bic_diag(X, Y, rank_max, K, u0, spectral_init, lambda, tol, max_iter, method, deflation);
-        if isnan(rx)
+        if max(isnan(rx))
             rx = rx_tmp;
         end
-        if isnan(ry)
+        if max(isnan(ry))
             ry = ry_tmp;
         end
     end

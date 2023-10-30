@@ -16,7 +16,7 @@
 % lambda: scaler for each layer, which is a vector of dimension K. The
 % default value is norm(X)/(norm(X)+norm(Y)) for each element
 % tol, max_iter: tolerance value and maximum iteration number. The default
-% values are tol = 0.0001 and max_iter = 20 
+% values are tol = 0.00001 and max_iter = 20 
 % deflation: deflation = 0 is subtract deflation, deflation = 1 is project 
 % deflation, deflation = 2 is project deflation for only u after subtract 
 % deflation, def = 3 is project deflation for only V and W after subtract
@@ -85,7 +85,7 @@ function [u_est, V_est, W_est, d_est] = JisstPCA(X, Y, K, varargin)
         lambda = lam*ones(K, 1);
     end
     if isnan(tol)
-        tol = 0.0001;
+        tol = 0.00001;
     end
     if isnan(max_iter)
         max_iter = 20;  
@@ -102,15 +102,21 @@ function [u_est, V_est, W_est, d_est] = JisstPCA(X, Y, K, varargin)
 
     % default value for u0, rx and ry
     if isnan(u0)
+        spectral_init = true;
         u0 = init(X, Y,lambda(1)); 
+    else
+        spectral_init = false;
     end
-    if isnan(rx)
-        rx = bic_def_1(X, Y, rank_max, K, u0, lambda, tol, max_iter, method, deflation);
+    if max(isnan(rx))||max(isnan(ry))
+        [rx_tmp, ry_tmp] = bic_def(X, Y, rank_max, K, u0, spectral_init, lambda, tol, max_iter, method, deflation);
+        if max(isnan(rx))
+            rx = rx_tmp;
+        end
+        if max(isnan(ry))
+            ry = ry_tmp;
+        end
     end
-    if isnan(ry)
-        ry = bic_def_2(X, Y, rank_max, K, u0, lambda, tol, max_iter, method, deflation);
-    end
-
+    
     %% main function when all the hyperparameters are known
     sz = size(rx);
     X_est = cell(sz(2) + 1, 1);
@@ -126,7 +132,7 @@ function [u_est, V_est, W_est, d_est] = JisstPCA(X, Y, K, varargin)
 
     k = 1;
     while k < K + 1
-        if k > 1
+        if (k > 1) && spectral_init
             u0 = init(X_est{k}, Y_est{k}, lambda(k)); 
         end
         [hat_u, hat_V, hat_W, d_x, d_y, ~, ~] = Jisst_single(X_est{k}, Y_est{k}, u0, rx(k), ry(k), lambda(k), tol, max_iter);
@@ -155,11 +161,8 @@ function [u_est, V_est, W_est, d_est] = JisstPCA(X, Y, K, varargin)
             Y_est{k+1} = Y_est{k} - d_y*squeeze(ttt(tensor(hat_W*hat_W'), tensor(hat_u)));
             
             sz_X = size(X);
-            sz_Y = size(Y);
             uk = double(eye(sz_X(3)) - u_est{k+1}*u_est{k+1}');
-            Vk = double(eye(sz_X(1)) - V_est{k+1}*V_est{k+1}');
-            Wk = double(eye(sz_Y(1)) - W_est{k+1}*W_est{k+1}');
-
+            
             X_est{k+1} = ttm(X_est{k+1}, {uk}, 3);
             Y_est{k+1} = ttm(Y_est{k+1}, {uk}, 3);
         elseif deflation == 3 % orthogonal individual factors after subtract deflation
@@ -168,7 +171,6 @@ function [u_est, V_est, W_est, d_est] = JisstPCA(X, Y, K, varargin)
             
             sz_X = size(X);
             sz_Y = size(Y);
-            uk = double(eye(sz_X(3)) - u_est{k+1}*u_est{k+1}');
             Vk = double(eye(sz_X(1)) - V_est{k+1}*V_est{k+1}');
             Wk = double(eye(sz_Y(1)) - W_est{k+1}*W_est{k+1}');
             

@@ -28,6 +28,6 @@ function u = tr_prod(X, V)
     sz = size(X, 3);
     u = zeros(sz, 1);
     for i=1:sz
-        u(i) = ttt(tensor(X(:,:,i)), tensor((V*V')), [1:2]);
+        u(i) = trace(V'*double(X(:, :, i))*V);
     end
 end

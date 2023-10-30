@@ -55,8 +55,8 @@ function [hat_u, hat_V, hat_W, dx, dy, hat_X, hat_Y] = Jisst_single(X, Y, u0, rx
         % matrix. Also, svd function in MATLAB have already arrange the
         % singular value/vector in an decreasing order, we arrange them again
         % to make sure we get the leading singular vectors
-        [a1, ~, ~] = svds(double(ttv(X, hat_u, 3)), rx);
-        hat_V = a1;
+        X_mat = double(ttv(X, hat_u, 3));
+        [hat_V, ~, ~] = svds(X_mat, rx);
     
         % update of W
         % at each iteration, the update of W is the ry leading eigenvectors
@@ -65,8 +65,8 @@ function [hat_u, hat_V, hat_W, dx, dy, hat_X, hat_Y] = Jisst_single(X, Y, u0, rx
         %
         % Note: at each iterstion, the estimate of W should be an orthogonal
         % matrix.
-        [a2, ~, ~] = svds(double(ttv(Y, hat_u, 3)), ry);
-        hat_W = a2;
+        Y_mat = double(ttv(Y, hat_u, 3));
+        [hat_W, ~, ~] = svds(Y_mat, ry);
     
         % update of u
         % the update of u is a weighted summation of two trace products:
@@ -76,7 +76,8 @@ function [hat_u, hat_V, hat_W, dx, dy, hat_X, hat_Y] = Jisst_single(X, Y, u0, rx
         %
         % Note: the function of trace product is tr_prod given by another
         % file in this toolbox.
-        hat_u = (lambda*tr_prod(X, hat_V)+(1-lambda)*tr_prod(Y, hat_W))/norm(lambda*tr_prod(X, hat_V)+(1-lambda)*tr_prod(Y, hat_W));
+        u_unnorm = lambda*tr_prod(X, hat_V)+(1-lambda)*tr_prod(Y, hat_W);
+        hat_u = u_unnorm/norm(u_unnorm);
 
         % estimate X and Y
         % after obtaining the estimation of u, V, W, since dx*rx equals to
@@ -85,20 +86,21 @@ function [hat_u, hat_V, hat_W, dx, dy, hat_X, hat_Y] = Jisst_single(X, Y, u0, rx
         %
         % then the estimation of the true X can be obtained in terms of
         % hat_V, hat_u, dx (so is the estimation of the true Y).
-        hat_X0 = squeeze(ttt(tensor(hat_V * hat_V'), tensor(hat_u)));
-        hat_Y0 = squeeze(ttt(tensor(hat_W * hat_W'), tensor(hat_u)));
-        dx = ttt(X, hat_X0, [1:3])/rx; % the estimated signal of X;
-        dy = ttt(Y, hat_Y0, [1:3])/ry; % the estimated signal of Y;
-        hat_X = tensor(dx*hat_X0); % estimation of X;
-        hat_Y = tensor(dy*hat_Y0); % estimation of Y;
-
-        % stopping critia: the sum of relative error smaller than the
-        % tolerance, then stop the iteration.
-        if norm(hat_X-X)/norm(X)+norm(hat_Y-Y)/norm(Y)<tol
-            break
+        if k > 1
+            hat_X_old = hat_X; hat_Y_old = hat_Y;
         end
+        dx = trace(hat_V'*X_mat*hat_V) / rx;% the estimated signal of X;
+        dy = trace(hat_W'*Y_mat*hat_W) / ry;% the estimated signal of Y;
+
+        hat_X = dx * squeeze(ttt(tensor(hat_V * hat_V'), tensor(hat_u))); % estimation of X;
+        hat_Y = dy * squeeze(ttt(tensor(hat_W * hat_W'), tensor(hat_u))); % estimation of Y;
 
         % next iteration
-        k = k + 1;
+        k = k+1;
+
+        % stopping criteria
+        if k > 2 && norm(hat_X-hat_X_old)/norm(hat_X_old)+norm(hat_Y-hat_Y_old)/norm(hat_Y_old)<tol
+            break
+        end
     end
 end
