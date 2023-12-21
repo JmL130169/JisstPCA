@@ -30,7 +30,7 @@ Y_obs = tensor(Y + noise_Y); % observation tensor of X, with noise
 
 % optional inputs
 tol = 0.0001; % tolerance level
-max_iter = 100; % maximum iteration number
+max_iter = 10; % maximum iteration number
 ratio = norm(X_obs)/(norm(X_obs) + norm(Y_obs)); % relative weight of X and Y in estimation
 lambda = ratio*ones(1, K); % relative weight of X and Y
 u0 = init(X_obs, Y_obs, lambda(1)); % initialization

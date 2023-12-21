@@ -1,0 +1,4001 @@
+q,N,seed,method,factor name,RI,ARI
+50,20,1,JisstPCA0 (oracle),sample,1,1
+50,20,1,JisstPCA0 (oracle),networkX1,1,1
+50,20,1,JisstPCA0 (oracle),networkY1,1,1
+50,20,1,JisstPCA0 (oracle),networkX2,0.496518987341772,-0.00692169036651305
+50,20,1,JisstPCA0 (oracle),networkY2,0.497142857142857,-0.00559701492537316
+50,20,1,JisstPCA0 (BIC),sample,0.605263157894737,0.129930394431554
+50,20,1,JisstPCA0 (BIC),networkX1,1,1
+50,20,1,JisstPCA0 (BIC),networkY1,1,1
+50,20,1,JisstPCA0 (BIC),networkX2,0.496518987341772,-0.00692169036651305
+50,20,1,JisstPCA0 (BIC),networkY2,0.497142857142857,-0.00559701492537316
+50,20,1,G-JisstPCA0 (oracle),sample,0.605263157894737,-0.0683760683760685
+50,20,1,G-JisstPCA0 (oracle),networkX1,1,1
+50,20,1,G-JisstPCA0 (oracle),networkY1,1,1
+50,20,1,G-JisstPCA0 (oracle),networkX2,0.496518987341772,-0.00692169036651305
+50,20,1,G-JisstPCA0 (oracle),networkY2,0.502857142857143,0.00599580293794338
+50,20,1,G-JisstPCA0 (BIC),sample,0.494736842105263,-0.045751633986928
+50,20,1,G-JisstPCA0 (BIC),networkX1,1,1
+50,20,1,G-JisstPCA0 (BIC),networkY1,1,1
+50,20,1,G-JisstPCA0 (BIC),networkX2,0.496518987341772,-0.00692169036651305
+50,20,1,G-JisstPCA0 (BIC),networkY2,0.497142857142857,-0.0053290700772716
+50,20,1,JisstPCA2 (oracle),sample,1,1
+50,20,1,JisstPCA2 (oracle),networkX1,1,1
+50,20,1,JisstPCA2 (oracle),networkY1,1,1
+50,20,1,JisstPCA2 (oracle),networkX2,1,1
+50,20,1,JisstPCA2 (oracle),networkY2,0.489795918367347,-0.021207776184601
+50,20,1,JisstPCA2 (BIC),sample,1,1
+50,20,1,JisstPCA2 (BIC),networkX1,1,1
+50,20,1,JisstPCA2 (BIC),networkY1,1,1
+50,20,1,JisstPCA2 (BIC),networkX2,1,1
+50,20,1,JisstPCA2 (BIC),networkY2,0.489795918367347,-0.021207776184601
+50,20,1,G-JisstPCA2 (oracle),sample,1,1
+50,20,1,G-JisstPCA2 (oracle),networkX1,1,1
+50,20,1,G-JisstPCA2 (oracle),networkY1,1,1
+50,20,1,G-JisstPCA2 (oracle),networkX2,1,1
+50,20,1,G-JisstPCA2 (oracle),networkY2,0.489795918367347,-0.0205271751807791
+50,20,1,G-JisstPCA2 (BIC),sample,1,1
+50,20,1,G-JisstPCA2 (BIC),networkX1,1,1
+50,20,1,G-JisstPCA2 (BIC),networkY1,1,1
+50,20,1,G-JisstPCA2 (BIC),networkX2,1,1
+50,20,1,G-JisstPCA2 (BIC),networkY2,0.490612244897959,-0.0200160128102481
+50,20,1,iHOSVD,sample,1,1
+50,20,1,iHOSVD,networkX1,1,1
+50,20,1,iHOSVD,networkY1,1,1
+50,20,1,iHOSVD,networkX2,0.494936708860759,-0.0102884615384615
+50,20,1,iHOSVD,networkY2,0.493061224489796,-0.0156203063983178
+50,20,1,iHOOI,sample,0.557894736842105,0.084967320261438
+50,20,1,iHOOI,networkX1,0.982594936708861,0.960672540291412
+50,20,1,iHOOI,networkY1,1,1
+50,20,1,iHOOI,networkX2,0.496518987341772,-0.00647015959193154
+50,20,1,iHOOI,networkY2,0.502857142857143,0.00493514288572476
+50,40,1,JisstPCA0 (oracle),sample,1,1
+50,40,1,JisstPCA0 (oracle),networkX1,1,1
+50,40,1,JisstPCA0 (oracle),networkY1,1,1
+50,40,1,JisstPCA0 (oracle),networkX2,1,1
+50,40,1,JisstPCA0 (oracle),networkY2,1,1
+50,40,1,JisstPCA0 (BIC),sample,1,1
+50,40,1,JisstPCA0 (BIC),networkX1,1,1
+50,40,1,JisstPCA0 (BIC),networkY1,1,1
+50,40,1,JisstPCA0 (BIC),networkX2,1,1
+50,40,1,JisstPCA0 (BIC),networkY2,1,1
+50,40,1,G-JisstPCA0 (oracle),sample,1,1
+50,40,1,G-JisstPCA0 (oracle),networkX1,1,1
+50,40,1,G-JisstPCA0 (oracle),networkY1,1,1
+50,40,1,G-JisstPCA0 (oracle),networkX2,1,1
+50,40,1,G-JisstPCA0 (oracle),networkY2,1,1
+50,40,1,G-JisstPCA0 (BIC),sample,1,1
+50,40,1,G-JisstPCA0 (BIC),networkX1,1,1
+50,40,1,G-JisstPCA0 (BIC),networkY1,1,1
+50,40,1,G-JisstPCA0 (BIC),networkX2,1,1
+50,40,1,G-JisstPCA0 (BIC),networkY2,1,1
+50,40,1,JisstPCA2 (oracle),sample,1,1
+50,40,1,JisstPCA2 (oracle),networkX1,1,1
+50,40,1,JisstPCA2 (oracle),networkY1,1,1
+50,40,1,JisstPCA2 (oracle),networkX2,1,1
+50,40,1,JisstPCA2 (oracle),networkY2,1,1
+50,40,1,JisstPCA2 (BIC),sample,1,1
+50,40,1,JisstPCA2 (BIC),networkX1,1,1
+50,40,1,JisstPCA2 (BIC),networkY1,1,1
+50,40,1,JisstPCA2 (BIC),networkX2,1,1
+50,40,1,JisstPCA2 (BIC),networkY2,1,1
+50,40,1,G-JisstPCA2 (oracle),sample,1,1
+50,40,1,G-JisstPCA2 (oracle),networkX1,1,1
+50,40,1,G-JisstPCA2 (oracle),networkY1,1,1
+50,40,1,G-JisstPCA2 (oracle),networkX2,1,1
+50,40,1,G-JisstPCA2 (oracle),networkY2,1,1
+50,40,1,G-JisstPCA2 (BIC),sample,1,1
+50,40,1,G-JisstPCA2 (BIC),networkX1,1,1
+50,40,1,G-JisstPCA2 (BIC),networkY1,1,1
+50,40,1,G-JisstPCA2 (BIC),networkX2,1,1
+50,40,1,G-JisstPCA2 (BIC),networkY2,1,1
+50,40,1,iHOSVD,sample,1,1
+50,40,1,iHOSVD,networkX1,0.756962025316456,0.468132854578097
+50,40,1,iHOSVD,networkY1,1,1
+50,40,1,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,40,1,iHOSVD,networkY2,0.529795918367347,0.0597014925373134
+50,40,1,iHOOI,sample,1,1
+50,40,1,iHOOI,networkX1,0.756962025316456,0.468132854578097
+50,40,1,iHOOI,networkY1,1,1
+50,40,1,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,40,1,iHOOI,networkY2,0.627755102040816,0.2552
+80,20,1,JisstPCA0 (oracle),sample,0.605263157894737,0.129930394431554
+80,20,1,JisstPCA0 (oracle),networkX1,1,1
+80,20,1,JisstPCA0 (oracle),networkY1,1,1
+80,20,1,JisstPCA0 (oracle),networkX2,0.505063291139241,0.0100948596333804
+80,20,1,JisstPCA0 (oracle),networkY2,0.501582278481013,-0.000450272977992956
+80,20,1,JisstPCA0 (BIC),sample,1,1
+80,20,1,JisstPCA0 (BIC),networkX1,1,1
+80,20,1,JisstPCA0 (BIC),networkY1,1,1
+80,20,1,JisstPCA0 (BIC),networkX2,0.505063291139241,0.0100948596333804
+80,20,1,JisstPCA0 (BIC),networkY2,0.49873417721519,-0.00793226324030699
+80,20,1,G-JisstPCA0 (oracle),sample,0.521052631578947,-0.0556844547563806
+80,20,1,G-JisstPCA0 (oracle),networkX1,1,1
+80,20,1,G-JisstPCA0 (oracle),networkY1,1,1
+80,20,1,G-JisstPCA0 (oracle),networkX2,0.494936708860759,-0.0102560815358483
+80,20,1,G-JisstPCA0 (oracle),networkY2,0.49873417721519,-0.00281444534911298
+80,20,1,G-JisstPCA0 (BIC),sample,1,1
+80,20,1,G-JisstPCA0 (BIC),networkX1,1,1
+80,20,1,G-JisstPCA0 (BIC),networkY1,1,1
+80,20,1,G-JisstPCA0 (BIC),networkX2,0.494936708860759,-0.0102560815358483
+80,20,1,G-JisstPCA0 (BIC),networkY2,0.496518987341772,-0.00747698310785361
+80,20,1,JisstPCA2 (oracle),sample,1,1
+80,20,1,JisstPCA2 (oracle),networkX1,1,1
+80,20,1,JisstPCA2 (oracle),networkY1,1,1
+80,20,1,JisstPCA2 (oracle),networkX2,0.950632911392405,0.90125
+80,20,1,JisstPCA2 (oracle),networkY2,0.759810126582279,0.519781069950938
+80,20,1,JisstPCA2 (BIC),sample,1,1
+80,20,1,JisstPCA2 (BIC),networkX1,1,1
+80,20,1,JisstPCA2 (BIC),networkY1,1,1
+80,20,1,JisstPCA2 (BIC),networkX2,0.950632911392405,0.90125
+80,20,1,JisstPCA2 (BIC),networkY2,0.724367088607595,0.448918724541853
+80,20,1,G-JisstPCA2 (oracle),sample,1,1
+80,20,1,G-JisstPCA2 (oracle),networkX1,1,1
+80,20,1,G-JisstPCA2 (oracle),networkY1,1,1
+80,20,1,G-JisstPCA2 (oracle),networkX2,0.950632911392405,0.90125
+80,20,1,G-JisstPCA2 (oracle),networkY2,0.501582278481013,0.00265477787877471
+80,20,1,G-JisstPCA2 (BIC),sample,1,1
+80,20,1,G-JisstPCA2 (BIC),networkX1,1,1
+80,20,1,G-JisstPCA2 (BIC),networkY1,1,1
+80,20,1,G-JisstPCA2 (BIC),networkX2,0.950632911392405,0.90125
+80,20,1,G-JisstPCA2 (BIC),networkY2,0.501582278481013,0.00265477787877471
+80,20,1,iHOSVD,sample,1,1
+80,20,1,iHOSVD,networkX1,1,1
+80,20,1,iHOSVD,networkY1,1,1
+80,20,1,iHOSVD,networkX2,0.547151898734177,0.0941659121321143
+80,20,1,iHOSVD,networkY2,0.493987341772152,-0.0138300997288876
+80,20,1,iHOOI,sample,1,1
+80,20,1,iHOOI,networkX1,1,1
+80,20,1,iHOOI,networkY1,1,1
+80,20,1,iHOOI,networkX2,0.646835443037975,0.295386976119689
+80,20,1,iHOOI,networkY2,0.509177215189873,0.0185447141316937
+80,40,1,JisstPCA0 (oracle),sample,1,1
+80,40,1,JisstPCA0 (oracle),networkX1,0.711708860759494,0.434622896009075
+80,40,1,JisstPCA0 (oracle),networkY1,1,1
+80,40,1,JisstPCA0 (oracle),networkX2,1,1
+80,40,1,JisstPCA0 (oracle),networkY2,1,1
+80,40,1,JisstPCA0 (BIC),sample,1,1
+80,40,1,JisstPCA0 (BIC),networkX1,1,1
+80,40,1,JisstPCA0 (BIC),networkY1,1,1
+80,40,1,JisstPCA0 (BIC),networkX2,1,1
+80,40,1,JisstPCA0 (BIC),networkY2,1,1
+80,40,1,G-JisstPCA0 (oracle),sample,1,1
+80,40,1,G-JisstPCA0 (oracle),networkX1,1,1
+80,40,1,G-JisstPCA0 (oracle),networkY1,1,1
+80,40,1,G-JisstPCA0 (oracle),networkX2,1,1
+80,40,1,G-JisstPCA0 (oracle),networkY2,1,1
+80,40,1,G-JisstPCA0 (BIC),sample,1,1
+80,40,1,G-JisstPCA0 (BIC),networkX1,1,1
+80,40,1,G-JisstPCA0 (BIC),networkY1,1,1
+80,40,1,G-JisstPCA0 (BIC),networkX2,1,1
+80,40,1,G-JisstPCA0 (BIC),networkY2,1,1
+80,40,1,JisstPCA2 (oracle),sample,1,1
+80,40,1,JisstPCA2 (oracle),networkX1,1,1
+80,40,1,JisstPCA2 (oracle),networkY1,1,1
+80,40,1,JisstPCA2 (oracle),networkX2,1,1
+80,40,1,JisstPCA2 (oracle),networkY2,1,1
+80,40,1,JisstPCA2 (BIC),sample,1,1
+80,40,1,JisstPCA2 (BIC),networkX1,1,1
+80,40,1,JisstPCA2 (BIC),networkY1,1,1
+80,40,1,JisstPCA2 (BIC),networkX2,1,1
+80,40,1,JisstPCA2 (BIC),networkY2,1,1
+80,40,1,G-JisstPCA2 (oracle),sample,1,1
+80,40,1,G-JisstPCA2 (oracle),networkX1,1,1
+80,40,1,G-JisstPCA2 (oracle),networkY1,1,1
+80,40,1,G-JisstPCA2 (oracle),networkX2,1,1
+80,40,1,G-JisstPCA2 (oracle),networkY2,1,1
+80,40,1,G-JisstPCA2 (BIC),sample,1,1
+80,40,1,G-JisstPCA2 (BIC),networkX1,1,1
+80,40,1,G-JisstPCA2 (BIC),networkY1,1,1
+80,40,1,G-JisstPCA2 (BIC),networkX2,1,1
+80,40,1,G-JisstPCA2 (BIC),networkY2,1,1
+80,40,1,iHOSVD,sample,1,1
+80,40,1,iHOSVD,networkX1,0.759810126582279,0.471531387656462
+80,40,1,iHOSVD,networkY1,1,1
+80,40,1,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,40,1,iHOSVD,networkY2,0.633227848101266,0.266391045517551
+80,40,1,iHOOI,sample,1,1
+80,40,1,iHOOI,networkX1,0.756962025316456,0.468132854578097
+80,40,1,iHOOI,networkY1,1,1
+80,40,1,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,40,1,iHOOI,networkY2,0.675949367088608,0.351395730706076
+50,20,2,JisstPCA0 (oracle),sample,0.810526315789474,0.517562420651714
+50,20,2,JisstPCA0 (oracle),networkX1,1,1
+50,20,2,JisstPCA0 (oracle),networkY1,1,1
+50,20,2,JisstPCA0 (oracle),networkX2,0.494936708860759,-0.0102560815358483
+50,20,2,JisstPCA0 (oracle),networkY2,0.497142857142857,-0.00693888444088595
+50,20,2,JisstPCA0 (BIC),sample,0.473684210526316,-0.0324964677752417
+50,20,2,JisstPCA0 (BIC),networkX1,1,1
+50,20,2,JisstPCA0 (BIC),networkY1,1,1
+50,20,2,JisstPCA0 (BIC),networkX2,0.494936708860759,-0.0102560815358483
+50,20,2,JisstPCA0 (BIC),networkY2,0.489795918367347,-0.0205271751807791
+50,20,2,G-JisstPCA0 (oracle),sample,1,1
+50,20,2,G-JisstPCA0 (oracle),networkX1,1,1
+50,20,2,G-JisstPCA0 (oracle),networkY1,1,1
+50,20,2,G-JisstPCA0 (oracle),networkX2,0.493670886075949,-0.0123013839056895
+50,20,2,G-JisstPCA0 (oracle),networkY2,0.490612244897959,-0.0192000000000001
+50,20,2,G-JisstPCA0 (BIC),sample,0.478947368421053,-0.101159114857745
+50,20,2,G-JisstPCA0 (BIC),networkX1,1,1
+50,20,2,G-JisstPCA0 (BIC),networkY1,1,1
+50,20,2,G-JisstPCA0 (BIC),networkX2,0.496518987341772,-0.00711532760154167
+50,20,2,G-JisstPCA0 (BIC),networkY2,0.490612244897959,-0.0192000000000001
+50,20,2,JisstPCA2 (oracle),sample,1,1
+50,20,2,JisstPCA2 (oracle),networkX1,1,1
+50,20,2,JisstPCA2 (oracle),networkY1,1,1
+50,20,2,JisstPCA2 (oracle),networkX2,1,1
+50,20,2,JisstPCA2 (oracle),networkY2,0.96,0.919990669465827
+50,20,2,JisstPCA2 (BIC),sample,1,1
+50,20,2,JisstPCA2 (BIC),networkX1,1,1
+50,20,2,JisstPCA2 (BIC),networkY1,1,1
+50,20,2,JisstPCA2 (BIC),networkX2,1,1
+50,20,2,JisstPCA2 (BIC),networkY2,0.96,0.919990669465827
+50,20,2,G-JisstPCA2 (oracle),sample,1,1
+50,20,2,G-JisstPCA2 (oracle),networkX1,1,1
+50,20,2,G-JisstPCA2 (oracle),networkY1,1,1
+50,20,2,G-JisstPCA2 (oracle),networkX2,1,1
+50,20,2,G-JisstPCA2 (oracle),networkY2,0.96,0.919990669465827
+50,20,2,G-JisstPCA2 (BIC),sample,1,1
+50,20,2,G-JisstPCA2 (BIC),networkX1,1,1
+50,20,2,G-JisstPCA2 (BIC),networkY1,1,1
+50,20,2,G-JisstPCA2 (BIC),networkX2,1,1
+50,20,2,G-JisstPCA2 (BIC),networkY2,0.96,0.919990669465827
+50,20,2,iHOSVD,sample,1,1
+50,20,2,iHOSVD,networkX1,1,1
+50,20,2,iHOSVD,networkY1,1,1
+50,20,2,iHOSVD,networkX2,0.59620253164557,0.194856230031949
+50,20,2,iHOSVD,networkY2,0.493061224489796,-0.0183394130049194
+50,20,2,iHOOI,sample,1,1
+50,20,2,iHOOI,networkX1,1,1
+50,20,2,iHOOI,networkY1,1,1
+50,20,2,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,20,2,iHOOI,networkY2,0.489795918367347,-0.0201192498584325
+50,40,2,JisstPCA0 (oracle),sample,0.533333333333333,0.0575207138304654
+50,40,2,JisstPCA0 (oracle),networkX1,1,1
+50,40,2,JisstPCA0 (oracle),networkY1,1,1
+50,40,2,JisstPCA0 (oracle),networkX2,0.496518987341772,-0.00711532760154167
+50,40,2,JisstPCA0 (oracle),networkY2,0.493061224489796,-0.0134554537885095
+50,40,2,JisstPCA0 (BIC),sample,0.533333333333333,0.0575207138304654
+50,40,2,JisstPCA0 (BIC),networkX1,1,1
+50,40,2,JisstPCA0 (BIC),networkY1,1,1
+50,40,2,JisstPCA0 (BIC),networkX2,0.496518987341772,-0.00711532760154167
+50,40,2,JisstPCA0 (BIC),networkY2,0.502857142857143,0.00559832050384887
+50,40,2,G-JisstPCA0 (oracle),sample,0.642307692307692,0.191808904140113
+50,40,2,G-JisstPCA0 (oracle),networkX1,1,1
+50,40,2,G-JisstPCA0 (oracle),networkY1,1,1
+50,40,2,G-JisstPCA0 (oracle),networkX2,0.49873417721519,-0.00240315293665283
+50,40,2,G-JisstPCA0 (oracle),networkY2,0.490612244897959,-0.0183852917665868
+50,40,2,G-JisstPCA0 (BIC),sample,0.488461538461538,-0.00839846028228148
+50,40,2,G-JisstPCA0 (BIC),networkX1,1,1
+50,40,2,G-JisstPCA0 (BIC),networkY1,1,1
+50,40,2,G-JisstPCA0 (BIC),networkX2,0.501582278481013,0.00339610249181012
+50,40,2,G-JisstPCA0 (BIC),networkY2,0.489795918367347,-0.0201192498584325
+50,40,2,JisstPCA2 (oracle),sample,1,1
+50,40,2,JisstPCA2 (oracle),networkX1,1,1
+50,40,2,JisstPCA2 (oracle),networkY1,1,1
+50,40,2,JisstPCA2 (oracle),networkX2,1,1
+50,40,2,JisstPCA2 (oracle),networkY2,1,1
+50,40,2,JisstPCA2 (BIC),sample,1,1
+50,40,2,JisstPCA2 (BIC),networkX1,1,1
+50,40,2,JisstPCA2 (BIC),networkY1,1,1
+50,40,2,JisstPCA2 (BIC),networkX2,1,1
+50,40,2,JisstPCA2 (BIC),networkY2,1,1
+50,40,2,G-JisstPCA2 (oracle),sample,1,1
+50,40,2,G-JisstPCA2 (oracle),networkX1,1,1
+50,40,2,G-JisstPCA2 (oracle),networkY1,1,1
+50,40,2,G-JisstPCA2 (oracle),networkX2,1,1
+50,40,2,G-JisstPCA2 (oracle),networkY2,1,1
+50,40,2,G-JisstPCA2 (BIC),sample,1,1
+50,40,2,G-JisstPCA2 (BIC),networkX1,1,1
+50,40,2,G-JisstPCA2 (BIC),networkY1,1,1
+50,40,2,G-JisstPCA2 (BIC),networkX2,1,1
+50,40,2,G-JisstPCA2 (BIC),networkY2,1,1
+50,40,2,iHOSVD,sample,1,1
+50,40,2,iHOSVD,networkX1,0.982594936708861,0.960823455794973
+50,40,2,iHOSVD,networkY1,1,1
+50,40,2,iHOSVD,networkX2,0.607911392405063,0.218458811411598
+50,40,2,iHOSVD,networkY2,0.490612244897959,-0.0183852917665868
+50,40,2,iHOOI,sample,1,1
+50,40,2,iHOOI,networkX1,1,1
+50,40,2,iHOOI,networkY1,1,1
+50,40,2,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,40,2,iHOOI,networkY2,0.493061224489796,-0.0135904866593385
+80,20,2,JisstPCA0 (oracle),sample,1,1
+80,20,2,JisstPCA0 (oracle),networkX1,1,1
+80,20,2,JisstPCA0 (oracle),networkY1,1,1
+80,20,2,JisstPCA0 (oracle),networkX2,0.493987341772152,-0.0121793895882245
+80,20,2,JisstPCA0 (oracle),networkY2,0.49873417721519,-0.0024609705452588
+80,20,2,JisstPCA0 (BIC),sample,0.9,0.764391071661663
+80,20,2,JisstPCA0 (BIC),networkX1,1,1
+80,20,2,JisstPCA0 (BIC),networkY1,1,1
+80,20,2,JisstPCA0 (BIC),networkX2,0.493987341772152,-0.0121793895882245
+80,20,2,JisstPCA0 (BIC),networkY2,0.49873417721519,-0.0024609705452588
+80,20,2,G-JisstPCA0 (oracle),sample,0.557894736842105,0.132702967068797
+80,20,2,G-JisstPCA0 (oracle),networkX1,1,1
+80,20,2,G-JisstPCA0 (oracle),networkY1,1,1
+80,20,2,G-JisstPCA0 (oracle),networkX2,0.493670886075949,-0.0127880516650108
+80,20,2,G-JisstPCA0 (oracle),networkY2,0.505063291139241,0.0104056539094887
+80,20,2,G-JisstPCA0 (BIC),sample,0.557894736842105,0.132702967068797
+80,20,2,G-JisstPCA0 (BIC),networkX1,1,1
+80,20,2,G-JisstPCA0 (BIC),networkY1,1,1
+80,20,2,G-JisstPCA0 (BIC),networkX2,0.493670886075949,-0.0127880516650108
+80,20,2,G-JisstPCA0 (BIC),networkY2,0.505063291139241,0.0104056539094887
+80,20,2,JisstPCA2 (oracle),sample,1,1
+80,20,2,JisstPCA2 (oracle),networkX1,1,1
+80,20,2,JisstPCA2 (oracle),networkY1,1,1
+80,20,2,JisstPCA2 (oracle),networkX2,1,1
+80,20,2,JisstPCA2 (oracle),networkY2,1,1
+80,20,2,JisstPCA2 (BIC),sample,1,1
+80,20,2,JisstPCA2 (BIC),networkX1,1,1
+80,20,2,JisstPCA2 (BIC),networkY1,1,1
+80,20,2,JisstPCA2 (BIC),networkX2,1,1
+80,20,2,JisstPCA2 (BIC),networkY2,1,1
+80,20,2,G-JisstPCA2 (oracle),sample,1,1
+80,20,2,G-JisstPCA2 (oracle),networkX1,1,1
+80,20,2,G-JisstPCA2 (oracle),networkY1,1,1
+80,20,2,G-JisstPCA2 (oracle),networkX2,1,1
+80,20,2,G-JisstPCA2 (oracle),networkY2,1,1
+80,20,2,G-JisstPCA2 (BIC),sample,1,1
+80,20,2,G-JisstPCA2 (BIC),networkX1,1,1
+80,20,2,G-JisstPCA2 (BIC),networkY1,1,1
+80,20,2,G-JisstPCA2 (BIC),networkX2,1,1
+80,20,2,G-JisstPCA2 (BIC),networkY2,1,1
+80,20,2,iHOSVD,sample,1,1
+80,20,2,iHOSVD,networkX1,1,1
+80,20,2,iHOSVD,networkY1,1,1
+80,20,2,iHOSVD,networkX2,0.607911392405063,0.218458811411598
+80,20,2,iHOSVD,networkY2,0.501582278481013,0.0033577851434027
+80,20,2,iHOOI,sample,1,1
+80,20,2,iHOOI,networkX1,0.805379746835443,0.560247495985793
+80,20,2,iHOOI,networkY1,1,1
+80,20,2,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,20,2,iHOOI,networkY2,0.759810126582279,0.519781069950938
+80,40,2,JisstPCA0 (oracle),sample,0.507692307692308,-0.078838174273859
+80,40,2,JisstPCA0 (oracle),networkX1,1,1
+80,40,2,JisstPCA0 (oracle),networkY1,1,1
+80,40,2,JisstPCA0 (oracle),networkX2,0.501582278481013,0.00301279637182393
+80,40,2,JisstPCA0 (oracle),networkY2,0.513924050632911,0.0182270091135047
+80,40,2,JisstPCA0 (BIC),sample,1,1
+80,40,2,JisstPCA0 (BIC),networkX1,1,1
+80,40,2,JisstPCA0 (BIC),networkY1,1,1
+80,40,2,JisstPCA0 (BIC),networkX2,0.501582278481013,0.00301279637182393
+80,40,2,JisstPCA0 (BIC),networkY2,0.513924050632911,0.0182270091135047
+80,40,2,G-JisstPCA0 (oracle),sample,0.533333333333333,-0.0226486860304288
+80,40,2,G-JisstPCA0 (oracle),networkX1,1,1
+80,40,2,G-JisstPCA0 (oracle),networkY1,1,1
+80,40,2,G-JisstPCA0 (oracle),networkX2,0.493670886075949,-0.0126906806819638
+80,40,2,G-JisstPCA0 (oracle),networkY2,0.493987341772152,-0.0121145109727664
+80,40,2,G-JisstPCA0 (BIC),sample,0.533333333333333,-0.0226486860304288
+80,40,2,G-JisstPCA0 (BIC),networkX1,1,1
+80,40,2,G-JisstPCA0 (BIC),networkY1,1,1
+80,40,2,G-JisstPCA0 (BIC),networkX2,0.493670886075949,-0.0126906806819638
+80,40,2,G-JisstPCA0 (BIC),networkY2,0.494936708860759,-0.0109105603448276
+80,40,2,JisstPCA2 (oracle),sample,1,1
+80,40,2,JisstPCA2 (oracle),networkX1,1,1
+80,40,2,JisstPCA2 (oracle),networkY1,1,1
+80,40,2,JisstPCA2 (oracle),networkX2,1,1
+80,40,2,JisstPCA2 (oracle),networkY2,0.975,0.949946184729937
+80,40,2,JisstPCA2 (BIC),sample,1,1
+80,40,2,JisstPCA2 (BIC),networkX1,1,1
+80,40,2,JisstPCA2 (BIC),networkY1,1,1
+80,40,2,JisstPCA2 (BIC),networkX2,1,1
+80,40,2,JisstPCA2 (BIC),networkY2,0.975,0.949946184729937
+80,40,2,G-JisstPCA2 (oracle),sample,1,1
+80,40,2,G-JisstPCA2 (oracle),networkX1,1,1
+80,40,2,G-JisstPCA2 (oracle),networkY1,1,1
+80,40,2,G-JisstPCA2 (oracle),networkX2,1,1
+80,40,2,G-JisstPCA2 (oracle),networkY2,1,1
+80,40,2,G-JisstPCA2 (BIC),sample,1,1
+80,40,2,G-JisstPCA2 (BIC),networkX1,1,1
+80,40,2,G-JisstPCA2 (BIC),networkY1,1,1
+80,40,2,G-JisstPCA2 (BIC),networkX2,1,1
+80,40,2,G-JisstPCA2 (BIC),networkY2,0.975,0.949946184729937
+80,40,2,iHOSVD,sample,1,1
+80,40,2,iHOSVD,networkX1,1,1
+80,40,2,iHOSVD,networkY1,1,1
+80,40,2,iHOSVD,networkX2,0.607911392405063,0.218458811411598
+80,40,2,iHOSVD,networkY2,0.496518987341772,-0.00804582398316402
+80,40,2,iHOOI,sample,1,1
+80,40,2,iHOOI,networkX1,1,1
+80,40,2,iHOOI,networkY1,1,1
+80,40,2,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,40,2,iHOOI,networkY2,0.707594936708861,0.415231100515266
+50,20,3,JisstPCA0 (oracle),sample,1,1
+50,20,3,JisstPCA0 (oracle),networkX1,1,1
+50,20,3,JisstPCA0 (oracle),networkY1,1,1
+50,20,3,JisstPCA0 (oracle),networkX2,0.505063291139241,0.00996794871794872
+50,20,3,JisstPCA0 (oracle),networkY2,0.493061224489796,-0.016842105263158
+50,20,3,JisstPCA0 (BIC),sample,0.473684210526316,-0.0457948040510788
+50,20,3,JisstPCA0 (BIC),networkX1,1,1
+50,20,3,JisstPCA0 (BIC),networkY1,1,1
+50,20,3,JisstPCA0 (BIC),networkX2,0.513924050632911,0.0279727001826397
+50,20,3,JisstPCA0 (BIC),networkY2,0.493061224489796,-0.016842105263158
+50,20,3,G-JisstPCA0 (oracle),sample,0.478947368421053,-0.0155490767735665
+50,20,3,G-JisstPCA0 (oracle),networkX1,1,1
+50,20,3,G-JisstPCA0 (oracle),networkY1,1,1
+50,20,3,G-JisstPCA0 (oracle),networkX2,0.501582278481013,0.00320448628079318
+50,20,3,G-JisstPCA0 (oracle),networkY2,0.502857142857143,0.00559832050384887
+50,20,3,G-JisstPCA0 (BIC),sample,0.478947368421053,-0.0155490767735665
+50,20,3,G-JisstPCA0 (BIC),networkX1,1,1
+50,20,3,G-JisstPCA0 (BIC),networkY1,0.755102040816326,0.48780487804878
+50,20,3,G-JisstPCA0 (BIC),networkX2,0.501582278481013,0.00320448628079318
+50,20,3,G-JisstPCA0 (BIC),networkY2,0.502857142857143,0.00599580293794338
+50,20,3,JisstPCA2 (oracle),sample,1,1
+50,20,3,JisstPCA2 (oracle),networkX1,1,1
+50,20,3,JisstPCA2 (oracle),networkY1,1,1
+50,20,3,JisstPCA2 (oracle),networkX2,1,1
+50,20,3,JisstPCA2 (oracle),networkY2,0.96,0.919990669465827
+50,20,3,JisstPCA2 (BIC),sample,1,1
+50,20,3,JisstPCA2 (BIC),networkX1,1,1
+50,20,3,JisstPCA2 (BIC),networkY1,1,1
+50,20,3,JisstPCA2 (BIC),networkX2,1,1
+50,20,3,JisstPCA2 (BIC),networkY2,0.96,0.919990669465827
+50,20,3,G-JisstPCA2 (oracle),sample,1,1
+50,20,3,G-JisstPCA2 (oracle),networkX1,1,1
+50,20,3,G-JisstPCA2 (oracle),networkY1,1,1
+50,20,3,G-JisstPCA2 (oracle),networkX2,1,1
+50,20,3,G-JisstPCA2 (oracle),networkY2,0.921632653061224,0.843283582089552
+50,20,3,G-JisstPCA2 (BIC),sample,1,1
+50,20,3,G-JisstPCA2 (BIC),networkX1,1,1
+50,20,3,G-JisstPCA2 (BIC),networkY1,1,1
+50,20,3,G-JisstPCA2 (BIC),networkX2,1,1
+50,20,3,G-JisstPCA2 (BIC),networkY2,0.921632653061224,0.843283582089552
+50,20,3,iHOSVD,sample,1,1
+50,20,3,iHOSVD,networkX1,1,1
+50,20,3,iHOSVD,networkY1,1,1
+50,20,3,iHOSVD,networkX2,0.585126582278481,0.173623024200305
+50,20,3,iHOSVD,networkY2,0.490612244897959,-0.0211060646540209
+50,20,3,iHOOI,sample,1,1
+50,20,3,iHOOI,networkX1,0.982594936708861,0.960823455794973
+50,20,3,iHOOI,networkY1,0.755102040816326,0.48780487804878
+50,20,3,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,20,3,iHOOI,networkY2,0.510204081632653,0.0199999999999999
+50,40,3,JisstPCA0 (oracle),sample,1,1
+50,40,3,JisstPCA0 (oracle),networkX1,1,1
+50,40,3,JisstPCA0 (oracle),networkY1,1,1
+50,40,3,JisstPCA0 (oracle),networkX2,0.493987341772152,-0.0119847786901662
+50,40,3,JisstPCA0 (oracle),networkY2,0.493061224489796,-0.0139958012596221
+50,40,3,JisstPCA0 (BIC),sample,0.533333333333333,0.0753658870195597
+50,40,3,JisstPCA0 (BIC),networkX1,1,1
+50,40,3,JisstPCA0 (BIC),networkY1,1,1
+50,40,3,JisstPCA0 (BIC),networkX2,0.493987341772152,-0.0119847786901662
+50,40,3,JisstPCA0 (BIC),networkY2,0.493061224489796,-0.0135904866593385
+50,40,3,G-JisstPCA0 (oracle),sample,1,1
+50,40,3,G-JisstPCA0 (oracle),networkX1,1,1
+50,40,3,G-JisstPCA0 (oracle),networkY1,1,1
+50,40,3,G-JisstPCA0 (oracle),networkX2,1,1
+50,40,3,G-JisstPCA0 (oracle),networkY2,1,1
+50,40,3,G-JisstPCA0 (BIC),sample,1,1
+50,40,3,G-JisstPCA0 (BIC),networkX1,1,1
+50,40,3,G-JisstPCA0 (BIC),networkY1,1,1
+50,40,3,G-JisstPCA0 (BIC),networkX2,1,1
+50,40,3,G-JisstPCA0 (BIC),networkY2,1,1
+50,40,3,JisstPCA2 (oracle),sample,1,1
+50,40,3,JisstPCA2 (oracle),networkX1,1,1
+50,40,3,JisstPCA2 (oracle),networkY1,1,1
+50,40,3,JisstPCA2 (oracle),networkX2,1,1
+50,40,3,JisstPCA2 (oracle),networkY2,1,1
+50,40,3,JisstPCA2 (BIC),sample,1,1
+50,40,3,JisstPCA2 (BIC),networkX1,1,1
+50,40,3,JisstPCA2 (BIC),networkY1,1,1
+50,40,3,JisstPCA2 (BIC),networkX2,1,1
+50,40,3,JisstPCA2 (BIC),networkY2,1,1
+50,40,3,G-JisstPCA2 (oracle),sample,1,1
+50,40,3,G-JisstPCA2 (oracle),networkX1,1,1
+50,40,3,G-JisstPCA2 (oracle),networkY1,1,1
+50,40,3,G-JisstPCA2 (oracle),networkX2,1,1
+50,40,3,G-JisstPCA2 (oracle),networkY2,1,1
+50,40,3,G-JisstPCA2 (BIC),sample,1,1
+50,40,3,G-JisstPCA2 (BIC),networkX1,1,1
+50,40,3,G-JisstPCA2 (BIC),networkY1,1,1
+50,40,3,G-JisstPCA2 (BIC),networkX2,1,1
+50,40,3,G-JisstPCA2 (BIC),networkY2,1,1
+50,40,3,iHOSVD,sample,1,1
+50,40,3,iHOSVD,networkX1,1,1
+50,40,3,iHOSVD,networkY1,1,1
+50,40,3,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,40,3,iHOSVD,networkY2,0.490612244897959,-0.0183852917665868
+50,40,3,iHOOI,sample,1,1
+50,40,3,iHOOI,networkX1,0.79746835443038,0.543141337034467
+50,40,3,iHOOI,networkY1,1,1
+50,40,3,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,40,3,iHOOI,networkY2,0.698775510204082,0.397801831806828
+80,20,3,JisstPCA0 (oracle),sample,0.478947368421053,-0.0155490767735665
+80,20,3,JisstPCA0 (oracle),networkX1,1,1
+80,20,3,JisstPCA0 (oracle),networkY1,1,1
+80,20,3,JisstPCA0 (oracle),networkX2,0.493987341772152,-0.0121145109727664
+80,20,3,JisstPCA0 (oracle),networkY2,0.513924050632911,0.0279166346227793
+80,20,3,JisstPCA0 (BIC),sample,0.478947368421053,-0.0155490767735665
+80,20,3,JisstPCA0 (BIC),networkX1,1,1
+80,20,3,JisstPCA0 (BIC),networkY1,1,1
+80,20,3,JisstPCA0 (BIC),networkX2,0.496518987341772,-0.00672812757811435
+80,20,3,JisstPCA0 (BIC),networkY2,0.513924050632911,0.0279166346227793
+80,20,3,G-JisstPCA0 (oracle),sample,1,1
+80,20,3,G-JisstPCA0 (oracle),networkX1,1,1
+80,20,3,G-JisstPCA0 (oracle),networkY1,1,1
+80,20,3,G-JisstPCA0 (oracle),networkX2,0.493987341772152,-0.0119847786901662
+80,20,3,G-JisstPCA0 (oracle),networkY2,0.509177215189873,0.0178524193587172
+80,20,3,G-JisstPCA0 (BIC),sample,1,1
+80,20,3,G-JisstPCA0 (BIC),networkX1,1,1
+80,20,3,G-JisstPCA0 (BIC),networkY1,1,1
+80,20,3,G-JisstPCA0 (BIC),networkX2,0.493987341772152,-0.0119847786901662
+80,20,3,G-JisstPCA0 (BIC),networkY2,0.509177215189873,0.0178524193587172
+80,20,3,JisstPCA2 (oracle),sample,1,1
+80,20,3,JisstPCA2 (oracle),networkX1,1,1
+80,20,3,JisstPCA2 (oracle),networkY1,0.762025316455696,0.505895190695446
+80,20,3,JisstPCA2 (oracle),networkX2,1,1
+80,20,3,JisstPCA2 (oracle),networkY2,0.975,0.949974430128523
+80,20,3,JisstPCA2 (BIC),sample,1,1
+80,20,3,JisstPCA2 (BIC),networkX1,1,1
+80,20,3,JisstPCA2 (BIC),networkY1,1,1
+80,20,3,JisstPCA2 (BIC),networkX2,1,1
+80,20,3,JisstPCA2 (BIC),networkY2,0.975,0.949974430128523
+80,20,3,G-JisstPCA2 (oracle),sample,1,1
+80,20,3,G-JisstPCA2 (oracle),networkX1,1,1
+80,20,3,G-JisstPCA2 (oracle),networkY1,1,1
+80,20,3,G-JisstPCA2 (oracle),networkX2,1,1
+80,20,3,G-JisstPCA2 (oracle),networkY2,0.975,0.949974430128523
+80,20,3,G-JisstPCA2 (BIC),sample,1,1
+80,20,3,G-JisstPCA2 (BIC),networkX1,1,1
+80,20,3,G-JisstPCA2 (BIC),networkY1,1,1
+80,20,3,G-JisstPCA2 (BIC),networkX2,1,1
+80,20,3,G-JisstPCA2 (BIC),networkY2,0.975,0.949974430128523
+80,20,3,iHOSVD,sample,1,1
+80,20,3,iHOSVD,networkX1,1,1
+80,20,3,iHOSVD,networkY1,1,1
+80,20,3,iHOSVD,networkX2,0.525316455696203,0.0512409927942354
+80,20,3,iHOSVD,networkY2,0.539240506329114,0.0787408133581941
+80,20,3,iHOOI,sample,1,1
+80,20,3,iHOOI,networkX1,0.949683544303797,0.886088484789126
+80,20,3,iHOOI,networkY1,1,1
+80,20,3,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,20,3,iHOOI,networkY2,0.620253164556962,0.24072045056994
+80,40,3,JisstPCA0 (oracle),sample,1,1
+80,40,3,JisstPCA0 (oracle),networkX1,1,1
+80,40,3,JisstPCA0 (oracle),networkY1,1,1
+80,40,3,JisstPCA0 (oracle),networkX2,0.493987341772152,-0.0108186830333923
+80,40,3,JisstPCA0 (oracle),networkY2,0.513924050632911,0.0182270091135047
+80,40,3,JisstPCA0 (BIC),sample,1,1
+80,40,3,JisstPCA0 (BIC),networkX1,1,1
+80,40,3,JisstPCA0 (BIC),networkY1,1,1
+80,40,3,JisstPCA0 (BIC),networkX2,0.493670886075949,-0.0116532206428479
+80,40,3,JisstPCA0 (BIC),networkY2,0.513924050632911,0.0182270091135047
+80,40,3,G-JisstPCA0 (oracle),sample,1,1
+80,40,3,G-JisstPCA0 (oracle),networkX1,1,1
+80,40,3,G-JisstPCA0 (oracle),networkY1,1,1
+80,40,3,G-JisstPCA0 (oracle),networkX2,0.494936708860759,-0.00912408759124081
+80,40,3,G-JisstPCA0 (oracle),networkY2,0.501582278481013,0.0034982676847522
+80,40,3,G-JisstPCA0 (BIC),sample,1,1
+80,40,3,G-JisstPCA0 (BIC),networkX1,1,1
+80,40,3,G-JisstPCA0 (BIC),networkY1,1,1
+80,40,3,G-JisstPCA0 (BIC),networkX2,1,1
+80,40,3,G-JisstPCA0 (BIC),networkY2,1,1
+80,40,3,JisstPCA2 (oracle),sample,1,1
+80,40,3,JisstPCA2 (oracle),networkX1,1,1
+80,40,3,JisstPCA2 (oracle),networkY1,1,1
+80,40,3,JisstPCA2 (oracle),networkX2,1,1
+80,40,3,JisstPCA2 (oracle),networkY2,1,1
+80,40,3,JisstPCA2 (BIC),sample,1,1
+80,40,3,JisstPCA2 (BIC),networkX1,1,1
+80,40,3,JisstPCA2 (BIC),networkY1,1,1
+80,40,3,JisstPCA2 (BIC),networkX2,1,1
+80,40,3,JisstPCA2 (BIC),networkY2,1,1
+80,40,3,G-JisstPCA2 (oracle),sample,1,1
+80,40,3,G-JisstPCA2 (oracle),networkX1,1,1
+80,40,3,G-JisstPCA2 (oracle),networkY1,1,1
+80,40,3,G-JisstPCA2 (oracle),networkX2,1,1
+80,40,3,G-JisstPCA2 (oracle),networkY2,1,1
+80,40,3,G-JisstPCA2 (BIC),sample,1,1
+80,40,3,G-JisstPCA2 (BIC),networkX1,1,1
+80,40,3,G-JisstPCA2 (BIC),networkY1,1,1
+80,40,3,G-JisstPCA2 (BIC),networkX2,1,1
+80,40,3,G-JisstPCA2 (BIC),networkY2,1,1
+80,40,3,iHOSVD,sample,1,1
+80,40,3,iHOSVD,networkX1,1,1
+80,40,3,iHOSVD,networkY1,1,1
+80,40,3,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,40,3,iHOSVD,networkY2,0.661075949367089,0.322378822025632
+80,40,3,iHOOI,sample,1,1
+80,40,3,iHOOI,networkX1,0.854430379746835,0.670682992960554
+80,40,3,iHOOI,networkY1,1,1
+80,40,3,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,40,3,iHOOI,networkY2,0.707594936708861,0.415024906879684
+50,20,4,JisstPCA0 (oracle),sample,1,1
+50,20,4,JisstPCA0 (oracle),networkX1,0.949683544303797,0.886744172207285
+50,20,4,JisstPCA0 (oracle),networkY1,1,1
+50,20,4,JisstPCA0 (oracle),networkX2,1,1
+50,20,4,JisstPCA0 (oracle),networkY2,0.96,0.919990669465827
+50,20,4,JisstPCA0 (BIC),sample,1,1
+50,20,4,JisstPCA0 (BIC),networkX1,0.949683544303797,0.886744172207285
+50,20,4,JisstPCA0 (BIC),networkY1,1,1
+50,20,4,JisstPCA0 (BIC),networkX2,1,1
+50,20,4,JisstPCA0 (BIC),networkY2,0.96,0.919990669465827
+50,20,4,G-JisstPCA0 (oracle),sample,1,1
+50,20,4,G-JisstPCA0 (oracle),networkX1,1,1
+50,20,4,G-JisstPCA0 (oracle),networkY1,1,1
+50,20,4,G-JisstPCA0 (oracle),networkX2,1,1
+50,20,4,G-JisstPCA0 (oracle),networkY2,0.96,0.919990669465827
+50,20,4,G-JisstPCA0 (BIC),sample,1,1
+50,20,4,G-JisstPCA0 (BIC),networkX1,1,1
+50,20,4,G-JisstPCA0 (BIC),networkY1,1,1
+50,20,4,G-JisstPCA0 (BIC),networkX2,1,1
+50,20,4,G-JisstPCA0 (BIC),networkY2,0.96,0.919990669465827
+50,20,4,JisstPCA2 (oracle),sample,1,1
+50,20,4,JisstPCA2 (oracle),networkX1,0.949683544303797,0.886744172207285
+50,20,4,JisstPCA2 (oracle),networkY1,1,1
+50,20,4,JisstPCA2 (oracle),networkX2,1,1
+50,20,4,JisstPCA2 (oracle),networkY2,0.96,0.919990669465827
+50,20,4,JisstPCA2 (BIC),sample,1,1
+50,20,4,JisstPCA2 (BIC),networkX1,0.949683544303797,0.886744172207285
+50,20,4,JisstPCA2 (BIC),networkY1,1,1
+50,20,4,JisstPCA2 (BIC),networkX2,1,1
+50,20,4,JisstPCA2 (BIC),networkY2,0.96,0.919990669465827
+50,20,4,G-JisstPCA2 (oracle),sample,1,1
+50,20,4,G-JisstPCA2 (oracle),networkX1,1,1
+50,20,4,G-JisstPCA2 (oracle),networkY1,1,1
+50,20,4,G-JisstPCA2 (oracle),networkX2,1,1
+50,20,4,G-JisstPCA2 (oracle),networkY2,0.96,0.919990669465827
+50,20,4,G-JisstPCA2 (BIC),sample,1,1
+50,20,4,G-JisstPCA2 (BIC),networkX1,1,1
+50,20,4,G-JisstPCA2 (BIC),networkY1,1,1
+50,20,4,G-JisstPCA2 (BIC),networkX2,1,1
+50,20,4,G-JisstPCA2 (BIC),networkY2,0.96,0.919990669465827
+50,20,4,iHOSVD,sample,1,1
+50,20,4,iHOSVD,networkX1,1,1
+50,20,4,iHOSVD,networkY1,1,1
+50,20,4,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,20,4,iHOSVD,networkY2,0.502857142857143,0.00599580293794338
+50,20,4,iHOOI,sample,1,1
+50,20,4,iHOOI,networkX1,0.756962025316456,0.468132854578097
+50,20,4,iHOOI,networkY1,1,1
+50,20,4,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,20,4,iHOOI,networkY2,0.60734693877551,0.21491622530895
+50,40,4,JisstPCA0 (oracle),sample,1,1
+50,40,4,JisstPCA0 (oracle),networkX1,1,1
+50,40,4,JisstPCA0 (oracle),networkY1,1,1
+50,40,4,JisstPCA0 (oracle),networkX2,1,1
+50,40,4,JisstPCA0 (oracle),networkY2,1,1
+50,40,4,JisstPCA0 (BIC),sample,1,1
+50,40,4,JisstPCA0 (BIC),networkX1,1,1
+50,40,4,JisstPCA0 (BIC),networkY1,1,1
+50,40,4,JisstPCA0 (BIC),networkX2,1,1
+50,40,4,JisstPCA0 (BIC),networkY2,1,1
+50,40,4,G-JisstPCA0 (oracle),sample,1,1
+50,40,4,G-JisstPCA0 (oracle),networkX1,1,1
+50,40,4,G-JisstPCA0 (oracle),networkY1,1,1
+50,40,4,G-JisstPCA0 (oracle),networkX2,1,1
+50,40,4,G-JisstPCA0 (oracle),networkY2,1,1
+50,40,4,G-JisstPCA0 (BIC),sample,1,1
+50,40,4,G-JisstPCA0 (BIC),networkX1,1,1
+50,40,4,G-JisstPCA0 (BIC),networkY1,1,1
+50,40,4,G-JisstPCA0 (BIC),networkX2,1,1
+50,40,4,G-JisstPCA0 (BIC),networkY2,1,1
+50,40,4,JisstPCA2 (oracle),sample,1,1
+50,40,4,JisstPCA2 (oracle),networkX1,1,1
+50,40,4,JisstPCA2 (oracle),networkY1,1,1
+50,40,4,JisstPCA2 (oracle),networkX2,1,1
+50,40,4,JisstPCA2 (oracle),networkY2,1,1
+50,40,4,JisstPCA2 (BIC),sample,1,1
+50,40,4,JisstPCA2 (BIC),networkX1,1,1
+50,40,4,JisstPCA2 (BIC),networkY1,1,1
+50,40,4,JisstPCA2 (BIC),networkX2,1,1
+50,40,4,JisstPCA2 (BIC),networkY2,1,1
+50,40,4,G-JisstPCA2 (oracle),sample,1,1
+50,40,4,G-JisstPCA2 (oracle),networkX1,1,1
+50,40,4,G-JisstPCA2 (oracle),networkY1,1,1
+50,40,4,G-JisstPCA2 (oracle),networkX2,1,1
+50,40,4,G-JisstPCA2 (oracle),networkY2,1,1
+50,40,4,G-JisstPCA2 (BIC),sample,1,1
+50,40,4,G-JisstPCA2 (BIC),networkX1,1,1
+50,40,4,G-JisstPCA2 (BIC),networkY1,1,1
+50,40,4,G-JisstPCA2 (BIC),networkX2,1,1
+50,40,4,G-JisstPCA2 (BIC),networkY2,1,1
+50,40,4,iHOSVD,sample,1,1
+50,40,4,iHOSVD,networkX1,1,1
+50,40,4,iHOSVD,networkY1,1,1
+50,40,4,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,40,4,iHOSVD,networkY2,0.588571428571429,0.177238805970149
+50,40,4,iHOOI,sample,1,1
+50,40,4,iHOOI,networkX1,0.756962025316456,0.468132854578097
+50,40,4,iHOOI,networkY1,1,1
+50,40,4,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,40,4,iHOOI,networkY2,0.502857142857143,-0.00241862340018141
+80,20,4,JisstPCA0 (oracle),sample,1,1
+80,20,4,JisstPCA0 (oracle),networkX1,1,1
+80,20,4,JisstPCA0 (oracle),networkY1,1,1
+80,20,4,JisstPCA0 (oracle),networkX2,1,1
+80,20,4,JisstPCA0 (oracle),networkY2,1,1
+80,20,4,JisstPCA0 (BIC),sample,1,1
+80,20,4,JisstPCA0 (BIC),networkX1,1,1
+80,20,4,JisstPCA0 (BIC),networkY1,1,1
+80,20,4,JisstPCA0 (BIC),networkX2,1,1
+80,20,4,JisstPCA0 (BIC),networkY2,1,1
+80,20,4,G-JisstPCA0 (oracle),sample,1,1
+80,20,4,G-JisstPCA0 (oracle),networkX1,1,1
+80,20,4,G-JisstPCA0 (oracle),networkY1,1,1
+80,20,4,G-JisstPCA0 (oracle),networkX2,1,1
+80,20,4,G-JisstPCA0 (oracle),networkY2,1,1
+80,20,4,G-JisstPCA0 (BIC),sample,1,1
+80,20,4,G-JisstPCA0 (BIC),networkX1,1,1
+80,20,4,G-JisstPCA0 (BIC),networkY1,1,1
+80,20,4,G-JisstPCA0 (BIC),networkX2,1,1
+80,20,4,G-JisstPCA0 (BIC),networkY2,1,1
+80,20,4,JisstPCA2 (oracle),sample,1,1
+80,20,4,JisstPCA2 (oracle),networkX1,1,1
+80,20,4,JisstPCA2 (oracle),networkY1,1,1
+80,20,4,JisstPCA2 (oracle),networkX2,1,1
+80,20,4,JisstPCA2 (oracle),networkY2,1,1
+80,20,4,JisstPCA2 (BIC),sample,1,1
+80,20,4,JisstPCA2 (BIC),networkX1,1,1
+80,20,4,JisstPCA2 (BIC),networkY1,1,1
+80,20,4,JisstPCA2 (BIC),networkX2,1,1
+80,20,4,JisstPCA2 (BIC),networkY2,1,1
+80,20,4,G-JisstPCA2 (oracle),sample,1,1
+80,20,4,G-JisstPCA2 (oracle),networkX1,1,1
+80,20,4,G-JisstPCA2 (oracle),networkY1,1,1
+80,20,4,G-JisstPCA2 (oracle),networkX2,1,1
+80,20,4,G-JisstPCA2 (oracle),networkY2,1,1
+80,20,4,G-JisstPCA2 (BIC),sample,1,1
+80,20,4,G-JisstPCA2 (BIC),networkX1,1,1
+80,20,4,G-JisstPCA2 (BIC),networkY1,1,1
+80,20,4,G-JisstPCA2 (BIC),networkX2,1,1
+80,20,4,G-JisstPCA2 (BIC),networkY2,1,1
+80,20,4,iHOSVD,sample,1,1
+80,20,4,iHOSVD,networkX1,0.756962025316456,0.468132854578097
+80,20,4,iHOSVD,networkY1,1,1
+80,20,4,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,20,4,iHOSVD,networkY2,0.59620253164557,0.192177252357659
+80,20,4,iHOOI,sample,1,1
+80,20,4,iHOOI,networkX1,1,1
+80,20,4,iHOOI,networkY1,1,1
+80,20,4,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,20,4,iHOOI,networkY2,0.675949367088608,0.351395730706076
+80,40,4,JisstPCA0 (oracle),sample,1,1
+80,40,4,JisstPCA0 (oracle),networkX1,1,1
+80,40,4,JisstPCA0 (oracle),networkY1,1,1
+80,40,4,JisstPCA0 (oracle),networkX2,1,1
+80,40,4,JisstPCA0 (oracle),networkY2,1,1
+80,40,4,JisstPCA0 (BIC),sample,1,1
+80,40,4,JisstPCA0 (BIC),networkX1,1,1
+80,40,4,JisstPCA0 (BIC),networkY1,1,1
+80,40,4,JisstPCA0 (BIC),networkX2,1,1
+80,40,4,JisstPCA0 (BIC),networkY2,1,1
+80,40,4,G-JisstPCA0 (oracle),sample,1,1
+80,40,4,G-JisstPCA0 (oracle),networkX1,1,1
+80,40,4,G-JisstPCA0 (oracle),networkY1,1,1
+80,40,4,G-JisstPCA0 (oracle),networkX2,1,1
+80,40,4,G-JisstPCA0 (oracle),networkY2,1,1
+80,40,4,G-JisstPCA0 (BIC),sample,1,1
+80,40,4,G-JisstPCA0 (BIC),networkX1,1,1
+80,40,4,G-JisstPCA0 (BIC),networkY1,1,1
+80,40,4,G-JisstPCA0 (BIC),networkX2,1,1
+80,40,4,G-JisstPCA0 (BIC),networkY2,1,1
+80,40,4,JisstPCA2 (oracle),sample,1,1
+80,40,4,JisstPCA2 (oracle),networkX1,1,1
+80,40,4,JisstPCA2 (oracle),networkY1,1,1
+80,40,4,JisstPCA2 (oracle),networkX2,1,1
+80,40,4,JisstPCA2 (oracle),networkY2,1,1
+80,40,4,JisstPCA2 (BIC),sample,1,1
+80,40,4,JisstPCA2 (BIC),networkX1,1,1
+80,40,4,JisstPCA2 (BIC),networkY1,1,1
+80,40,4,JisstPCA2 (BIC),networkX2,1,1
+80,40,4,JisstPCA2 (BIC),networkY2,1,1
+80,40,4,G-JisstPCA2 (oracle),sample,1,1
+80,40,4,G-JisstPCA2 (oracle),networkX1,1,1
+80,40,4,G-JisstPCA2 (oracle),networkY1,1,1
+80,40,4,G-JisstPCA2 (oracle),networkX2,1,1
+80,40,4,G-JisstPCA2 (oracle),networkY2,1,1
+80,40,4,G-JisstPCA2 (BIC),sample,1,1
+80,40,4,G-JisstPCA2 (BIC),networkX1,1,1
+80,40,4,G-JisstPCA2 (BIC),networkY1,1,1
+80,40,4,G-JisstPCA2 (BIC),networkX2,1,1
+80,40,4,G-JisstPCA2 (BIC),networkY2,1,1
+80,40,4,iHOSVD,sample,1,1
+80,40,4,iHOSVD,networkX1,0.756962025316456,0.468132854578097
+80,40,4,iHOSVD,networkY1,1,1
+80,40,4,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,40,4,iHOSVD,networkY2,0.707594936708861,0.415354746938854
+80,40,4,iHOOI,sample,1,1
+80,40,4,iHOOI,networkX1,0.756962025316456,0.468132854578097
+80,40,4,iHOOI,networkY1,1,1
+80,40,4,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,40,4,iHOOI,networkY2,0.675949367088608,0.351395730706076
+50,20,5,JisstPCA0 (oracle),sample,1,1
+50,20,5,JisstPCA0 (oracle),networkX1,1,1
+50,20,5,JisstPCA0 (oracle),networkY1,1,1
+50,20,5,JisstPCA0 (oracle),networkX2,1,1
+50,20,5,JisstPCA0 (oracle),networkY2,1,1
+50,20,5,JisstPCA0 (BIC),sample,1,1
+50,20,5,JisstPCA0 (BIC),networkX1,1,1
+50,20,5,JisstPCA0 (BIC),networkY1,1,1
+50,20,5,JisstPCA0 (BIC),networkX2,1,1
+50,20,5,JisstPCA0 (BIC),networkY2,1,1
+50,20,5,G-JisstPCA0 (oracle),sample,1,1
+50,20,5,G-JisstPCA0 (oracle),networkX1,1,1
+50,20,5,G-JisstPCA0 (oracle),networkY1,1,1
+50,20,5,G-JisstPCA0 (oracle),networkX2,1,1
+50,20,5,G-JisstPCA0 (oracle),networkY2,1,1
+50,20,5,G-JisstPCA0 (BIC),sample,1,1
+50,20,5,G-JisstPCA0 (BIC),networkX1,1,1
+50,20,5,G-JisstPCA0 (BIC),networkY1,1,1
+50,20,5,G-JisstPCA0 (BIC),networkX2,1,1
+50,20,5,G-JisstPCA0 (BIC),networkY2,1,1
+50,20,5,JisstPCA2 (oracle),sample,1,1
+50,20,5,JisstPCA2 (oracle),networkX1,1,1
+50,20,5,JisstPCA2 (oracle),networkY1,1,1
+50,20,5,JisstPCA2 (oracle),networkX2,1,1
+50,20,5,JisstPCA2 (oracle),networkY2,1,1
+50,20,5,JisstPCA2 (BIC),sample,1,1
+50,20,5,JisstPCA2 (BIC),networkX1,1,1
+50,20,5,JisstPCA2 (BIC),networkY1,1,1
+50,20,5,JisstPCA2 (BIC),networkX2,1,1
+50,20,5,JisstPCA2 (BIC),networkY2,1,1
+50,20,5,G-JisstPCA2 (oracle),sample,1,1
+50,20,5,G-JisstPCA2 (oracle),networkX1,1,1
+50,20,5,G-JisstPCA2 (oracle),networkY1,1,1
+50,20,5,G-JisstPCA2 (oracle),networkX2,1,1
+50,20,5,G-JisstPCA2 (oracle),networkY2,1,1
+50,20,5,G-JisstPCA2 (BIC),sample,1,1
+50,20,5,G-JisstPCA2 (BIC),networkX1,1,1
+50,20,5,G-JisstPCA2 (BIC),networkY1,1,1
+50,20,5,G-JisstPCA2 (BIC),networkX2,1,1
+50,20,5,G-JisstPCA2 (BIC),networkY2,1,1
+50,20,5,iHOSVD,sample,1,1
+50,20,5,iHOSVD,networkX1,1,1
+50,20,5,iHOSVD,networkY1,1,1
+50,20,5,iHOSVD,networkX2,0.585126582278481,0.173623024200305
+50,20,5,iHOSVD,networkY2,0.529795918367347,0.0597014925373134
+50,20,5,iHOOI,sample,1,1
+50,20,5,iHOOI,networkX1,0.878481012658228,0.72588480222068
+50,20,5,iHOOI,networkY1,1,1
+50,20,5,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,20,5,iHOOI,networkY2,0.698775510204082,0.397801831806828
+50,40,5,JisstPCA0 (oracle),sample,1,1
+50,40,5,JisstPCA0 (oracle),networkX1,1,1
+50,40,5,JisstPCA0 (oracle),networkY1,1,1
+50,40,5,JisstPCA0 (oracle),networkX2,1,1
+50,40,5,JisstPCA0 (oracle),networkY2,1,1
+50,40,5,JisstPCA0 (BIC),sample,1,1
+50,40,5,JisstPCA0 (BIC),networkX1,1,1
+50,40,5,JisstPCA0 (BIC),networkY1,1,1
+50,40,5,JisstPCA0 (BIC),networkX2,1,1
+50,40,5,JisstPCA0 (BIC),networkY2,1,1
+50,40,5,G-JisstPCA0 (oracle),sample,1,1
+50,40,5,G-JisstPCA0 (oracle),networkX1,1,1
+50,40,5,G-JisstPCA0 (oracle),networkY1,1,1
+50,40,5,G-JisstPCA0 (oracle),networkX2,1,1
+50,40,5,G-JisstPCA0 (oracle),networkY2,1,1
+50,40,5,G-JisstPCA0 (BIC),sample,1,1
+50,40,5,G-JisstPCA0 (BIC),networkX1,1,1
+50,40,5,G-JisstPCA0 (BIC),networkY1,1,1
+50,40,5,G-JisstPCA0 (BIC),networkX2,1,1
+50,40,5,G-JisstPCA0 (BIC),networkY2,1,1
+50,40,5,JisstPCA2 (oracle),sample,1,1
+50,40,5,JisstPCA2 (oracle),networkX1,1,1
+50,40,5,JisstPCA2 (oracle),networkY1,1,1
+50,40,5,JisstPCA2 (oracle),networkX2,1,1
+50,40,5,JisstPCA2 (oracle),networkY2,1,1
+50,40,5,JisstPCA2 (BIC),sample,1,1
+50,40,5,JisstPCA2 (BIC),networkX1,1,1
+50,40,5,JisstPCA2 (BIC),networkY1,1,1
+50,40,5,JisstPCA2 (BIC),networkX2,1,1
+50,40,5,JisstPCA2 (BIC),networkY2,1,1
+50,40,5,G-JisstPCA2 (oracle),sample,1,1
+50,40,5,G-JisstPCA2 (oracle),networkX1,1,1
+50,40,5,G-JisstPCA2 (oracle),networkY1,1,1
+50,40,5,G-JisstPCA2 (oracle),networkX2,1,1
+50,40,5,G-JisstPCA2 (oracle),networkY2,1,1
+50,40,5,G-JisstPCA2 (BIC),sample,1,1
+50,40,5,G-JisstPCA2 (BIC),networkX1,1,1
+50,40,5,G-JisstPCA2 (BIC),networkY1,1,1
+50,40,5,G-JisstPCA2 (BIC),networkX2,1,1
+50,40,5,G-JisstPCA2 (BIC),networkY2,1,1
+50,40,5,iHOSVD,sample,1,1
+50,40,5,iHOSVD,networkX1,1,1
+50,40,5,iHOSVD,networkY1,0.976326530612245,0.947496767042306
+50,40,5,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,40,5,iHOSVD,networkY2,0.555918367346939,0.111940298507463
+50,40,5,iHOOI,sample,1,1
+50,40,5,iHOOI,networkX1,0.813924050632911,0.579046956219143
+50,40,5,iHOOI,networkY1,1,1
+50,40,5,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,40,5,iHOOI,networkY2,0.60734693877551,0.214078495448331
+80,20,5,JisstPCA0 (oracle),sample,1,1
+80,20,5,JisstPCA0 (oracle),networkX1,1,1
+80,20,5,JisstPCA0 (oracle),networkY1,1,1
+80,20,5,JisstPCA0 (oracle),networkX2,0.494936708860759,-0.00977063044592523
+80,20,5,JisstPCA0 (oracle),networkY2,0.493987341772152,-0.0118291438448883
+80,20,5,JisstPCA0 (BIC),sample,1,1
+80,20,5,JisstPCA0 (BIC),networkX1,1,1
+80,20,5,JisstPCA0 (BIC),networkY1,1,1
+80,20,5,JisstPCA0 (BIC),networkX2,0.494936708860759,-0.00977063044592523
+80,20,5,JisstPCA0 (BIC),networkY2,0.493670886075949,-0.013444170771757
+80,20,5,G-JisstPCA0 (oracle),sample,1,1
+80,20,5,G-JisstPCA0 (oracle),networkX1,1,1
+80,20,5,G-JisstPCA0 (oracle),networkY1,1,1
+80,20,5,G-JisstPCA0 (oracle),networkX2,1,1
+80,20,5,G-JisstPCA0 (oracle),networkY2,1,1
+80,20,5,G-JisstPCA0 (BIC),sample,1,1
+80,20,5,G-JisstPCA0 (BIC),networkX1,1,1
+80,20,5,G-JisstPCA0 (BIC),networkY1,1,1
+80,20,5,G-JisstPCA0 (BIC),networkX2,1,1
+80,20,5,G-JisstPCA0 (BIC),networkY2,1,1
+80,20,5,JisstPCA2 (oracle),sample,1,1
+80,20,5,JisstPCA2 (oracle),networkX1,1,1
+80,20,5,JisstPCA2 (oracle),networkY1,1,1
+80,20,5,JisstPCA2 (oracle),networkX2,1,1
+80,20,5,JisstPCA2 (oracle),networkY2,1,1
+80,20,5,JisstPCA2 (BIC),sample,1,1
+80,20,5,JisstPCA2 (BIC),networkX1,1,1
+80,20,5,JisstPCA2 (BIC),networkY1,1,1
+80,20,5,JisstPCA2 (BIC),networkX2,1,1
+80,20,5,JisstPCA2 (BIC),networkY2,1,1
+80,20,5,G-JisstPCA2 (oracle),sample,1,1
+80,20,5,G-JisstPCA2 (oracle),networkX1,1,1
+80,20,5,G-JisstPCA2 (oracle),networkY1,1,1
+80,20,5,G-JisstPCA2 (oracle),networkX2,1,1
+80,20,5,G-JisstPCA2 (oracle),networkY2,1,1
+80,20,5,G-JisstPCA2 (BIC),sample,1,1
+80,20,5,G-JisstPCA2 (BIC),networkX1,1,1
+80,20,5,G-JisstPCA2 (BIC),networkY1,1,1
+80,20,5,G-JisstPCA2 (BIC),networkX2,1,1
+80,20,5,G-JisstPCA2 (BIC),networkY2,1,1
+80,20,5,iHOSVD,sample,1,1
+80,20,5,iHOSVD,networkX1,1,1
+80,20,5,iHOSVD,networkY1,1,1
+80,20,5,iHOSVD,networkX2,0.564873417721519,0.133944588399442
+80,20,5,iHOSVD,networkY2,0.564873417721519,0.130038170200974
+80,20,5,iHOOI,sample,1,1
+80,20,5,iHOOI,networkX1,0.783544303797468,0.538362175018453
+80,20,5,iHOOI,networkY1,1,1
+80,20,5,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,20,5,iHOOI,networkY2,0.675949367088608,0.351715914117745
+80,40,5,JisstPCA0 (oracle),sample,1,1
+80,40,5,JisstPCA0 (oracle),networkX1,1,1
+80,40,5,JisstPCA0 (oracle),networkY1,1,1
+80,40,5,JisstPCA0 (oracle),networkX2,1,1
+80,40,5,JisstPCA0 (oracle),networkY2,1,1
+80,40,5,JisstPCA0 (BIC),sample,1,1
+80,40,5,JisstPCA0 (BIC),networkX1,1,1
+80,40,5,JisstPCA0 (BIC),networkY1,1,1
+80,40,5,JisstPCA0 (BIC),networkX2,1,1
+80,40,5,JisstPCA0 (BIC),networkY2,1,1
+80,40,5,G-JisstPCA0 (oracle),sample,1,1
+80,40,5,G-JisstPCA0 (oracle),networkX1,1,1
+80,40,5,G-JisstPCA0 (oracle),networkY1,1,1
+80,40,5,G-JisstPCA0 (oracle),networkX2,1,1
+80,40,5,G-JisstPCA0 (oracle),networkY2,1,1
+80,40,5,G-JisstPCA0 (BIC),sample,1,1
+80,40,5,G-JisstPCA0 (BIC),networkX1,1,1
+80,40,5,G-JisstPCA0 (BIC),networkY1,1,1
+80,40,5,G-JisstPCA0 (BIC),networkX2,1,1
+80,40,5,G-JisstPCA0 (BIC),networkY2,1,1
+80,40,5,JisstPCA2 (oracle),sample,1,1
+80,40,5,JisstPCA2 (oracle),networkX1,1,1
+80,40,5,JisstPCA2 (oracle),networkY1,1,1
+80,40,5,JisstPCA2 (oracle),networkX2,1,1
+80,40,5,JisstPCA2 (oracle),networkY2,1,1
+80,40,5,JisstPCA2 (BIC),sample,1,1
+80,40,5,JisstPCA2 (BIC),networkX1,1,1
+80,40,5,JisstPCA2 (BIC),networkY1,1,1
+80,40,5,JisstPCA2 (BIC),networkX2,1,1
+80,40,5,JisstPCA2 (BIC),networkY2,1,1
+80,40,5,G-JisstPCA2 (oracle),sample,1,1
+80,40,5,G-JisstPCA2 (oracle),networkX1,1,1
+80,40,5,G-JisstPCA2 (oracle),networkY1,1,1
+80,40,5,G-JisstPCA2 (oracle),networkX2,1,1
+80,40,5,G-JisstPCA2 (oracle),networkY2,1,1
+80,40,5,G-JisstPCA2 (BIC),sample,1,1
+80,40,5,G-JisstPCA2 (BIC),networkX1,1,1
+80,40,5,G-JisstPCA2 (BIC),networkY1,1,1
+80,40,5,G-JisstPCA2 (BIC),networkX2,1,1
+80,40,5,G-JisstPCA2 (BIC),networkY2,1,1
+80,40,5,iHOSVD,sample,1,1
+80,40,5,iHOSVD,networkX1,1,1
+80,40,5,iHOSVD,networkY1,1,1
+80,40,5,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,40,5,iHOSVD,networkY2,0.724367088607595,0.448918724541853
+80,40,5,iHOOI,sample,1,1
+80,40,5,iHOOI,networkX1,0.756962025316456,0.468132854578097
+80,40,5,iHOOI,networkY1,1,1
+80,40,5,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,40,5,iHOOI,networkY2,0.707594936708861,0.415231100515266
+50,20,6,JisstPCA0 (oracle),sample,1,1
+50,20,6,JisstPCA0 (oracle),networkX1,1,1
+50,20,6,JisstPCA0 (oracle),networkY1,1,1
+50,20,6,JisstPCA0 (oracle),networkX2,1,1
+50,20,6,JisstPCA0 (oracle),networkY2,1,1
+50,20,6,JisstPCA0 (BIC),sample,1,1
+50,20,6,JisstPCA0 (BIC),networkX1,1,1
+50,20,6,JisstPCA0 (BIC),networkY1,1,1
+50,20,6,JisstPCA0 (BIC),networkX2,1,1
+50,20,6,JisstPCA0 (BIC),networkY2,1,1
+50,20,6,G-JisstPCA0 (oracle),sample,1,1
+50,20,6,G-JisstPCA0 (oracle),networkX1,1,1
+50,20,6,G-JisstPCA0 (oracle),networkY1,1,1
+50,20,6,G-JisstPCA0 (oracle),networkX2,1,1
+50,20,6,G-JisstPCA0 (oracle),networkY2,1,1
+50,20,6,G-JisstPCA0 (BIC),sample,1,1
+50,20,6,G-JisstPCA0 (BIC),networkX1,1,1
+50,20,6,G-JisstPCA0 (BIC),networkY1,1,1
+50,20,6,G-JisstPCA0 (BIC),networkX2,1,1
+50,20,6,G-JisstPCA0 (BIC),networkY2,1,1
+50,20,6,JisstPCA2 (oracle),sample,1,1
+50,20,6,JisstPCA2 (oracle),networkX1,1,1
+50,20,6,JisstPCA2 (oracle),networkY1,1,1
+50,20,6,JisstPCA2 (oracle),networkX2,1,1
+50,20,6,JisstPCA2 (oracle),networkY2,1,1
+50,20,6,JisstPCA2 (BIC),sample,1,1
+50,20,6,JisstPCA2 (BIC),networkX1,1,1
+50,20,6,JisstPCA2 (BIC),networkY1,1,1
+50,20,6,JisstPCA2 (BIC),networkX2,1,1
+50,20,6,JisstPCA2 (BIC),networkY2,1,1
+50,20,6,G-JisstPCA2 (oracle),sample,1,1
+50,20,6,G-JisstPCA2 (oracle),networkX1,1,1
+50,20,6,G-JisstPCA2 (oracle),networkY1,1,1
+50,20,6,G-JisstPCA2 (oracle),networkX2,1,1
+50,20,6,G-JisstPCA2 (oracle),networkY2,1,1
+50,20,6,G-JisstPCA2 (BIC),sample,1,1
+50,20,6,G-JisstPCA2 (BIC),networkX1,1,1
+50,20,6,G-JisstPCA2 (BIC),networkY1,1,1
+50,20,6,G-JisstPCA2 (BIC),networkX2,1,1
+50,20,6,G-JisstPCA2 (BIC),networkY2,1,1
+50,20,6,iHOSVD,sample,1,1
+50,20,6,iHOSVD,networkX1,1,1
+50,20,6,iHOSVD,networkY1,1,1
+50,20,6,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,20,6,iHOSVD,networkY2,0.519183673469388,0.037613791723632
+50,20,6,iHOOI,sample,1,1
+50,20,6,iHOOI,networkX1,0.756962025316456,0.468132854578097
+50,20,6,iHOOI,networkY1,1,1
+50,20,6,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,20,6,iHOOI,networkY2,0.673469387755102,0.347014925373134
+50,40,6,JisstPCA0 (oracle),sample,1,1
+50,40,6,JisstPCA0 (oracle),networkX1,1,1
+50,40,6,JisstPCA0 (oracle),networkY1,1,1
+50,40,6,JisstPCA0 (oracle),networkX2,1,1
+50,40,6,JisstPCA0 (oracle),networkY2,1,1
+50,40,6,JisstPCA0 (BIC),sample,1,1
+50,40,6,JisstPCA0 (BIC),networkX1,1,1
+50,40,6,JisstPCA0 (BIC),networkY1,1,1
+50,40,6,JisstPCA0 (BIC),networkX2,1,1
+50,40,6,JisstPCA0 (BIC),networkY2,1,1
+50,40,6,G-JisstPCA0 (oracle),sample,1,1
+50,40,6,G-JisstPCA0 (oracle),networkX1,1,1
+50,40,6,G-JisstPCA0 (oracle),networkY1,1,1
+50,40,6,G-JisstPCA0 (oracle),networkX2,1,1
+50,40,6,G-JisstPCA0 (oracle),networkY2,1,1
+50,40,6,G-JisstPCA0 (BIC),sample,1,1
+50,40,6,G-JisstPCA0 (BIC),networkX1,1,1
+50,40,6,G-JisstPCA0 (BIC),networkY1,1,1
+50,40,6,G-JisstPCA0 (BIC),networkX2,1,1
+50,40,6,G-JisstPCA0 (BIC),networkY2,1,1
+50,40,6,JisstPCA2 (oracle),sample,1,1
+50,40,6,JisstPCA2 (oracle),networkX1,1,1
+50,40,6,JisstPCA2 (oracle),networkY1,1,1
+50,40,6,JisstPCA2 (oracle),networkX2,1,1
+50,40,6,JisstPCA2 (oracle),networkY2,1,1
+50,40,6,JisstPCA2 (BIC),sample,1,1
+50,40,6,JisstPCA2 (BIC),networkX1,1,1
+50,40,6,JisstPCA2 (BIC),networkY1,1,1
+50,40,6,JisstPCA2 (BIC),networkX2,1,1
+50,40,6,JisstPCA2 (BIC),networkY2,1,1
+50,40,6,G-JisstPCA2 (oracle),sample,1,1
+50,40,6,G-JisstPCA2 (oracle),networkX1,1,1
+50,40,6,G-JisstPCA2 (oracle),networkY1,1,1
+50,40,6,G-JisstPCA2 (oracle),networkX2,1,1
+50,40,6,G-JisstPCA2 (oracle),networkY2,1,1
+50,40,6,G-JisstPCA2 (BIC),sample,1,1
+50,40,6,G-JisstPCA2 (BIC),networkX1,1,1
+50,40,6,G-JisstPCA2 (BIC),networkY1,1,1
+50,40,6,G-JisstPCA2 (BIC),networkX2,1,1
+50,40,6,G-JisstPCA2 (BIC),networkY2,1,1
+50,40,6,iHOSVD,sample,1,1
+50,40,6,iHOSVD,networkX1,1,1
+50,40,6,iHOSVD,networkY1,1,1
+50,40,6,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,40,6,iHOSVD,networkY2,0.60734693877551,0.213344013884717
+50,40,6,iHOOI,sample,1,1
+50,40,6,iHOOI,networkX1,0.756962025316456,0.468132854578097
+50,40,6,iHOOI,networkY1,1,1
+50,40,6,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,40,6,iHOOI,networkY2,0.627755102040816,0.2552
+80,20,6,JisstPCA0 (oracle),sample,1,1
+80,20,6,JisstPCA0 (oracle),networkX1,1,1
+80,20,6,JisstPCA0 (oracle),networkY1,1,1
+80,20,6,JisstPCA0 (oracle),networkX2,1,1
+80,20,6,JisstPCA0 (oracle),networkY2,1,1
+80,20,6,JisstPCA0 (BIC),sample,1,1
+80,20,6,JisstPCA0 (BIC),networkX1,1,1
+80,20,6,JisstPCA0 (BIC),networkY1,1,1
+80,20,6,JisstPCA0 (BIC),networkX2,1,1
+80,20,6,JisstPCA0 (BIC),networkY2,1,1
+80,20,6,G-JisstPCA0 (oracle),sample,1,1
+80,20,6,G-JisstPCA0 (oracle),networkX1,1,1
+80,20,6,G-JisstPCA0 (oracle),networkY1,1,1
+80,20,6,G-JisstPCA0 (oracle),networkX2,1,1
+80,20,6,G-JisstPCA0 (oracle),networkY2,1,1
+80,20,6,G-JisstPCA0 (BIC),sample,1,1
+80,20,6,G-JisstPCA0 (BIC),networkX1,1,1
+80,20,6,G-JisstPCA0 (BIC),networkY1,1,1
+80,20,6,G-JisstPCA0 (BIC),networkX2,1,1
+80,20,6,G-JisstPCA0 (BIC),networkY2,1,1
+80,20,6,JisstPCA2 (oracle),sample,1,1
+80,20,6,JisstPCA2 (oracle),networkX1,1,1
+80,20,6,JisstPCA2 (oracle),networkY1,1,1
+80,20,6,JisstPCA2 (oracle),networkX2,1,1
+80,20,6,JisstPCA2 (oracle),networkY2,1,1
+80,20,6,JisstPCA2 (BIC),sample,1,1
+80,20,6,JisstPCA2 (BIC),networkX1,1,1
+80,20,6,JisstPCA2 (BIC),networkY1,1,1
+80,20,6,JisstPCA2 (BIC),networkX2,1,1
+80,20,6,JisstPCA2 (BIC),networkY2,1,1
+80,20,6,G-JisstPCA2 (oracle),sample,1,1
+80,20,6,G-JisstPCA2 (oracle),networkX1,1,1
+80,20,6,G-JisstPCA2 (oracle),networkY1,1,1
+80,20,6,G-JisstPCA2 (oracle),networkX2,1,1
+80,20,6,G-JisstPCA2 (oracle),networkY2,1,1
+80,20,6,G-JisstPCA2 (BIC),sample,1,1
+80,20,6,G-JisstPCA2 (BIC),networkX1,1,1
+80,20,6,G-JisstPCA2 (BIC),networkY1,1,1
+80,20,6,G-JisstPCA2 (BIC),networkX2,1,1
+80,20,6,G-JisstPCA2 (BIC),networkY2,1,1
+80,20,6,iHOSVD,sample,1,1
+80,20,6,iHOSVD,networkX1,1,1
+80,20,6,iHOSVD,networkY1,1,1
+80,20,6,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,20,6,iHOSVD,networkY2,0.564873417721519,0.129915526712494
+80,20,6,iHOOI,sample,1,1
+80,20,6,iHOOI,networkX1,1,1
+80,20,6,iHOOI,networkY1,1,1
+80,20,6,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,20,6,iHOOI,networkY2,0.675949367088608,0.351395730706076
+80,40,6,JisstPCA0 (oracle),sample,1,1
+80,40,6,JisstPCA0 (oracle),networkX1,1,1
+80,40,6,JisstPCA0 (oracle),networkY1,1,1
+80,40,6,JisstPCA0 (oracle),networkX2,1,1
+80,40,6,JisstPCA0 (oracle),networkY2,1,1
+80,40,6,JisstPCA0 (BIC),sample,1,1
+80,40,6,JisstPCA0 (BIC),networkX1,1,1
+80,40,6,JisstPCA0 (BIC),networkY1,1,1
+80,40,6,JisstPCA0 (BIC),networkX2,1,1
+80,40,6,JisstPCA0 (BIC),networkY2,1,1
+80,40,6,G-JisstPCA0 (oracle),sample,1,1
+80,40,6,G-JisstPCA0 (oracle),networkX1,1,1
+80,40,6,G-JisstPCA0 (oracle),networkY1,1,1
+80,40,6,G-JisstPCA0 (oracle),networkX2,1,1
+80,40,6,G-JisstPCA0 (oracle),networkY2,1,1
+80,40,6,G-JisstPCA0 (BIC),sample,1,1
+80,40,6,G-JisstPCA0 (BIC),networkX1,1,1
+80,40,6,G-JisstPCA0 (BIC),networkY1,1,1
+80,40,6,G-JisstPCA0 (BIC),networkX2,1,1
+80,40,6,G-JisstPCA0 (BIC),networkY2,1,1
+80,40,6,JisstPCA2 (oracle),sample,1,1
+80,40,6,JisstPCA2 (oracle),networkX1,1,1
+80,40,6,JisstPCA2 (oracle),networkY1,1,1
+80,40,6,JisstPCA2 (oracle),networkX2,1,1
+80,40,6,JisstPCA2 (oracle),networkY2,1,1
+80,40,6,JisstPCA2 (BIC),sample,1,1
+80,40,6,JisstPCA2 (BIC),networkX1,1,1
+80,40,6,JisstPCA2 (BIC),networkY1,1,1
+80,40,6,JisstPCA2 (BIC),networkX2,1,1
+80,40,6,JisstPCA2 (BIC),networkY2,1,1
+80,40,6,G-JisstPCA2 (oracle),sample,1,1
+80,40,6,G-JisstPCA2 (oracle),networkX1,1,1
+80,40,6,G-JisstPCA2 (oracle),networkY1,1,1
+80,40,6,G-JisstPCA2 (oracle),networkX2,1,1
+80,40,6,G-JisstPCA2 (oracle),networkY2,1,1
+80,40,6,G-JisstPCA2 (BIC),sample,1,1
+80,40,6,G-JisstPCA2 (BIC),networkX1,1,1
+80,40,6,G-JisstPCA2 (BIC),networkY1,1,1
+80,40,6,G-JisstPCA2 (BIC),networkX2,1,1
+80,40,6,G-JisstPCA2 (BIC),networkY2,1,1
+80,40,6,iHOSVD,sample,1,1
+80,40,6,iHOSVD,networkX1,0.756962025316456,0.468132854578097
+80,40,6,iHOSVD,networkY1,0.762025316455696,0.505895190695446
+80,40,6,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,40,6,iHOSVD,networkY2,0.633227848101266,0.266701264918494
+80,40,6,iHOOI,sample,1,1
+80,40,6,iHOOI,networkX1,0.756962025316456,0.468132854578097
+80,40,6,iHOOI,networkY1,1,1
+80,40,6,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,40,6,iHOOI,networkY2,0.661075949367089,0.321805248957567
+50,20,7,JisstPCA0 (oracle),sample,1,1
+50,20,7,JisstPCA0 (oracle),networkX1,1,1
+50,20,7,JisstPCA0 (oracle),networkY1,1,1
+50,20,7,JisstPCA0 (oracle),networkX2,1,1
+50,20,7,JisstPCA0 (oracle),networkY2,1,1
+50,20,7,JisstPCA0 (BIC),sample,1,1
+50,20,7,JisstPCA0 (BIC),networkX1,1,1
+50,20,7,JisstPCA0 (BIC),networkY1,1,1
+50,20,7,JisstPCA0 (BIC),networkX2,1,1
+50,20,7,JisstPCA0 (BIC),networkY2,1,1
+50,20,7,G-JisstPCA0 (oracle),sample,1,1
+50,20,7,G-JisstPCA0 (oracle),networkX1,1,1
+50,20,7,G-JisstPCA0 (oracle),networkY1,1,1
+50,20,7,G-JisstPCA0 (oracle),networkX2,1,1
+50,20,7,G-JisstPCA0 (oracle),networkY2,1,1
+50,20,7,G-JisstPCA0 (BIC),sample,1,1
+50,20,7,G-JisstPCA0 (BIC),networkX1,1,1
+50,20,7,G-JisstPCA0 (BIC),networkY1,1,1
+50,20,7,G-JisstPCA0 (BIC),networkX2,1,1
+50,20,7,G-JisstPCA0 (BIC),networkY2,1,1
+50,20,7,JisstPCA2 (oracle),sample,1,1
+50,20,7,JisstPCA2 (oracle),networkX1,1,1
+50,20,7,JisstPCA2 (oracle),networkY1,1,1
+50,20,7,JisstPCA2 (oracle),networkX2,1,1
+50,20,7,JisstPCA2 (oracle),networkY2,1,1
+50,20,7,JisstPCA2 (BIC),sample,1,1
+50,20,7,JisstPCA2 (BIC),networkX1,1,1
+50,20,7,JisstPCA2 (BIC),networkY1,1,1
+50,20,7,JisstPCA2 (BIC),networkX2,1,1
+50,20,7,JisstPCA2 (BIC),networkY2,1,1
+50,20,7,G-JisstPCA2 (oracle),sample,1,1
+50,20,7,G-JisstPCA2 (oracle),networkX1,1,1
+50,20,7,G-JisstPCA2 (oracle),networkY1,1,1
+50,20,7,G-JisstPCA2 (oracle),networkX2,1,1
+50,20,7,G-JisstPCA2 (oracle),networkY2,1,1
+50,20,7,G-JisstPCA2 (BIC),sample,1,1
+50,20,7,G-JisstPCA2 (BIC),networkX1,1,1
+50,20,7,G-JisstPCA2 (BIC),networkY1,1,1
+50,20,7,G-JisstPCA2 (BIC),networkX2,1,1
+50,20,7,G-JisstPCA2 (BIC),networkY2,1,1
+50,20,7,iHOSVD,sample,1,1
+50,20,7,iHOSVD,networkX1,0.756962025316456,0.468132854578097
+50,20,7,iHOSVD,networkY1,1,1
+50,20,7,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,20,7,iHOSVD,networkY2,0.588571428571429,0.176140912730184
+50,20,7,iHOOI,sample,1,1
+50,20,7,iHOOI,networkX1,1,1
+50,20,7,iHOOI,networkY1,1,1
+50,20,7,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,20,7,iHOOI,networkY2,0.673469387755102,0.346666666666667
+50,40,7,JisstPCA0 (oracle),sample,1,1
+50,40,7,JisstPCA0 (oracle),networkX1,1,1
+50,40,7,JisstPCA0 (oracle),networkY1,1,1
+50,40,7,JisstPCA0 (oracle),networkX2,1,1
+50,40,7,JisstPCA0 (oracle),networkY2,1,1
+50,40,7,JisstPCA0 (BIC),sample,1,1
+50,40,7,JisstPCA0 (BIC),networkX1,1,1
+50,40,7,JisstPCA0 (BIC),networkY1,1,1
+50,40,7,JisstPCA0 (BIC),networkX2,1,1
+50,40,7,JisstPCA0 (BIC),networkY2,1,1
+50,40,7,G-JisstPCA0 (oracle),sample,1,1
+50,40,7,G-JisstPCA0 (oracle),networkX1,1,1
+50,40,7,G-JisstPCA0 (oracle),networkY1,1,1
+50,40,7,G-JisstPCA0 (oracle),networkX2,1,1
+50,40,7,G-JisstPCA0 (oracle),networkY2,1,1
+50,40,7,G-JisstPCA0 (BIC),sample,1,1
+50,40,7,G-JisstPCA0 (BIC),networkX1,1,1
+50,40,7,G-JisstPCA0 (BIC),networkY1,1,1
+50,40,7,G-JisstPCA0 (BIC),networkX2,1,1
+50,40,7,G-JisstPCA0 (BIC),networkY2,1,1
+50,40,7,JisstPCA2 (oracle),sample,1,1
+50,40,7,JisstPCA2 (oracle),networkX1,1,1
+50,40,7,JisstPCA2 (oracle),networkY1,1,1
+50,40,7,JisstPCA2 (oracle),networkX2,1,1
+50,40,7,JisstPCA2 (oracle),networkY2,1,1
+50,40,7,JisstPCA2 (BIC),sample,1,1
+50,40,7,JisstPCA2 (BIC),networkX1,1,1
+50,40,7,JisstPCA2 (BIC),networkY1,1,1
+50,40,7,JisstPCA2 (BIC),networkX2,1,1
+50,40,7,JisstPCA2 (BIC),networkY2,1,1
+50,40,7,G-JisstPCA2 (oracle),sample,1,1
+50,40,7,G-JisstPCA2 (oracle),networkX1,1,1
+50,40,7,G-JisstPCA2 (oracle),networkY1,1,1
+50,40,7,G-JisstPCA2 (oracle),networkX2,1,1
+50,40,7,G-JisstPCA2 (oracle),networkY2,1,1
+50,40,7,G-JisstPCA2 (BIC),sample,1,1
+50,40,7,G-JisstPCA2 (BIC),networkX1,1,1
+50,40,7,G-JisstPCA2 (BIC),networkY1,1,1
+50,40,7,G-JisstPCA2 (BIC),networkX2,1,1
+50,40,7,G-JisstPCA2 (BIC),networkY2,1,1
+50,40,7,iHOSVD,sample,1,1
+50,40,7,iHOSVD,networkX1,1,1
+50,40,7,iHOSVD,networkY1,1,1
+50,40,7,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,40,7,iHOSVD,networkY2,0.60734693877551,0.21491622530895
+50,40,7,iHOOI,sample,1,1
+50,40,7,iHOOI,networkX1,0.756962025316456,0.468132854578097
+50,40,7,iHOOI,networkY1,1,1
+50,40,7,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,40,7,iHOOI,networkY2,0.698775510204082,0.397721594883581
+80,20,7,JisstPCA0 (oracle),sample,1,1
+80,20,7,JisstPCA0 (oracle),networkX1,1,1
+80,20,7,JisstPCA0 (oracle),networkY1,1,1
+80,20,7,JisstPCA0 (oracle),networkX2,1,1
+80,20,7,JisstPCA0 (oracle),networkY2,1,1
+80,20,7,JisstPCA0 (BIC),sample,1,1
+80,20,7,JisstPCA0 (BIC),networkX1,1,1
+80,20,7,JisstPCA0 (BIC),networkY1,1,1
+80,20,7,JisstPCA0 (BIC),networkX2,1,1
+80,20,7,JisstPCA0 (BIC),networkY2,1,1
+80,20,7,G-JisstPCA0 (oracle),sample,1,1
+80,20,7,G-JisstPCA0 (oracle),networkX1,1,1
+80,20,7,G-JisstPCA0 (oracle),networkY1,1,1
+80,20,7,G-JisstPCA0 (oracle),networkX2,1,1
+80,20,7,G-JisstPCA0 (oracle),networkY2,1,1
+80,20,7,G-JisstPCA0 (BIC),sample,1,1
+80,20,7,G-JisstPCA0 (BIC),networkX1,1,1
+80,20,7,G-JisstPCA0 (BIC),networkY1,1,1
+80,20,7,G-JisstPCA0 (BIC),networkX2,1,1
+80,20,7,G-JisstPCA0 (BIC),networkY2,1,1
+80,20,7,JisstPCA2 (oracle),sample,1,1
+80,20,7,JisstPCA2 (oracle),networkX1,1,1
+80,20,7,JisstPCA2 (oracle),networkY1,1,1
+80,20,7,JisstPCA2 (oracle),networkX2,1,1
+80,20,7,JisstPCA2 (oracle),networkY2,1,1
+80,20,7,JisstPCA2 (BIC),sample,1,1
+80,20,7,JisstPCA2 (BIC),networkX1,1,1
+80,20,7,JisstPCA2 (BIC),networkY1,1,1
+80,20,7,JisstPCA2 (BIC),networkX2,1,1
+80,20,7,JisstPCA2 (BIC),networkY2,1,1
+80,20,7,G-JisstPCA2 (oracle),sample,1,1
+80,20,7,G-JisstPCA2 (oracle),networkX1,1,1
+80,20,7,G-JisstPCA2 (oracle),networkY1,1,1
+80,20,7,G-JisstPCA2 (oracle),networkX2,1,1
+80,20,7,G-JisstPCA2 (oracle),networkY2,1,1
+80,20,7,G-JisstPCA2 (BIC),sample,1,1
+80,20,7,G-JisstPCA2 (BIC),networkX1,1,1
+80,20,7,G-JisstPCA2 (BIC),networkY1,1,1
+80,20,7,G-JisstPCA2 (BIC),networkX2,1,1
+80,20,7,G-JisstPCA2 (BIC),networkY2,1,1
+80,20,7,iHOSVD,sample,1,1
+80,20,7,iHOSVD,networkX1,1,1
+80,20,7,iHOSVD,networkY1,1,1
+80,20,7,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,20,7,iHOSVD,networkY2,0.620253164556962,0.240773962070733
+80,20,7,iHOOI,sample,1,1
+80,20,7,iHOOI,networkX1,0.756962025316456,0.468132854578097
+80,20,7,iHOOI,networkY1,1,1
+80,20,7,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,20,7,iHOOI,networkY2,0.691455696202532,0.382595814877337
+80,40,7,JisstPCA0 (oracle),sample,1,1
+80,40,7,JisstPCA0 (oracle),networkX1,1,1
+80,40,7,JisstPCA0 (oracle),networkY1,1,1
+80,40,7,JisstPCA0 (oracle),networkX2,1,1
+80,40,7,JisstPCA0 (oracle),networkY2,1,1
+80,40,7,JisstPCA0 (BIC),sample,1,1
+80,40,7,JisstPCA0 (BIC),networkX1,1,1
+80,40,7,JisstPCA0 (BIC),networkY1,1,1
+80,40,7,JisstPCA0 (BIC),networkX2,1,1
+80,40,7,JisstPCA0 (BIC),networkY2,1,1
+80,40,7,G-JisstPCA0 (oracle),sample,1,1
+80,40,7,G-JisstPCA0 (oracle),networkX1,1,1
+80,40,7,G-JisstPCA0 (oracle),networkY1,1,1
+80,40,7,G-JisstPCA0 (oracle),networkX2,1,1
+80,40,7,G-JisstPCA0 (oracle),networkY2,1,1
+80,40,7,G-JisstPCA0 (BIC),sample,1,1
+80,40,7,G-JisstPCA0 (BIC),networkX1,1,1
+80,40,7,G-JisstPCA0 (BIC),networkY1,1,1
+80,40,7,G-JisstPCA0 (BIC),networkX2,1,1
+80,40,7,G-JisstPCA0 (BIC),networkY2,1,1
+80,40,7,JisstPCA2 (oracle),sample,1,1
+80,40,7,JisstPCA2 (oracle),networkX1,1,1
+80,40,7,JisstPCA2 (oracle),networkY1,1,1
+80,40,7,JisstPCA2 (oracle),networkX2,1,1
+80,40,7,JisstPCA2 (oracle),networkY2,1,1
+80,40,7,JisstPCA2 (BIC),sample,1,1
+80,40,7,JisstPCA2 (BIC),networkX1,1,1
+80,40,7,JisstPCA2 (BIC),networkY1,1,1
+80,40,7,JisstPCA2 (BIC),networkX2,1,1
+80,40,7,JisstPCA2 (BIC),networkY2,1,1
+80,40,7,G-JisstPCA2 (oracle),sample,1,1
+80,40,7,G-JisstPCA2 (oracle),networkX1,1,1
+80,40,7,G-JisstPCA2 (oracle),networkY1,1,1
+80,40,7,G-JisstPCA2 (oracle),networkX2,1,1
+80,40,7,G-JisstPCA2 (oracle),networkY2,1,1
+80,40,7,G-JisstPCA2 (BIC),sample,1,1
+80,40,7,G-JisstPCA2 (BIC),networkX1,1,1
+80,40,7,G-JisstPCA2 (BIC),networkY1,1,1
+80,40,7,G-JisstPCA2 (BIC),networkX2,1,1
+80,40,7,G-JisstPCA2 (BIC),networkY2,1,1
+80,40,7,iHOSVD,sample,1,1
+80,40,7,iHOSVD,networkX1,0.756962025316456,0.468132854578097
+80,40,7,iHOSVD,networkY1,1,1
+80,40,7,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,40,7,iHOSVD,networkY2,0.661075949367089,0.321805248957567
+80,40,7,iHOOI,sample,1,1
+80,40,7,iHOOI,networkX1,0.756962025316456,0.468132854578097
+80,40,7,iHOOI,networkY1,1,1
+80,40,7,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,40,7,iHOOI,networkY2,0.675949367088608,0.351395730706076
+50,20,8,JisstPCA0 (oracle),sample,1,1
+50,20,8,JisstPCA0 (oracle),networkX1,1,1
+50,20,8,JisstPCA0 (oracle),networkY1,1,1
+50,20,8,JisstPCA0 (oracle),networkX2,1,1
+50,20,8,JisstPCA0 (oracle),networkY2,1,1
+50,20,8,JisstPCA0 (BIC),sample,1,1
+50,20,8,JisstPCA0 (BIC),networkX1,0.712658227848101,0.436837774860725
+50,20,8,JisstPCA0 (BIC),networkY1,1,1
+50,20,8,JisstPCA0 (BIC),networkX2,1,1
+50,20,8,JisstPCA0 (BIC),networkY2,1,1
+50,20,8,G-JisstPCA0 (oracle),sample,1,1
+50,20,8,G-JisstPCA0 (oracle),networkX1,1,1
+50,20,8,G-JisstPCA0 (oracle),networkY1,1,1
+50,20,8,G-JisstPCA0 (oracle),networkX2,1,1
+50,20,8,G-JisstPCA0 (oracle),networkY2,1,1
+50,20,8,G-JisstPCA0 (BIC),sample,1,1
+50,20,8,G-JisstPCA0 (BIC),networkX1,1,1
+50,20,8,G-JisstPCA0 (BIC),networkY1,1,1
+50,20,8,G-JisstPCA0 (BIC),networkX2,1,1
+50,20,8,G-JisstPCA0 (BIC),networkY2,1,1
+50,20,8,JisstPCA2 (oracle),sample,1,1
+50,20,8,JisstPCA2 (oracle),networkX1,1,1
+50,20,8,JisstPCA2 (oracle),networkY1,1,1
+50,20,8,JisstPCA2 (oracle),networkX2,1,1
+50,20,8,JisstPCA2 (oracle),networkY2,1,1
+50,20,8,JisstPCA2 (BIC),sample,1,1
+50,20,8,JisstPCA2 (BIC),networkX1,1,1
+50,20,8,JisstPCA2 (BIC),networkY1,1,1
+50,20,8,JisstPCA2 (BIC),networkX2,1,1
+50,20,8,JisstPCA2 (BIC),networkY2,1,1
+50,20,8,G-JisstPCA2 (oracle),sample,1,1
+50,20,8,G-JisstPCA2 (oracle),networkX1,1,1
+50,20,8,G-JisstPCA2 (oracle),networkY1,1,1
+50,20,8,G-JisstPCA2 (oracle),networkX2,1,1
+50,20,8,G-JisstPCA2 (oracle),networkY2,1,1
+50,20,8,G-JisstPCA2 (BIC),sample,1,1
+50,20,8,G-JisstPCA2 (BIC),networkX1,1,1
+50,20,8,G-JisstPCA2 (BIC),networkY1,1,1
+50,20,8,G-JisstPCA2 (BIC),networkX2,1,1
+50,20,8,G-JisstPCA2 (BIC),networkY2,1,1
+50,20,8,iHOSVD,sample,1,1
+50,20,8,iHOSVD,networkX1,1,1
+50,20,8,iHOSVD,networkY1,0.976326530612245,0.947496767042306
+50,20,8,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,20,8,iHOSVD,networkY2,0.497142857142857,-0.0150659133709981
+50,20,8,iHOOI,sample,1,1
+50,20,8,iHOOI,networkX1,0.756962025316456,0.468132854578097
+50,20,8,iHOOI,networkY1,0.762448979591837,0.505496792092943
+50,20,8,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,20,8,iHOOI,networkY2,0.490612244897959,-0.0183852917665868
+50,40,8,JisstPCA0 (oracle),sample,1,1
+50,40,8,JisstPCA0 (oracle),networkX1,1,1
+50,40,8,JisstPCA0 (oracle),networkY1,1,1
+50,40,8,JisstPCA0 (oracle),networkX2,1,1
+50,40,8,JisstPCA0 (oracle),networkY2,1,1
+50,40,8,JisstPCA0 (BIC),sample,1,1
+50,40,8,JisstPCA0 (BIC),networkX1,1,1
+50,40,8,JisstPCA0 (BIC),networkY1,1,1
+50,40,8,JisstPCA0 (BIC),networkX2,1,1
+50,40,8,JisstPCA0 (BIC),networkY2,1,1
+50,40,8,G-JisstPCA0 (oracle),sample,1,1
+50,40,8,G-JisstPCA0 (oracle),networkX1,1,1
+50,40,8,G-JisstPCA0 (oracle),networkY1,1,1
+50,40,8,G-JisstPCA0 (oracle),networkX2,1,1
+50,40,8,G-JisstPCA0 (oracle),networkY2,1,1
+50,40,8,G-JisstPCA0 (BIC),sample,1,1
+50,40,8,G-JisstPCA0 (BIC),networkX1,1,1
+50,40,8,G-JisstPCA0 (BIC),networkY1,1,1
+50,40,8,G-JisstPCA0 (BIC),networkX2,1,1
+50,40,8,G-JisstPCA0 (BIC),networkY2,1,1
+50,40,8,JisstPCA2 (oracle),sample,1,1
+50,40,8,JisstPCA2 (oracle),networkX1,1,1
+50,40,8,JisstPCA2 (oracle),networkY1,1,1
+50,40,8,JisstPCA2 (oracle),networkX2,1,1
+50,40,8,JisstPCA2 (oracle),networkY2,1,1
+50,40,8,JisstPCA2 (BIC),sample,1,1
+50,40,8,JisstPCA2 (BIC),networkX1,1,1
+50,40,8,JisstPCA2 (BIC),networkY1,1,1
+50,40,8,JisstPCA2 (BIC),networkX2,1,1
+50,40,8,JisstPCA2 (BIC),networkY2,1,1
+50,40,8,G-JisstPCA2 (oracle),sample,1,1
+50,40,8,G-JisstPCA2 (oracle),networkX1,1,1
+50,40,8,G-JisstPCA2 (oracle),networkY1,1,1
+50,40,8,G-JisstPCA2 (oracle),networkX2,1,1
+50,40,8,G-JisstPCA2 (oracle),networkY2,1,1
+50,40,8,G-JisstPCA2 (BIC),sample,1,1
+50,40,8,G-JisstPCA2 (BIC),networkX1,1,1
+50,40,8,G-JisstPCA2 (BIC),networkY1,1,1
+50,40,8,G-JisstPCA2 (BIC),networkX2,1,1
+50,40,8,G-JisstPCA2 (BIC),networkY2,1,1
+50,40,8,iHOSVD,sample,1,1
+50,40,8,iHOSVD,networkX1,1,1
+50,40,8,iHOSVD,networkY1,1,1
+50,40,8,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,40,8,iHOSVD,networkY2,0.60734693877551,0.214602285980872
+50,40,8,iHOOI,sample,1,1
+50,40,8,iHOOI,networkX1,0.756962025316456,0.468132854578097
+50,40,8,iHOOI,networkY1,1,1
+50,40,8,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,40,8,iHOOI,networkY2,0.627755102040816,0.254603682946357
+80,20,8,JisstPCA0 (oracle),sample,1,1
+80,20,8,JisstPCA0 (oracle),networkX1,1,1
+80,20,8,JisstPCA0 (oracle),networkY1,1,1
+80,20,8,JisstPCA0 (oracle),networkX2,1,1
+80,20,8,JisstPCA0 (oracle),networkY2,1,1
+80,20,8,JisstPCA0 (BIC),sample,1,1
+80,20,8,JisstPCA0 (BIC),networkX1,1,1
+80,20,8,JisstPCA0 (BIC),networkY1,1,1
+80,20,8,JisstPCA0 (BIC),networkX2,1,1
+80,20,8,JisstPCA0 (BIC),networkY2,1,1
+80,20,8,G-JisstPCA0 (oracle),sample,1,1
+80,20,8,G-JisstPCA0 (oracle),networkX1,1,1
+80,20,8,G-JisstPCA0 (oracle),networkY1,1,1
+80,20,8,G-JisstPCA0 (oracle),networkX2,1,1
+80,20,8,G-JisstPCA0 (oracle),networkY2,1,1
+80,20,8,G-JisstPCA0 (BIC),sample,1,1
+80,20,8,G-JisstPCA0 (BIC),networkX1,1,1
+80,20,8,G-JisstPCA0 (BIC),networkY1,1,1
+80,20,8,G-JisstPCA0 (BIC),networkX2,1,1
+80,20,8,G-JisstPCA0 (BIC),networkY2,1,1
+80,20,8,JisstPCA2 (oracle),sample,1,1
+80,20,8,JisstPCA2 (oracle),networkX1,1,1
+80,20,8,JisstPCA2 (oracle),networkY1,1,1
+80,20,8,JisstPCA2 (oracle),networkX2,1,1
+80,20,8,JisstPCA2 (oracle),networkY2,1,1
+80,20,8,JisstPCA2 (BIC),sample,1,1
+80,20,8,JisstPCA2 (BIC),networkX1,1,1
+80,20,8,JisstPCA2 (BIC),networkY1,1,1
+80,20,8,JisstPCA2 (BIC),networkX2,1,1
+80,20,8,JisstPCA2 (BIC),networkY2,1,1
+80,20,8,G-JisstPCA2 (oracle),sample,1,1
+80,20,8,G-JisstPCA2 (oracle),networkX1,1,1
+80,20,8,G-JisstPCA2 (oracle),networkY1,1,1
+80,20,8,G-JisstPCA2 (oracle),networkX2,1,1
+80,20,8,G-JisstPCA2 (oracle),networkY2,1,1
+80,20,8,G-JisstPCA2 (BIC),sample,1,1
+80,20,8,G-JisstPCA2 (BIC),networkX1,1,1
+80,20,8,G-JisstPCA2 (BIC),networkY1,1,1
+80,20,8,G-JisstPCA2 (BIC),networkX2,1,1
+80,20,8,G-JisstPCA2 (BIC),networkY2,1,1
+80,20,8,iHOSVD,sample,1,1
+80,20,8,iHOSVD,networkX1,0.752215189873418,0.449660046726893
+80,20,8,iHOSVD,networkY1,1,1
+80,20,8,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,20,8,iHOSVD,networkY2,0.633227848101266,0.266597887607114
+80,20,8,iHOOI,sample,1,1
+80,20,8,iHOOI,networkX1,0.752215189873418,0.449660046726893
+80,20,8,iHOOI,networkY1,1,1
+80,20,8,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,20,8,iHOOI,networkY2,0.661075949367089,0.321805248957567
+80,40,8,JisstPCA0 (oracle),sample,1,1
+80,40,8,JisstPCA0 (oracle),networkX1,1,1
+80,40,8,JisstPCA0 (oracle),networkY1,1,1
+80,40,8,JisstPCA0 (oracle),networkX2,1,1
+80,40,8,JisstPCA0 (oracle),networkY2,1,1
+80,40,8,JisstPCA0 (BIC),sample,1,1
+80,40,8,JisstPCA0 (BIC),networkX1,1,1
+80,40,8,JisstPCA0 (BIC),networkY1,1,1
+80,40,8,JisstPCA0 (BIC),networkX2,1,1
+80,40,8,JisstPCA0 (BIC),networkY2,1,1
+80,40,8,G-JisstPCA0 (oracle),sample,1,1
+80,40,8,G-JisstPCA0 (oracle),networkX1,1,1
+80,40,8,G-JisstPCA0 (oracle),networkY1,1,1
+80,40,8,G-JisstPCA0 (oracle),networkX2,1,1
+80,40,8,G-JisstPCA0 (oracle),networkY2,1,1
+80,40,8,G-JisstPCA0 (BIC),sample,1,1
+80,40,8,G-JisstPCA0 (BIC),networkX1,1,1
+80,40,8,G-JisstPCA0 (BIC),networkY1,1,1
+80,40,8,G-JisstPCA0 (BIC),networkX2,1,1
+80,40,8,G-JisstPCA0 (BIC),networkY2,1,1
+80,40,8,JisstPCA2 (oracle),sample,1,1
+80,40,8,JisstPCA2 (oracle),networkX1,1,1
+80,40,8,JisstPCA2 (oracle),networkY1,1,1
+80,40,8,JisstPCA2 (oracle),networkX2,1,1
+80,40,8,JisstPCA2 (oracle),networkY2,1,1
+80,40,8,JisstPCA2 (BIC),sample,1,1
+80,40,8,JisstPCA2 (BIC),networkX1,1,1
+80,40,8,JisstPCA2 (BIC),networkY1,1,1
+80,40,8,JisstPCA2 (BIC),networkX2,1,1
+80,40,8,JisstPCA2 (BIC),networkY2,1,1
+80,40,8,G-JisstPCA2 (oracle),sample,1,1
+80,40,8,G-JisstPCA2 (oracle),networkX1,1,1
+80,40,8,G-JisstPCA2 (oracle),networkY1,1,1
+80,40,8,G-JisstPCA2 (oracle),networkX2,1,1
+80,40,8,G-JisstPCA2 (oracle),networkY2,1,1
+80,40,8,G-JisstPCA2 (BIC),sample,1,1
+80,40,8,G-JisstPCA2 (BIC),networkX1,1,1
+80,40,8,G-JisstPCA2 (BIC),networkY1,1,1
+80,40,8,G-JisstPCA2 (BIC),networkX2,1,1
+80,40,8,G-JisstPCA2 (BIC),networkY2,1,1
+80,40,8,iHOSVD,sample,1,1
+80,40,8,iHOSVD,networkX1,1,1
+80,40,8,iHOSVD,networkY1,1,1
+80,40,8,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,40,8,iHOSVD,networkY2,0.675949367088608,0.351715914117745
+80,40,8,iHOOI,sample,1,1
+80,40,8,iHOOI,networkX1,0.756962025316456,0.468132854578097
+80,40,8,iHOOI,networkY1,1,1
+80,40,8,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,40,8,iHOOI,networkY2,0.707594936708861,0.415024906879684
+50,20,9,JisstPCA0 (oracle),sample,0.9,0.719240939492923
+50,20,9,JisstPCA0 (oracle),networkX1,1,1
+50,20,9,JisstPCA0 (oracle),networkY1,1,1
+50,20,9,JisstPCA0 (oracle),networkX2,0.494936708860759,-0.0102884615384615
+50,20,9,JisstPCA0 (oracle),networkY2,0.493061224489796,-0.0156203063983178
+50,20,9,JisstPCA0 (BIC),sample,1,1
+50,20,9,JisstPCA0 (BIC),networkX1,1,1
+50,20,9,JisstPCA0 (BIC),networkY1,1,1
+50,20,9,JisstPCA0 (BIC),networkX2,0.494936708860759,-0.0102884615384615
+50,20,9,JisstPCA0 (BIC),networkY2,0.493061224489796,-0.0156203063983178
+50,20,9,G-JisstPCA0 (oracle),sample,1,1
+50,20,9,G-JisstPCA0 (oracle),networkX1,1,1
+50,20,9,G-JisstPCA0 (oracle),networkY1,1,1
+50,20,9,G-JisstPCA0 (oracle),networkX2,0.496518987341772,-0.00672812757811435
+50,20,9,G-JisstPCA0 (oracle),networkY2,0.490612244897959,-0.0186567164179105
+50,20,9,G-JisstPCA0 (BIC),sample,1,1
+50,20,9,G-JisstPCA0 (BIC),networkX1,1,1
+50,20,9,G-JisstPCA0 (BIC),networkY1,1,1
+50,20,9,G-JisstPCA0 (BIC),networkX2,0.496518987341772,-0.00672812757811435
+50,20,9,G-JisstPCA0 (BIC),networkY2,0.489795918367347,-0.0205271751807791
+50,20,9,JisstPCA2 (oracle),sample,1,1
+50,20,9,JisstPCA2 (oracle),networkX1,1,1
+50,20,9,JisstPCA2 (oracle),networkY1,1,1
+50,20,9,JisstPCA2 (oracle),networkX2,1,1
+50,20,9,JisstPCA2 (oracle),networkY2,0.96,0.919990669465827
+50,20,9,JisstPCA2 (BIC),sample,1,1
+50,20,9,JisstPCA2 (BIC),networkX1,1,1
+50,20,9,JisstPCA2 (BIC),networkY1,1,1
+50,20,9,JisstPCA2 (BIC),networkX2,1,1
+50,20,9,JisstPCA2 (BIC),networkY2,0.96,0.919990669465827
+50,20,9,G-JisstPCA2 (oracle),sample,1,1
+50,20,9,G-JisstPCA2 (oracle),networkX1,1,1
+50,20,9,G-JisstPCA2 (oracle),networkY1,1,1
+50,20,9,G-JisstPCA2 (oracle),networkX2,1,1
+50,20,9,G-JisstPCA2 (oracle),networkY2,0.96,0.919990669465827
+50,20,9,G-JisstPCA2 (BIC),sample,1,1
+50,20,9,G-JisstPCA2 (BIC),networkX1,1,1
+50,20,9,G-JisstPCA2 (BIC),networkY1,1,1
+50,20,9,G-JisstPCA2 (BIC),networkX2,1,1
+50,20,9,G-JisstPCA2 (BIC),networkY2,0.96,0.919990669465827
+50,20,9,iHOSVD,sample,1,1
+50,20,9,iHOSVD,networkX1,1,1
+50,20,9,iHOSVD,networkY1,1,1
+50,20,9,iHOSVD,networkX2,0.607911392405063,0.218458811411598
+50,20,9,iHOSVD,networkY2,0.497142857142857,-0.00693888444088595
+50,20,9,iHOOI,sample,1,1
+50,20,9,iHOOI,networkX1,0.919303797468354,0.817311720888221
+50,20,9,iHOOI,networkY1,1,1
+50,20,9,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,20,9,iHOOI,networkY2,0.519183673469388,0.0386396189334132
+50,40,9,JisstPCA0 (oracle),sample,1,1
+50,40,9,JisstPCA0 (oracle),networkX1,1,1
+50,40,9,JisstPCA0 (oracle),networkY1,1,1
+50,40,9,JisstPCA0 (oracle),networkX2,1,1
+50,40,9,JisstPCA0 (oracle),networkY2,1,1
+50,40,9,JisstPCA0 (BIC),sample,1,1
+50,40,9,JisstPCA0 (BIC),networkX1,1,1
+50,40,9,JisstPCA0 (BIC),networkY1,1,1
+50,40,9,JisstPCA0 (BIC),networkX2,1,1
+50,40,9,JisstPCA0 (BIC),networkY2,1,1
+50,40,9,G-JisstPCA0 (oracle),sample,1,1
+50,40,9,G-JisstPCA0 (oracle),networkX1,1,1
+50,40,9,G-JisstPCA0 (oracle),networkY1,1,1
+50,40,9,G-JisstPCA0 (oracle),networkX2,1,1
+50,40,9,G-JisstPCA0 (oracle),networkY2,1,1
+50,40,9,G-JisstPCA0 (BIC),sample,1,1
+50,40,9,G-JisstPCA0 (BIC),networkX1,1,1
+50,40,9,G-JisstPCA0 (BIC),networkY1,1,1
+50,40,9,G-JisstPCA0 (BIC),networkX2,1,1
+50,40,9,G-JisstPCA0 (BIC),networkY2,1,1
+50,40,9,JisstPCA2 (oracle),sample,1,1
+50,40,9,JisstPCA2 (oracle),networkX1,1,1
+50,40,9,JisstPCA2 (oracle),networkY1,1,1
+50,40,9,JisstPCA2 (oracle),networkX2,1,1
+50,40,9,JisstPCA2 (oracle),networkY2,1,1
+50,40,9,JisstPCA2 (BIC),sample,1,1
+50,40,9,JisstPCA2 (BIC),networkX1,1,1
+50,40,9,JisstPCA2 (BIC),networkY1,1,1
+50,40,9,JisstPCA2 (BIC),networkX2,1,1
+50,40,9,JisstPCA2 (BIC),networkY2,1,1
+50,40,9,G-JisstPCA2 (oracle),sample,1,1
+50,40,9,G-JisstPCA2 (oracle),networkX1,1,1
+50,40,9,G-JisstPCA2 (oracle),networkY1,1,1
+50,40,9,G-JisstPCA2 (oracle),networkX2,1,1
+50,40,9,G-JisstPCA2 (oracle),networkY2,1,1
+50,40,9,G-JisstPCA2 (BIC),sample,1,1
+50,40,9,G-JisstPCA2 (BIC),networkX1,1,1
+50,40,9,G-JisstPCA2 (BIC),networkY1,1,1
+50,40,9,G-JisstPCA2 (BIC),networkX2,1,1
+50,40,9,G-JisstPCA2 (BIC),networkY2,1,1
+50,40,9,iHOSVD,sample,1,1
+50,40,9,iHOSVD,networkX1,0.756962025316456,0.468132854578097
+50,40,9,iHOSVD,networkY1,0.768163265306122,0.519143054595715
+50,40,9,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,40,9,iHOSVD,networkY2,0.588571428571429,0.176140912730184
+50,40,9,iHOOI,sample,1,1
+50,40,9,iHOOI,networkX1,1,1
+50,40,9,iHOOI,networkY1,1,1
+50,40,9,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,40,9,iHOOI,networkY2,0.60734693877551,0.214078495448331
+80,20,9,JisstPCA0 (oracle),sample,0.810526315789474,0.397993311036789
+80,20,9,JisstPCA0 (oracle),networkX1,1,1
+80,20,9,JisstPCA0 (oracle),networkY1,0.759810126582279,0.500615475331849
+80,20,9,JisstPCA0 (oracle),networkX2,0.493987341772152,-0.0121793895882245
+80,20,9,JisstPCA0 (oracle),networkY2,0.493670886075949,-0.0125868389346048
+80,20,9,JisstPCA0 (BIC),sample,0.731578947368421,0.367576034460253
+80,20,9,JisstPCA0 (BIC),networkX1,1,1
+80,20,9,JisstPCA0 (BIC),networkY1,1,1
+80,20,9,JisstPCA0 (BIC),networkX2,0.493987341772152,-0.0121793895882245
+80,20,9,JisstPCA0 (BIC),networkY2,0.493670886075949,-0.0125868389346048
+80,20,9,G-JisstPCA0 (oracle),sample,0.810526315789474,0.517562420651714
+80,20,9,G-JisstPCA0 (oracle),networkX1,1,1
+80,20,9,G-JisstPCA0 (oracle),networkY1,1,1
+80,20,9,G-JisstPCA0 (oracle),networkX2,0.494936708860759,-0.0101589539802589
+80,20,9,G-JisstPCA0 (oracle),networkY2,0.493987341772152,-0.0116865206171944
+80,20,9,G-JisstPCA0 (BIC),sample,0.473684210526316,-0.0324964677752417
+80,20,9,G-JisstPCA0 (BIC),networkX1,1,1
+80,20,9,G-JisstPCA0 (BIC),networkY1,1,1
+80,20,9,G-JisstPCA0 (BIC),networkX2,0.496518987341772,-0.00531093781243748
+80,20,9,G-JisstPCA0 (BIC),networkY2,0.496518987341772,-0.00662492451654556
+80,20,9,JisstPCA2 (oracle),sample,1,1
+80,20,9,JisstPCA2 (oracle),networkX1,1,1
+80,20,9,JisstPCA2 (oracle),networkY1,1,1
+80,20,9,JisstPCA2 (oracle),networkX2,1,1
+80,20,9,JisstPCA2 (oracle),networkY2,0.975,0.949946184729937
+80,20,9,JisstPCA2 (BIC),sample,1,1
+80,20,9,JisstPCA2 (BIC),networkX1,1,1
+80,20,9,JisstPCA2 (BIC),networkY1,1,1
+80,20,9,JisstPCA2 (BIC),networkX2,1,1
+80,20,9,JisstPCA2 (BIC),networkY2,0.950632911392405,0.901126408010013
+80,20,9,G-JisstPCA2 (oracle),sample,1,1
+80,20,9,G-JisstPCA2 (oracle),networkX1,1,1
+80,20,9,G-JisstPCA2 (oracle),networkY1,1,1
+80,20,9,G-JisstPCA2 (oracle),networkX2,1,1
+80,20,9,G-JisstPCA2 (oracle),networkY2,0.975,0.949946184729937
+80,20,9,G-JisstPCA2 (BIC),sample,1,1
+80,20,9,G-JisstPCA2 (BIC),networkX1,1,1
+80,20,9,G-JisstPCA2 (BIC),networkY1,1,1
+80,20,9,G-JisstPCA2 (BIC),networkX2,1,1
+80,20,9,G-JisstPCA2 (BIC),networkY2,0.975,0.949946184729937
+80,20,9,iHOSVD,sample,1,1
+80,20,9,iHOSVD,networkX1,0.878481012658228,0.72588480222068
+80,20,9,iHOSVD,networkY1,1,1
+80,20,9,iHOSVD,networkX2,0.585126582278481,0.173623024200305
+80,20,9,iHOSVD,networkY2,0.620253164556962,0.24072045056994
+80,20,9,iHOOI,sample,1,1
+80,20,9,iHOOI,networkX1,0.854430379746835,0.673203789900792
+80,20,9,iHOOI,networkY1,1,1
+80,20,9,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,20,9,iHOOI,networkY2,0.585126582278481,0.169360103556299
+80,40,9,JisstPCA0 (oracle),sample,1,1
+80,40,9,JisstPCA0 (oracle),networkX1,1,1
+80,40,9,JisstPCA0 (oracle),networkY1,0.756962025316456,0.493806065783853
+80,40,9,JisstPCA0 (oracle),networkX2,1,1
+80,40,9,JisstPCA0 (oracle),networkY2,1,1
+80,40,9,JisstPCA0 (BIC),sample,1,1
+80,40,9,JisstPCA0 (BIC),networkX1,1,1
+80,40,9,JisstPCA0 (BIC),networkY1,1,1
+80,40,9,JisstPCA0 (BIC),networkX2,1,1
+80,40,9,JisstPCA0 (BIC),networkY2,1,1
+80,40,9,G-JisstPCA0 (oracle),sample,1,1
+80,40,9,G-JisstPCA0 (oracle),networkX1,1,1
+80,40,9,G-JisstPCA0 (oracle),networkY1,1,1
+80,40,9,G-JisstPCA0 (oracle),networkX2,1,1
+80,40,9,G-JisstPCA0 (oracle),networkY2,1,1
+80,40,9,G-JisstPCA0 (BIC),sample,1,1
+80,40,9,G-JisstPCA0 (BIC),networkX1,1,1
+80,40,9,G-JisstPCA0 (BIC),networkY1,1,1
+80,40,9,G-JisstPCA0 (BIC),networkX2,1,1
+80,40,9,G-JisstPCA0 (BIC),networkY2,1,1
+80,40,9,JisstPCA2 (oracle),sample,1,1
+80,40,9,JisstPCA2 (oracle),networkX1,1,1
+80,40,9,JisstPCA2 (oracle),networkY1,1,1
+80,40,9,JisstPCA2 (oracle),networkX2,1,1
+80,40,9,JisstPCA2 (oracle),networkY2,1,1
+80,40,9,JisstPCA2 (BIC),sample,1,1
+80,40,9,JisstPCA2 (BIC),networkX1,1,1
+80,40,9,JisstPCA2 (BIC),networkY1,1,1
+80,40,9,JisstPCA2 (BIC),networkX2,1,1
+80,40,9,JisstPCA2 (BIC),networkY2,1,1
+80,40,9,G-JisstPCA2 (oracle),sample,1,1
+80,40,9,G-JisstPCA2 (oracle),networkX1,1,1
+80,40,9,G-JisstPCA2 (oracle),networkY1,1,1
+80,40,9,G-JisstPCA2 (oracle),networkX2,1,1
+80,40,9,G-JisstPCA2 (oracle),networkY2,1,1
+80,40,9,G-JisstPCA2 (BIC),sample,1,1
+80,40,9,G-JisstPCA2 (BIC),networkX1,1,1
+80,40,9,G-JisstPCA2 (BIC),networkY1,1,1
+80,40,9,G-JisstPCA2 (BIC),networkX2,1,1
+80,40,9,G-JisstPCA2 (BIC),networkY2,1,1
+80,40,9,iHOSVD,sample,1,1
+80,40,9,iHOSVD,networkX1,1,1
+80,40,9,iHOSVD,networkY1,1,1
+80,40,9,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,40,9,iHOSVD,networkY2,0.675949367088608,0.351715914117745
+80,40,9,iHOOI,sample,1,1
+80,40,9,iHOOI,networkX1,1,1
+80,40,9,iHOOI,networkY1,1,1
+80,40,9,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,40,9,iHOOI,networkY2,0.661075949367089,0.321422327161553
+50,20,10,JisstPCA0 (oracle),sample,1,1
+50,20,10,JisstPCA0 (oracle),networkX1,1,1
+50,20,10,JisstPCA0 (oracle),networkY1,1,1
+50,20,10,JisstPCA0 (oracle),networkX2,1,1
+50,20,10,JisstPCA0 (oracle),networkY2,1,1
+50,20,10,JisstPCA0 (BIC),sample,1,1
+50,20,10,JisstPCA0 (BIC),networkX1,1,1
+50,20,10,JisstPCA0 (BIC),networkY1,1,1
+50,20,10,JisstPCA0 (BIC),networkX2,1,1
+50,20,10,JisstPCA0 (BIC),networkY2,1,1
+50,20,10,G-JisstPCA0 (oracle),sample,1,1
+50,20,10,G-JisstPCA0 (oracle),networkX1,1,1
+50,20,10,G-JisstPCA0 (oracle),networkY1,1,1
+50,20,10,G-JisstPCA0 (oracle),networkX2,1,1
+50,20,10,G-JisstPCA0 (oracle),networkY2,1,1
+50,20,10,G-JisstPCA0 (BIC),sample,1,1
+50,20,10,G-JisstPCA0 (BIC),networkX1,1,1
+50,20,10,G-JisstPCA0 (BIC),networkY1,1,1
+50,20,10,G-JisstPCA0 (BIC),networkX2,1,1
+50,20,10,G-JisstPCA0 (BIC),networkY2,1,1
+50,20,10,JisstPCA2 (oracle),sample,1,1
+50,20,10,JisstPCA2 (oracle),networkX1,1,1
+50,20,10,JisstPCA2 (oracle),networkY1,1,1
+50,20,10,JisstPCA2 (oracle),networkX2,1,1
+50,20,10,JisstPCA2 (oracle),networkY2,1,1
+50,20,10,JisstPCA2 (BIC),sample,1,1
+50,20,10,JisstPCA2 (BIC),networkX1,1,1
+50,20,10,JisstPCA2 (BIC),networkY1,1,1
+50,20,10,JisstPCA2 (BIC),networkX2,1,1
+50,20,10,JisstPCA2 (BIC),networkY2,1,1
+50,20,10,G-JisstPCA2 (oracle),sample,1,1
+50,20,10,G-JisstPCA2 (oracle),networkX1,1,1
+50,20,10,G-JisstPCA2 (oracle),networkY1,1,1
+50,20,10,G-JisstPCA2 (oracle),networkX2,1,1
+50,20,10,G-JisstPCA2 (oracle),networkY2,1,1
+50,20,10,G-JisstPCA2 (BIC),sample,1,1
+50,20,10,G-JisstPCA2 (BIC),networkX1,1,1
+50,20,10,G-JisstPCA2 (BIC),networkY1,1,1
+50,20,10,G-JisstPCA2 (BIC),networkX2,1,1
+50,20,10,G-JisstPCA2 (BIC),networkY2,1,1
+50,20,10,iHOSVD,sample,1,1
+50,20,10,iHOSVD,networkX1,1,1
+50,20,10,iHOSVD,networkY1,1,1
+50,20,10,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,20,10,iHOSVD,networkY2,0.490612244897959,-0.0192000000000001
+50,20,10,iHOOI,sample,1,1
+50,20,10,iHOOI,networkX1,0.756962025316456,0.468132854578097
+50,20,10,iHOOI,networkY1,0.976326530612245,0.947496767042306
+50,20,10,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,20,10,iHOOI,networkY2,0.493061224489796,-0.0146720464170196
+50,40,10,JisstPCA0 (oracle),sample,1,1
+50,40,10,JisstPCA0 (oracle),networkX1,1,1
+50,40,10,JisstPCA0 (oracle),networkY1,1,1
+50,40,10,JisstPCA0 (oracle),networkX2,1,1
+50,40,10,JisstPCA0 (oracle),networkY2,1,1
+50,40,10,JisstPCA0 (BIC),sample,1,1
+50,40,10,JisstPCA0 (BIC),networkX1,1,1
+50,40,10,JisstPCA0 (BIC),networkY1,1,1
+50,40,10,JisstPCA0 (BIC),networkX2,1,1
+50,40,10,JisstPCA0 (BIC),networkY2,1,1
+50,40,10,G-JisstPCA0 (oracle),sample,1,1
+50,40,10,G-JisstPCA0 (oracle),networkX1,1,1
+50,40,10,G-JisstPCA0 (oracle),networkY1,1,1
+50,40,10,G-JisstPCA0 (oracle),networkX2,1,1
+50,40,10,G-JisstPCA0 (oracle),networkY2,1,1
+50,40,10,G-JisstPCA0 (BIC),sample,1,1
+50,40,10,G-JisstPCA0 (BIC),networkX1,1,1
+50,40,10,G-JisstPCA0 (BIC),networkY1,1,1
+50,40,10,G-JisstPCA0 (BIC),networkX2,1,1
+50,40,10,G-JisstPCA0 (BIC),networkY2,1,1
+50,40,10,JisstPCA2 (oracle),sample,1,1
+50,40,10,JisstPCA2 (oracle),networkX1,1,1
+50,40,10,JisstPCA2 (oracle),networkY1,1,1
+50,40,10,JisstPCA2 (oracle),networkX2,1,1
+50,40,10,JisstPCA2 (oracle),networkY2,1,1
+50,40,10,JisstPCA2 (BIC),sample,1,1
+50,40,10,JisstPCA2 (BIC),networkX1,1,1
+50,40,10,JisstPCA2 (BIC),networkY1,1,1
+50,40,10,JisstPCA2 (BIC),networkX2,1,1
+50,40,10,JisstPCA2 (BIC),networkY2,1,1
+50,40,10,G-JisstPCA2 (oracle),sample,1,1
+50,40,10,G-JisstPCA2 (oracle),networkX1,1,1
+50,40,10,G-JisstPCA2 (oracle),networkY1,1,1
+50,40,10,G-JisstPCA2 (oracle),networkX2,1,1
+50,40,10,G-JisstPCA2 (oracle),networkY2,1,1
+50,40,10,G-JisstPCA2 (BIC),sample,1,1
+50,40,10,G-JisstPCA2 (BIC),networkX1,1,1
+50,40,10,G-JisstPCA2 (BIC),networkY1,1,1
+50,40,10,G-JisstPCA2 (BIC),networkX2,1,1
+50,40,10,G-JisstPCA2 (BIC),networkY2,1,1
+50,40,10,iHOSVD,sample,1,1
+50,40,10,iHOSVD,networkX1,1,1
+50,40,10,iHOSVD,networkY1,1,1
+50,40,10,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,40,10,iHOSVD,networkY2,0.542040816326531,0.084340961327071
+50,40,10,iHOOI,sample,1,1
+50,40,10,iHOOI,networkX1,0.866139240506329,0.697536082604863
+50,40,10,iHOOI,networkY1,1,1
+50,40,10,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,40,10,iHOOI,networkY2,0.649795918367347,0.29904298242689
+80,20,10,JisstPCA0 (oracle),sample,1,1
+80,20,10,JisstPCA0 (oracle),networkX1,1,1
+80,20,10,JisstPCA0 (oracle),networkY1,1,1
+80,20,10,JisstPCA0 (oracle),networkX2,1,1
+80,20,10,JisstPCA0 (oracle),networkY2,0.975,0.949974430128523
+80,20,10,JisstPCA0 (BIC),sample,1,1
+80,20,10,JisstPCA0 (BIC),networkX1,1,1
+80,20,10,JisstPCA0 (BIC),networkY1,1,1
+80,20,10,JisstPCA0 (BIC),networkX2,1,1
+80,20,10,JisstPCA0 (BIC),networkY2,0.975,0.949974430128523
+80,20,10,G-JisstPCA0 (oracle),sample,1,1
+80,20,10,G-JisstPCA0 (oracle),networkX1,1,1
+80,20,10,G-JisstPCA0 (oracle),networkY1,1,1
+80,20,10,G-JisstPCA0 (oracle),networkX2,1,1
+80,20,10,G-JisstPCA0 (oracle),networkY2,0.975,0.949974430128523
+80,20,10,G-JisstPCA0 (BIC),sample,1,1
+80,20,10,G-JisstPCA0 (BIC),networkX1,1,1
+80,20,10,G-JisstPCA0 (BIC),networkY1,1,1
+80,20,10,G-JisstPCA0 (BIC),networkX2,1,1
+80,20,10,G-JisstPCA0 (BIC),networkY2,0.975,0.949974430128523
+80,20,10,JisstPCA2 (oracle),sample,1,1
+80,20,10,JisstPCA2 (oracle),networkX1,1,1
+80,20,10,JisstPCA2 (oracle),networkY1,1,1
+80,20,10,JisstPCA2 (oracle),networkX2,1,1
+80,20,10,JisstPCA2 (oracle),networkY2,0.975,0.949974430128523
+80,20,10,JisstPCA2 (BIC),sample,1,1
+80,20,10,JisstPCA2 (BIC),networkX1,1,1
+80,20,10,JisstPCA2 (BIC),networkY1,1,1
+80,20,10,JisstPCA2 (BIC),networkX2,1,1
+80,20,10,JisstPCA2 (BIC),networkY2,0.975,0.949974430128523
+80,20,10,G-JisstPCA2 (oracle),sample,1,1
+80,20,10,G-JisstPCA2 (oracle),networkX1,1,1
+80,20,10,G-JisstPCA2 (oracle),networkY1,1,1
+80,20,10,G-JisstPCA2 (oracle),networkX2,1,1
+80,20,10,G-JisstPCA2 (oracle),networkY2,0.975,0.949974430128523
+80,20,10,G-JisstPCA2 (BIC),sample,1,1
+80,20,10,G-JisstPCA2 (BIC),networkX1,1,1
+80,20,10,G-JisstPCA2 (BIC),networkY1,1,1
+80,20,10,G-JisstPCA2 (BIC),networkX2,1,1
+80,20,10,G-JisstPCA2 (BIC),networkY2,0.975,0.949974430128523
+80,20,10,iHOSVD,sample,1,1
+80,20,10,iHOSVD,networkX1,0.737025316455696,0.492751607534434
+80,20,10,iHOSVD,networkY1,0.777215189873418,0.541715008965299
+80,20,10,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,20,10,iHOSVD,networkY2,0.564873417721519,0.129670135967759
+80,20,10,iHOOI,sample,1,1
+80,20,10,iHOOI,networkX1,0.77753164556962,0.502118397154194
+80,20,10,iHOOI,networkY1,1,1
+80,20,10,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,20,10,iHOOI,networkY2,0.759810126582279,0.519713370745297
+80,40,10,JisstPCA0 (oracle),sample,1,1
+80,40,10,JisstPCA0 (oracle),networkX1,1,1
+80,40,10,JisstPCA0 (oracle),networkY1,1,1
+80,40,10,JisstPCA0 (oracle),networkX2,0.493670886075949,-0.0126906806819638
+80,40,10,JisstPCA0 (oracle),networkY2,0.513924050632911,0.0182270091135047
+80,40,10,JisstPCA0 (BIC),sample,1,1
+80,40,10,JisstPCA0 (BIC),networkX1,1,1
+80,40,10,JisstPCA0 (BIC),networkY1,1,1
+80,40,10,JisstPCA0 (BIC),networkX2,0.493670886075949,-0.0126906806819638
+80,40,10,JisstPCA0 (BIC),networkY2,0.513924050632911,0.0182270091135047
+80,40,10,G-JisstPCA0 (oracle),sample,1,1
+80,40,10,G-JisstPCA0 (oracle),networkX1,1,1
+80,40,10,G-JisstPCA0 (oracle),networkY1,1,1
+80,40,10,G-JisstPCA0 (oracle),networkX2,1,1
+80,40,10,G-JisstPCA0 (oracle),networkY2,1,1
+80,40,10,G-JisstPCA0 (BIC),sample,1,1
+80,40,10,G-JisstPCA0 (BIC),networkX1,1,1
+80,40,10,G-JisstPCA0 (BIC),networkY1,1,1
+80,40,10,G-JisstPCA0 (BIC),networkX2,1,1
+80,40,10,G-JisstPCA0 (BIC),networkY2,1,1
+80,40,10,JisstPCA2 (oracle),sample,1,1
+80,40,10,JisstPCA2 (oracle),networkX1,1,1
+80,40,10,JisstPCA2 (oracle),networkY1,1,1
+80,40,10,JisstPCA2 (oracle),networkX2,1,1
+80,40,10,JisstPCA2 (oracle),networkY2,1,1
+80,40,10,JisstPCA2 (BIC),sample,1,1
+80,40,10,JisstPCA2 (BIC),networkX1,1,1
+80,40,10,JisstPCA2 (BIC),networkY1,1,1
+80,40,10,JisstPCA2 (BIC),networkX2,1,1
+80,40,10,JisstPCA2 (BIC),networkY2,1,1
+80,40,10,G-JisstPCA2 (oracle),sample,1,1
+80,40,10,G-JisstPCA2 (oracle),networkX1,1,1
+80,40,10,G-JisstPCA2 (oracle),networkY1,1,1
+80,40,10,G-JisstPCA2 (oracle),networkX2,1,1
+80,40,10,G-JisstPCA2 (oracle),networkY2,1,1
+80,40,10,G-JisstPCA2 (BIC),sample,1,1
+80,40,10,G-JisstPCA2 (BIC),networkX1,1,1
+80,40,10,G-JisstPCA2 (BIC),networkY1,1,1
+80,40,10,G-JisstPCA2 (BIC),networkX2,1,1
+80,40,10,G-JisstPCA2 (BIC),networkY2,1,1
+80,40,10,iHOSVD,sample,1,1
+80,40,10,iHOSVD,networkX1,0.878481012658228,0.725091889775767
+80,40,10,iHOSVD,networkY1,1,1
+80,40,10,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,40,10,iHOSVD,networkY2,0.607911392405063,0.215421758597969
+80,40,10,iHOOI,sample,1,1
+80,40,10,iHOOI,networkX1,0.878481012658228,0.72588480222068
+80,40,10,iHOOI,networkY1,1,1
+80,40,10,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,40,10,iHOOI,networkY2,0.691455696202532,0.382595814877337
+50,20,11,JisstPCA0 (oracle),sample,1,1
+50,20,11,JisstPCA0 (oracle),networkX1,1,1
+50,20,11,JisstPCA0 (oracle),networkY1,1,1
+50,20,11,JisstPCA0 (oracle),networkX2,1,1
+50,20,11,JisstPCA0 (oracle),networkY2,1,1
+50,20,11,JisstPCA0 (BIC),sample,1,1
+50,20,11,JisstPCA0 (BIC),networkX1,1,1
+50,20,11,JisstPCA0 (BIC),networkY1,1,1
+50,20,11,JisstPCA0 (BIC),networkX2,1,1
+50,20,11,JisstPCA0 (BIC),networkY2,1,1
+50,20,11,G-JisstPCA0 (oracle),sample,1,1
+50,20,11,G-JisstPCA0 (oracle),networkX1,1,1
+50,20,11,G-JisstPCA0 (oracle),networkY1,1,1
+50,20,11,G-JisstPCA0 (oracle),networkX2,1,1
+50,20,11,G-JisstPCA0 (oracle),networkY2,1,1
+50,20,11,G-JisstPCA0 (BIC),sample,1,1
+50,20,11,G-JisstPCA0 (BIC),networkX1,1,1
+50,20,11,G-JisstPCA0 (BIC),networkY1,1,1
+50,20,11,G-JisstPCA0 (BIC),networkX2,1,1
+50,20,11,G-JisstPCA0 (BIC),networkY2,1,1
+50,20,11,JisstPCA2 (oracle),sample,1,1
+50,20,11,JisstPCA2 (oracle),networkX1,1,1
+50,20,11,JisstPCA2 (oracle),networkY1,1,1
+50,20,11,JisstPCA2 (oracle),networkX2,1,1
+50,20,11,JisstPCA2 (oracle),networkY2,1,1
+50,20,11,JisstPCA2 (BIC),sample,1,1
+50,20,11,JisstPCA2 (BIC),networkX1,1,1
+50,20,11,JisstPCA2 (BIC),networkY1,1,1
+50,20,11,JisstPCA2 (BIC),networkX2,1,1
+50,20,11,JisstPCA2 (BIC),networkY2,1,1
+50,20,11,G-JisstPCA2 (oracle),sample,1,1
+50,20,11,G-JisstPCA2 (oracle),networkX1,1,1
+50,20,11,G-JisstPCA2 (oracle),networkY1,1,1
+50,20,11,G-JisstPCA2 (oracle),networkX2,1,1
+50,20,11,G-JisstPCA2 (oracle),networkY2,1,1
+50,20,11,G-JisstPCA2 (BIC),sample,1,1
+50,20,11,G-JisstPCA2 (BIC),networkX1,1,1
+50,20,11,G-JisstPCA2 (BIC),networkY1,1,1
+50,20,11,G-JisstPCA2 (BIC),networkX2,1,1
+50,20,11,G-JisstPCA2 (BIC),networkY2,1,1
+50,20,11,iHOSVD,sample,1,1
+50,20,11,iHOSVD,networkX1,1,1
+50,20,11,iHOSVD,networkY1,1,1
+50,20,11,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,20,11,iHOSVD,networkY2,0.519183673469388,0.0382551901096338
+50,20,11,iHOOI,sample,1,1
+50,20,11,iHOOI,networkX1,0.783544303797468,0.514068244113352
+50,20,11,iHOOI,networkY1,1,1
+50,20,11,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,20,11,iHOOI,networkY2,0.502857142857143,0.00599580293794338
+50,40,11,JisstPCA0 (oracle),sample,1,1
+50,40,11,JisstPCA0 (oracle),networkX1,1,1
+50,40,11,JisstPCA0 (oracle),networkY1,0.80734693877551,0.610114632501686
+50,40,11,JisstPCA0 (oracle),networkX2,1,1
+50,40,11,JisstPCA0 (oracle),networkY2,1,1
+50,40,11,JisstPCA0 (BIC),sample,1,1
+50,40,11,JisstPCA0 (BIC),networkX1,1,1
+50,40,11,JisstPCA0 (BIC),networkY1,1,1
+50,40,11,JisstPCA0 (BIC),networkX2,1,1
+50,40,11,JisstPCA0 (BIC),networkY2,1,1
+50,40,11,G-JisstPCA0 (oracle),sample,1,1
+50,40,11,G-JisstPCA0 (oracle),networkX1,1,1
+50,40,11,G-JisstPCA0 (oracle),networkY1,1,1
+50,40,11,G-JisstPCA0 (oracle),networkX2,1,1
+50,40,11,G-JisstPCA0 (oracle),networkY2,1,1
+50,40,11,G-JisstPCA0 (BIC),sample,1,1
+50,40,11,G-JisstPCA0 (BIC),networkX1,1,1
+50,40,11,G-JisstPCA0 (BIC),networkY1,1,1
+50,40,11,G-JisstPCA0 (BIC),networkX2,1,1
+50,40,11,G-JisstPCA0 (BIC),networkY2,1,1
+50,40,11,JisstPCA2 (oracle),sample,1,1
+50,40,11,JisstPCA2 (oracle),networkX1,1,1
+50,40,11,JisstPCA2 (oracle),networkY1,1,1
+50,40,11,JisstPCA2 (oracle),networkX2,1,1
+50,40,11,JisstPCA2 (oracle),networkY2,1,1
+50,40,11,JisstPCA2 (BIC),sample,1,1
+50,40,11,JisstPCA2 (BIC),networkX1,1,1
+50,40,11,JisstPCA2 (BIC),networkY1,1,1
+50,40,11,JisstPCA2 (BIC),networkX2,1,1
+50,40,11,JisstPCA2 (BIC),networkY2,1,1
+50,40,11,G-JisstPCA2 (oracle),sample,1,1
+50,40,11,G-JisstPCA2 (oracle),networkX1,1,1
+50,40,11,G-JisstPCA2 (oracle),networkY1,1,1
+50,40,11,G-JisstPCA2 (oracle),networkX2,1,1
+50,40,11,G-JisstPCA2 (oracle),networkY2,1,1
+50,40,11,G-JisstPCA2 (BIC),sample,1,1
+50,40,11,G-JisstPCA2 (BIC),networkX1,1,1
+50,40,11,G-JisstPCA2 (BIC),networkY1,1,1
+50,40,11,G-JisstPCA2 (BIC),networkX2,1,1
+50,40,11,G-JisstPCA2 (BIC),networkY2,1,1
+50,40,11,iHOSVD,sample,1,1
+50,40,11,iHOSVD,networkX1,0.759810126582279,0.471531387656462
+50,40,11,iHOSVD,networkY1,1,1
+50,40,11,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,40,11,iHOSVD,networkY2,0.529795918367347,0.0584467574059248
+50,40,11,iHOOI,sample,1,1
+50,40,11,iHOOI,networkX1,0.756962025316456,0.468132854578097
+50,40,11,iHOOI,networkY1,1,1
+50,40,11,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,40,11,iHOOI,networkY2,0.649795918367347,0.29904298242689
+80,20,11,JisstPCA0 (oracle),sample,1,1
+80,20,11,JisstPCA0 (oracle),networkX1,1,1
+80,20,11,JisstPCA0 (oracle),networkY1,1,1
+80,20,11,JisstPCA0 (oracle),networkX2,0.493987341772152,-0.0119847786901662
+80,20,11,JisstPCA0 (oracle),networkY2,0.509177215189873,0.0185447141316937
+80,20,11,JisstPCA0 (BIC),sample,0.663157894736842,0.299861814831875
+80,20,11,JisstPCA0 (BIC),networkX1,1,1
+80,20,11,JisstPCA0 (BIC),networkY1,1,1
+80,20,11,JisstPCA0 (BIC),networkX2,0.493987341772152,-0.0119847786901662
+80,20,11,JisstPCA0 (BIC),networkY2,0.509177215189873,0.0185447141316937
+80,20,11,G-JisstPCA0 (oracle),sample,1,1
+80,20,11,G-JisstPCA0 (oracle),networkX1,1,1
+80,20,11,G-JisstPCA0 (oracle),networkY1,1,1
+80,20,11,G-JisstPCA0 (oracle),networkX2,1,1
+80,20,11,G-JisstPCA0 (oracle),networkY2,1,1
+80,20,11,G-JisstPCA0 (BIC),sample,1,1
+80,20,11,G-JisstPCA0 (BIC),networkX1,1,1
+80,20,11,G-JisstPCA0 (BIC),networkY1,1,1
+80,20,11,G-JisstPCA0 (BIC),networkX2,1,1
+80,20,11,G-JisstPCA0 (BIC),networkY2,1,1
+80,20,11,JisstPCA2 (oracle),sample,1,1
+80,20,11,JisstPCA2 (oracle),networkX1,1,1
+80,20,11,JisstPCA2 (oracle),networkY1,1,1
+80,20,11,JisstPCA2 (oracle),networkX2,1,1
+80,20,11,JisstPCA2 (oracle),networkY2,1,1
+80,20,11,JisstPCA2 (BIC),sample,1,1
+80,20,11,JisstPCA2 (BIC),networkX1,1,1
+80,20,11,JisstPCA2 (BIC),networkY1,1,1
+80,20,11,JisstPCA2 (BIC),networkX2,1,1
+80,20,11,JisstPCA2 (BIC),networkY2,1,1
+80,20,11,G-JisstPCA2 (oracle),sample,1,1
+80,20,11,G-JisstPCA2 (oracle),networkX1,1,1
+80,20,11,G-JisstPCA2 (oracle),networkY1,1,1
+80,20,11,G-JisstPCA2 (oracle),networkX2,1,1
+80,20,11,G-JisstPCA2 (oracle),networkY2,1,1
+80,20,11,G-JisstPCA2 (BIC),sample,1,1
+80,20,11,G-JisstPCA2 (BIC),networkX1,1,1
+80,20,11,G-JisstPCA2 (BIC),networkY1,1,1
+80,20,11,G-JisstPCA2 (BIC),networkX2,1,1
+80,20,11,G-JisstPCA2 (BIC),networkY2,1,1
+80,20,11,iHOSVD,sample,1,1
+80,20,11,iHOSVD,networkX1,1,1
+80,20,11,iHOSVD,networkY1,1,1
+80,20,11,iHOSVD,networkX2,0.585126582278481,0.173623024200305
+80,20,11,iHOSVD,networkY2,0.525316455696203,0.0498960899014778
+80,20,11,iHOOI,sample,1,1
+80,20,11,iHOOI,networkX1,0.772151898734177,0.486034004163775
+80,20,11,iHOOI,networkY1,1,1
+80,20,11,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,20,11,iHOOI,networkY2,0.661075949367089,0.321805248957567
+80,40,11,JisstPCA0 (oracle),sample,1,1
+80,40,11,JisstPCA0 (oracle),networkX1,1,1
+80,40,11,JisstPCA0 (oracle),networkY1,1,1
+80,40,11,JisstPCA0 (oracle),networkX2,1,1
+80,40,11,JisstPCA0 (oracle),networkY2,1,1
+80,40,11,JisstPCA0 (BIC),sample,1,1
+80,40,11,JisstPCA0 (BIC),networkX1,1,1
+80,40,11,JisstPCA0 (BIC),networkY1,1,1
+80,40,11,JisstPCA0 (BIC),networkX2,1,1
+80,40,11,JisstPCA0 (BIC),networkY2,1,1
+80,40,11,G-JisstPCA0 (oracle),sample,1,1
+80,40,11,G-JisstPCA0 (oracle),networkX1,1,1
+80,40,11,G-JisstPCA0 (oracle),networkY1,1,1
+80,40,11,G-JisstPCA0 (oracle),networkX2,1,1
+80,40,11,G-JisstPCA0 (oracle),networkY2,1,1
+80,40,11,G-JisstPCA0 (BIC),sample,1,1
+80,40,11,G-JisstPCA0 (BIC),networkX1,1,1
+80,40,11,G-JisstPCA0 (BIC),networkY1,1,1
+80,40,11,G-JisstPCA0 (BIC),networkX2,1,1
+80,40,11,G-JisstPCA0 (BIC),networkY2,1,1
+80,40,11,JisstPCA2 (oracle),sample,1,1
+80,40,11,JisstPCA2 (oracle),networkX1,1,1
+80,40,11,JisstPCA2 (oracle),networkY1,1,1
+80,40,11,JisstPCA2 (oracle),networkX2,1,1
+80,40,11,JisstPCA2 (oracle),networkY2,1,1
+80,40,11,JisstPCA2 (BIC),sample,1,1
+80,40,11,JisstPCA2 (BIC),networkX1,1,1
+80,40,11,JisstPCA2 (BIC),networkY1,1,1
+80,40,11,JisstPCA2 (BIC),networkX2,1,1
+80,40,11,JisstPCA2 (BIC),networkY2,1,1
+80,40,11,G-JisstPCA2 (oracle),sample,1,1
+80,40,11,G-JisstPCA2 (oracle),networkX1,1,1
+80,40,11,G-JisstPCA2 (oracle),networkY1,1,1
+80,40,11,G-JisstPCA2 (oracle),networkX2,1,1
+80,40,11,G-JisstPCA2 (oracle),networkY2,1,1
+80,40,11,G-JisstPCA2 (BIC),sample,1,1
+80,40,11,G-JisstPCA2 (BIC),networkX1,1,1
+80,40,11,G-JisstPCA2 (BIC),networkY1,1,1
+80,40,11,G-JisstPCA2 (BIC),networkX2,1,1
+80,40,11,G-JisstPCA2 (BIC),networkY2,1,1
+80,40,11,iHOSVD,sample,1,1
+80,40,11,iHOSVD,networkX1,0.756962025316456,0.468132854578097
+80,40,11,iHOSVD,networkY1,1,1
+80,40,11,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,40,11,iHOSVD,networkY2,0.675949367088608,0.351395730706076
+80,40,11,iHOOI,sample,1,1
+80,40,11,iHOOI,networkX1,0.756962025316456,0.468132854578097
+80,40,11,iHOOI,networkY1,1,1
+80,40,11,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,40,11,iHOOI,networkY2,0.707594936708861,0.415024906879684
+50,20,12,JisstPCA0 (oracle),sample,1,1
+50,20,12,JisstPCA0 (oracle),networkX1,1,1
+50,20,12,JisstPCA0 (oracle),networkY1,0.755918367346939,0.489778861222358
+50,20,12,JisstPCA0 (oracle),networkX2,1,1
+50,20,12,JisstPCA0 (oracle),networkY2,1,1
+50,20,12,JisstPCA0 (BIC),sample,1,1
+50,20,12,JisstPCA0 (BIC),networkX1,1,1
+50,20,12,JisstPCA0 (BIC),networkY1,1,1
+50,20,12,JisstPCA0 (BIC),networkX2,1,1
+50,20,12,JisstPCA0 (BIC),networkY2,1,1
+50,20,12,G-JisstPCA0 (oracle),sample,1,1
+50,20,12,G-JisstPCA0 (oracle),networkX1,1,1
+50,20,12,G-JisstPCA0 (oracle),networkY1,1,1
+50,20,12,G-JisstPCA0 (oracle),networkX2,1,1
+50,20,12,G-JisstPCA0 (oracle),networkY2,1,1
+50,20,12,G-JisstPCA0 (BIC),sample,1,1
+50,20,12,G-JisstPCA0 (BIC),networkX1,1,1
+50,20,12,G-JisstPCA0 (BIC),networkY1,1,1
+50,20,12,G-JisstPCA0 (BIC),networkX2,1,1
+50,20,12,G-JisstPCA0 (BIC),networkY2,1,1
+50,20,12,JisstPCA2 (oracle),sample,1,1
+50,20,12,JisstPCA2 (oracle),networkX1,1,1
+50,20,12,JisstPCA2 (oracle),networkY1,1,1
+50,20,12,JisstPCA2 (oracle),networkX2,1,1
+50,20,12,JisstPCA2 (oracle),networkY2,1,1
+50,20,12,JisstPCA2 (BIC),sample,1,1
+50,20,12,JisstPCA2 (BIC),networkX1,1,1
+50,20,12,JisstPCA2 (BIC),networkY1,1,1
+50,20,12,JisstPCA2 (BIC),networkX2,1,1
+50,20,12,JisstPCA2 (BIC),networkY2,1,1
+50,20,12,G-JisstPCA2 (oracle),sample,1,1
+50,20,12,G-JisstPCA2 (oracle),networkX1,1,1
+50,20,12,G-JisstPCA2 (oracle),networkY1,1,1
+50,20,12,G-JisstPCA2 (oracle),networkX2,1,1
+50,20,12,G-JisstPCA2 (oracle),networkY2,1,1
+50,20,12,G-JisstPCA2 (BIC),sample,1,1
+50,20,12,G-JisstPCA2 (BIC),networkX1,1,1
+50,20,12,G-JisstPCA2 (BIC),networkY1,1,1
+50,20,12,G-JisstPCA2 (BIC),networkX2,1,1
+50,20,12,G-JisstPCA2 (BIC),networkY2,1,1
+50,20,12,iHOSVD,sample,1,1
+50,20,12,iHOSVD,networkX1,1,1
+50,20,12,iHOSVD,networkY1,0.976326530612245,0.948072355198246
+50,20,12,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,20,12,iHOSVD,networkY2,0.510204081632653,0.0207833733013588
+50,20,12,iHOOI,sample,1,1
+50,20,12,iHOOI,networkX1,1,1
+50,20,12,iHOOI,networkY1,1,1
+50,20,12,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,20,12,iHOOI,networkY2,0.725714285714286,0.451638689048761
+50,40,12,JisstPCA0 (oracle),sample,1,1
+50,40,12,JisstPCA0 (oracle),networkX1,1,1
+50,40,12,JisstPCA0 (oracle),networkY1,1,1
+50,40,12,JisstPCA0 (oracle),networkX2,1,1
+50,40,12,JisstPCA0 (oracle),networkY2,1,1
+50,40,12,JisstPCA0 (BIC),sample,1,1
+50,40,12,JisstPCA0 (BIC),networkX1,1,1
+50,40,12,JisstPCA0 (BIC),networkY1,1,1
+50,40,12,JisstPCA0 (BIC),networkX2,1,1
+50,40,12,JisstPCA0 (BIC),networkY2,1,1
+50,40,12,G-JisstPCA0 (oracle),sample,1,1
+50,40,12,G-JisstPCA0 (oracle),networkX1,1,1
+50,40,12,G-JisstPCA0 (oracle),networkY1,1,1
+50,40,12,G-JisstPCA0 (oracle),networkX2,1,1
+50,40,12,G-JisstPCA0 (oracle),networkY2,1,1
+50,40,12,G-JisstPCA0 (BIC),sample,1,1
+50,40,12,G-JisstPCA0 (BIC),networkX1,1,1
+50,40,12,G-JisstPCA0 (BIC),networkY1,1,1
+50,40,12,G-JisstPCA0 (BIC),networkX2,1,1
+50,40,12,G-JisstPCA0 (BIC),networkY2,1,1
+50,40,12,JisstPCA2 (oracle),sample,1,1
+50,40,12,JisstPCA2 (oracle),networkX1,1,1
+50,40,12,JisstPCA2 (oracle),networkY1,1,1
+50,40,12,JisstPCA2 (oracle),networkX2,1,1
+50,40,12,JisstPCA2 (oracle),networkY2,1,1
+50,40,12,JisstPCA2 (BIC),sample,1,1
+50,40,12,JisstPCA2 (BIC),networkX1,1,1
+50,40,12,JisstPCA2 (BIC),networkY1,1,1
+50,40,12,JisstPCA2 (BIC),networkX2,1,1
+50,40,12,JisstPCA2 (BIC),networkY2,1,1
+50,40,12,G-JisstPCA2 (oracle),sample,1,1
+50,40,12,G-JisstPCA2 (oracle),networkX1,1,1
+50,40,12,G-JisstPCA2 (oracle),networkY1,1,1
+50,40,12,G-JisstPCA2 (oracle),networkX2,1,1
+50,40,12,G-JisstPCA2 (oracle),networkY2,1,1
+50,40,12,G-JisstPCA2 (BIC),sample,1,1
+50,40,12,G-JisstPCA2 (BIC),networkX1,1,1
+50,40,12,G-JisstPCA2 (BIC),networkY1,1,1
+50,40,12,G-JisstPCA2 (BIC),networkX2,1,1
+50,40,12,G-JisstPCA2 (BIC),networkY2,1,1
+50,40,12,iHOSVD,sample,1,1
+50,40,12,iHOSVD,networkX1,0.754746835443038,0.460391074352778
+50,40,12,iHOSVD,networkY1,1,1
+50,40,12,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,40,12,iHOSVD,networkY2,0.571428571428571,0.14138379893862
+50,40,12,iHOOI,sample,1,1
+50,40,12,iHOOI,networkX1,1,1
+50,40,12,iHOOI,networkY1,1,1
+50,40,12,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,40,12,iHOOI,networkY2,0.673469387755102,0.346666666666667
+80,20,12,JisstPCA0 (oracle),sample,1,1
+80,20,12,JisstPCA0 (oracle),networkX1,1,1
+80,20,12,JisstPCA0 (oracle),networkY1,1,1
+80,20,12,JisstPCA0 (oracle),networkX2,1,1
+80,20,12,JisstPCA0 (oracle),networkY2,1,1
+80,20,12,JisstPCA0 (BIC),sample,1,1
+80,20,12,JisstPCA0 (BIC),networkX1,1,1
+80,20,12,JisstPCA0 (BIC),networkY1,1,1
+80,20,12,JisstPCA0 (BIC),networkX2,1,1
+80,20,12,JisstPCA0 (BIC),networkY2,1,1
+80,20,12,G-JisstPCA0 (oracle),sample,1,1
+80,20,12,G-JisstPCA0 (oracle),networkX1,1,1
+80,20,12,G-JisstPCA0 (oracle),networkY1,1,1
+80,20,12,G-JisstPCA0 (oracle),networkX2,1,1
+80,20,12,G-JisstPCA0 (oracle),networkY2,1,1
+80,20,12,G-JisstPCA0 (BIC),sample,1,1
+80,20,12,G-JisstPCA0 (BIC),networkX1,1,1
+80,20,12,G-JisstPCA0 (BIC),networkY1,1,1
+80,20,12,G-JisstPCA0 (BIC),networkX2,1,1
+80,20,12,G-JisstPCA0 (BIC),networkY2,1,1
+80,20,12,JisstPCA2 (oracle),sample,1,1
+80,20,12,JisstPCA2 (oracle),networkX1,1,1
+80,20,12,JisstPCA2 (oracle),networkY1,1,1
+80,20,12,JisstPCA2 (oracle),networkX2,1,1
+80,20,12,JisstPCA2 (oracle),networkY2,1,1
+80,20,12,JisstPCA2 (BIC),sample,1,1
+80,20,12,JisstPCA2 (BIC),networkX1,1,1
+80,20,12,JisstPCA2 (BIC),networkY1,1,1
+80,20,12,JisstPCA2 (BIC),networkX2,1,1
+80,20,12,JisstPCA2 (BIC),networkY2,1,1
+80,20,12,G-JisstPCA2 (oracle),sample,1,1
+80,20,12,G-JisstPCA2 (oracle),networkX1,1,1
+80,20,12,G-JisstPCA2 (oracle),networkY1,1,1
+80,20,12,G-JisstPCA2 (oracle),networkX2,1,1
+80,20,12,G-JisstPCA2 (oracle),networkY2,1,1
+80,20,12,G-JisstPCA2 (BIC),sample,1,1
+80,20,12,G-JisstPCA2 (BIC),networkX1,1,1
+80,20,12,G-JisstPCA2 (BIC),networkY1,1,1
+80,20,12,G-JisstPCA2 (BIC),networkX2,1,1
+80,20,12,G-JisstPCA2 (BIC),networkY2,1,1
+80,20,12,iHOSVD,sample,1,1
+80,20,12,iHOSVD,networkX1,0.756962025316456,0.468132854578097
+80,20,12,iHOSVD,networkY1,1,1
+80,20,12,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,20,12,iHOSVD,networkY2,0.564873417721519,0.128194879845391
+80,20,12,iHOOI,sample,1,1
+80,20,12,iHOOI,networkX1,0.756962025316456,0.468132854578097
+80,20,12,iHOOI,networkY1,1,1
+80,20,12,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,20,12,iHOOI,networkY2,0.646835443037975,0.2931226908867
+80,40,12,JisstPCA0 (oracle),sample,1,1
+80,40,12,JisstPCA0 (oracle),networkX1,1,1
+80,40,12,JisstPCA0 (oracle),networkY1,1,1
+80,40,12,JisstPCA0 (oracle),networkX2,1,1
+80,40,12,JisstPCA0 (oracle),networkY2,1,1
+80,40,12,JisstPCA0 (BIC),sample,1,1
+80,40,12,JisstPCA0 (BIC),networkX1,1,1
+80,40,12,JisstPCA0 (BIC),networkY1,1,1
+80,40,12,JisstPCA0 (BIC),networkX2,1,1
+80,40,12,JisstPCA0 (BIC),networkY2,1,1
+80,40,12,G-JisstPCA0 (oracle),sample,1,1
+80,40,12,G-JisstPCA0 (oracle),networkX1,1,1
+80,40,12,G-JisstPCA0 (oracle),networkY1,1,1
+80,40,12,G-JisstPCA0 (oracle),networkX2,1,1
+80,40,12,G-JisstPCA0 (oracle),networkY2,1,1
+80,40,12,G-JisstPCA0 (BIC),sample,1,1
+80,40,12,G-JisstPCA0 (BIC),networkX1,1,1
+80,40,12,G-JisstPCA0 (BIC),networkY1,1,1
+80,40,12,G-JisstPCA0 (BIC),networkX2,1,1
+80,40,12,G-JisstPCA0 (BIC),networkY2,1,1
+80,40,12,JisstPCA2 (oracle),sample,1,1
+80,40,12,JisstPCA2 (oracle),networkX1,1,1
+80,40,12,JisstPCA2 (oracle),networkY1,1,1
+80,40,12,JisstPCA2 (oracle),networkX2,1,1
+80,40,12,JisstPCA2 (oracle),networkY2,1,1
+80,40,12,JisstPCA2 (BIC),sample,1,1
+80,40,12,JisstPCA2 (BIC),networkX1,1,1
+80,40,12,JisstPCA2 (BIC),networkY1,1,1
+80,40,12,JisstPCA2 (BIC),networkX2,1,1
+80,40,12,JisstPCA2 (BIC),networkY2,1,1
+80,40,12,G-JisstPCA2 (oracle),sample,1,1
+80,40,12,G-JisstPCA2 (oracle),networkX1,1,1
+80,40,12,G-JisstPCA2 (oracle),networkY1,1,1
+80,40,12,G-JisstPCA2 (oracle),networkX2,1,1
+80,40,12,G-JisstPCA2 (oracle),networkY2,1,1
+80,40,12,G-JisstPCA2 (BIC),sample,1,1
+80,40,12,G-JisstPCA2 (BIC),networkX1,1,1
+80,40,12,G-JisstPCA2 (BIC),networkY1,1,1
+80,40,12,G-JisstPCA2 (BIC),networkX2,1,1
+80,40,12,G-JisstPCA2 (BIC),networkY2,1,1
+80,40,12,iHOSVD,sample,1,1
+80,40,12,iHOSVD,networkX1,0.756962025316456,0.468132854578097
+80,40,12,iHOSVD,networkY1,1,1
+80,40,12,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,40,12,iHOSVD,networkY2,0.633227848101266,0.265666178506293
+80,40,12,iHOOI,sample,1,1
+80,40,12,iHOOI,networkX1,1,1
+80,40,12,iHOOI,networkY1,1,1
+80,40,12,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,40,12,iHOOI,networkY2,0.574683544303797,0.13404321954275
+50,20,13,JisstPCA0 (oracle),sample,1,1
+50,20,13,JisstPCA0 (oracle),networkX1,1,1
+50,20,13,JisstPCA0 (oracle),networkY1,1,1
+50,20,13,JisstPCA0 (oracle),networkX2,1,1
+50,20,13,JisstPCA0 (oracle),networkY2,1,1
+50,20,13,JisstPCA0 (BIC),sample,1,1
+50,20,13,JisstPCA0 (BIC),networkX1,1,1
+50,20,13,JisstPCA0 (BIC),networkY1,1,1
+50,20,13,JisstPCA0 (BIC),networkX2,1,1
+50,20,13,JisstPCA0 (BIC),networkY2,0.96,0.919937310347127
+50,20,13,G-JisstPCA0 (oracle),sample,1,1
+50,20,13,G-JisstPCA0 (oracle),networkX1,1,1
+50,20,13,G-JisstPCA0 (oracle),networkY1,1,1
+50,20,13,G-JisstPCA0 (oracle),networkX2,1,1
+50,20,13,G-JisstPCA0 (oracle),networkY2,1,1
+50,20,13,G-JisstPCA0 (BIC),sample,1,1
+50,20,13,G-JisstPCA0 (BIC),networkX1,1,1
+50,20,13,G-JisstPCA0 (BIC),networkY1,1,1
+50,20,13,G-JisstPCA0 (BIC),networkX2,1,1
+50,20,13,G-JisstPCA0 (BIC),networkY2,1,1
+50,20,13,JisstPCA2 (oracle),sample,1,1
+50,20,13,JisstPCA2 (oracle),networkX1,1,1
+50,20,13,JisstPCA2 (oracle),networkY1,1,1
+50,20,13,JisstPCA2 (oracle),networkX2,1,1
+50,20,13,JisstPCA2 (oracle),networkY2,1,1
+50,20,13,JisstPCA2 (BIC),sample,1,1
+50,20,13,JisstPCA2 (BIC),networkX1,1,1
+50,20,13,JisstPCA2 (BIC),networkY1,1,1
+50,20,13,JisstPCA2 (BIC),networkX2,1,1
+50,20,13,JisstPCA2 (BIC),networkY2,1,1
+50,20,13,G-JisstPCA2 (oracle),sample,1,1
+50,20,13,G-JisstPCA2 (oracle),networkX1,1,1
+50,20,13,G-JisstPCA2 (oracle),networkY1,1,1
+50,20,13,G-JisstPCA2 (oracle),networkX2,1,1
+50,20,13,G-JisstPCA2 (oracle),networkY2,1,1
+50,20,13,G-JisstPCA2 (BIC),sample,1,1
+50,20,13,G-JisstPCA2 (BIC),networkX1,1,1
+50,20,13,G-JisstPCA2 (BIC),networkY1,1,1
+50,20,13,G-JisstPCA2 (BIC),networkX2,1,1
+50,20,13,G-JisstPCA2 (BIC),networkY2,1,1
+50,20,13,iHOSVD,sample,1,1
+50,20,13,iHOSVD,networkX1,1,1
+50,20,13,iHOSVD,networkY1,1,1
+50,20,13,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,20,13,iHOSVD,networkY2,0.519183673469388,0.0341354037682809
+50,20,13,iHOOI,sample,1,1
+50,20,13,iHOOI,networkX1,0.754746835443038,0.460391074352778
+50,20,13,iHOOI,networkY1,0.937959183673469,0.863389581804842
+50,20,13,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,20,13,iHOOI,networkY2,0.571428571428571,0.142185468004935
+50,40,13,JisstPCA0 (oracle),sample,1,1
+50,40,13,JisstPCA0 (oracle),networkX1,1,1
+50,40,13,JisstPCA0 (oracle),networkY1,1,1
+50,40,13,JisstPCA0 (oracle),networkX2,1,1
+50,40,13,JisstPCA0 (oracle),networkY2,1,1
+50,40,13,JisstPCA0 (BIC),sample,1,1
+50,40,13,JisstPCA0 (BIC),networkX1,1,1
+50,40,13,JisstPCA0 (BIC),networkY1,1,1
+50,40,13,JisstPCA0 (BIC),networkX2,1,1
+50,40,13,JisstPCA0 (BIC),networkY2,1,1
+50,40,13,G-JisstPCA0 (oracle),sample,1,1
+50,40,13,G-JisstPCA0 (oracle),networkX1,1,1
+50,40,13,G-JisstPCA0 (oracle),networkY1,1,1
+50,40,13,G-JisstPCA0 (oracle),networkX2,1,1
+50,40,13,G-JisstPCA0 (oracle),networkY2,1,1
+50,40,13,G-JisstPCA0 (BIC),sample,1,1
+50,40,13,G-JisstPCA0 (BIC),networkX1,1,1
+50,40,13,G-JisstPCA0 (BIC),networkY1,1,1
+50,40,13,G-JisstPCA0 (BIC),networkX2,1,1
+50,40,13,G-JisstPCA0 (BIC),networkY2,1,1
+50,40,13,JisstPCA2 (oracle),sample,1,1
+50,40,13,JisstPCA2 (oracle),networkX1,1,1
+50,40,13,JisstPCA2 (oracle),networkY1,1,1
+50,40,13,JisstPCA2 (oracle),networkX2,1,1
+50,40,13,JisstPCA2 (oracle),networkY2,1,1
+50,40,13,JisstPCA2 (BIC),sample,1,1
+50,40,13,JisstPCA2 (BIC),networkX1,1,1
+50,40,13,JisstPCA2 (BIC),networkY1,1,1
+50,40,13,JisstPCA2 (BIC),networkX2,1,1
+50,40,13,JisstPCA2 (BIC),networkY2,1,1
+50,40,13,G-JisstPCA2 (oracle),sample,1,1
+50,40,13,G-JisstPCA2 (oracle),networkX1,1,1
+50,40,13,G-JisstPCA2 (oracle),networkY1,1,1
+50,40,13,G-JisstPCA2 (oracle),networkX2,1,1
+50,40,13,G-JisstPCA2 (oracle),networkY2,1,1
+50,40,13,G-JisstPCA2 (BIC),sample,1,1
+50,40,13,G-JisstPCA2 (BIC),networkX1,1,1
+50,40,13,G-JisstPCA2 (BIC),networkY1,1,1
+50,40,13,G-JisstPCA2 (BIC),networkX2,1,1
+50,40,13,G-JisstPCA2 (BIC),networkY2,1,1
+50,40,13,iHOSVD,sample,1,1
+50,40,13,iHOSVD,networkX1,1,1
+50,40,13,iHOSVD,networkY1,1,1
+50,40,13,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,40,13,iHOSVD,networkY2,0.673469387755102,0.347188915534239
+50,40,13,iHOOI,sample,1,1
+50,40,13,iHOOI,networkX1,0.756962025316456,0.468132854578097
+50,40,13,iHOOI,networkY1,1,1
+50,40,13,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,40,13,iHOOI,networkY2,0.673469387755102,0.346666666666667
+80,20,13,JisstPCA0 (oracle),sample,1,1
+80,20,13,JisstPCA0 (oracle),networkX1,0.982594936708861,0.960672540291412
+80,20,13,JisstPCA0 (oracle),networkY1,1,1
+80,20,13,JisstPCA0 (oracle),networkX2,1,1
+80,20,13,JisstPCA0 (oracle),networkY2,1,1
+80,20,13,JisstPCA0 (BIC),sample,1,1
+80,20,13,JisstPCA0 (BIC),networkX1,0.982594936708861,0.960672540291412
+80,20,13,JisstPCA0 (BIC),networkY1,1,1
+80,20,13,JisstPCA0 (BIC),networkX2,1,1
+80,20,13,JisstPCA0 (BIC),networkY2,1,1
+80,20,13,G-JisstPCA0 (oracle),sample,1,1
+80,20,13,G-JisstPCA0 (oracle),networkX1,1,1
+80,20,13,G-JisstPCA0 (oracle),networkY1,1,1
+80,20,13,G-JisstPCA0 (oracle),networkX2,1,1
+80,20,13,G-JisstPCA0 (oracle),networkY2,1,1
+80,20,13,G-JisstPCA0 (BIC),sample,1,1
+80,20,13,G-JisstPCA0 (BIC),networkX1,1,1
+80,20,13,G-JisstPCA0 (BIC),networkY1,1,1
+80,20,13,G-JisstPCA0 (BIC),networkX2,1,1
+80,20,13,G-JisstPCA0 (BIC),networkY2,1,1
+80,20,13,JisstPCA2 (oracle),sample,1,1
+80,20,13,JisstPCA2 (oracle),networkX1,0.982594936708861,0.960672540291412
+80,20,13,JisstPCA2 (oracle),networkY1,1,1
+80,20,13,JisstPCA2 (oracle),networkX2,1,1
+80,20,13,JisstPCA2 (oracle),networkY2,1,1
+80,20,13,JisstPCA2 (BIC),sample,1,1
+80,20,13,JisstPCA2 (BIC),networkX1,0.982594936708861,0.960672540291412
+80,20,13,JisstPCA2 (BIC),networkY1,1,1
+80,20,13,JisstPCA2 (BIC),networkX2,1,1
+80,20,13,JisstPCA2 (BIC),networkY2,1,1
+80,20,13,G-JisstPCA2 (oracle),sample,1,1
+80,20,13,G-JisstPCA2 (oracle),networkX1,1,1
+80,20,13,G-JisstPCA2 (oracle),networkY1,1,1
+80,20,13,G-JisstPCA2 (oracle),networkX2,1,1
+80,20,13,G-JisstPCA2 (oracle),networkY2,1,1
+80,20,13,G-JisstPCA2 (BIC),sample,1,1
+80,20,13,G-JisstPCA2 (BIC),networkX1,1,1
+80,20,13,G-JisstPCA2 (BIC),networkY1,1,1
+80,20,13,G-JisstPCA2 (BIC),networkX2,1,1
+80,20,13,G-JisstPCA2 (BIC),networkY2,1,1
+80,20,13,iHOSVD,sample,1,1
+80,20,13,iHOSVD,networkX1,0.754746835443038,0.460391074352778
+80,20,13,iHOSVD,networkY1,0.985126582278481,0.967291473231511
+80,20,13,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,20,13,iHOSVD,networkY2,0.633227848101266,0.266391045517551
+80,20,13,iHOOI,sample,1,1
+80,20,13,iHOOI,networkX1,0.756962025316456,0.468132854578097
+80,20,13,iHOOI,networkY1,1,1
+80,20,13,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,20,13,iHOOI,networkY2,0.646835443037975,0.2931226908867
+80,40,13,JisstPCA0 (oracle),sample,1,1
+80,40,13,JisstPCA0 (oracle),networkX1,1,1
+80,40,13,JisstPCA0 (oracle),networkY1,1,1
+80,40,13,JisstPCA0 (oracle),networkX2,1,1
+80,40,13,JisstPCA0 (oracle),networkY2,1,1
+80,40,13,JisstPCA0 (BIC),sample,1,1
+80,40,13,JisstPCA0 (BIC),networkX1,1,1
+80,40,13,JisstPCA0 (BIC),networkY1,1,1
+80,40,13,JisstPCA0 (BIC),networkX2,1,1
+80,40,13,JisstPCA0 (BIC),networkY2,1,1
+80,40,13,G-JisstPCA0 (oracle),sample,1,1
+80,40,13,G-JisstPCA0 (oracle),networkX1,1,1
+80,40,13,G-JisstPCA0 (oracle),networkY1,1,1
+80,40,13,G-JisstPCA0 (oracle),networkX2,1,1
+80,40,13,G-JisstPCA0 (oracle),networkY2,1,1
+80,40,13,G-JisstPCA0 (BIC),sample,1,1
+80,40,13,G-JisstPCA0 (BIC),networkX1,1,1
+80,40,13,G-JisstPCA0 (BIC),networkY1,1,1
+80,40,13,G-JisstPCA0 (BIC),networkX2,1,1
+80,40,13,G-JisstPCA0 (BIC),networkY2,1,1
+80,40,13,JisstPCA2 (oracle),sample,1,1
+80,40,13,JisstPCA2 (oracle),networkX1,1,1
+80,40,13,JisstPCA2 (oracle),networkY1,1,1
+80,40,13,JisstPCA2 (oracle),networkX2,1,1
+80,40,13,JisstPCA2 (oracle),networkY2,1,1
+80,40,13,JisstPCA2 (BIC),sample,1,1
+80,40,13,JisstPCA2 (BIC),networkX1,1,1
+80,40,13,JisstPCA2 (BIC),networkY1,1,1
+80,40,13,JisstPCA2 (BIC),networkX2,1,1
+80,40,13,JisstPCA2 (BIC),networkY2,1,1
+80,40,13,G-JisstPCA2 (oracle),sample,1,1
+80,40,13,G-JisstPCA2 (oracle),networkX1,1,1
+80,40,13,G-JisstPCA2 (oracle),networkY1,1,1
+80,40,13,G-JisstPCA2 (oracle),networkX2,1,1
+80,40,13,G-JisstPCA2 (oracle),networkY2,1,1
+80,40,13,G-JisstPCA2 (BIC),sample,1,1
+80,40,13,G-JisstPCA2 (BIC),networkX1,1,1
+80,40,13,G-JisstPCA2 (BIC),networkY1,1,1
+80,40,13,G-JisstPCA2 (BIC),networkX2,1,1
+80,40,13,G-JisstPCA2 (BIC),networkY2,1,1
+80,40,13,iHOSVD,sample,1,1
+80,40,13,iHOSVD,networkX1,1,1
+80,40,13,iHOSVD,networkY1,1,1
+80,40,13,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,40,13,iHOSVD,networkY2,0.675949367088608,0.351395730706076
+80,40,13,iHOOI,sample,1,1
+80,40,13,iHOOI,networkX1,1,1
+80,40,13,iHOOI,networkY1,1,1
+80,40,13,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,40,13,iHOOI,networkY2,0.633227848101266,0.265147538720587
+50,20,14,JisstPCA0 (oracle),sample,1,1
+50,20,14,JisstPCA0 (oracle),networkX1,1,1
+50,20,14,JisstPCA0 (oracle),networkY1,1,1
+50,20,14,JisstPCA0 (oracle),networkX2,1,1
+50,20,14,JisstPCA0 (oracle),networkY2,1,1
+50,20,14,JisstPCA0 (BIC),sample,1,1
+50,20,14,JisstPCA0 (BIC),networkX1,1,1
+50,20,14,JisstPCA0 (BIC),networkY1,1,1
+50,20,14,JisstPCA0 (BIC),networkX2,1,1
+50,20,14,JisstPCA0 (BIC),networkY2,1,1
+50,20,14,G-JisstPCA0 (oracle),sample,1,1
+50,20,14,G-JisstPCA0 (oracle),networkX1,1,1
+50,20,14,G-JisstPCA0 (oracle),networkY1,1,1
+50,20,14,G-JisstPCA0 (oracle),networkX2,1,1
+50,20,14,G-JisstPCA0 (oracle),networkY2,1,1
+50,20,14,G-JisstPCA0 (BIC),sample,1,1
+50,20,14,G-JisstPCA0 (BIC),networkX1,1,1
+50,20,14,G-JisstPCA0 (BIC),networkY1,1,1
+50,20,14,G-JisstPCA0 (BIC),networkX2,1,1
+50,20,14,G-JisstPCA0 (BIC),networkY2,1,1
+50,20,14,JisstPCA2 (oracle),sample,1,1
+50,20,14,JisstPCA2 (oracle),networkX1,1,1
+50,20,14,JisstPCA2 (oracle),networkY1,1,1
+50,20,14,JisstPCA2 (oracle),networkX2,1,1
+50,20,14,JisstPCA2 (oracle),networkY2,1,1
+50,20,14,JisstPCA2 (BIC),sample,1,1
+50,20,14,JisstPCA2 (BIC),networkX1,1,1
+50,20,14,JisstPCA2 (BIC),networkY1,1,1
+50,20,14,JisstPCA2 (BIC),networkX2,1,1
+50,20,14,JisstPCA2 (BIC),networkY2,1,1
+50,20,14,G-JisstPCA2 (oracle),sample,1,1
+50,20,14,G-JisstPCA2 (oracle),networkX1,1,1
+50,20,14,G-JisstPCA2 (oracle),networkY1,1,1
+50,20,14,G-JisstPCA2 (oracle),networkX2,1,1
+50,20,14,G-JisstPCA2 (oracle),networkY2,1,1
+50,20,14,G-JisstPCA2 (BIC),sample,1,1
+50,20,14,G-JisstPCA2 (BIC),networkX1,1,1
+50,20,14,G-JisstPCA2 (BIC),networkY1,1,1
+50,20,14,G-JisstPCA2 (BIC),networkX2,1,1
+50,20,14,G-JisstPCA2 (BIC),networkY2,1,1
+50,20,14,iHOSVD,sample,1,1
+50,20,14,iHOSVD,networkX1,1,1
+50,20,14,iHOSVD,networkY1,1,1
+50,20,14,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,20,14,iHOSVD,networkY2,0.519183673469388,0.0387676935886762
+50,20,14,iHOOI,sample,1,1
+50,20,14,iHOOI,networkX1,1,1
+50,20,14,iHOOI,networkY1,1,1
+50,20,14,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,20,14,iHOOI,networkY2,0.627755102040816,0.255597014925373
+50,40,14,JisstPCA0 (oracle),sample,1,1
+50,40,14,JisstPCA0 (oracle),networkX1,1,1
+50,40,14,JisstPCA0 (oracle),networkY1,1,1
+50,40,14,JisstPCA0 (oracle),networkX2,1,1
+50,40,14,JisstPCA0 (oracle),networkY2,1,1
+50,40,14,JisstPCA0 (BIC),sample,1,1
+50,40,14,JisstPCA0 (BIC),networkX1,1,1
+50,40,14,JisstPCA0 (BIC),networkY1,1,1
+50,40,14,JisstPCA0 (BIC),networkX2,1,1
+50,40,14,JisstPCA0 (BIC),networkY2,1,1
+50,40,14,G-JisstPCA0 (oracle),sample,1,1
+50,40,14,G-JisstPCA0 (oracle),networkX1,1,1
+50,40,14,G-JisstPCA0 (oracle),networkY1,1,1
+50,40,14,G-JisstPCA0 (oracle),networkX2,1,1
+50,40,14,G-JisstPCA0 (oracle),networkY2,1,1
+50,40,14,G-JisstPCA0 (BIC),sample,1,1
+50,40,14,G-JisstPCA0 (BIC),networkX1,1,1
+50,40,14,G-JisstPCA0 (BIC),networkY1,1,1
+50,40,14,G-JisstPCA0 (BIC),networkX2,1,1
+50,40,14,G-JisstPCA0 (BIC),networkY2,1,1
+50,40,14,JisstPCA2 (oracle),sample,1,1
+50,40,14,JisstPCA2 (oracle),networkX1,1,1
+50,40,14,JisstPCA2 (oracle),networkY1,1,1
+50,40,14,JisstPCA2 (oracle),networkX2,1,1
+50,40,14,JisstPCA2 (oracle),networkY2,1,1
+50,40,14,JisstPCA2 (BIC),sample,1,1
+50,40,14,JisstPCA2 (BIC),networkX1,1,1
+50,40,14,JisstPCA2 (BIC),networkY1,1,1
+50,40,14,JisstPCA2 (BIC),networkX2,1,1
+50,40,14,JisstPCA2 (BIC),networkY2,1,1
+50,40,14,G-JisstPCA2 (oracle),sample,1,1
+50,40,14,G-JisstPCA2 (oracle),networkX1,1,1
+50,40,14,G-JisstPCA2 (oracle),networkY1,1,1
+50,40,14,G-JisstPCA2 (oracle),networkX2,1,1
+50,40,14,G-JisstPCA2 (oracle),networkY2,1,1
+50,40,14,G-JisstPCA2 (BIC),sample,1,1
+50,40,14,G-JisstPCA2 (BIC),networkX1,1,1
+50,40,14,G-JisstPCA2 (BIC),networkY1,1,1
+50,40,14,G-JisstPCA2 (BIC),networkX2,1,1
+50,40,14,G-JisstPCA2 (BIC),networkY2,1,1
+50,40,14,iHOSVD,sample,1,1
+50,40,14,iHOSVD,networkX1,1,1
+50,40,14,iHOSVD,networkY1,1,1
+50,40,14,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,40,14,iHOSVD,networkY2,0.627755102040816,0.2552
+50,40,14,iHOOI,sample,1,1
+50,40,14,iHOOI,networkX1,0.756962025316456,0.468132854578097
+50,40,14,iHOOI,networkY1,1,1
+50,40,14,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,40,14,iHOOI,networkY2,0.627755102040816,0.254603682946357
+80,20,14,JisstPCA0 (oracle),sample,1,1
+80,20,14,JisstPCA0 (oracle),networkX1,1,1
+80,20,14,JisstPCA0 (oracle),networkY1,1,1
+80,20,14,JisstPCA0 (oracle),networkX2,1,1
+80,20,14,JisstPCA0 (oracle),networkY2,1,1
+80,20,14,JisstPCA0 (BIC),sample,1,1
+80,20,14,JisstPCA0 (BIC),networkX1,1,1
+80,20,14,JisstPCA0 (BIC),networkY1,1,1
+80,20,14,JisstPCA0 (BIC),networkX2,1,1
+80,20,14,JisstPCA0 (BIC),networkY2,1,1
+80,20,14,G-JisstPCA0 (oracle),sample,1,1
+80,20,14,G-JisstPCA0 (oracle),networkX1,1,1
+80,20,14,G-JisstPCA0 (oracle),networkY1,1,1
+80,20,14,G-JisstPCA0 (oracle),networkX2,1,1
+80,20,14,G-JisstPCA0 (oracle),networkY2,1,1
+80,20,14,G-JisstPCA0 (BIC),sample,1,1
+80,20,14,G-JisstPCA0 (BIC),networkX1,1,1
+80,20,14,G-JisstPCA0 (BIC),networkY1,1,1
+80,20,14,G-JisstPCA0 (BIC),networkX2,1,1
+80,20,14,G-JisstPCA0 (BIC),networkY2,1,1
+80,20,14,JisstPCA2 (oracle),sample,1,1
+80,20,14,JisstPCA2 (oracle),networkX1,1,1
+80,20,14,JisstPCA2 (oracle),networkY1,1,1
+80,20,14,JisstPCA2 (oracle),networkX2,1,1
+80,20,14,JisstPCA2 (oracle),networkY2,1,1
+80,20,14,JisstPCA2 (BIC),sample,1,1
+80,20,14,JisstPCA2 (BIC),networkX1,1,1
+80,20,14,JisstPCA2 (BIC),networkY1,1,1
+80,20,14,JisstPCA2 (BIC),networkX2,1,1
+80,20,14,JisstPCA2 (BIC),networkY2,1,1
+80,20,14,G-JisstPCA2 (oracle),sample,1,1
+80,20,14,G-JisstPCA2 (oracle),networkX1,1,1
+80,20,14,G-JisstPCA2 (oracle),networkY1,1,1
+80,20,14,G-JisstPCA2 (oracle),networkX2,1,1
+80,20,14,G-JisstPCA2 (oracle),networkY2,1,1
+80,20,14,G-JisstPCA2 (BIC),sample,1,1
+80,20,14,G-JisstPCA2 (BIC),networkX1,1,1
+80,20,14,G-JisstPCA2 (BIC),networkY1,1,1
+80,20,14,G-JisstPCA2 (BIC),networkX2,1,1
+80,20,14,G-JisstPCA2 (BIC),networkY2,1,1
+80,20,14,iHOSVD,sample,1,1
+80,20,14,iHOSVD,networkX1,1,1
+80,20,14,iHOSVD,networkY1,1,1
+80,20,14,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,20,14,iHOSVD,networkY2,0.574683544303797,0.149606904638333
+80,20,14,iHOOI,sample,1,1
+80,20,14,iHOOI,networkX1,0.756962025316456,0.468132854578097
+80,20,14,iHOOI,networkY1,1,1
+80,20,14,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,20,14,iHOOI,networkY2,0.59620253164557,0.18989205418507
+80,40,14,JisstPCA0 (oracle),sample,1,1
+80,40,14,JisstPCA0 (oracle),networkX1,1,1
+80,40,14,JisstPCA0 (oracle),networkY1,1,1
+80,40,14,JisstPCA0 (oracle),networkX2,1,1
+80,40,14,JisstPCA0 (oracle),networkY2,1,1
+80,40,14,JisstPCA0 (BIC),sample,1,1
+80,40,14,JisstPCA0 (BIC),networkX1,1,1
+80,40,14,JisstPCA0 (BIC),networkY1,1,1
+80,40,14,JisstPCA0 (BIC),networkX2,1,1
+80,40,14,JisstPCA0 (BIC),networkY2,1,1
+80,40,14,G-JisstPCA0 (oracle),sample,1,1
+80,40,14,G-JisstPCA0 (oracle),networkX1,1,1
+80,40,14,G-JisstPCA0 (oracle),networkY1,1,1
+80,40,14,G-JisstPCA0 (oracle),networkX2,1,1
+80,40,14,G-JisstPCA0 (oracle),networkY2,1,1
+80,40,14,G-JisstPCA0 (BIC),sample,1,1
+80,40,14,G-JisstPCA0 (BIC),networkX1,1,1
+80,40,14,G-JisstPCA0 (BIC),networkY1,1,1
+80,40,14,G-JisstPCA0 (BIC),networkX2,1,1
+80,40,14,G-JisstPCA0 (BIC),networkY2,1,1
+80,40,14,JisstPCA2 (oracle),sample,1,1
+80,40,14,JisstPCA2 (oracle),networkX1,1,1
+80,40,14,JisstPCA2 (oracle),networkY1,1,1
+80,40,14,JisstPCA2 (oracle),networkX2,1,1
+80,40,14,JisstPCA2 (oracle),networkY2,1,1
+80,40,14,JisstPCA2 (BIC),sample,1,1
+80,40,14,JisstPCA2 (BIC),networkX1,1,1
+80,40,14,JisstPCA2 (BIC),networkY1,1,1
+80,40,14,JisstPCA2 (BIC),networkX2,1,1
+80,40,14,JisstPCA2 (BIC),networkY2,1,1
+80,40,14,G-JisstPCA2 (oracle),sample,1,1
+80,40,14,G-JisstPCA2 (oracle),networkX1,1,1
+80,40,14,G-JisstPCA2 (oracle),networkY1,1,1
+80,40,14,G-JisstPCA2 (oracle),networkX2,1,1
+80,40,14,G-JisstPCA2 (oracle),networkY2,1,1
+80,40,14,G-JisstPCA2 (BIC),sample,1,1
+80,40,14,G-JisstPCA2 (BIC),networkX1,1,1
+80,40,14,G-JisstPCA2 (BIC),networkY1,1,1
+80,40,14,G-JisstPCA2 (BIC),networkX2,1,1
+80,40,14,G-JisstPCA2 (BIC),networkY2,1,1
+80,40,14,iHOSVD,sample,1,1
+80,40,14,iHOSVD,networkX1,0.783544303797468,0.514068244113352
+80,40,14,iHOSVD,networkY1,1,1
+80,40,14,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,40,14,iHOSVD,networkY2,0.675949367088608,0.352127114300359
+80,40,14,iHOOI,sample,1,1
+80,40,14,iHOOI,networkX1,0.756962025316456,0.468132854578097
+80,40,14,iHOOI,networkY1,0.777215189873418,0.541715008965299
+80,40,14,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,40,14,iHOOI,networkY2,0.661075949367089,0.321422327161553
+50,20,15,JisstPCA0 (oracle),sample,1,1
+50,20,15,JisstPCA0 (oracle),networkX1,1,1
+50,20,15,JisstPCA0 (oracle),networkY1,1,1
+50,20,15,JisstPCA0 (oracle),networkX2,1,1
+50,20,15,JisstPCA0 (oracle),networkY2,0.96,0.919990669465827
+50,20,15,JisstPCA0 (BIC),sample,1,1
+50,20,15,JisstPCA0 (BIC),networkX1,1,1
+50,20,15,JisstPCA0 (BIC),networkY1,1,1
+50,20,15,JisstPCA0 (BIC),networkX2,1,1
+50,20,15,JisstPCA0 (BIC),networkY2,0.96,0.919990669465827
+50,20,15,G-JisstPCA0 (oracle),sample,1,1
+50,20,15,G-JisstPCA0 (oracle),networkX1,1,1
+50,20,15,G-JisstPCA0 (oracle),networkY1,1,1
+50,20,15,G-JisstPCA0 (oracle),networkX2,1,1
+50,20,15,G-JisstPCA0 (oracle),networkY2,1,1
+50,20,15,G-JisstPCA0 (BIC),sample,1,1
+50,20,15,G-JisstPCA0 (BIC),networkX1,1,1
+50,20,15,G-JisstPCA0 (BIC),networkY1,1,1
+50,20,15,G-JisstPCA0 (BIC),networkX2,1,1
+50,20,15,G-JisstPCA0 (BIC),networkY2,1,1
+50,20,15,JisstPCA2 (oracle),sample,1,1
+50,20,15,JisstPCA2 (oracle),networkX1,1,1
+50,20,15,JisstPCA2 (oracle),networkY1,1,1
+50,20,15,JisstPCA2 (oracle),networkX2,1,1
+50,20,15,JisstPCA2 (oracle),networkY2,1,1
+50,20,15,JisstPCA2 (BIC),sample,1,1
+50,20,15,JisstPCA2 (BIC),networkX1,1,1
+50,20,15,JisstPCA2 (BIC),networkY1,1,1
+50,20,15,JisstPCA2 (BIC),networkX2,1,1
+50,20,15,JisstPCA2 (BIC),networkY2,1,1
+50,20,15,G-JisstPCA2 (oracle),sample,1,1
+50,20,15,G-JisstPCA2 (oracle),networkX1,1,1
+50,20,15,G-JisstPCA2 (oracle),networkY1,1,1
+50,20,15,G-JisstPCA2 (oracle),networkX2,1,1
+50,20,15,G-JisstPCA2 (oracle),networkY2,1,1
+50,20,15,G-JisstPCA2 (BIC),sample,1,1
+50,20,15,G-JisstPCA2 (BIC),networkX1,1,1
+50,20,15,G-JisstPCA2 (BIC),networkY1,1,1
+50,20,15,G-JisstPCA2 (BIC),networkX2,1,1
+50,20,15,G-JisstPCA2 (BIC),networkY2,1,1
+50,20,15,iHOSVD,sample,1,1
+50,20,15,iHOSVD,networkX1,1,1
+50,20,15,iHOSVD,networkY1,1,1
+50,20,15,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,20,15,iHOSVD,networkY2,0.490612244897959,-0.0192000000000001
+50,20,15,iHOOI,sample,1,1
+50,20,15,iHOOI,networkX1,0.783544303797468,0.517301260612297
+50,20,15,iHOOI,networkY1,1,1
+50,20,15,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,20,15,iHOOI,networkY2,0.493061224489796,-0.0139958012596221
+50,40,15,JisstPCA0 (oracle),sample,1,1
+50,40,15,JisstPCA0 (oracle),networkX1,1,1
+50,40,15,JisstPCA0 (oracle),networkY1,1,1
+50,40,15,JisstPCA0 (oracle),networkX2,1,1
+50,40,15,JisstPCA0 (oracle),networkY2,1,1
+50,40,15,JisstPCA0 (BIC),sample,1,1
+50,40,15,JisstPCA0 (BIC),networkX1,1,1
+50,40,15,JisstPCA0 (BIC),networkY1,1,1
+50,40,15,JisstPCA0 (BIC),networkX2,1,1
+50,40,15,JisstPCA0 (BIC),networkY2,1,1
+50,40,15,G-JisstPCA0 (oracle),sample,1,1
+50,40,15,G-JisstPCA0 (oracle),networkX1,1,1
+50,40,15,G-JisstPCA0 (oracle),networkY1,1,1
+50,40,15,G-JisstPCA0 (oracle),networkX2,1,1
+50,40,15,G-JisstPCA0 (oracle),networkY2,1,1
+50,40,15,G-JisstPCA0 (BIC),sample,1,1
+50,40,15,G-JisstPCA0 (BIC),networkX1,1,1
+50,40,15,G-JisstPCA0 (BIC),networkY1,1,1
+50,40,15,G-JisstPCA0 (BIC),networkX2,1,1
+50,40,15,G-JisstPCA0 (BIC),networkY2,1,1
+50,40,15,JisstPCA2 (oracle),sample,1,1
+50,40,15,JisstPCA2 (oracle),networkX1,1,1
+50,40,15,JisstPCA2 (oracle),networkY1,1,1
+50,40,15,JisstPCA2 (oracle),networkX2,1,1
+50,40,15,JisstPCA2 (oracle),networkY2,1,1
+50,40,15,JisstPCA2 (BIC),sample,1,1
+50,40,15,JisstPCA2 (BIC),networkX1,1,1
+50,40,15,JisstPCA2 (BIC),networkY1,1,1
+50,40,15,JisstPCA2 (BIC),networkX2,1,1
+50,40,15,JisstPCA2 (BIC),networkY2,1,1
+50,40,15,G-JisstPCA2 (oracle),sample,1,1
+50,40,15,G-JisstPCA2 (oracle),networkX1,1,1
+50,40,15,G-JisstPCA2 (oracle),networkY1,1,1
+50,40,15,G-JisstPCA2 (oracle),networkX2,1,1
+50,40,15,G-JisstPCA2 (oracle),networkY2,1,1
+50,40,15,G-JisstPCA2 (BIC),sample,1,1
+50,40,15,G-JisstPCA2 (BIC),networkX1,1,1
+50,40,15,G-JisstPCA2 (BIC),networkY1,1,1
+50,40,15,G-JisstPCA2 (BIC),networkX2,1,1
+50,40,15,G-JisstPCA2 (BIC),networkY2,1,1
+50,40,15,iHOSVD,sample,1,1
+50,40,15,iHOSVD,networkX1,0.891455696202532,0.754266353979059
+50,40,15,iHOSVD,networkY1,1,1
+50,40,15,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,40,15,iHOSVD,networkY2,0.510204081632653,0.0199999999999999
+50,40,15,iHOOI,sample,1,1
+50,40,15,iHOOI,networkX1,0.878481012658228,0.72588480222068
+50,40,15,iHOOI,networkY1,1,1
+50,40,15,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,40,15,iHOOI,networkY2,0.627755102040816,0.254603682946357
+80,20,15,JisstPCA0 (oracle),sample,1,1
+80,20,15,JisstPCA0 (oracle),networkX1,1,1
+80,20,15,JisstPCA0 (oracle),networkY1,1,1
+80,20,15,JisstPCA0 (oracle),networkX2,0.496518987341772,-0.00672812757811435
+80,20,15,JisstPCA0 (oracle),networkY2,0.493987341772152,-0.0116865206171944
+80,20,15,JisstPCA0 (BIC),sample,0.9,0.785246876859013
+80,20,15,JisstPCA0 (BIC),networkX1,1,1
+80,20,15,JisstPCA0 (BIC),networkY1,1,1
+80,20,15,JisstPCA0 (BIC),networkX2,0.494936708860759,-0.00947958366693356
+80,20,15,JisstPCA0 (BIC),networkY2,0.493987341772152,-0.0116865206171944
+80,20,15,G-JisstPCA0 (oracle),sample,1,1
+80,20,15,G-JisstPCA0 (oracle),networkX1,1,1
+80,20,15,G-JisstPCA0 (oracle),networkY1,1,1
+80,20,15,G-JisstPCA0 (oracle),networkX2,1,1
+80,20,15,G-JisstPCA0 (oracle),networkY2,1,1
+80,20,15,G-JisstPCA0 (BIC),sample,1,1
+80,20,15,G-JisstPCA0 (BIC),networkX1,1,1
+80,20,15,G-JisstPCA0 (BIC),networkY1,1,1
+80,20,15,G-JisstPCA0 (BIC),networkX2,1,1
+80,20,15,G-JisstPCA0 (BIC),networkY2,1,1
+80,20,15,JisstPCA2 (oracle),sample,1,1
+80,20,15,JisstPCA2 (oracle),networkX1,1,1
+80,20,15,JisstPCA2 (oracle),networkY1,0.77246835443038,0.530592748446769
+80,20,15,JisstPCA2 (oracle),networkX2,1,1
+80,20,15,JisstPCA2 (oracle),networkY2,1,1
+80,20,15,JisstPCA2 (BIC),sample,1,1
+80,20,15,JisstPCA2 (BIC),networkX1,1,1
+80,20,15,JisstPCA2 (BIC),networkY1,0.77246835443038,0.530592748446769
+80,20,15,JisstPCA2 (BIC),networkX2,1,1
+80,20,15,JisstPCA2 (BIC),networkY2,1,1
+80,20,15,G-JisstPCA2 (oracle),sample,1,1
+80,20,15,G-JisstPCA2 (oracle),networkX1,1,1
+80,20,15,G-JisstPCA2 (oracle),networkY1,1,1
+80,20,15,G-JisstPCA2 (oracle),networkX2,1,1
+80,20,15,G-JisstPCA2 (oracle),networkY2,1,1
+80,20,15,G-JisstPCA2 (BIC),sample,1,1
+80,20,15,G-JisstPCA2 (BIC),networkX1,1,1
+80,20,15,G-JisstPCA2 (BIC),networkY1,1,1
+80,20,15,G-JisstPCA2 (BIC),networkX2,1,1
+80,20,15,G-JisstPCA2 (BIC),networkY2,1,1
+80,20,15,iHOSVD,sample,1,1
+80,20,15,iHOSVD,networkX1,0.783544303797468,0.545387240286182
+80,20,15,iHOSVD,networkY1,1,1
+80,20,15,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,20,15,iHOSVD,networkY2,0.633227848101266,0.266597887607114
+80,20,15,iHOOI,sample,1,1
+80,20,15,iHOOI,networkX1,0.790189873417722,0.53044736459919
+80,20,15,iHOOI,networkY1,1,1
+80,20,15,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,20,15,iHOOI,networkY2,0.547151898734177,0.0888274181146419
+80,40,15,JisstPCA0 (oracle),sample,1,1
+80,40,15,JisstPCA0 (oracle),networkX1,1,1
+80,40,15,JisstPCA0 (oracle),networkY1,1,1
+80,40,15,JisstPCA0 (oracle),networkX2,0.494936708860759,-0.00999711621647596
+80,40,15,JisstPCA0 (oracle),networkY2,0.513924050632911,0.0182270091135047
+80,40,15,JisstPCA0 (BIC),sample,1,1
+80,40,15,JisstPCA0 (BIC),networkX1,1,1
+80,40,15,JisstPCA0 (BIC),networkY1,1,1
+80,40,15,JisstPCA0 (BIC),networkX2,0.494936708860759,-0.00999711621647596
+80,40,15,JisstPCA0 (BIC),networkY2,0.513924050632911,0.0182270091135047
+80,40,15,G-JisstPCA0 (oracle),sample,0.615384615384615,0.218515178839796
+80,40,15,G-JisstPCA0 (oracle),networkX1,1,1
+80,40,15,G-JisstPCA0 (oracle),networkY1,1,1
+80,40,15,G-JisstPCA0 (oracle),networkX2,0.494936708860759,-0.00977063044592523
+80,40,15,G-JisstPCA0 (oracle),networkY2,0.505063291139241,0.00935832307060755
+80,40,15,G-JisstPCA0 (BIC),sample,1,1
+80,40,15,G-JisstPCA0 (BIC),networkX1,1,1
+80,40,15,G-JisstPCA0 (BIC),networkY1,1,1
+80,40,15,G-JisstPCA0 (BIC),networkX2,1,1
+80,40,15,G-JisstPCA0 (BIC),networkY2,1,1
+80,40,15,JisstPCA2 (oracle),sample,1,1
+80,40,15,JisstPCA2 (oracle),networkX1,0.719303797468354,0.452264558883534
+80,40,15,JisstPCA2 (oracle),networkY1,1,1
+80,40,15,JisstPCA2 (oracle),networkX2,1,1
+80,40,15,JisstPCA2 (oracle),networkY2,1,1
+80,40,15,JisstPCA2 (BIC),sample,1,1
+80,40,15,JisstPCA2 (BIC),networkX1,1,1
+80,40,15,JisstPCA2 (BIC),networkY1,1,1
+80,40,15,JisstPCA2 (BIC),networkX2,1,1
+80,40,15,JisstPCA2 (BIC),networkY2,1,1
+80,40,15,G-JisstPCA2 (oracle),sample,1,1
+80,40,15,G-JisstPCA2 (oracle),networkX1,1,1
+80,40,15,G-JisstPCA2 (oracle),networkY1,1,1
+80,40,15,G-JisstPCA2 (oracle),networkX2,1,1
+80,40,15,G-JisstPCA2 (oracle),networkY2,1,1
+80,40,15,G-JisstPCA2 (BIC),sample,1,1
+80,40,15,G-JisstPCA2 (BIC),networkX1,1,1
+80,40,15,G-JisstPCA2 (BIC),networkY1,1,1
+80,40,15,G-JisstPCA2 (BIC),networkX2,1,1
+80,40,15,G-JisstPCA2 (BIC),networkY2,1,1
+80,40,15,iHOSVD,sample,1,1
+80,40,15,iHOSVD,networkX1,1,1
+80,40,15,iHOSVD,networkY1,1,1
+80,40,15,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,40,15,iHOSVD,networkY2,0.633227848101266,0.266597887607114
+80,40,15,iHOOI,sample,1,1
+80,40,15,iHOOI,networkX1,0.878481012658228,0.72588480222068
+80,40,15,iHOOI,networkY1,1,1
+80,40,15,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,40,15,iHOOI,networkY2,0.633227848101266,0.257173037200978
+50,20,16,JisstPCA0 (oracle),sample,0.478947368421053,-0.033402922755741
+50,20,16,JisstPCA0 (oracle),networkX1,1,1
+50,20,16,JisstPCA0 (oracle),networkY1,1,1
+50,20,16,JisstPCA0 (oracle),networkX2,0.49873417721519,-0.00256377387514415
+50,20,16,JisstPCA0 (oracle),networkY2,0.493061224489796,-0.0135904866593385
+50,20,16,JisstPCA0 (BIC),sample,0.478947368421053,-0.033402922755741
+50,20,16,JisstPCA0 (BIC),networkX1,1,1
+50,20,16,JisstPCA0 (BIC),networkY1,1,1
+50,20,16,JisstPCA0 (BIC),networkX2,0.49873417721519,-0.00256377387514415
+50,20,16,JisstPCA0 (BIC),networkY2,0.493061224489796,-0.0135904866593385
+50,20,16,G-JisstPCA0 (oracle),sample,0.478947368421053,-0.033402922755741
+50,20,16,G-JisstPCA0 (oracle),networkX1,1,1
+50,20,16,G-JisstPCA0 (oracle),networkY1,1,1
+50,20,16,G-JisstPCA0 (oracle),networkX2,0.501582278481013,0.00320448628079318
+50,20,16,G-JisstPCA0 (oracle),networkY2,0.497142857142857,-0.0053290700772716
+50,20,16,G-JisstPCA0 (BIC),sample,1,1
+50,20,16,G-JisstPCA0 (BIC),networkX1,1,1
+50,20,16,G-JisstPCA0 (BIC),networkY1,1,1
+50,20,16,G-JisstPCA0 (BIC),networkX2,0.501582278481013,0.00320448628079318
+50,20,16,G-JisstPCA0 (BIC),networkY2,0.497142857142857,-0.0053290700772716
+50,20,16,JisstPCA2 (oracle),sample,1,1
+50,20,16,JisstPCA2 (oracle),networkX1,1,1
+50,20,16,JisstPCA2 (oracle),networkY1,1,1
+50,20,16,JisstPCA2 (oracle),networkX2,0.950632911392405,0.90125
+50,20,16,JisstPCA2 (oracle),networkY2,0.493061224489796,-0.0146720464170196
+50,20,16,JisstPCA2 (BIC),sample,0.557894736842105,-0.0632911392405063
+50,20,16,JisstPCA2 (BIC),networkX1,1,1
+50,20,16,JisstPCA2 (BIC),networkY1,1,1
+50,20,16,JisstPCA2 (BIC),networkX2,0.950632911392405,0.90125
+50,20,16,JisstPCA2 (BIC),networkY2,0.490612244897959,-0.0200160128102481
+50,20,16,G-JisstPCA2 (oracle),sample,1,1
+50,20,16,G-JisstPCA2 (oracle),networkX1,1,1
+50,20,16,G-JisstPCA2 (oracle),networkY1,1,1
+50,20,16,G-JisstPCA2 (oracle),networkX2,0.975,0.949992387881507
+50,20,16,G-JisstPCA2 (oracle),networkY2,0.493061224489796,-0.0156203063983178
+50,20,16,G-JisstPCA2 (BIC),sample,1,1
+50,20,16,G-JisstPCA2 (BIC),networkX1,1,1
+50,20,16,G-JisstPCA2 (BIC),networkY1,1,1
+50,20,16,G-JisstPCA2 (BIC),networkX2,0.975,0.949992387881507
+50,20,16,G-JisstPCA2 (BIC),networkY2,0.493061224489796,-0.0156203063983178
+50,20,16,iHOSVD,sample,1,1
+50,20,16,iHOSVD,networkX1,1,1
+50,20,16,iHOSVD,networkY1,1,1
+50,20,16,iHOSVD,networkX2,0.493987341772152,-0.0121793895882245
+50,20,16,iHOSVD,networkY2,0.502857142857143,0.00559832050384887
+50,20,16,iHOOI,sample,1,1
+50,20,16,iHOOI,networkX1,1,1
+50,20,16,iHOOI,networkY1,1,1
+50,20,16,iHOOI,networkX2,0.519303797468354,0.038646104546365
+50,20,16,iHOOI,networkY2,0.490612244897959,-0.0183852917665868
+50,40,16,JisstPCA0 (oracle),sample,1,1
+50,40,16,JisstPCA0 (oracle),networkX1,1,1
+50,40,16,JisstPCA0 (oracle),networkY1,1,1
+50,40,16,JisstPCA0 (oracle),networkX2,0.494936708860759,-0.0102560815358483
+50,40,16,JisstPCA0 (oracle),networkY2,0.493061224489796,-0.0134554537885095
+50,40,16,JisstPCA0 (BIC),sample,1,1
+50,40,16,JisstPCA0 (BIC),networkX1,1,1
+50,40,16,JisstPCA0 (BIC),networkY1,1,1
+50,40,16,JisstPCA0 (BIC),networkX2,0.494936708860759,-0.0102560815358483
+50,40,16,JisstPCA0 (BIC),networkY2,0.490612244897959,-0.0186567164179105
+50,40,16,G-JisstPCA0 (oracle),sample,0.533333333333333,0.0464483627204032
+50,40,16,G-JisstPCA0 (oracle),networkX1,1,1
+50,40,16,G-JisstPCA0 (oracle),networkY1,1,1
+50,40,16,G-JisstPCA0 (oracle),networkX2,0.493987341772152,-0.0121793895882245
+50,40,16,G-JisstPCA0 (oracle),networkY2,0.493061224489796,-0.0156203063983178
+50,40,16,G-JisstPCA0 (BIC),sample,0.533333333333333,0.0464483627204032
+50,40,16,G-JisstPCA0 (BIC),networkX1,1,1
+50,40,16,G-JisstPCA0 (BIC),networkY1,1,1
+50,40,16,G-JisstPCA0 (BIC),networkX2,0.493987341772152,-0.0121793895882245
+50,40,16,G-JisstPCA0 (BIC),networkY2,0.493061224489796,-0.0146720464170196
+50,40,16,JisstPCA2 (oracle),sample,1,1
+50,40,16,JisstPCA2 (oracle),networkX1,1,1
+50,40,16,JisstPCA2 (oracle),networkY1,1,1
+50,40,16,JisstPCA2 (oracle),networkX2,1,1
+50,40,16,JisstPCA2 (oracle),networkY2,1,1
+50,40,16,JisstPCA2 (BIC),sample,1,1
+50,40,16,JisstPCA2 (BIC),networkX1,1,1
+50,40,16,JisstPCA2 (BIC),networkY1,1,1
+50,40,16,JisstPCA2 (BIC),networkX2,1,1
+50,40,16,JisstPCA2 (BIC),networkY2,1,1
+50,40,16,G-JisstPCA2 (oracle),sample,1,1
+50,40,16,G-JisstPCA2 (oracle),networkX1,1,1
+50,40,16,G-JisstPCA2 (oracle),networkY1,1,1
+50,40,16,G-JisstPCA2 (oracle),networkX2,1,1
+50,40,16,G-JisstPCA2 (oracle),networkY2,1,1
+50,40,16,G-JisstPCA2 (BIC),sample,1,1
+50,40,16,G-JisstPCA2 (BIC),networkX1,1,1
+50,40,16,G-JisstPCA2 (BIC),networkY1,1,1
+50,40,16,G-JisstPCA2 (BIC),networkX2,1,1
+50,40,16,G-JisstPCA2 (BIC),networkY2,1,1
+50,40,16,iHOSVD,sample,1,1
+50,40,16,iHOSVD,networkX1,0.934177215189873,0.850947722852747
+50,40,16,iHOSVD,networkY1,1,1
+50,40,16,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,40,16,iHOSVD,networkY2,0.502857142857143,0.00559832050384887
+50,40,16,iHOOI,sample,1,1
+50,40,16,iHOOI,networkX1,1,1
+50,40,16,iHOOI,networkY1,1,1
+50,40,16,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,40,16,iHOOI,networkY2,0.490612244897959,-0.0183852917665868
+80,20,16,JisstPCA0 (oracle),sample,0.473684210526316,-0.0183299389002038
+80,20,16,JisstPCA0 (oracle),networkX1,1,1
+80,20,16,JisstPCA0 (oracle),networkY1,1,1
+80,20,16,JisstPCA0 (oracle),networkX2,0.505063291139241,0.0107606084867894
+80,20,16,JisstPCA0 (oracle),networkY2,0.513924050632911,0.0226111386760659
+80,20,16,JisstPCA0 (BIC),sample,0.473684210526316,-0.0183299389002038
+80,20,16,JisstPCA0 (BIC),networkX1,1,1
+80,20,16,JisstPCA0 (BIC),networkY1,1,1
+80,20,16,JisstPCA0 (BIC),networkX2,0.501582278481013,0.00307670119943275
+80,20,16,JisstPCA0 (BIC),networkY2,0.505063291139241,0.00795842861180337
+80,20,16,G-JisstPCA0 (oracle),sample,0.478947368421053,0
+80,20,16,G-JisstPCA0 (oracle),networkX1,1,1
+80,20,16,G-JisstPCA0 (oracle),networkY1,1,1
+80,20,16,G-JisstPCA0 (oracle),networkX2,0.509177215189873,0.018833929901266
+80,20,16,G-JisstPCA0 (oracle),networkY2,0.494936708860759,-0.0104115244805457
+80,20,16,G-JisstPCA0 (BIC),sample,1,1
+80,20,16,G-JisstPCA0 (BIC),networkX1,1,1
+80,20,16,G-JisstPCA0 (BIC),networkY1,1,1
+80,20,16,G-JisstPCA0 (BIC),networkX2,0.509177215189873,0.018833929901266
+80,20,16,G-JisstPCA0 (BIC),networkY2,0.509177215189873,0.0166038244656006
+80,20,16,JisstPCA2 (oracle),sample,1,1
+80,20,16,JisstPCA2 (oracle),networkX1,1,1
+80,20,16,JisstPCA2 (oracle),networkY1,1,1
+80,20,16,JisstPCA2 (oracle),networkX2,1,1
+80,20,16,JisstPCA2 (oracle),networkY2,0.859493670886076,0.719007152195647
+80,20,16,JisstPCA2 (BIC),sample,1,1
+80,20,16,JisstPCA2 (BIC),networkX1,1,1
+80,20,16,JisstPCA2 (BIC),networkY1,1,1
+80,20,16,JisstPCA2 (BIC),networkX2,1,1
+80,20,16,JisstPCA2 (BIC),networkY2,0.859493670886076,0.719007152195647
+80,20,16,G-JisstPCA2 (oracle),sample,1,1
+80,20,16,G-JisstPCA2 (oracle),networkX1,1,1
+80,20,16,G-JisstPCA2 (oracle),networkY1,1,1
+80,20,16,G-JisstPCA2 (oracle),networkX2,1,1
+80,20,16,G-JisstPCA2 (oracle),networkY2,0.859493670886076,0.719007152195647
+80,20,16,G-JisstPCA2 (BIC),sample,1,1
+80,20,16,G-JisstPCA2 (BIC),networkX1,1,1
+80,20,16,G-JisstPCA2 (BIC),networkY1,1,1
+80,20,16,G-JisstPCA2 (BIC),networkX2,1,1
+80,20,16,G-JisstPCA2 (BIC),networkY2,0.859493670886076,0.719007152195647
+80,20,16,iHOSVD,sample,1,1
+80,20,16,iHOSVD,networkX1,1,1
+80,20,16,iHOSVD,networkY1,1,1
+80,20,16,iHOSVD,networkX2,0.513924050632911,0.0278169465453148
+80,20,16,iHOSVD,networkY2,0.494936708860759,-0.0100553718372683
+80,20,16,iHOOI,sample,1,1
+80,20,16,iHOOI,networkX1,1,1
+80,20,16,iHOOI,networkY1,1,1
+80,20,16,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,20,16,iHOOI,networkY2,0.49873417721519,-0.00281444534911298
+80,40,16,JisstPCA0 (oracle),sample,1,1
+80,40,16,JisstPCA0 (oracle),networkX1,1,1
+80,40,16,JisstPCA0 (oracle),networkY1,1,1
+80,40,16,JisstPCA0 (oracle),networkX2,0.494936708860759,-0.00999711621647596
+80,40,16,JisstPCA0 (oracle),networkY2,0.513924050632911,0.0182270091135047
+80,40,16,JisstPCA0 (BIC),sample,1,1
+80,40,16,JisstPCA0 (BIC),networkX1,1,1
+80,40,16,JisstPCA0 (BIC),networkY1,1,1
+80,40,16,JisstPCA0 (BIC),networkX2,0.494936708860759,-0.00999711621647596
+80,40,16,JisstPCA0 (BIC),networkY2,0.513924050632911,0.0182270091135047
+80,40,16,G-JisstPCA0 (oracle),sample,1,1
+80,40,16,G-JisstPCA0 (oracle),networkX1,1,1
+80,40,16,G-JisstPCA0 (oracle),networkY1,1,1
+80,40,16,G-JisstPCA0 (oracle),networkX2,0.494936708860759,-0.00977063044592523
+80,40,16,G-JisstPCA0 (oracle),networkY2,0.496518987341772,-0.00662492451654556
+80,40,16,G-JisstPCA0 (BIC),sample,1,1
+80,40,16,G-JisstPCA0 (BIC),networkX1,1,1
+80,40,16,G-JisstPCA0 (BIC),networkY1,1,1
+80,40,16,G-JisstPCA0 (BIC),networkX2,0.494936708860759,-0.00977063044592523
+80,40,16,G-JisstPCA0 (BIC),networkY2,0.493987341772152,-0.0116865206171944
+80,40,16,JisstPCA2 (oracle),sample,1,1
+80,40,16,JisstPCA2 (oracle),networkX1,1,1
+80,40,16,JisstPCA2 (oracle),networkY1,1,1
+80,40,16,JisstPCA2 (oracle),networkX2,1,1
+80,40,16,JisstPCA2 (oracle),networkY2,1,1
+80,40,16,JisstPCA2 (BIC),sample,1,1
+80,40,16,JisstPCA2 (BIC),networkX1,1,1
+80,40,16,JisstPCA2 (BIC),networkY1,1,1
+80,40,16,JisstPCA2 (BIC),networkX2,1,1
+80,40,16,JisstPCA2 (BIC),networkY2,1,1
+80,40,16,G-JisstPCA2 (oracle),sample,1,1
+80,40,16,G-JisstPCA2 (oracle),networkX1,1,1
+80,40,16,G-JisstPCA2 (oracle),networkY1,1,1
+80,40,16,G-JisstPCA2 (oracle),networkX2,1,1
+80,40,16,G-JisstPCA2 (oracle),networkY2,1,1
+80,40,16,G-JisstPCA2 (BIC),sample,1,1
+80,40,16,G-JisstPCA2 (BIC),networkX1,1,1
+80,40,16,G-JisstPCA2 (BIC),networkY1,1,1
+80,40,16,G-JisstPCA2 (BIC),networkX2,1,1
+80,40,16,G-JisstPCA2 (BIC),networkY2,1,1
+80,40,16,iHOSVD,sample,1,1
+80,40,16,iHOSVD,networkX1,0.711708860759494,0.434622896009075
+80,40,16,iHOSVD,networkY1,1,1
+80,40,16,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,40,16,iHOSVD,networkY2,0.539240506329114,0.0735168085366875
+80,40,16,iHOOI,sample,1,1
+80,40,16,iHOOI,networkX1,1,1
+80,40,16,iHOOI,networkY1,1,1
+80,40,16,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,40,16,iHOOI,networkY2,0.646835443037975,0.2931226908867
+50,20,17,JisstPCA0 (oracle),sample,1,1
+50,20,17,JisstPCA0 (oracle),networkX1,1,1
+50,20,17,JisstPCA0 (oracle),networkY1,1,1
+50,20,17,JisstPCA0 (oracle),networkX2,1,1
+50,20,17,JisstPCA0 (oracle),networkY2,1,1
+50,20,17,JisstPCA0 (BIC),sample,1,1
+50,20,17,JisstPCA0 (BIC),networkX1,1,1
+50,20,17,JisstPCA0 (BIC),networkY1,1,1
+50,20,17,JisstPCA0 (BIC),networkX2,1,1
+50,20,17,JisstPCA0 (BIC),networkY2,1,1
+50,20,17,G-JisstPCA0 (oracle),sample,1,1
+50,20,17,G-JisstPCA0 (oracle),networkX1,1,1
+50,20,17,G-JisstPCA0 (oracle),networkY1,1,1
+50,20,17,G-JisstPCA0 (oracle),networkX2,1,1
+50,20,17,G-JisstPCA0 (oracle),networkY2,0.96,0.919990669465827
+50,20,17,G-JisstPCA0 (BIC),sample,1,1
+50,20,17,G-JisstPCA0 (BIC),networkX1,1,1
+50,20,17,G-JisstPCA0 (BIC),networkY1,1,1
+50,20,17,G-JisstPCA0 (BIC),networkX2,1,1
+50,20,17,G-JisstPCA0 (BIC),networkY2,1,1
+50,20,17,JisstPCA2 (oracle),sample,1,1
+50,20,17,JisstPCA2 (oracle),networkX1,1,1
+50,20,17,JisstPCA2 (oracle),networkY1,0.755918367346939,0.489778861222358
+50,20,17,JisstPCA2 (oracle),networkX2,1,1
+50,20,17,JisstPCA2 (oracle),networkY2,0.96,0.919990669465827
+50,20,17,JisstPCA2 (BIC),sample,1,1
+50,20,17,JisstPCA2 (BIC),networkX1,1,1
+50,20,17,JisstPCA2 (BIC),networkY1,1,1
+50,20,17,JisstPCA2 (BIC),networkX2,1,1
+50,20,17,JisstPCA2 (BIC),networkY2,1,1
+50,20,17,G-JisstPCA2 (oracle),sample,1,1
+50,20,17,G-JisstPCA2 (oracle),networkX1,1,1
+50,20,17,G-JisstPCA2 (oracle),networkY1,1,1
+50,20,17,G-JisstPCA2 (oracle),networkX2,1,1
+50,20,17,G-JisstPCA2 (oracle),networkY2,1,1
+50,20,17,G-JisstPCA2 (BIC),sample,1,1
+50,20,17,G-JisstPCA2 (BIC),networkX1,1,1
+50,20,17,G-JisstPCA2 (BIC),networkY1,1,1
+50,20,17,G-JisstPCA2 (BIC),networkX2,1,1
+50,20,17,G-JisstPCA2 (BIC),networkY2,1,1
+50,20,17,iHOSVD,sample,1,1
+50,20,17,iHOSVD,networkX1,0.754746835443038,0.460391074352778
+50,20,17,iHOSVD,networkY1,1,1
+50,20,17,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,20,17,iHOSVD,networkY2,0.493061224489796,-0.0139958012596221
+50,20,17,iHOOI,sample,1,1
+50,20,17,iHOOI,networkX1,0.759810126582279,0.477412135061784
+50,20,17,iHOOI,networkY1,1,1
+50,20,17,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,20,17,iHOOI,networkY2,0.529795918367347,0.0597014925373134
+50,40,17,JisstPCA0 (oracle),sample,0.902564102564103,0.779547939397996
+50,40,17,JisstPCA0 (oracle),networkX1,1,1
+50,40,17,JisstPCA0 (oracle),networkY1,0.762448979591837,0.505496792092943
+50,40,17,JisstPCA0 (oracle),networkX2,0.494936708860759,-0.00870427853691316
+50,40,17,JisstPCA0 (oracle),networkY2,0.490612244897959,-0.0186567164179105
+50,40,17,JisstPCA0 (BIC),sample,1,1
+50,40,17,JisstPCA0 (BIC),networkX1,1,1
+50,40,17,JisstPCA0 (BIC),networkY1,1,1
+50,40,17,JisstPCA0 (BIC),networkX2,0.501582278481013,0.00301279637182393
+50,40,17,JisstPCA0 (BIC),networkY2,0.490612244897959,-0.0186567164179105
+50,40,17,G-JisstPCA0 (oracle),sample,0.857692307692308,0.685826257348138
+50,40,17,G-JisstPCA0 (oracle),networkX1,1,1
+50,40,17,G-JisstPCA0 (oracle),networkY1,1,1
+50,40,17,G-JisstPCA0 (oracle),networkX2,0.509177215189873,0.0182049823318723
+50,40,17,G-JisstPCA0 (oracle),networkY2,0.490612244897959,-0.0224719101123595
+50,40,17,G-JisstPCA0 (BIC),sample,0.498717948717949,-0.00889206462625538
+50,40,17,G-JisstPCA0 (BIC),networkX1,1,1
+50,40,17,G-JisstPCA0 (BIC),networkY1,1,1
+50,40,17,G-JisstPCA0 (BIC),networkX2,0.509177215189873,0.0182049823318723
+50,40,17,G-JisstPCA0 (BIC),networkY2,0.490612244897959,-0.0224719101123595
+50,40,17,JisstPCA2 (oracle),sample,1,1
+50,40,17,JisstPCA2 (oracle),networkX1,1,1
+50,40,17,JisstPCA2 (oracle),networkY1,1,1
+50,40,17,JisstPCA2 (oracle),networkX2,1,1
+50,40,17,JisstPCA2 (oracle),networkY2,1,1
+50,40,17,JisstPCA2 (BIC),sample,1,1
+50,40,17,JisstPCA2 (BIC),networkX1,1,1
+50,40,17,JisstPCA2 (BIC),networkY1,1,1
+50,40,17,JisstPCA2 (BIC),networkX2,1,1
+50,40,17,JisstPCA2 (BIC),networkY2,1,1
+50,40,17,G-JisstPCA2 (oracle),sample,1,1
+50,40,17,G-JisstPCA2 (oracle),networkX1,1,1
+50,40,17,G-JisstPCA2 (oracle),networkY1,1,1
+50,40,17,G-JisstPCA2 (oracle),networkX2,1,1
+50,40,17,G-JisstPCA2 (oracle),networkY2,1,1
+50,40,17,G-JisstPCA2 (BIC),sample,1,1
+50,40,17,G-JisstPCA2 (BIC),networkX1,1,1
+50,40,17,G-JisstPCA2 (BIC),networkY1,1,1
+50,40,17,G-JisstPCA2 (BIC),networkX2,1,1
+50,40,17,G-JisstPCA2 (BIC),networkY2,1,1
+50,40,17,iHOSVD,sample,1,1
+50,40,17,iHOSVD,networkX1,0.878481012658228,0.72588480222068
+50,40,17,iHOSVD,networkY1,1,1
+50,40,17,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,40,17,iHOSVD,networkY2,0.571428571428571,0.142757172848146
+50,40,17,iHOOI,sample,1,1
+50,40,17,iHOOI,networkX1,0.878481012658228,0.72588480222068
+50,40,17,iHOOI,networkY1,1,1
+50,40,17,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,40,17,iHOOI,networkY2,0.489795918367347,-0.0337552742616034
+80,20,17,JisstPCA0 (oracle),sample,0.605263157894737,0.199528142905292
+80,20,17,JisstPCA0 (oracle),networkX1,1,1
+80,20,17,JisstPCA0 (oracle),networkY1,1,1
+80,20,17,JisstPCA0 (oracle),networkX2,0.501582278481013,0.00339610249181012
+80,20,17,JisstPCA0 (oracle),networkY2,0.49873417721519,-0.00224900524767896
+80,20,17,JisstPCA0 (BIC),sample,1,1
+80,20,17,JisstPCA0 (BIC),networkX1,1,1
+80,20,17,JisstPCA0 (BIC),networkY1,1,1
+80,20,17,JisstPCA0 (BIC),networkX2,0.501582278481013,0.00339610249181012
+80,20,17,JisstPCA0 (BIC),networkY2,0.49873417721519,-0.00224900524767896
+80,20,17,G-JisstPCA0 (oracle),sample,1,1
+80,20,17,G-JisstPCA0 (oracle),networkX1,1,1
+80,20,17,G-JisstPCA0 (oracle),networkY1,1,1
+80,20,17,G-JisstPCA0 (oracle),networkX2,1,1
+80,20,17,G-JisstPCA0 (oracle),networkY2,1,1
+80,20,17,G-JisstPCA0 (BIC),sample,1,1
+80,20,17,G-JisstPCA0 (BIC),networkX1,1,1
+80,20,17,G-JisstPCA0 (BIC),networkY1,1,1
+80,20,17,G-JisstPCA0 (BIC),networkX2,1,1
+80,20,17,G-JisstPCA0 (BIC),networkY2,1,1
+80,20,17,JisstPCA2 (oracle),sample,1,1
+80,20,17,JisstPCA2 (oracle),networkX1,1,1
+80,20,17,JisstPCA2 (oracle),networkY1,1,1
+80,20,17,JisstPCA2 (oracle),networkX2,1,1
+80,20,17,JisstPCA2 (oracle),networkY2,1,1
+80,20,17,JisstPCA2 (BIC),sample,1,1
+80,20,17,JisstPCA2 (BIC),networkX1,1,1
+80,20,17,JisstPCA2 (BIC),networkY1,1,1
+80,20,17,JisstPCA2 (BIC),networkX2,1,1
+80,20,17,JisstPCA2 (BIC),networkY2,1,1
+80,20,17,G-JisstPCA2 (oracle),sample,1,1
+80,20,17,G-JisstPCA2 (oracle),networkX1,1,1
+80,20,17,G-JisstPCA2 (oracle),networkY1,1,1
+80,20,17,G-JisstPCA2 (oracle),networkX2,1,1
+80,20,17,G-JisstPCA2 (oracle),networkY2,1,1
+80,20,17,G-JisstPCA2 (BIC),sample,1,1
+80,20,17,G-JisstPCA2 (BIC),networkX1,1,1
+80,20,17,G-JisstPCA2 (BIC),networkY1,0.758227848101266,0.496835421932627
+80,20,17,G-JisstPCA2 (BIC),networkX2,1,1
+80,20,17,G-JisstPCA2 (BIC),networkY2,1,1
+80,20,17,iHOSVD,sample,1,1
+80,20,17,iHOSVD,networkX1,0.891455696202532,0.754739660362808
+80,20,17,iHOSVD,networkY1,1,1
+80,20,17,iHOSVD,networkX2,0.564873417721519,0.133281203871411
+80,20,17,iHOSVD,networkY2,0.574683544303797,0.149606904638333
+80,20,17,iHOOI,sample,1,1
+80,20,17,iHOOI,networkX1,0.891455696202532,0.754739660362808
+80,20,17,iHOOI,networkY1,1,1
+80,20,17,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,20,17,iHOOI,networkY2,0.675949367088608,0.351944423081853
+80,40,17,JisstPCA0 (oracle),sample,1,1
+80,40,17,JisstPCA0 (oracle),networkX1,1,1
+80,40,17,JisstPCA0 (oracle),networkY1,1,1
+80,40,17,JisstPCA0 (oracle),networkX2,0.496518987341772,-0.00711532760154167
+80,40,17,JisstPCA0 (oracle),networkY2,0.513924050632911,0.0182270091135047
+80,40,17,JisstPCA0 (BIC),sample,1,1
+80,40,17,JisstPCA0 (BIC),networkX1,1,1
+80,40,17,JisstPCA0 (BIC),networkY1,1,1
+80,40,17,JisstPCA0 (BIC),networkX2,0.494936708860759,-0.0101589539802589
+80,40,17,JisstPCA0 (BIC),networkY2,0.513924050632911,0.0182270091135047
+80,40,17,G-JisstPCA0 (oracle),sample,1,1
+80,40,17,G-JisstPCA0 (oracle),networkX1,1,1
+80,40,17,G-JisstPCA0 (oracle),networkY1,1,1
+80,40,17,G-JisstPCA0 (oracle),networkX2,0.493987341772152,-0.011530977490571
+80,40,17,G-JisstPCA0 (oracle),networkY2,0.493987341772152,-0.0116865206171944
+80,40,17,G-JisstPCA0 (BIC),sample,1,1
+80,40,17,G-JisstPCA0 (BIC),networkX1,1,1
+80,40,17,G-JisstPCA0 (BIC),networkY1,1,1
+80,40,17,G-JisstPCA0 (BIC),networkX2,1,1
+80,40,17,G-JisstPCA0 (BIC),networkY2,1,1
+80,40,17,JisstPCA2 (oracle),sample,1,1
+80,40,17,JisstPCA2 (oracle),networkX1,1,1
+80,40,17,JisstPCA2 (oracle),networkY1,1,1
+80,40,17,JisstPCA2 (oracle),networkX2,1,1
+80,40,17,JisstPCA2 (oracle),networkY2,1,1
+80,40,17,JisstPCA2 (BIC),sample,1,1
+80,40,17,JisstPCA2 (BIC),networkX1,1,1
+80,40,17,JisstPCA2 (BIC),networkY1,1,1
+80,40,17,JisstPCA2 (BIC),networkX2,1,1
+80,40,17,JisstPCA2 (BIC),networkY2,1,1
+80,40,17,G-JisstPCA2 (oracle),sample,1,1
+80,40,17,G-JisstPCA2 (oracle),networkX1,1,1
+80,40,17,G-JisstPCA2 (oracle),networkY1,1,1
+80,40,17,G-JisstPCA2 (oracle),networkX2,1,1
+80,40,17,G-JisstPCA2 (oracle),networkY2,1,1
+80,40,17,G-JisstPCA2 (BIC),sample,1,1
+80,40,17,G-JisstPCA2 (BIC),networkX1,1,1
+80,40,17,G-JisstPCA2 (BIC),networkY1,1,1
+80,40,17,G-JisstPCA2 (BIC),networkX2,1,1
+80,40,17,G-JisstPCA2 (BIC),networkY2,1,1
+80,40,17,iHOSVD,sample,1,1
+80,40,17,iHOSVD,networkX1,0.712658227848101,0.436837774860725
+80,40,17,iHOSVD,networkY1,1,1
+80,40,17,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,40,17,iHOSVD,networkY2,0.574683544303797,0.147503918193263
+80,40,17,iHOOI,sample,1,1
+80,40,17,iHOOI,networkX1,0.823101265822785,0.599518635202023
+80,40,17,iHOOI,networkY1,1,1
+80,40,17,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,40,17,iHOOI,networkY2,0.724367088607595,0.448841035466606
+50,20,18,JisstPCA0 (oracle),sample,1,1
+50,20,18,JisstPCA0 (oracle),networkX1,0.783544303797468,0.511732303955586
+50,20,18,JisstPCA0 (oracle),networkY1,1,1
+50,20,18,JisstPCA0 (oracle),networkX2,1,1
+50,20,18,JisstPCA0 (oracle),networkY2,1,1
+50,20,18,JisstPCA0 (BIC),sample,1,1
+50,20,18,JisstPCA0 (BIC),networkX1,0.783544303797468,0.511732303955586
+50,20,18,JisstPCA0 (BIC),networkY1,1,1
+50,20,18,JisstPCA0 (BIC),networkX2,1,1
+50,20,18,JisstPCA0 (BIC),networkY2,1,1
+50,20,18,G-JisstPCA0 (oracle),sample,1,1
+50,20,18,G-JisstPCA0 (oracle),networkX1,1,1
+50,20,18,G-JisstPCA0 (oracle),networkY1,1,1
+50,20,18,G-JisstPCA0 (oracle),networkX2,1,1
+50,20,18,G-JisstPCA0 (oracle),networkY2,1,1
+50,20,18,G-JisstPCA0 (BIC),sample,1,1
+50,20,18,G-JisstPCA0 (BIC),networkX1,1,1
+50,20,18,G-JisstPCA0 (BIC),networkY1,1,1
+50,20,18,G-JisstPCA0 (BIC),networkX2,1,1
+50,20,18,G-JisstPCA0 (BIC),networkY2,1,1
+50,20,18,JisstPCA2 (oracle),sample,1,1
+50,20,18,JisstPCA2 (oracle),networkX1,0.712658227848101,0.436837774860725
+50,20,18,JisstPCA2 (oracle),networkY1,1,1
+50,20,18,JisstPCA2 (oracle),networkX2,1,1
+50,20,18,JisstPCA2 (oracle),networkY2,1,1
+50,20,18,JisstPCA2 (BIC),sample,1,1
+50,20,18,JisstPCA2 (BIC),networkX1,0.790189873417722,0.525010474309376
+50,20,18,JisstPCA2 (BIC),networkY1,1,1
+50,20,18,JisstPCA2 (BIC),networkX2,1,1
+50,20,18,JisstPCA2 (BIC),networkY2,1,1
+50,20,18,G-JisstPCA2 (oracle),sample,1,1
+50,20,18,G-JisstPCA2 (oracle),networkX1,1,1
+50,20,18,G-JisstPCA2 (oracle),networkY1,1,1
+50,20,18,G-JisstPCA2 (oracle),networkX2,1,1
+50,20,18,G-JisstPCA2 (oracle),networkY2,1,1
+50,20,18,G-JisstPCA2 (BIC),sample,1,1
+50,20,18,G-JisstPCA2 (BIC),networkX1,1,1
+50,20,18,G-JisstPCA2 (BIC),networkY1,1,1
+50,20,18,G-JisstPCA2 (BIC),networkX2,1,1
+50,20,18,G-JisstPCA2 (BIC),networkY2,1,1
+50,20,18,iHOSVD,sample,1,1
+50,20,18,iHOSVD,networkX1,1,1
+50,20,18,iHOSVD,networkY1,1,1
+50,20,18,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,20,18,iHOSVD,networkY2,0.493061224489796,-0.0156203063983178
+50,20,18,iHOOI,sample,1,1
+50,20,18,iHOOI,networkX1,0.752215189873418,0.467796971819231
+50,20,18,iHOOI,networkY1,1,1
+50,20,18,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,20,18,iHOOI,networkY2,0.490612244897959,-0.0183852917665868
+50,40,18,JisstPCA0 (oracle),sample,1,1
+50,40,18,JisstPCA0 (oracle),networkX1,1,1
+50,40,18,JisstPCA0 (oracle),networkY1,1,1
+50,40,18,JisstPCA0 (oracle),networkX2,1,1
+50,40,18,JisstPCA0 (oracle),networkY2,1,1
+50,40,18,JisstPCA0 (BIC),sample,1,1
+50,40,18,JisstPCA0 (BIC),networkX1,1,1
+50,40,18,JisstPCA0 (BIC),networkY1,1,1
+50,40,18,JisstPCA0 (BIC),networkX2,1,1
+50,40,18,JisstPCA0 (BIC),networkY2,1,1
+50,40,18,G-JisstPCA0 (oracle),sample,1,1
+50,40,18,G-JisstPCA0 (oracle),networkX1,1,1
+50,40,18,G-JisstPCA0 (oracle),networkY1,1,1
+50,40,18,G-JisstPCA0 (oracle),networkX2,1,1
+50,40,18,G-JisstPCA0 (oracle),networkY2,1,1
+50,40,18,G-JisstPCA0 (BIC),sample,1,1
+50,40,18,G-JisstPCA0 (BIC),networkX1,1,1
+50,40,18,G-JisstPCA0 (BIC),networkY1,1,1
+50,40,18,G-JisstPCA0 (BIC),networkX2,1,1
+50,40,18,G-JisstPCA0 (BIC),networkY2,1,1
+50,40,18,JisstPCA2 (oracle),sample,1,1
+50,40,18,JisstPCA2 (oracle),networkX1,1,1
+50,40,18,JisstPCA2 (oracle),networkY1,1,1
+50,40,18,JisstPCA2 (oracle),networkX2,1,1
+50,40,18,JisstPCA2 (oracle),networkY2,1,1
+50,40,18,JisstPCA2 (BIC),sample,1,1
+50,40,18,JisstPCA2 (BIC),networkX1,1,1
+50,40,18,JisstPCA2 (BIC),networkY1,1,1
+50,40,18,JisstPCA2 (BIC),networkX2,1,1
+50,40,18,JisstPCA2 (BIC),networkY2,1,1
+50,40,18,G-JisstPCA2 (oracle),sample,1,1
+50,40,18,G-JisstPCA2 (oracle),networkX1,1,1
+50,40,18,G-JisstPCA2 (oracle),networkY1,1,1
+50,40,18,G-JisstPCA2 (oracle),networkX2,1,1
+50,40,18,G-JisstPCA2 (oracle),networkY2,1,1
+50,40,18,G-JisstPCA2 (BIC),sample,1,1
+50,40,18,G-JisstPCA2 (BIC),networkX1,1,1
+50,40,18,G-JisstPCA2 (BIC),networkY1,1,1
+50,40,18,G-JisstPCA2 (BIC),networkX2,1,1
+50,40,18,G-JisstPCA2 (BIC),networkY2,1,1
+50,40,18,iHOSVD,sample,1,1
+50,40,18,iHOSVD,networkX1,0.756962025316456,0.468132854578097
+50,40,18,iHOSVD,networkY1,1,1
+50,40,18,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,40,18,iHOSVD,networkY2,0.542040816326531,0.084340961327071
+50,40,18,iHOOI,sample,1,1
+50,40,18,iHOOI,networkX1,1,1
+50,40,18,iHOOI,networkY1,1,1
+50,40,18,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,40,18,iHOOI,networkY2,0.649795918367347,0.29904298242689
+80,20,18,JisstPCA0 (oracle),sample,1,1
+80,20,18,JisstPCA0 (oracle),networkX1,0.965822784810127,0.922682093999435
+80,20,18,JisstPCA0 (oracle),networkY1,1,1
+80,20,18,JisstPCA0 (oracle),networkX2,1,1
+80,20,18,JisstPCA0 (oracle),networkY2,1,1
+80,20,18,JisstPCA0 (BIC),sample,1,1
+80,20,18,JisstPCA0 (BIC),networkX1,0.965822784810127,0.922682093999435
+80,20,18,JisstPCA0 (BIC),networkY1,1,1
+80,20,18,JisstPCA0 (BIC),networkX2,1,1
+80,20,18,JisstPCA0 (BIC),networkY2,1,1
+80,20,18,G-JisstPCA0 (oracle),sample,1,1
+80,20,18,G-JisstPCA0 (oracle),networkX1,1,1
+80,20,18,G-JisstPCA0 (oracle),networkY1,1,1
+80,20,18,G-JisstPCA0 (oracle),networkX2,1,1
+80,20,18,G-JisstPCA0 (oracle),networkY2,1,1
+80,20,18,G-JisstPCA0 (BIC),sample,1,1
+80,20,18,G-JisstPCA0 (BIC),networkX1,1,1
+80,20,18,G-JisstPCA0 (BIC),networkY1,1,1
+80,20,18,G-JisstPCA0 (BIC),networkX2,1,1
+80,20,18,G-JisstPCA0 (BIC),networkY2,1,1
+80,20,18,JisstPCA2 (oracle),sample,1,1
+80,20,18,JisstPCA2 (oracle),networkX1,0.965822784810127,0.922682093999435
+80,20,18,JisstPCA2 (oracle),networkY1,1,1
+80,20,18,JisstPCA2 (oracle),networkX2,1,1
+80,20,18,JisstPCA2 (oracle),networkY2,1,1
+80,20,18,JisstPCA2 (BIC),sample,1,1
+80,20,18,JisstPCA2 (BIC),networkX1,0.949683544303797,0.886307889206083
+80,20,18,JisstPCA2 (BIC),networkY1,1,1
+80,20,18,JisstPCA2 (BIC),networkX2,1,1
+80,20,18,JisstPCA2 (BIC),networkY2,1,1
+80,20,18,G-JisstPCA2 (oracle),sample,1,1
+80,20,18,G-JisstPCA2 (oracle),networkX1,1,1
+80,20,18,G-JisstPCA2 (oracle),networkY1,1,1
+80,20,18,G-JisstPCA2 (oracle),networkX2,1,1
+80,20,18,G-JisstPCA2 (oracle),networkY2,1,1
+80,20,18,G-JisstPCA2 (BIC),sample,1,1
+80,20,18,G-JisstPCA2 (BIC),networkX1,1,1
+80,20,18,G-JisstPCA2 (BIC),networkY1,1,1
+80,20,18,G-JisstPCA2 (BIC),networkX2,1,1
+80,20,18,G-JisstPCA2 (BIC),networkY2,1,1
+80,20,18,iHOSVD,sample,1,1
+80,20,18,iHOSVD,networkX1,0.726898734177215,0.469731027155508
+80,20,18,iHOSVD,networkY1,0.77246835443038,0.530592748446769
+80,20,18,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,20,18,iHOSVD,networkY2,0.564873417721519,0.128194879845391
+80,20,18,iHOOI,sample,1,1
+80,20,18,iHOOI,networkX1,0.754746835443038,0.466395790082849
+80,20,18,iHOOI,networkY1,1,1
+80,20,18,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,20,18,iHOOI,networkY2,0.661075949367089,0.321422327161553
+80,40,18,JisstPCA0 (oracle),sample,1,1
+80,40,18,JisstPCA0 (oracle),networkX1,1,1
+80,40,18,JisstPCA0 (oracle),networkY1,1,1
+80,40,18,JisstPCA0 (oracle),networkX2,1,1
+80,40,18,JisstPCA0 (oracle),networkY2,1,1
+80,40,18,JisstPCA0 (BIC),sample,1,1
+80,40,18,JisstPCA0 (BIC),networkX1,1,1
+80,40,18,JisstPCA0 (BIC),networkY1,1,1
+80,40,18,JisstPCA0 (BIC),networkX2,1,1
+80,40,18,JisstPCA0 (BIC),networkY2,1,1
+80,40,18,G-JisstPCA0 (oracle),sample,1,1
+80,40,18,G-JisstPCA0 (oracle),networkX1,1,1
+80,40,18,G-JisstPCA0 (oracle),networkY1,1,1
+80,40,18,G-JisstPCA0 (oracle),networkX2,1,1
+80,40,18,G-JisstPCA0 (oracle),networkY2,1,1
+80,40,18,G-JisstPCA0 (BIC),sample,1,1
+80,40,18,G-JisstPCA0 (BIC),networkX1,1,1
+80,40,18,G-JisstPCA0 (BIC),networkY1,1,1
+80,40,18,G-JisstPCA0 (BIC),networkX2,1,1
+80,40,18,G-JisstPCA0 (BIC),networkY2,1,1
+80,40,18,JisstPCA2 (oracle),sample,1,1
+80,40,18,JisstPCA2 (oracle),networkX1,1,1
+80,40,18,JisstPCA2 (oracle),networkY1,1,1
+80,40,18,JisstPCA2 (oracle),networkX2,1,1
+80,40,18,JisstPCA2 (oracle),networkY2,1,1
+80,40,18,JisstPCA2 (BIC),sample,1,1
+80,40,18,JisstPCA2 (BIC),networkX1,1,1
+80,40,18,JisstPCA2 (BIC),networkY1,1,1
+80,40,18,JisstPCA2 (BIC),networkX2,1,1
+80,40,18,JisstPCA2 (BIC),networkY2,1,1
+80,40,18,G-JisstPCA2 (oracle),sample,1,1
+80,40,18,G-JisstPCA2 (oracle),networkX1,1,1
+80,40,18,G-JisstPCA2 (oracle),networkY1,1,1
+80,40,18,G-JisstPCA2 (oracle),networkX2,1,1
+80,40,18,G-JisstPCA2 (oracle),networkY2,1,1
+80,40,18,G-JisstPCA2 (BIC),sample,1,1
+80,40,18,G-JisstPCA2 (BIC),networkX1,1,1
+80,40,18,G-JisstPCA2 (BIC),networkY1,1,1
+80,40,18,G-JisstPCA2 (BIC),networkX2,1,1
+80,40,18,G-JisstPCA2 (BIC),networkY2,1,1
+80,40,18,iHOSVD,sample,1,1
+80,40,18,iHOSVD,networkX1,1,1
+80,40,18,iHOSVD,networkY1,1,1
+80,40,18,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,40,18,iHOSVD,networkY2,0.620253164556962,0.238842784101128
+80,40,18,iHOOI,sample,1,1
+80,40,18,iHOOI,networkX1,0.756962025316456,0.468132854578097
+80,40,18,iHOOI,networkY1,1,1
+80,40,18,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,40,18,iHOOI,networkY2,0.607911392405063,0.204308784868039
+50,20,19,JisstPCA0 (oracle),sample,0.473684210526316,-0.0324964677752417
+50,20,19,JisstPCA0 (oracle),networkX1,1,1
+50,20,19,JisstPCA0 (oracle),networkY1,1,1
+50,20,19,JisstPCA0 (oracle),networkX2,0.494936708860759,-0.0102560815358483
+50,20,19,JisstPCA0 (oracle),networkY2,0.502857142857143,0.00493514288572476
+50,20,19,JisstPCA0 (BIC),sample,1,1
+50,20,19,JisstPCA0 (BIC),networkX1,1,1
+50,20,19,JisstPCA0 (BIC),networkY1,1,1
+50,20,19,JisstPCA0 (BIC),networkX2,0.494936708860759,-0.0102560815358483
+50,20,19,JisstPCA0 (BIC),networkY2,0.502857142857143,0.00493514288572476
+50,20,19,G-JisstPCA0 (oracle),sample,1,1
+50,20,19,G-JisstPCA0 (oracle),networkX1,1,1
+50,20,19,G-JisstPCA0 (oracle),networkY1,1,1
+50,20,19,G-JisstPCA0 (oracle),networkX2,0.496518987341772,-0.00692169036651305
+50,20,19,G-JisstPCA0 (oracle),networkY2,0.489795918367347,-0.0205271751807791
+50,20,19,G-JisstPCA0 (BIC),sample,1,1
+50,20,19,G-JisstPCA0 (BIC),networkX1,1,1
+50,20,19,G-JisstPCA0 (BIC),networkY1,1,1
+50,20,19,G-JisstPCA0 (BIC),networkX2,1,1
+50,20,19,G-JisstPCA0 (BIC),networkY2,0.884897959183673,0.769861097231938
+50,20,19,JisstPCA2 (oracle),sample,1,1
+50,20,19,JisstPCA2 (oracle),networkX1,1,1
+50,20,19,JisstPCA2 (oracle),networkY1,1,1
+50,20,19,JisstPCA2 (oracle),networkX2,1,1
+50,20,19,JisstPCA2 (oracle),networkY2,0.884897959183673,0.769861097231938
+50,20,19,JisstPCA2 (BIC),sample,1,1
+50,20,19,JisstPCA2 (BIC),networkX1,1,1
+50,20,19,JisstPCA2 (BIC),networkY1,0.755918367346939,0.489778861222358
+50,20,19,JisstPCA2 (BIC),networkX2,1,1
+50,20,19,JisstPCA2 (BIC),networkY2,0.884897959183673,0.769861097231938
+50,20,19,G-JisstPCA2 (oracle),sample,1,1
+50,20,19,G-JisstPCA2 (oracle),networkX1,1,1
+50,20,19,G-JisstPCA2 (oracle),networkY1,1,1
+50,20,19,G-JisstPCA2 (oracle),networkX2,1,1
+50,20,19,G-JisstPCA2 (oracle),networkY2,0.884897959183673,0.769861097231938
+50,20,19,G-JisstPCA2 (BIC),sample,1,1
+50,20,19,G-JisstPCA2 (BIC),networkX1,1,1
+50,20,19,G-JisstPCA2 (BIC),networkY1,1,1
+50,20,19,G-JisstPCA2 (BIC),networkX2,1,1
+50,20,19,G-JisstPCA2 (BIC),networkY2,0.884897959183673,0.769861097231938
+50,20,19,iHOSVD,sample,1,1
+50,20,19,iHOSVD,networkX1,0.934177215189873,0.852231278911663
+50,20,19,iHOSVD,networkY1,1,1
+50,20,19,iHOSVD,networkX2,0.59620253164557,0.195396060151336
+50,20,19,iHOSVD,networkY2,0.510204081632653,0.0207833733013588
+50,20,19,iHOOI,sample,1,1
+50,20,19,iHOOI,networkX1,1,1
+50,20,19,iHOOI,networkY1,1,1
+50,20,19,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,20,19,iHOOI,networkY2,0.529795918367347,0.0591999999999999
+50,40,19,JisstPCA0 (oracle),sample,0.615384615384615,0.12979449762367
+50,40,19,JisstPCA0 (oracle),networkX1,1,1
+50,40,19,JisstPCA0 (oracle),networkY1,1,1
+50,40,19,JisstPCA0 (oracle),networkX2,0.493670886075949,-0.0127880516650108
+50,40,19,JisstPCA0 (oracle),networkY2,0.490612244897959,-0.0200160128102481
+50,40,19,JisstPCA0 (BIC),sample,0.615384615384615,0.12979449762367
+50,40,19,JisstPCA0 (BIC),networkX1,1,1
+50,40,19,JisstPCA0 (BIC),networkY1,1,1
+50,40,19,JisstPCA0 (BIC),networkX2,0.493670886075949,-0.0127880516650108
+50,40,19,JisstPCA0 (BIC),networkY2,0.490612244897959,-0.0211060646540209
+50,40,19,G-JisstPCA0 (oracle),sample,0.815384615384615,0.601167522423674
+50,40,19,G-JisstPCA0 (oracle),networkX1,1,1
+50,40,19,G-JisstPCA0 (oracle),networkY1,1,1
+50,40,19,G-JisstPCA0 (oracle),networkX2,0.496518987341772,-0.00711532760154167
+50,40,19,G-JisstPCA0 (oracle),networkY2,0.490612244897959,-0.0192000000000001
+50,40,19,G-JisstPCA0 (BIC),sample,1,1
+50,40,19,G-JisstPCA0 (BIC),networkX1,1,1
+50,40,19,G-JisstPCA0 (BIC),networkY1,1,1
+50,40,19,G-JisstPCA0 (BIC),networkX2,1,1
+50,40,19,G-JisstPCA0 (BIC),networkY2,1,1
+50,40,19,JisstPCA2 (oracle),sample,1,1
+50,40,19,JisstPCA2 (oracle),networkX1,1,1
+50,40,19,JisstPCA2 (oracle),networkY1,1,1
+50,40,19,JisstPCA2 (oracle),networkX2,1,1
+50,40,19,JisstPCA2 (oracle),networkY2,1,1
+50,40,19,JisstPCA2 (BIC),sample,1,1
+50,40,19,JisstPCA2 (BIC),networkX1,1,1
+50,40,19,JisstPCA2 (BIC),networkY1,1,1
+50,40,19,JisstPCA2 (BIC),networkX2,1,1
+50,40,19,JisstPCA2 (BIC),networkY2,1,1
+50,40,19,G-JisstPCA2 (oracle),sample,1,1
+50,40,19,G-JisstPCA2 (oracle),networkX1,1,1
+50,40,19,G-JisstPCA2 (oracle),networkY1,1,1
+50,40,19,G-JisstPCA2 (oracle),networkX2,1,1
+50,40,19,G-JisstPCA2 (oracle),networkY2,1,1
+50,40,19,G-JisstPCA2 (BIC),sample,1,1
+50,40,19,G-JisstPCA2 (BIC),networkX1,1,1
+50,40,19,G-JisstPCA2 (BIC),networkY1,1,1
+50,40,19,G-JisstPCA2 (BIC),networkX2,1,1
+50,40,19,G-JisstPCA2 (BIC),networkY2,1,1
+50,40,19,iHOSVD,sample,1,1
+50,40,19,iHOSVD,networkX1,1,1
+50,40,19,iHOSVD,networkY1,1,1
+50,40,19,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,40,19,iHOSVD,networkY2,0.519183673469388,0.0386396189334132
+50,40,19,iHOOI,sample,1,1
+50,40,19,iHOOI,networkX1,0.905063291139241,0.785228038887318
+50,40,19,iHOOI,networkY1,1,1
+50,40,19,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,40,19,iHOOI,networkY2,0.754285714285714,0.508514112432937
+80,20,19,JisstPCA0 (oracle),sample,0.557894736842105,0.132702967068797
+80,20,19,JisstPCA0 (oracle),networkX1,1,1
+80,20,19,JisstPCA0 (oracle),networkY1,1,1
+80,20,19,JisstPCA0 (oracle),networkX2,0.494936708860759,-0.00999711621647596
+80,20,19,JisstPCA0 (oracle),networkY2,0.509177215189873,0.0185447141316937
+80,20,19,JisstPCA0 (BIC),sample,1,1
+80,20,19,JisstPCA0 (BIC),networkX1,1,1
+80,20,19,JisstPCA0 (BIC),networkY1,1,1
+80,20,19,JisstPCA0 (BIC),networkX2,0.496518987341772,-0.00705077358203333
+80,20,19,JisstPCA0 (BIC),networkY2,0.509177215189873,0.0185447141316937
+80,20,19,G-JisstPCA0 (oracle),sample,1,1
+80,20,19,G-JisstPCA0 (oracle),networkX1,1,1
+80,20,19,G-JisstPCA0 (oracle),networkY1,1,1
+80,20,19,G-JisstPCA0 (oracle),networkX2,0.493987341772152,-0.0112070828763779
+80,20,19,G-JisstPCA0 (oracle),networkY2,0.49873417721519,-0.00472752498651116
+80,20,19,G-JisstPCA0 (BIC),sample,1,1
+80,20,19,G-JisstPCA0 (BIC),networkX1,1,1
+80,20,19,G-JisstPCA0 (BIC),networkY1,1,1
+80,20,19,G-JisstPCA0 (BIC),networkX2,0.493987341772152,-0.0121145109727664
+80,20,19,G-JisstPCA0 (BIC),networkY2,0.49873417721519,-0.00472752498651116
+80,20,19,JisstPCA2 (oracle),sample,1,1
+80,20,19,JisstPCA2 (oracle),networkX1,1,1
+80,20,19,JisstPCA2 (oracle),networkY1,0.756962025316456,0.493806065783853
+80,20,19,JisstPCA2 (oracle),networkX2,1,1
+80,20,19,JisstPCA2 (oracle),networkY2,1,1
+80,20,19,JisstPCA2 (BIC),sample,1,1
+80,20,19,JisstPCA2 (BIC),networkX1,1,1
+80,20,19,JisstPCA2 (BIC),networkY1,1,1
+80,20,19,JisstPCA2 (BIC),networkX2,1,1
+80,20,19,JisstPCA2 (BIC),networkY2,1,1
+80,20,19,G-JisstPCA2 (oracle),sample,1,1
+80,20,19,G-JisstPCA2 (oracle),networkX1,1,1
+80,20,19,G-JisstPCA2 (oracle),networkY1,1,1
+80,20,19,G-JisstPCA2 (oracle),networkX2,1,1
+80,20,19,G-JisstPCA2 (oracle),networkY2,1,1
+80,20,19,G-JisstPCA2 (BIC),sample,1,1
+80,20,19,G-JisstPCA2 (BIC),networkX1,1,1
+80,20,19,G-JisstPCA2 (BIC),networkY1,1,1
+80,20,19,G-JisstPCA2 (BIC),networkX2,1,1
+80,20,19,G-JisstPCA2 (BIC),networkY2,1,1
+80,20,19,iHOSVD,sample,1,1
+80,20,19,iHOSVD,networkX1,1,1
+80,20,19,iHOSVD,networkY1,1,1
+80,20,19,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,20,19,iHOSVD,networkY2,0.509177215189873,0.0182679133716319
+80,20,19,iHOOI,sample,1,1
+80,20,19,iHOOI,networkX1,1,1
+80,20,19,iHOOI,networkY1,1,1
+80,20,19,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,20,19,iHOOI,networkY2,0.778481012658228,0.557086929499132
+80,40,19,JisstPCA0 (oracle),sample,1,1
+80,40,19,JisstPCA0 (oracle),networkX1,1,1
+80,40,19,JisstPCA0 (oracle),networkY1,1,1
+80,40,19,JisstPCA0 (oracle),networkX2,0.494936708860759,-0.0102560815358483
+80,40,19,JisstPCA0 (oracle),networkY2,0.513924050632911,0.0182270091135047
+80,40,19,JisstPCA0 (BIC),sample,1,1
+80,40,19,JisstPCA0 (BIC),networkX1,1,1
+80,40,19,JisstPCA0 (BIC),networkY1,1,1
+80,40,19,JisstPCA0 (BIC),networkX2,0.494936708860759,-0.0102560815358483
+80,40,19,JisstPCA0 (BIC),networkY2,0.513924050632911,0.0182270091135047
+80,40,19,G-JisstPCA0 (oracle),sample,0.498717948717949,0.00780792504391962
+80,40,19,G-JisstPCA0 (oracle),networkX1,1,1
+80,40,19,G-JisstPCA0 (oracle),networkY1,1,1
+80,40,19,G-JisstPCA0 (oracle),networkX2,0.493987341772152,-0.0121145109727664
+80,40,19,G-JisstPCA0 (oracle),networkY2,0.496518987341772,-0.00705077358203333
+80,40,19,G-JisstPCA0 (BIC),sample,1,1
+80,40,19,G-JisstPCA0 (BIC),networkX1,1,1
+80,40,19,G-JisstPCA0 (BIC),networkY1,1,1
+80,40,19,G-JisstPCA0 (BIC),networkX2,0.493987341772152,-0.0121145109727664
+80,40,19,G-JisstPCA0 (BIC),networkY2,0.496518987341772,-0.00705077358203333
+80,40,19,JisstPCA2 (oracle),sample,1,1
+80,40,19,JisstPCA2 (oracle),networkX1,1,1
+80,40,19,JisstPCA2 (oracle),networkY1,1,1
+80,40,19,JisstPCA2 (oracle),networkX2,1,1
+80,40,19,JisstPCA2 (oracle),networkY2,1,1
+80,40,19,JisstPCA2 (BIC),sample,1,1
+80,40,19,JisstPCA2 (BIC),networkX1,1,1
+80,40,19,JisstPCA2 (BIC),networkY1,1,1
+80,40,19,JisstPCA2 (BIC),networkX2,1,1
+80,40,19,JisstPCA2 (BIC),networkY2,1,1
+80,40,19,G-JisstPCA2 (oracle),sample,1,1
+80,40,19,G-JisstPCA2 (oracle),networkX1,1,1
+80,40,19,G-JisstPCA2 (oracle),networkY1,1,1
+80,40,19,G-JisstPCA2 (oracle),networkX2,1,1
+80,40,19,G-JisstPCA2 (oracle),networkY2,1,1
+80,40,19,G-JisstPCA2 (BIC),sample,1,1
+80,40,19,G-JisstPCA2 (BIC),networkX1,1,1
+80,40,19,G-JisstPCA2 (BIC),networkY1,1,1
+80,40,19,G-JisstPCA2 (BIC),networkX2,1,1
+80,40,19,G-JisstPCA2 (BIC),networkY2,1,1
+80,40,19,iHOSVD,sample,1,1
+80,40,19,iHOSVD,networkX1,0.949683544303797,0.886307889206083
+80,40,19,iHOSVD,networkY1,1,1
+80,40,19,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,40,19,iHOSVD,networkY2,0.661075949367089,0.322283293897514
+80,40,19,iHOOI,sample,1,1
+80,40,19,iHOOI,networkX1,0.934177215189873,0.850947722852747
+80,40,19,iHOOI,networkY1,1,1
+80,40,19,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,40,19,iHOOI,networkY2,0.661075949367089,0.321422327161553
+50,20,20,JisstPCA0 (oracle),sample,1,1
+50,20,20,JisstPCA0 (oracle),networkX1,1,1
+50,20,20,JisstPCA0 (oracle),networkY1,1,1
+50,20,20,JisstPCA0 (oracle),networkX2,1,1
+50,20,20,JisstPCA0 (oracle),networkY2,1,1
+50,20,20,JisstPCA0 (BIC),sample,1,1
+50,20,20,JisstPCA0 (BIC),networkX1,1,1
+50,20,20,JisstPCA0 (BIC),networkY1,1,1
+50,20,20,JisstPCA0 (BIC),networkX2,1,1
+50,20,20,JisstPCA0 (BIC),networkY2,1,1
+50,20,20,G-JisstPCA0 (oracle),sample,1,1
+50,20,20,G-JisstPCA0 (oracle),networkX1,1,1
+50,20,20,G-JisstPCA0 (oracle),networkY1,1,1
+50,20,20,G-JisstPCA0 (oracle),networkX2,1,1
+50,20,20,G-JisstPCA0 (oracle),networkY2,1,1
+50,20,20,G-JisstPCA0 (BIC),sample,1,1
+50,20,20,G-JisstPCA0 (BIC),networkX1,1,1
+50,20,20,G-JisstPCA0 (BIC),networkY1,1,1
+50,20,20,G-JisstPCA0 (BIC),networkX2,1,1
+50,20,20,G-JisstPCA0 (BIC),networkY2,1,1
+50,20,20,JisstPCA2 (oracle),sample,1,1
+50,20,20,JisstPCA2 (oracle),networkX1,1,1
+50,20,20,JisstPCA2 (oracle),networkY1,1,1
+50,20,20,JisstPCA2 (oracle),networkX2,1,1
+50,20,20,JisstPCA2 (oracle),networkY2,1,1
+50,20,20,JisstPCA2 (BIC),sample,1,1
+50,20,20,JisstPCA2 (BIC),networkX1,1,1
+50,20,20,JisstPCA2 (BIC),networkY1,1,1
+50,20,20,JisstPCA2 (BIC),networkX2,1,1
+50,20,20,JisstPCA2 (BIC),networkY2,1,1
+50,20,20,G-JisstPCA2 (oracle),sample,1,1
+50,20,20,G-JisstPCA2 (oracle),networkX1,1,1
+50,20,20,G-JisstPCA2 (oracle),networkY1,1,1
+50,20,20,G-JisstPCA2 (oracle),networkX2,1,1
+50,20,20,G-JisstPCA2 (oracle),networkY2,1,1
+50,20,20,G-JisstPCA2 (BIC),sample,1,1
+50,20,20,G-JisstPCA2 (BIC),networkX1,1,1
+50,20,20,G-JisstPCA2 (BIC),networkY1,1,1
+50,20,20,G-JisstPCA2 (BIC),networkX2,1,1
+50,20,20,G-JisstPCA2 (BIC),networkY2,1,1
+50,20,20,iHOSVD,sample,1,1
+50,20,20,iHOSVD,networkX1,0.756962025316456,0.468132854578097
+50,20,20,iHOSVD,networkY1,0.954285714285714,0.898219584569733
+50,20,20,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,20,20,iHOSVD,networkY2,0.490612244897959,-0.0186567164179105
+50,20,20,iHOOI,sample,1,1
+50,20,20,iHOOI,networkX1,1,1
+50,20,20,iHOOI,networkY1,1,1
+50,20,20,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,20,20,iHOOI,networkY2,0.588571428571429,0.177238805970149
+50,40,20,JisstPCA0 (oracle),sample,1,1
+50,40,20,JisstPCA0 (oracle),networkX1,1,1
+50,40,20,JisstPCA0 (oracle),networkY1,1,1
+50,40,20,JisstPCA0 (oracle),networkX2,1,1
+50,40,20,JisstPCA0 (oracle),networkY2,1,1
+50,40,20,JisstPCA0 (BIC),sample,1,1
+50,40,20,JisstPCA0 (BIC),networkX1,1,1
+50,40,20,JisstPCA0 (BIC),networkY1,1,1
+50,40,20,JisstPCA0 (BIC),networkX2,1,1
+50,40,20,JisstPCA0 (BIC),networkY2,1,1
+50,40,20,G-JisstPCA0 (oracle),sample,1,1
+50,40,20,G-JisstPCA0 (oracle),networkX1,1,1
+50,40,20,G-JisstPCA0 (oracle),networkY1,1,1
+50,40,20,G-JisstPCA0 (oracle),networkX2,1,1
+50,40,20,G-JisstPCA0 (oracle),networkY2,1,1
+50,40,20,G-JisstPCA0 (BIC),sample,1,1
+50,40,20,G-JisstPCA0 (BIC),networkX1,1,1
+50,40,20,G-JisstPCA0 (BIC),networkY1,1,1
+50,40,20,G-JisstPCA0 (BIC),networkX2,1,1
+50,40,20,G-JisstPCA0 (BIC),networkY2,1,1
+50,40,20,JisstPCA2 (oracle),sample,1,1
+50,40,20,JisstPCA2 (oracle),networkX1,1,1
+50,40,20,JisstPCA2 (oracle),networkY1,1,1
+50,40,20,JisstPCA2 (oracle),networkX2,1,1
+50,40,20,JisstPCA2 (oracle),networkY2,1,1
+50,40,20,JisstPCA2 (BIC),sample,1,1
+50,40,20,JisstPCA2 (BIC),networkX1,1,1
+50,40,20,JisstPCA2 (BIC),networkY1,1,1
+50,40,20,JisstPCA2 (BIC),networkX2,1,1
+50,40,20,JisstPCA2 (BIC),networkY2,1,1
+50,40,20,G-JisstPCA2 (oracle),sample,1,1
+50,40,20,G-JisstPCA2 (oracle),networkX1,1,1
+50,40,20,G-JisstPCA2 (oracle),networkY1,1,1
+50,40,20,G-JisstPCA2 (oracle),networkX2,1,1
+50,40,20,G-JisstPCA2 (oracle),networkY2,1,1
+50,40,20,G-JisstPCA2 (BIC),sample,1,1
+50,40,20,G-JisstPCA2 (BIC),networkX1,1,1
+50,40,20,G-JisstPCA2 (BIC),networkY1,1,1
+50,40,20,G-JisstPCA2 (BIC),networkX2,1,1
+50,40,20,G-JisstPCA2 (BIC),networkY2,1,1
+50,40,20,iHOSVD,sample,1,1
+50,40,20,iHOSVD,networkX1,0.756962025316456,0.468132854578097
+50,40,20,iHOSVD,networkY1,1,1
+50,40,20,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+50,40,20,iHOSVD,networkY2,0.502857142857143,0.00133864328503069
+50,40,20,iHOOI,sample,1,1
+50,40,20,iHOOI,networkX1,0.756962025316456,0.468132854578097
+50,40,20,iHOOI,networkY1,1,1
+50,40,20,iHOOI,networkX2,0.574683544303797,0.153139356814701
+50,40,20,iHOOI,networkY2,0.698775510204082,0.397480755773268
+80,20,20,JisstPCA0 (oracle),sample,1,1
+80,20,20,JisstPCA0 (oracle),networkX1,1,1
+80,20,20,JisstPCA0 (oracle),networkY1,1,1
+80,20,20,JisstPCA0 (oracle),networkX2,1,1
+80,20,20,JisstPCA0 (oracle),networkY2,1,1
+80,20,20,JisstPCA0 (BIC),sample,1,1
+80,20,20,JisstPCA0 (BIC),networkX1,1,1
+80,20,20,JisstPCA0 (BIC),networkY1,1,1
+80,20,20,JisstPCA0 (BIC),networkX2,1,1
+80,20,20,JisstPCA0 (BIC),networkY2,1,1
+80,20,20,G-JisstPCA0 (oracle),sample,1,1
+80,20,20,G-JisstPCA0 (oracle),networkX1,1,1
+80,20,20,G-JisstPCA0 (oracle),networkY1,1,1
+80,20,20,G-JisstPCA0 (oracle),networkX2,1,1
+80,20,20,G-JisstPCA0 (oracle),networkY2,1,1
+80,20,20,G-JisstPCA0 (BIC),sample,1,1
+80,20,20,G-JisstPCA0 (BIC),networkX1,1,1
+80,20,20,G-JisstPCA0 (BIC),networkY1,1,1
+80,20,20,G-JisstPCA0 (BIC),networkX2,1,1
+80,20,20,G-JisstPCA0 (BIC),networkY2,1,1
+80,20,20,JisstPCA2 (oracle),sample,1,1
+80,20,20,JisstPCA2 (oracle),networkX1,1,1
+80,20,20,JisstPCA2 (oracle),networkY1,1,1
+80,20,20,JisstPCA2 (oracle),networkX2,1,1
+80,20,20,JisstPCA2 (oracle),networkY2,1,1
+80,20,20,JisstPCA2 (BIC),sample,1,1
+80,20,20,JisstPCA2 (BIC),networkX1,1,1
+80,20,20,JisstPCA2 (BIC),networkY1,1,1
+80,20,20,JisstPCA2 (BIC),networkX2,1,1
+80,20,20,JisstPCA2 (BIC),networkY2,1,1
+80,20,20,G-JisstPCA2 (oracle),sample,1,1
+80,20,20,G-JisstPCA2 (oracle),networkX1,1,1
+80,20,20,G-JisstPCA2 (oracle),networkY1,1,1
+80,20,20,G-JisstPCA2 (oracle),networkX2,1,1
+80,20,20,G-JisstPCA2 (oracle),networkY2,1,1
+80,20,20,G-JisstPCA2 (BIC),sample,1,1
+80,20,20,G-JisstPCA2 (BIC),networkX1,1,1
+80,20,20,G-JisstPCA2 (BIC),networkY1,1,1
+80,20,20,G-JisstPCA2 (BIC),networkX2,1,1
+80,20,20,G-JisstPCA2 (BIC),networkY2,1,1
+80,20,20,iHOSVD,sample,1,1
+80,20,20,iHOSVD,networkX1,1,1
+80,20,20,iHOSVD,networkY1,0.944303797468354,0.876678114267874
+80,20,20,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,20,20,iHOSVD,networkY2,0.574683544303797,0.148706896551724
+80,20,20,iHOOI,sample,1,1
+80,20,20,iHOOI,networkX1,1,1
+80,20,20,iHOOI,networkY1,1,1
+80,20,20,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,20,20,iHOOI,networkY2,0.661075949367089,0.321422327161553
+80,40,20,JisstPCA0 (oracle),sample,1,1
+80,40,20,JisstPCA0 (oracle),networkX1,1,1
+80,40,20,JisstPCA0 (oracle),networkY1,1,1
+80,40,20,JisstPCA0 (oracle),networkX2,1,1
+80,40,20,JisstPCA0 (oracle),networkY2,1,1
+80,40,20,JisstPCA0 (BIC),sample,1,1
+80,40,20,JisstPCA0 (BIC),networkX1,1,1
+80,40,20,JisstPCA0 (BIC),networkY1,1,1
+80,40,20,JisstPCA0 (BIC),networkX2,1,1
+80,40,20,JisstPCA0 (BIC),networkY2,1,1
+80,40,20,G-JisstPCA0 (oracle),sample,1,1
+80,40,20,G-JisstPCA0 (oracle),networkX1,1,1
+80,40,20,G-JisstPCA0 (oracle),networkY1,0.758227848101266,0.496835421932627
+80,40,20,G-JisstPCA0 (oracle),networkX2,1,1
+80,40,20,G-JisstPCA0 (oracle),networkY2,1,1
+80,40,20,G-JisstPCA0 (BIC),sample,1,1
+80,40,20,G-JisstPCA0 (BIC),networkX1,1,1
+80,40,20,G-JisstPCA0 (BIC),networkY1,1,1
+80,40,20,G-JisstPCA0 (BIC),networkX2,1,1
+80,40,20,G-JisstPCA0 (BIC),networkY2,1,1
+80,40,20,JisstPCA2 (oracle),sample,1,1
+80,40,20,JisstPCA2 (oracle),networkX1,1,1
+80,40,20,JisstPCA2 (oracle),networkY1,1,1
+80,40,20,JisstPCA2 (oracle),networkX2,1,1
+80,40,20,JisstPCA2 (oracle),networkY2,1,1
+80,40,20,JisstPCA2 (BIC),sample,1,1
+80,40,20,JisstPCA2 (BIC),networkX1,1,1
+80,40,20,JisstPCA2 (BIC),networkY1,1,1
+80,40,20,JisstPCA2 (BIC),networkX2,1,1
+80,40,20,JisstPCA2 (BIC),networkY2,1,1
+80,40,20,G-JisstPCA2 (oracle),sample,1,1
+80,40,20,G-JisstPCA2 (oracle),networkX1,1,1
+80,40,20,G-JisstPCA2 (oracle),networkY1,1,1
+80,40,20,G-JisstPCA2 (oracle),networkX2,1,1
+80,40,20,G-JisstPCA2 (oracle),networkY2,1,1
+80,40,20,G-JisstPCA2 (BIC),sample,1,1
+80,40,20,G-JisstPCA2 (BIC),networkX1,1,1
+80,40,20,G-JisstPCA2 (BIC),networkY1,1,1
+80,40,20,G-JisstPCA2 (BIC),networkX2,1,1
+80,40,20,G-JisstPCA2 (BIC),networkY2,1,1
+80,40,20,iHOSVD,sample,1,1
+80,40,20,iHOSVD,networkX1,0.756962025316456,0.468132854578097
+80,40,20,iHOSVD,networkY1,1,1
+80,40,20,iHOSVD,networkX2,0.574683544303797,0.153139356814701
+80,40,20,iHOSVD,networkY2,0.646835443037975,0.2931226908867
+80,40,20,iHOOI,sample,1,1
+80,40,20,iHOOI,networkX1,1,1
+80,40,20,iHOOI,networkY1,1,1
+80,40,20,iHOOI,networkX2,0.574683544303797,0.153139356814701
+80,40,20,iHOOI,networkY2,0.675949367088608,0.351395730706076
