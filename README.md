@@ -1,18 +1,18 @@
 # JisstPCA
-This repo is about algorithms and simulation of Joint-Integrated Semi-Symmetric Tensor PCA (JisstPCA), from the paper:
+This repo include functions for implementing the Joint, Integrative, Semi-Symmetric Tensor PCA (JisstPCA) algorithm, and code to reproduce the empirical results in the paper: Joint Semi-Symmetric Tensor PCA for Integrating Multi-modal Populations of Networks.
 
 To run the code, you need to install tensor_toolbox by Kolda first, the link is https://www.tensortoolbox.org. To use functions, please download 'function' folder and use 'mkdir', 'addpath' command to add this toolbox into the path that can be applied in MATLAB.
 
 The folders in this repository are:
 
-## Function
+## functions
 
-This folder contains all functions that we used in our empirical study: Main functions of our algorithms, baseline algorithms for comparative study, and other functions we used in the main functions.
+This folder contains all functions needed for running the JisstPCA algorithm and its extensions, as well as integrated extensions of the HOSVD and HOOI algorithms.
 
-## Example
+## example
 
 In this folder, we present examples of all JisstPCA algorithms.
 
-## Empirical
+## simulations
 
-This folder contains the code of empirical study that appears in our main paper.
+This folder contains the code for reproducing the empirical results in the paper.
